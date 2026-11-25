@@ -114,3 +114,14 @@ test("a code reveal requires both visible and removable code and a later speech 
   intro.codeReveal = {parts: ["a", "b"], answerCue: "쏙 빠집니다."};
   assert.equal(EpisodeScriptSchema.safeParse(script).success, false);
 });
+
+test("preview keeps a question pause and joins a mid-sentence reveal", () => {
+  const script = structuredClone(SAMPLE_SCRIPT);
+  script.scenes[0].speech = [
+    { language: "ko", caption: "보이세요? 백틱이", text: "보이세요? 백틱이" },
+    { language: "ko", caption: "쏙 빠집니다.", text: "쏙 빠집니다." },
+  ];
+  const [question, lead, reveal] = buildSceneTimeline(script, "long").scenes[0].cues;
+  assert.ok(Math.abs(lead.startSec - question.endSec - 0.65) < 0.001);
+  assert.equal(lead.endSec, reveal.startSec);
+});

@@ -1,3 +1,4 @@
+import { checkVideo } from "./services/check-video";
 import { spawn } from "node:child_process";
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -286,6 +287,7 @@ program
   .argument("<idOrNext>", "Proposal ID 또는 next")
   .description("script.json을 바탕으로 한국어 TTS 음성, 자막(.srt), 타임라인(manifest.json)을 생성합니다")
   .option("--format <fmt>", "long | short | both", "both")
+  .option("--scene <ids...>", "선택한 장면만 다시 합성합니다 (--format long 또는 short)")
   .option("--tts <provider>", "qwen3-clone | qwen3-tts | edge | macos-say | openai | elevenlabs | custom | auto")
   .option("--voice <voice>", "TTS 음성 이름 또는 Voice ID")
   .option("--rate <rate>", "발화 속도 (예: +5%, +10%)")
@@ -295,6 +297,7 @@ program
       idOrNext: string,
       opts: {
         format: string;
+        scene?: string[];
         tts?: TtsProviderName;
         voice?: string;
         rate?: string;
@@ -307,6 +310,7 @@ program
 
       const summaries = await synthesizeEpisodeAudio(proposal.id, {
         format,
+        sceneIds: opts.scene,
         provider: opts.tts,
         voice: opts.voice,
         rate: opts.rate,
@@ -364,6 +368,16 @@ program
       });
       child.on("error", reject);
     });
+  });
+
+program
+  .command("check-video <id>")
+  .description("렌더링된 영상과 음성, 자막, 용어 주석의 표시 시점을 확인합니다")
+  .option("--format <fmt>", "long | short | both", "both")
+  .action(async (id: string, opts: {format: string}) => {
+    const format = parseFormatOption(opts.format);
+    const formats: VideoFormat[] = format === "both" ? ["long", "short"] : [format];
+    for (const item of formats) console.log(await checkVideo(id, item));
   });
 
 program

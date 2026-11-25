@@ -4,196 +4,226 @@
   "provider": "qwen3-clone",
   "voice": "voice-profile",
   "fps": 30,
-  "totalDurationSec": 91.2,
-  "totalFrames": 2736,
-  "generatedAt": "2026-11-25T17:16:51.399Z",
+  "totalDurationSec": 95.81,
+  "totalFrames": 2875,
+  "generatedAt": "2026-11-25T17:49:12.092Z",
   "scenes": [
     {
       "sceneId": "01-intro",
       "audioFile": "long/01-intro.mp3",
-      "durationSec": 5.76,
-      "leadInSec": 0.35,
-      "tailPadSec": 0.45,
-      "totalDurationSec": 6.56,
+      "durationSec": 7.13,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 8.43,
       "startSec": 0,
-      "endSec": 6.56,
+      "endSec": 8.43,
       "cues": [
         {
-          "startSec": 0.35,
-          "endSec": 3.55,
-          "text": "이 코드에서 지워도 되는 글자 두 개, 보이세요?"
+          "startSec": 0.48,
+          "endSec": 3.92,
+          "text": "이 코드에서 지워도 되는 글자 두 개, 보이죠?"
         },
         {
-          "startSec": 3.55,
-          "endSec": 5.23,
+          "startSec": 4.72,
+          "endSec": 6.56,
           "text": "in 양옆의 백틱이"
         },
         {
-          "startSec": 5.23,
-          "endSec": 6.11,
-          "text": "쏙 빠집니다."
+          "startSec": 6.56,
+          "endSec": 7.28,
+          "text": "쏙 빠져요."
         }
       ]
     },
     {
       "sceneId": "01-history",
       "audioFile": "long/01-history.mp3",
-      "durationSec": 8.56,
-      "leadInSec": 0.35,
-      "tailPadSec": 0.45,
-      "totalDurationSec": 9.36,
-      "startSec": 6.56,
-      "endSec": 15.92,
+      "durationSec": 8.85,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 10.15,
+      "startSec": 8.43,
+      "endSec": 18.58,
       "cues": [
         {
-          "startSec": 6.91,
-          "endSec": 11.55,
-          "text": "2015년 11월에 제안서가 작성됐고, 12월에 구현됐습니다."
+          "startSec": 8.83,
+          "endSec": 11.95,
+          "text": "이 얘기가 처음 나온 건 2015년 11월이에요."
         },
         {
-          "startSec": 11.55,
-          "endSec": 15.47,
-          "text": "2016년 3월, Swift 2.2에 이 문법이 담겼습니다."
+          "startSec": 12.4,
+          "endSec": 17.68,
+          "text": "그해 12월에 구현됐고, 이듬해 3월에 나온 Swift 2.2부터 쓸 수 있었어요."
         }
       ]
     },
     {
       "sceneId": "02-problem",
       "audioFile": "long/02-problem.mp3",
-      "durationSec": 14.4,
-      "leadInSec": 0.35,
-      "tailPadSec": 0.45,
-      "totalDurationSec": 15.2,
-      "startSec": 15.92,
-      "endSec": 31.12,
+      "durationSec": 16.48,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 17.78,
+      "startSec": 18.58,
+      "endSec": 36.36,
       "cues": [
         {
-          "startSec": 16.27,
-          "endSec": 22.27,
-          "text": "컬렉션에서 값의 위치를 찾는 함수를 예로 들어 보죠. 이름을 소리 내어 읽으면 이렇습니다."
+          "startSec": 18.98,
+          "endSec": 21.46,
+          "text": "리스트에서 값 하나를 찾는다고 해 봐요."
         },
         {
-          "startSec": 22.27,
-          "endSec": 23.23,
-          "text": "indexOf, in."
+          "startSec": 21.91,
+          "endSec": 23.67,
+          "text": "함수 이름을 한번 읽어 볼게요."
         },
         {
-          "startSec": 23.23,
-          "endSec": 30.67,
-          "text": "무엇을 찾는지, 어디에서 찾는지가 드러납니다. 그런데 예전에는 in이 예약어라서 양옆에 백틱을 붙여야 했습니다."
+          "startSec": 24.12,
+          "endSec": 26.68,
+          "text": "index of a value in a collection."
+        },
+        {
+          "startSec": 27.13,
+          "endSec": 30.49,
+          "text": "어떤 값을 어디에서 찾는지 이름만 봐도 보이죠?"
+        },
+        {
+          "startSec": 31.14,
+          "endSec": 35.46,
+          "text": "예전엔 in이 예약어라서 양옆에 백틱을 붙여야 했어요."
         }
       ]
     },
     {
       "sceneId": "03-compare",
       "audioFile": "long/03-compare.mp3",
-      "durationSec": 13.6,
-      "leadInSec": 0.35,
-      "tailPadSec": 0.45,
-      "totalDurationSec": 14.4,
-      "startSec": 31.12,
-      "endSec": 45.52,
+      "durationSec": 12.03,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 13.33,
+      "startSec": 36.36,
+      "endSec": 49.69,
       "cues": [
         {
-          "startSec": 31.47,
-          "endSec": 33.95,
-          "text": "두 호출에서 두 번째 인자를 보세요."
+          "startSec": 36.76,
+          "endSec": 39.56,
+          "text": "왼쪽 코드에서 두 번째 인자를 봐요."
         },
         {
-          "startSec": 33.95,
-          "endSec": 39.31,
-          "text": "왼쪽은 in 양옆에 백틱이 있습니다. 오른쪽은 같은 자리에 레이블만 남습니다."
+          "startSec": 40.01,
+          "endSec": 42.09,
+          "text": "오른쪽도 같은 리스트를 넘기죠?"
         },
         {
-          "startSec": 39.31,
-          "endSec": 45.07,
-          "text": "콜론 뒤로 넘기는 컬렉션도, 함수가 하는 일도 같습니다. 이미 작성한 호출은 그대로 동작합니다."
+          "startSec": 42.74,
+          "endSec": 46.02,
+          "text": "달라진 건 in 양옆의 백틱 두 개예요."
+        },
+        {
+          "startSec": 46.47,
+          "endSec": 48.79,
+          "text": "예전에 쓰던 호출도 그대로 동작해요."
         }
       ]
     },
     {
       "sceneId": "04-exceptions",
       "audioFile": "long/04-exceptions.mp3",
-      "durationSec": 16.96,
-      "leadInSec": 0.35,
-      "tailPadSec": 0.45,
-      "totalDurationSec": 17.76,
-      "startSec": 45.52,
-      "endSec": 63.28,
+      "durationSec": 21.54,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 22.84,
+      "startSec": 49.69,
+      "endSec": 72.53,
       "cues": [
         {
-          "startSec": 45.87,
-          "endSec": 48.03,
-          "text": "제안서 제목에는 단서가 있습니다."
+          "startSec": 50.09,
+          "endSec": 52.25,
+          "text": "제안서 제목을 보면 이런 말이 있어요."
         },
         {
-          "startSec": 48.03,
-          "endSec": 49.23,
+          "startSec": 52.7,
+          "endSec": 54.14,
           "text": "most keywords."
         },
         {
-          "startSec": 49.23,
-          "endSec": 56.03,
-          "text": "대부분의 키워드라는 뜻입니다. 당시 함수 선언에서는 다음 세 단어가 매개변수를 꾸미는 역할도 했습니다."
+          "startSec": 54.59,
+          "endSec": 56.59,
+          "text": "대부분의 키워드라는 뜻이죠."
         },
         {
-          "startSec": 56.03,
-          "endSec": 58.11,
+          "startSec": 57.04,
+          "endSec": 59.44,
+          "text": "그럼 어떤 단어가 빠졌을까요?"
+        },
+        {
+          "startSec": 60.09,
+          "endSec": 62.33,
           "text": "inout, var, let."
         },
         {
-          "startSec": 58.11,
-          "endSec": 62.83,
-          "text": "그래서 선언에서 이 단어들을 레이블로 쓰려면 백틱으로 구별해야 했습니다."
+          "startSec": 62.78,
+          "endSec": 66.94,
+          "text": "당시엔 이 셋이 선언부에서 매개변수를 꾸미기도 했어요."
+        },
+        {
+          "startSec": 67.39,
+          "endSec": 71.63,
+          "text": "그래서 레이블로 쓰려면 백틱을 남겨 둬야 했죠."
         }
       ]
     },
     {
       "sceneId": "05-key-points",
       "audioFile": "long/05-key-points.mp3",
-      "durationSec": 13.76,
-      "leadInSec": 0.35,
-      "tailPadSec": 0.45,
-      "totalDurationSec": 14.56,
-      "startSec": 63.28,
-      "endSec": 77.84,
+      "durationSec": 11.51,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 12.81,
+      "startSec": 72.53,
+      "endSec": 85.34,
       "cues": [
         {
-          "startSec": 63.63,
-          "endSec": 66.83,
-          "text": "인자 레이블은 함수를 호출하는 사람이 읽는 이름입니다."
+          "startSec": 72.93,
+          "endSec": 75.73,
+          "text": "당시 제안서에는 다른 이름도 나와요."
         },
         {
-          "startSec": 66.83,
-          "endSec": 71.79,
-          "text": "예전에는 예약어를 피하려고 in 대신 within 같은 이름을 고르기도 했죠."
+          "startSec": 76.18,
+          "endSec": 76.98,
+          "text": "within."
         },
         {
-          "startSec": 71.79,
-          "endSec": 77.39,
-          "text": "이 제안 덕분에 개발자는 문맥에 잘 맞는 짧은 이름을 그대로 쓸 수 있게 됐습니다."
+          "startSec": 77.43,
+          "endSec": 79.75,
+          "text": "백틱을 피하려고 고른 이름이에요."
+        },
+        {
+          "startSec": 80.2,
+          "endSec": 84.44,
+          "text": "Swift 2.2부터는 짧게 in이라고 쓸 수 있게 됐어요."
         }
       ]
     },
     {
       "sceneId": "06-outro",
       "audioFile": "long/06-outro.mp3",
-      "durationSec": 12.56,
-      "leadInSec": 0.35,
-      "tailPadSec": 0.45,
-      "totalDurationSec": 13.36,
-      "startSec": 77.84,
-      "endSec": 91.2,
+      "durationSec": 9.17,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 10.47,
+      "startSec": 85.34,
+      "endSec": 95.81,
       "cues": [
         {
-          "startSec": 78.19,
-          "endSec": 84.27,
-          "text": "오늘의 변화는 코드 한 줄에서 확인할 수 있습니다. 레이블 양옆의 백틱이 사라졌습니다."
+          "startSec": 85.74,
+          "endSec": 89.74,
+          "text": "이 함수에서 in은 값을 어디에서 찾을지 알려 줘요."
         },
         {
-          "startSec": 84.27,
-          "endSec": 90.75,
-          "text": "다음 편에서는 SE-0002가 함수를 커링 형태로 선언하는 문법을 왜 없앴는지 살펴보겠습니다."
+          "startSec": 90.19,
+          "endSec": 94.91,
+          "text": "다음 편에서는 스위프트가 커링 문법을 없앤 이유를 살펴볼게요."
         }
       ]
     }

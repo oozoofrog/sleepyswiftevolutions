@@ -34,6 +34,12 @@ export const SceneSchema = z.object({
   heading: z.string().min(1),
   subheading: z.string().optional(),
   narration: z.string().min(1),
+  termNotes: z.array(z.object({
+    term: z.string().trim().min(1),
+    meaning: z.string().trim().min(1),
+    cue: z.string().trim().min(1),
+  })).optional(),
+  deliveryNote: z.string().trim().min(1).optional(),
   speech: SpeechSchema.optional(),
   milestones: z.array(z.object({
     date: z.string().trim().min(1),

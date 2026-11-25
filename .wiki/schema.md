@@ -14,3 +14,15 @@ Open this directory as an Obsidian vault. Keep immutable, dated snapshots in sou
 - 2026-11-26-editorial-guide.md ← `_context/editorial-direction.md`
 - 2026-11-26-decision-journal.md ← `_context/production-journal.md`
 - 2026-11-26-se-0001-proposal.md ← `episodes/SE-0001/proposal.md`
+- 2026-11-26-decision-journal-pacing.md ← `_context/production-journal.md` (pacing revision)
+- 2026-11-26-colleague-delivery.md ← `_context/production-journal.md` (colleague delivery revision)
+- 2026-11-26-reading-ko.md ← `episodes/SE-0001/reading-ko.md`
+- 2026-11-26-voice-reference-ko.md ← `episodes/SE-0001/voice-reference-ko.md`
+
+- 2026-11-26-series-theme.md ← `_context/production-journal.md` (series theme)
+
+- 2026-11-26-first-episode-approval.md ← `_context/production-journal.md` (style approval)
+
+- 2026-11-26-term-definitions.md ← `_context/production-journal.md`
+
+- 2026-11-26-script-language-and-time.md ← `_context/production-journal.md`

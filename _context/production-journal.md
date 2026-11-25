@@ -17,3 +17,37 @@ The creator requested a brief introduction to each proposal's origin, implementa
 For SE-0001, the first proposal document commit is dated 2015-11-04 UTC. The project recorded implementation on 2015-12-23 UTC. Swift 2.2 shipped with the feature on 2016-03-21. The first timestamp describes repository history. Public availability of that repository on that day is unverified. [Proposal commit](https://github.com/swiftlang/swift-evolution/commit/463051803866a2ab8e199f39b6c8c4d2ec5a0b4b) · [Implementation status commit](https://github.com/swiftlang/swift-evolution/commit/960107656dff24fbbf047c801a42f83c5eca1504) · [Swift 2.2 announcement](https://www.swift.org/blog/swift-2.2-released/)
 
 Both full-length outputs rendered with the revised dates and palette. The 14.18-second portrait preview includes the code question and chronology. The long and short history frames were inspected. Type checking and six pipeline tests passed. [Opening preview](../episodes/SE-0001/out/SE-0001-opening.mp4)
+
+## 2026-11-26 · Breathing room, noise and delivery
+
+The creator reported rushed scene transitions, possible background noise and low energy in the synthetic delivery. Recut the existing SE-0001 speech at sentence boundaries and left the words and speaking rate intact. The first transition in the rendered Short measured 1.106 seconds below −42 dBFS, up from 0.456 seconds. The opening question has a 0.689-second measured pause. Future Qwen generation inserts sentence pauses and carries them into the captions. Added scene-level coaching notes for the writer and reference speaker. Perceived energy and resemblance await creator review.
+
+The raw microphone recording measured −59.1 dBFS RMS over seconds 7–12 with no speech and −42.1 dBFS RMS over the selected speaking interval. A background signal exists. These measurements cannot identify its physical source or distinguish reference noise from synthesis artifacts in the voiced output. [Revised opening](../episodes/SE-0001/out/SE-0001-opening.mp4)
+
+## 2026-11-26 · Colleague-to-colleague delivery
+
+The creator gave “보이죠? 쏙 빠져요.” as the target voice. Revised the landscape and portrait scripts and their prompt guidance around that example. Recorded a new microphone take for the voice profile. Local ASR detected the opening question and the closing “쏙 빠져요”; it disagreed with the intended technical term in the middle. The profile transcript uses the intended term. The direct take and synthesized episode are separate review artifacts.
+
+## 2026-11-26 · Human reading sheet
+
+The creator wanted help with breathing and found acting cues awkward. The Korean recording sheet covers both editions. It marks physical breaths separately from time for the viewer to inspect the code. It keeps the shared opener and history in one place. The cues are for the reader, outside TTS input. [Recording script](../episodes/SE-0001/reading-ko.md)
+
+## 2026-11-26 · Reference voice recording
+
+The creator requested a dedicated reference script after finding the performed reading awkward. Use a short question and a conversational explanation with a comfortable breath between them. Test synthesis on different words so the creator can compare the delivery. [Recording and listening script](../episodes/SE-0001/voice-reference-ko.md)
+
+## 2026-11-26 · Series theme
+
+Use the series name “듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기”. Keep the approved conversational voice and the pause after the opening question. Show the series name as a small opening label and use a concrete language change as the thumbnail headline.
+
+## 2026-11-26 · First episode style approval
+
+The creator approved the finished SE-0001 style. Use the opening question, the pause for inspection, the change timed to the spoken answer, and the brief chronology as the reference sequence for future episodes. Both final MP4 files decoded through the last frame with H.264 video and AAC narration.
+
+## 2026-11-26 · On-screen term definitions
+
+Write for beginner and intermediate Swift developers. When a technical term first appears, show a short Korean definition tied to the code on screen. Anchor the note to a matching subtitle phrase. Keep the opening puzzle free of clues until the answer begins. Apply the same rule independently to Shorts.
+
+## 2026-11-26 · Historical narration and pronunciation
+
+Apply korean-product-writing to narration, captions and screen copy. Name the code element and what it does. Use a conversational Korean sentence with one main point. Use the same term for the same concept. Separate what the proposal requested, what shipped in a dated release, and what a current compiler accepts. For pending work, describe its verified status and use conditional language for its possible effects. Apply RFC 2119 distinctions when a requirement could be confused with a recommendation or permission. Adapt ASD-STE100 clarity principles to spoken Korean. Keep English pronunciation in English speech segments. Where a single clipped word sounds abrupt, use a short meaningful phrase. Keep literal code in code panels.

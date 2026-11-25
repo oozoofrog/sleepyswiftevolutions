@@ -1,3 +1,4 @@
+import { TermNote } from "../components/TermNote";
 import { KineticHeading } from "../components/KineticHeading";
 import React from "react";
 import {
@@ -476,6 +477,7 @@ export const LongVideo: React.FC<LongVideoProps> = ({ script, manifest }) => {
           durationInFrames={timing.durationInFrames}
         >
           <LongSceneView script={script} timing={timing} />
+          <TermNote timing={timing} />
           {timing.audioFile && (
             <Sequence from={timing.leadInFrames}>
               <Audio src={staticFile(timing.audioFile)} />

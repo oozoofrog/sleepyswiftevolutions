@@ -44,6 +44,7 @@ function createProvider(name: TtsProviderName): TtsProvider {
 
 export interface VoiceSynthesisOptions {
   format?: VideoFormat | "both";
+  sceneIds?: string[];
   provider?: TtsProviderName;
   voice?: string;
   rate?: string;
@@ -146,23 +147,47 @@ export async function synthesizeEpisodeAudio(
 
     await fs.mkdir(paths.formatAudioDir(format), { recursive: true });
 
-    const qwenResults = requestedProvider === "qwen3-clone" || requestedProvider === "qwen3-tts"
-      ? await synthesizeQwenScenes(scenes, paths.formatAudioDir(format), requestedProvider, options.voice)
+    const previous = options.sceneIds
+      ? AudioManifestSchema.parse(JSON.parse(await fs.readFile(paths.manifestPath(format), "utf8")))
       : undefined;
+    const selected = options.sceneIds ? scenes.filter(scene => options.sceneIds?.includes(scene.id)) : scenes;
+    if (previous) {
+      if (formats.length !== 1 || options.sceneIds?.some(id => !selected.some(scene => scene.id === id))) {
+        throw new Error("부분 합성에는 한 가지 화면 형식과 해당 형식의 장면 ID가 필요합니다.");
+      }
+      if (previous.format !== format || previous.proposalId !== script.proposalId ||
+          previous.provider !== requestedProvider || !["qwen3-clone", "qwen3-tts"].includes(requestedProvider)) {
+        throw new Error("부분 합성에는 기존 타임라인과 같은 로컬 Qwen 제공자가 필요합니다.");
+      }
+    }
+    const retained = new Map<string, TtsSynthesizeResult>();
+    for (const scene of scenes.filter(scene => !selected.includes(scene))) {
+      const entry = previous?.scenes.find(row => row.sceneId === scene.id);
+      if (!entry || !previous) throw new Error(`${scene.id}의 기존 음성이 없습니다. 합성 대상에 포함하세요.`);
+      const audioPath = path.join(paths.audioDir, entry.audioFile);
+      await fs.access(audioPath);
+      const offset = entry.startSec + entry.leadInSec;
+      retained.set(scene.id, {
+        audioPath, durationSec: entry.durationSec, provider: previous.provider, voice: previous.voice,
+        cues: entry.cues.map(c => ({...c, startSec: c.startSec - offset, endSec: c.endSec - offset})),
+      });
+    }
+    const outputDir = previous
+      ? await fs.mkdtemp(path.join(paths.formatAudioDir(format), "revision-"))
+      : paths.formatAudioDir(format);
+    const qwenResults = requestedProvider === "qwen3-clone" || requestedProvider === "qwen3-tts"
+      ? await synthesizeQwenScenes(selected, outputDir, requestedProvider, options.voice ?? previous?.voice)
+      : undefined;
+    const generated = new Map(selected.map((scene, i) => [scene.id, qwenResults?.[i]]));
 
-    for (const [sceneIndex, scene] of scenes.entries()) {
+    for (const scene of scenes) {
       const safeFile = `${scene.id.replace(/[^a-zA-Z0-9_-]/g, "_")}.mp3`;
       const absMp3Path = path.join(paths.formatAudioDir(format), safeFile);
-      const relMp3Path = `${format}/${safeFile}`;
-
-      const { result, warnings: sceneWarnings } = qwenResults?.[sceneIndex] ?? await synthesizeSceneWithFallback(
-        scene,
-        format,
-        absMp3Path,
-        paths.audioCustomDir,
-        requestedProvider,
-        options,
-      );
+      const saved = retained.get(scene.id);
+      const { result, warnings: sceneWarnings } = saved ? { result: saved, warnings: [] } :
+        generated.get(scene.id) ?? await synthesizeSceneWithFallback(
+          scene, format, absMp3Path, paths.audioCustomDir, requestedProvider, options,
+        );
       warnings.push(...sceneWarnings);
       lastProvider = result.provider;
       lastVoice = result.voice;
@@ -180,7 +205,7 @@ export async function synthesizeEpisodeAudio(
 
       audioEntries.push({
         sceneId: scene.id,
-        audioFile: relMp3Path,
+        audioFile: path.relative(paths.audioDir, result.audioPath),
         durationSec: result.durationSec,
         leadInSec,
         tailPadSec,

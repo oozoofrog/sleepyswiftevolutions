@@ -5,15 +5,15 @@
   "swiftVersion": "2.2",
   "proposalState": "implemented",
   "proposalTitle": "Allow (most) keywords as argument labels",
-  "koreanTitle": "이제 `in`도 백틱 없이 함수 인자 레이블로 쓸 수 있다고?",
+  "koreanTitle": "Swift 2.2에서 in 양옆의 백틱이 사라진 이유",
   "authors": [
     "Doug Gregor"
   ],
   "proposalUrl": "https://github.com/swiftlang/swift-evolution/blob/main/proposals/0001-keywords-as-argument-labels.md",
   "thumbnail": {
     "eyebrow": "EP.001 · SWIFT 2.2",
-    "headline": "백틱(`) 지옥 탈출!\n키워드 인자 레이블 허용",
-    "subheadline": "SE-0001 · Allow (most) keywords as argument labels",
+    "headline": "백틱 두 개가\n사라진 자리",
+    "subheadline": "듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기",
     "codeBefore": "indexOf(value, `in`: list)",
     "codeAfter": "indexOf(value, in: list)"
   },
@@ -22,16 +22,16 @@
       "id": "01-intro",
       "type": "intro",
       "chapterTitle": "인트로",
-      "heading": "이 코드에서 지워도 되는 글자 두 개, 보이세요?",
+      "heading": "이 코드에서 지워도 되는 글자 두 개, 보이죠?",
       "subheading": "Allow (most) keywords as argument labels",
-      "narration": "이 코드에서 지워도 되는 글자 두 개, 보이세요? in 양옆의 백틱이 쏙 빠집니다.",
-      "badge": "Swift Evolution 역사적인 첫 제안",
+      "narration": "이 코드에서 지워도 되는 글자 두 개, 보이죠? in 양옆의 백틱이 쏙 빠져요.",
+      "badge": "듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기",
       "includeInShort": true,
       "speech": [
         {
           "language": "ko",
-          "caption": "이 코드에서 지워도 되는 글자 두 개, 보이세요?",
-          "text": "이 코드에서 지워도 되는 글자 두 개, 보이세요?"
+          "caption": "이 코드에서 지워도 되는 글자 두 개, 보이죠?",
+          "text": "이 코드에서 지워도 되는 글자 두 개, 보이죠?"
         },
         {
           "language": "ko",
@@ -40,8 +40,8 @@
         },
         {
           "language": "ko",
-          "caption": "쏙 빠집니다.",
-          "text": "쏙 빠집니다."
+          "caption": "쏙 빠져요.",
+          "text": "쏙 빠져요."
         }
       ],
       "codeReveal": {
@@ -56,8 +56,16 @@
           },
           ": list)"
         ],
-        "answerCue": "쏙 빠집니다."
-      }
+        "answerCue": "쏙 빠져요."
+      },
+      "deliveryNote": "같은 화면을 보고 있는 동료에게 묻듯 “두 개, 보이죠?”를 가볍게 올려 읽어요. 한 박자 쉬고 “백틱이 쏙 빠져요”를 한 호흡에 말해요.",
+      "termNotes": [
+        {
+          "term": "백틱",
+          "meaning": "이름을 감쌀 때 쓰는 기호 ( ` )",
+          "cue": "백틱이"
+        }
+      ]
     },
     {
       "id": "01-history",
@@ -67,16 +75,16 @@
       "speech": [
         {
           "language": "ko",
-          "caption": "2015년 11월에 제안서가 작성됐고, 12월에 구현됐습니다.",
-          "text": "이천십오 년 십일월에 제안서가 작성됐고, 십이월에 구현됐습니다."
+          "caption": "이 얘기가 처음 나온 건 2015년 11월이에요.",
+          "text": "이 얘기가 처음 나온 건 이천십오 년 십일월이에요."
         },
         {
           "language": "ko",
-          "caption": "2016년 3월, Swift 2.2에 이 문법이 담겼습니다.",
-          "text": "이천십육 년 삼월, 스위프트 이 점 이에 이 문법이 담겼습니다."
+          "caption": "그해 12월에 구현됐고, 이듬해 3월에 나온 Swift 2.2부터 쓸 수 있었어요.",
+          "text": "그해 십이월에 구현됐고, 이듬해 삼월에 나온 스위프트 이 점 이부터 쓸 수 있었어요."
         }
       ],
-      "narration": "2015년 11월에 제안서가 작성됐고, 12월에 구현됐습니다. 2016년 3월, Swift 2.2에 이 문법이 담겼습니다.",
+      "narration": "이 얘기가 처음 나온 건 2015년 11월이에요. 그해 12월에 구현됐고, 이듬해 3월에 나온 Swift 2.2부터 쓸 수 있었어요.",
       "milestones": [
         {
           "date": "2015.11.04",
@@ -93,7 +101,8 @@
           "event": "Swift 2.2 정식 출시",
           "sourceUrl": "https://www.swift.org/blog/swift-2.2-released/"
         }
-      ]
+      ],
+      "deliveryNote": "연도는 같은 높이로 가볍게 지나갑니다. ‘제안서’와 ‘구현’을 구분하고 마지막 ‘스위프트 이 점 이’를 분명히 읽습니다."
     },
     {
       "id": "02-problem",
@@ -101,7 +110,7 @@
       "chapterTitle": "도입 배경과 불편함",
       "heading": "가장 자연스러운 이름이 예약어일 때",
       "subheading": "컬렉션에서 값을 찾을 때, 'in'보다 좋은 이름이 있을까요?",
-      "narration": "컬렉션에서 값의 위치를 찾는 함수를 예로 들어 보죠. 이름을 소리 내어 읽으면 이렇습니다. indexOf, in. 무엇을 찾는지, 어디에서 찾는지가 드러납니다. 그런데 예전에는 in이 예약어라서 양옆에 백틱을 붙여야 했습니다.",
+      "narration": "리스트에서 값 하나를 찾는다고 해 봐요. 함수 이름을 한번 읽어 볼게요. index of a value in a collection. 어떤 값을 어디에서 찾는지 이름만 봐도 보이죠? 예전엔 in이 예약어라서 양옆에 백틱을 붙여야 했어요.",
       "bullets": [
         "함수 인자 레이블에 in, repeat, defer 같은 키워드를 그대로 못 씀",
         "개발자들이 억지로 within 같은 어색한 대체 이름을 선택하게 됨",
@@ -127,18 +136,36 @@
       "speech": [
         {
           "language": "ko",
-          "caption": "컬렉션에서 값의 위치를 찾는 함수를 예로 들어 보죠. 이름을 소리 내어 읽으면 이렇습니다.",
-          "text": "컬렉션에서 값의 위치를 찾는 함수를 예로 들어 보죠. 이름을 소리 내어 읽으면 이렇습니다."
-        },
-        {
-          "language": "en",
-          "caption": "indexOf, in.",
-          "text": "index of, in."
+          "caption": "리스트에서 값 하나를 찾는다고 해 봐요.",
+          "text": "리스트에서 값 하나를 찾는다고 해 봐요."
         },
         {
           "language": "ko",
-          "caption": "무엇을 찾는지, 어디에서 찾는지가 드러납니다. 그런데 예전에는 in이 예약어라서 양옆에 백틱을 붙여야 했습니다.",
-          "text": "무엇을 찾는지, 어디에서 찾는지가 드러납니다. 그런데 예전에는 인이 예약어라서 양옆에 백틱을 붙여야 했습니다."
+          "caption": "함수 이름을 한번 읽어 볼게요.",
+          "text": "함수 이름을 한번 읽어 볼게요."
+        },
+        {
+          "language": "en",
+          "caption": "index of a value in a collection.",
+          "text": "Index of a value in a collection."
+        },
+        {
+          "language": "ko",
+          "caption": "어떤 값을 어디에서 찾는지 이름만 봐도 보이죠?",
+          "text": "어떤 값을 어디에서 찾는지 이름만 봐도 보이죠?"
+        },
+        {
+          "language": "ko",
+          "caption": "예전엔 in이 예약어라서 양옆에 백틱을 붙여야 했어요.",
+          "text": "예전엔 인이 예약어라서 양옆에 백틱을 붙여야 했어요."
+        }
+      ],
+      "deliveryNote": "예시를 건네듯 시작합니다. 영어 호출은 한 덩어리로 읽고, 다시 한국어로 돌아오면 ‘예약어’에 힘을 줍니다.",
+      "termNotes": [
+        {
+          "term": "예약어",
+          "meaning": "Swift가 문법에 쓰려고 정해 둔 단어",
+          "cue": "예약어"
         }
       ]
     },
@@ -146,9 +173,9 @@
       "id": "03-compare",
       "type": "code-compare",
       "chapterTitle": "Before & After",
-      "heading": "백틱을 벗고, 영어 문장처럼 읽히는 API로",
-      "subheading": "호출부와 선언부 문법에서 키워드 제약을 과감히 해제했습니다",
-      "narration": "두 호출에서 두 번째 인자를 보세요. 왼쪽은 in 양옆에 백틱이 있습니다. 오른쪽은 같은 자리에 레이블만 남습니다. 콜론 뒤로 넘기는 컬렉션도, 함수가 하는 일도 같습니다. 이미 작성한 호출은 그대로 동작합니다.",
+      "heading": "Swift 2.2에서 바뀐 호출 방식",
+      "subheading": "같은 값을 넘겨도 in 양옆의 백틱을 생략할 수 있었어요.",
+      "narration": "왼쪽 코드에서 두 번째 인자를 봐요. 오른쪽도 같은 리스트를 넘기죠? 달라진 건 in 양옆의 백틱 두 개예요. 예전에 쓰던 호출도 그대로 동작해요.",
       "codeBefore": {
         "label": "Before · Swift 2.1",
         "filename": "Before.swift",
@@ -175,23 +202,36 @@
           6
         ]
       },
-      "callout": "기존에 정상 동작하던 코드는 단 한 줄도 깨지지 않는 100% 추가적(additive) 변경",
+      "callout": "백틱을 붙인 호출도 그대로 쓸 수 있었어요.",
       "includeInShort": true,
       "speech": [
         {
           "language": "ko",
-          "caption": "두 호출에서 두 번째 인자를 보세요.",
-          "text": "두 호출에서 두 번째 인자를 보세요."
+          "caption": "왼쪽 코드에서 두 번째 인자를 봐요.",
+          "text": "왼쪽 코드에서 두 번째 인자를 봐요."
         },
         {
           "language": "ko",
-          "caption": "왼쪽은 in 양옆에 백틱이 있습니다. 오른쪽은 같은 자리에 레이블만 남습니다.",
-          "text": "왼쪽은 인 양옆에 백틱이 있습니다. 오른쪽은 같은 자리에 레이블만 남습니다."
+          "caption": "오른쪽도 같은 리스트를 넘기죠?",
+          "text": "오른쪽도 같은 리스트를 넘기죠?"
         },
         {
           "language": "ko",
-          "caption": "콜론 뒤로 넘기는 컬렉션도, 함수가 하는 일도 같습니다. 이미 작성한 호출은 그대로 동작합니다.",
-          "text": "콜론 뒤로 넘기는 컬렉션도, 함수가 하는 일도 같습니다. 이미 작성한 호출은 그대로 동작합니다."
+          "caption": "달라진 건 in 양옆의 백틱 두 개예요.",
+          "text": "달라진 건 인 양옆의 백틱 두 개예요."
+        },
+        {
+          "language": "ko",
+          "caption": "예전에 쓰던 호출도 그대로 동작해요.",
+          "text": "예전에 쓰던 호출도 그대로 동작해요."
+        }
+      ],
+      "deliveryNote": "‘왼쪽’에서 시선을 짚어 주고, ‘오른쪽’에서 앞보다 살짝 높은 음으로 시작합니다. 결론인 ‘그대로 동작합니다’는 안정되게 내립니다.",
+      "termNotes": [
+        {
+          "term": "인자",
+          "meaning": "함수를 부를 때 건네는 값",
+          "cue": "인자를"
         }
       ]
     },
@@ -200,8 +240,8 @@
       "type": "code-focus",
       "chapterTitle": "단 3가지 예외 규칙",
       "heading": "제목에 '(most)'가 붙은 이유",
-      "subheading": "inout, var, let은 여전히 백틱이 필요합니다",
-      "narration": "제안서 제목에는 단서가 있습니다. most keywords. 대부분의 키워드라는 뜻입니다. 당시 함수 선언에서는 다음 세 단어가 매개변수를 꾸미는 역할도 했습니다. inout, var, let. 그래서 선언에서 이 단어들을 레이블로 쓰려면 백틱으로 구별해야 했습니다.",
+      "subheading": "Swift 2.2의 함수 선언에서 예외였던 세 단어",
+      "narration": "제안서 제목을 보면 이런 말이 있어요. most keywords. 대부분의 키워드라는 뜻이죠. 그럼 어떤 단어가 빠졌을까요? inout, var, let. 당시엔 이 셋이 선언부에서 매개변수를 꾸미기도 했어요. 그래서 레이블로 쓰려면 백틱을 남겨 둬야 했죠.",
       "bullets": [
         "호출식에서는 '<키워드>:' 형태가 모호하지 않아 전부 안전하게 파싱 가능",
         "선언부에서는 inout, var, let이 파라미터 수식어와 충돌해 예외로 남김",
@@ -224,8 +264,8 @@
       "speech": [
         {
           "language": "ko",
-          "caption": "제안서 제목에는 단서가 있습니다.",
-          "text": "제안서 제목에는 단서가 있습니다."
+          "caption": "제안서 제목을 보면 이런 말이 있어요.",
+          "text": "제안서 제목을 보면 이런 말이 있어요."
         },
         {
           "language": "en",
@@ -234,8 +274,13 @@
         },
         {
           "language": "ko",
-          "caption": "대부분의 키워드라는 뜻입니다. 당시 함수 선언에서는 다음 세 단어가 매개변수를 꾸미는 역할도 했습니다.",
-          "text": "대부분의 키워드라는 뜻입니다. 당시 함수 선언에서는 다음 세 단어가 매개변수를 꾸미는 역할도 했습니다."
+          "caption": "대부분의 키워드라는 뜻이죠.",
+          "text": "대부분의 키워드라는 뜻이죠."
+        },
+        {
+          "language": "ko",
+          "caption": "그럼 어떤 단어가 빠졌을까요?",
+          "text": "그럼 어떤 단어가 빠졌을까요?"
         },
         {
           "language": "en",
@@ -244,8 +289,26 @@
         },
         {
           "language": "ko",
-          "caption": "그래서 선언에서 이 단어들을 레이블로 쓰려면 백틱으로 구별해야 했습니다.",
-          "text": "그래서 선언에서 이 단어들을 레이블로 쓰려면 백틱으로 구별해야 했습니다."
+          "caption": "당시엔 이 셋이 선언부에서 매개변수를 꾸미기도 했어요.",
+          "text": "당시엔 이 셋이 선언부에서 매개변수를 꾸미기도 했어요."
+        },
+        {
+          "language": "ko",
+          "caption": "그래서 레이블로 쓰려면 백틱을 남겨 둬야 했죠.",
+          "text": "그래서 레이블로 쓰려면 백틱을 남겨 둬야 했죠."
+        }
+      ],
+      "deliveryNote": "most keywords에서 most를 강조합니다. 세 단어는 일정한 간격으로 읽고, 한국어 설명은 마지막 단어가 끝난 뒤 시작합니다.",
+      "termNotes": [
+        {
+          "term": "매개변수",
+          "meaning": "함수 안에서 전달받은 값을 부르는 이름",
+          "cue": "매개변수"
+        },
+        {
+          "term": "인자 레이블",
+          "meaning": "호출할 때 값 앞에 붙이는 이름. 여기서는 in",
+          "cue": "레이블"
         }
       ]
     },
@@ -254,7 +317,7 @@
       "type": "key-points",
       "chapterTitle": "핵심 포인트 정리",
       "heading": "SE-0001이 남긴 Swift의 API 철학",
-      "narration": "인자 레이블은 함수를 호출하는 사람이 읽는 이름입니다. 예전에는 예약어를 피하려고 in 대신 within 같은 이름을 고르기도 했죠. 이 제안 덕분에 개발자는 문맥에 잘 맞는 짧은 이름을 그대로 쓸 수 있게 됐습니다.",
+      "narration": "당시 제안서에는 다른 이름도 나와요. within. 백틱을 피하려고 고른 이름이에요. Swift 2.2부터는 짧게 in이라고 쓸 수 있게 됐어요.",
       "bullets": [
         "호출부에서 in, protocol, default 등을 백틱 없이 바로 사용",
         "inout·var·let 3개 키워드만 선언부 모호성 때문에 예외 유지",
@@ -265,44 +328,57 @@
       "speech": [
         {
           "language": "ko",
-          "caption": "인자 레이블은 함수를 호출하는 사람이 읽는 이름입니다.",
-          "text": "인자 레이블은 함수를 호출하는 사람이 읽는 이름입니다."
+          "caption": "당시 제안서에는 다른 이름도 나와요.",
+          "text": "당시 제안서에는 다른 이름도 나와요."
+        },
+        {
+          "language": "en",
+          "caption": "within.",
+          "text": "Within."
         },
         {
           "language": "ko",
-          "caption": "예전에는 예약어를 피하려고 in 대신 within 같은 이름을 고르기도 했죠.",
-          "text": "예전에는 예약어를 피하려고 인 대신 위딘 같은 이름을 고르기도 했죠."
+          "caption": "백틱을 피하려고 고른 이름이에요.",
+          "text": "백틱을 피하려고 고른 이름이에요."
         },
         {
           "language": "ko",
-          "caption": "이 제안 덕분에 개발자는 문맥에 잘 맞는 짧은 이름을 그대로 쓸 수 있게 됐습니다.",
-          "text": "이 제안 덕분에 개발자는 문맥에 잘 맞는 짧은 이름을 그대로 쓸 수 있게 됐습니다."
+          "caption": "Swift 2.2부터는 짧게 in이라고 쓸 수 있게 됐어요.",
+          "text": "스위프트 이 점 이부터는 짧게 인이라고 쓸 수 있게 됐어요."
         }
-      ]
+      ],
+      "deliveryNote": "첫 문장은 한 사람에게 답하듯 읽습니다. ‘짧은 이름’을 또렷하게 하고 종결은 짧게 마칩니다."
     },
     {
       "id": "06-outro",
       "type": "outro",
       "chapterTitle": "마무리 & 다음 예고",
-      "heading": "작지만 큰 첫 걸음, SE-0001",
-      "subheading": "Swift Evolution을 처음부터 끝까지 함께 정복해 봅시다",
-      "narration": "오늘의 변화는 코드 한 줄에서 확인할 수 있습니다. 레이블 양옆의 백틱이 사라졌습니다. 다음 편에서는 SE-0002가 함수를 커링 형태로 선언하는 문법을 왜 없앴는지 살펴보겠습니다.",
+      "heading": "값을 어디에서 찾을까요?",
+      "subheading": "in 다음에 오는 값이 검색 대상이에요.",
+      "narration": "이 함수에서 in은 값을 어디에서 찾을지 알려 줘요. 다음 편에서는 스위프트가 커링 문법을 없앤 이유를 살펴볼게요.",
       "bullets": [
         "SE-0001 핵심: inout, var, let을 제외한 키워드의 인자 레이블 허용 (Swift 2.2)",
         "다음 에피소드 예고: SE-0002 - Removing currying func declaration syntax"
       ],
-      "callout": "구독과 좋아요로 다음 Swift Evolution 에피소드를 놓치지 마세요!",
       "includeInShort": false,
       "speech": [
         {
           "language": "ko",
-          "caption": "오늘의 변화는 코드 한 줄에서 확인할 수 있습니다. 레이블 양옆의 백틱이 사라졌습니다.",
-          "text": "오늘의 변화는 코드 한 줄에서 확인할 수 있습니다. 레이블 양옆의 백틱이 사라졌습니다."
+          "caption": "이 함수에서 in은 값을 어디에서 찾을지 알려 줘요.",
+          "text": "이 함수에서 인은 값을 어디에서 찾을지 알려 줘요."
         },
         {
           "language": "ko",
-          "caption": "다음 편에서는 SE-0002가 함수를 커링 형태로 선언하는 문법을 왜 없앴는지 살펴보겠습니다.",
-          "text": "다음 편에서는 두 번째 제안이 함수를 커링 형태로 선언하는 문법을 왜 없앴는지 살펴보겠습니다."
+          "caption": "다음 편에서는 스위프트가 커링 문법을 없앤 이유를 살펴볼게요.",
+          "text": "다음 편에서는 스위프트가 커링 문법을 없앤 이유를 살펴볼게요."
+        }
+      ],
+      "deliveryNote": "‘백틱이 사라졌습니다’에서 결론을 맺습니다. 숨을 한 번 고른 뒤 다음 편을 평소 말투로 소개합니다.",
+      "termNotes": [
+        {
+          "term": "커링",
+          "meaning": "값을 하나씩 받는 함수로 나누는 방식",
+          "cue": "커링"
         }
       ]
     }
@@ -312,14 +388,14 @@
       "id": "s01-hook",
       "type": "intro",
       "chapterTitle": "훅",
-      "heading": "이 코드에서 지워도 되는 글자 두 개, 보이세요?",
+      "heading": "이 코드에서 지워도 되는 글자 두 개, 보이죠?",
       "subheading": "Swift 2.2 · Allow (most) keywords as argument labels",
-      "narration": "이 코드에서 지워도 되는 글자 두 개, 보이세요? in 양옆의 백틱이 쏙 빠집니다.",
+      "narration": "이 코드에서 지워도 되는 글자 두 개, 보이죠? in 양옆의 백틱이 쏙 빠져요.",
       "speech": [
         {
           "language": "ko",
-          "caption": "이 코드에서 지워도 되는 글자 두 개, 보이세요?",
-          "text": "이 코드에서 지워도 되는 글자 두 개, 보이세요?"
+          "caption": "이 코드에서 지워도 되는 글자 두 개, 보이죠?",
+          "text": "이 코드에서 지워도 되는 글자 두 개, 보이죠?"
         },
         {
           "language": "ko",
@@ -328,8 +404,8 @@
         },
         {
           "language": "ko",
-          "caption": "쏙 빠집니다.",
-          "text": "쏙 빠집니다."
+          "caption": "쏙 빠져요.",
+          "text": "쏙 빠져요."
         }
       ],
       "codeReveal": {
@@ -344,8 +420,17 @@
           },
           ": list)"
         ],
-        "answerCue": "쏙 빠집니다."
-      }
+        "answerCue": "쏙 빠져요."
+      },
+      "deliveryNote": "같은 화면을 보고 있는 동료에게 묻듯 “두 개, 보이죠?”를 가볍게 올려 읽어요. 한 박자 쉬고 “백틱이 쏙 빠져요”를 한 호흡에 말해요.",
+      "badge": "듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기",
+      "termNotes": [
+        {
+          "term": "백틱",
+          "meaning": "이름을 감쌀 때 쓰는 기호 ( ` )",
+          "cue": "백틱이"
+        }
+      ]
     },
     {
       "id": "s01-history",
@@ -355,16 +440,16 @@
       "speech": [
         {
           "language": "ko",
-          "caption": "2015년 11월에 제안서가 작성됐고, 12월에 구현됐습니다.",
-          "text": "이천십오 년 십일월에 제안서가 작성됐고, 십이월에 구현됐습니다."
+          "caption": "이 얘기가 처음 나온 건 2015년 11월이에요.",
+          "text": "이 얘기가 처음 나온 건 이천십오 년 십일월이에요."
         },
         {
           "language": "ko",
-          "caption": "2016년 3월, Swift 2.2에 이 문법이 담겼습니다.",
-          "text": "이천십육 년 삼월, 스위프트 이 점 이에 이 문법이 담겼습니다."
+          "caption": "그해 12월에 구현됐고, 이듬해 3월에 나온 Swift 2.2부터 쓸 수 있었어요.",
+          "text": "그해 십이월에 구현됐고, 이듬해 삼월에 나온 스위프트 이 점 이부터 쓸 수 있었어요."
         }
       ],
-      "narration": "2015년 11월에 제안서가 작성됐고, 12월에 구현됐습니다. 2016년 3월, Swift 2.2에 이 문법이 담겼습니다.",
+      "narration": "이 얘기가 처음 나온 건 2015년 11월이에요. 그해 12월에 구현됐고, 이듬해 3월에 나온 Swift 2.2부터 쓸 수 있었어요.",
       "milestones": [
         {
           "date": "2015.11.04",
@@ -381,14 +466,15 @@
           "event": "Swift 2.2 정식 출시",
           "sourceUrl": "https://www.swift.org/blog/swift-2.2-released/"
         }
-      ]
+      ],
+      "deliveryNote": "연도는 같은 높이로 가볍게 지나갑니다. ‘제안서’와 ‘구현’을 구분하고 마지막 ‘스위프트 이 점 이’를 분명히 읽습니다."
     },
     {
       "id": "s02-compare",
       "type": "code-compare",
       "chapterTitle": "Before & After",
-      "heading": "SE-0001로 백틱 지옥 탈출!",
-      "narration": "원래 in은 예약어였습니다. 두 번째 인자의 레이블을 영어로 읽어 볼까요? in. 어디에서 찾는지를 알려 주는 말이죠. 첫 번째 제안이 적용되면서 호출할 때 백틱을 뺄 수 있게 됐습니다.",
+      "heading": "Swift 2.2에서 빠진 백틱 두 개",
+      "narration": "이 함수는 어디에서 값을 찾을까요? in a collection. 바로 뒤에 오는 컬렉션에서 찾아요. Swift 2.2부터는 이 레이블을 백틱 없이 쓸 수 있었어요.",
       "codeBefore": {
         "label": "Before · Swift 2.1",
         "code": "indexOf(value, `in`: collection)\nNSXPCInterface(`protocol`: Service.self)",
@@ -408,18 +494,36 @@
       "speech": [
         {
           "language": "ko",
-          "caption": "원래 in은 예약어였습니다. 두 번째 인자의 레이블을 영어로 읽어 볼까요?",
-          "text": "원래 인은 예약어였습니다. 두 번째 인자의 레이블을 영어로 읽어 볼까요?"
+          "caption": "이 함수는 어디에서 값을 찾을까요?",
+          "text": "이 함수는 어디에서 값을 찾을까요?"
         },
         {
           "language": "en",
-          "caption": "in.",
-          "text": "In."
+          "caption": "in a collection.",
+          "text": "In a collection."
         },
         {
           "language": "ko",
-          "caption": "어디에서 찾는지를 알려 주는 말이죠. 첫 번째 제안이 적용되면서 호출할 때 백틱을 뺄 수 있게 됐습니다.",
-          "text": "어디에서 찾는지를 알려 주는 말이죠. 첫 번째 제안이 적용되면서 호출할 때 백틱을 뺄 수 있게 됐습니다."
+          "caption": "바로 뒤에 오는 컬렉션에서 찾아요.",
+          "text": "바로 뒤에 오는 컬렉션에서 찾아요."
+        },
+        {
+          "language": "ko",
+          "caption": "Swift 2.2부터는 이 레이블을 백틱 없이 쓸 수 있었어요.",
+          "text": "스위프트 이 점 이부터는 이 레이블을 백틱 없이 쓸 수 있었어요."
+        }
+      ],
+      "deliveryNote": "영어 in은 짧고 또렷하게 읽습니다. 바로 뒤 설명의 ‘어디에서’를 강조해 레이블의 뜻이 들리게 합니다.",
+      "termNotes": [
+        {
+          "term": "컬렉션",
+          "meaning": "여러 값을 모아 둔 것. 배열이 한 예예요",
+          "cue": "컬렉션"
+        },
+        {
+          "term": "인자 레이블",
+          "meaning": "호출할 때 값 앞에 붙이는 이름. 여기서는 in",
+          "cue": "레이블"
         }
       ]
     },
@@ -427,8 +531,8 @@
       "id": "s03-rule",
       "type": "key-points",
       "chapterTitle": "핵심 1줄",
-      "heading": "단 3개만 빼고 전부 허용!",
-      "narration": "당시 선언부에서는 세 단어가 예외였습니다. inout, var, let. 이 셋은 매개변수를 꾸미는 역할도 해서, 레이블로 쓰려면 백틱이 필요했습니다.",
+      "heading": "당시 함수 선언에 남은 세 가지 예외",
+      "narration": "당시 선언부에선 세 단어가 예외였어요. inout, var, let. 이 셋은 매개변수를 꾸밀 때도 쓰여서, 레이블로 쓰려면 백틱이 필요했어요.",
       "bullets": [
         "대부분 키워드(in, protocol, repeat 등) 자유롭게 사용",
         "예외 단 3개: inout · var · let"
@@ -437,8 +541,8 @@
       "speech": [
         {
           "language": "ko",
-          "caption": "당시 선언부에서는 세 단어가 예외였습니다.",
-          "text": "당시 선언부에서는 세 단어가 예외였습니다."
+          "caption": "당시 선언부에선 세 단어가 예외였어요.",
+          "text": "당시 선언부에선 세 단어가 예외였어요."
         },
         {
           "language": "en",
@@ -447,16 +551,24 @@
         },
         {
           "language": "ko",
-          "caption": "이 셋은 매개변수를 꾸미는 역할도 해서, 레이블로 쓰려면 백틱이 필요했습니다.",
-          "text": "이 셋은 매개변수를 꾸미는 역할도 해서, 레이블로 쓰려면 백틱이 필요했습니다."
+          "caption": "이 셋은 매개변수를 꾸밀 때도 쓰여서, 레이블로 쓰려면 백틱이 필요했어요.",
+          "text": "이 셋은 매개변수를 꾸밀 때도 쓰여서, 레이블로 쓰려면 백틱이 필요했어요."
+        }
+      ],
+      "deliveryNote": "‘세 단어’로 예고한 뒤 inout, var, let을 같은 박자로 읽습니다. 마지막 ‘백틱’이 잘 들리도록 끝까지 발음합니다.",
+      "termNotes": [
+        {
+          "term": "매개변수",
+          "meaning": "함수 안에서 전달받은 값을 부르는 이름",
+          "cue": "매개변수"
         }
       ]
     }
   ],
   "youtube": {
     "long": {
-      "title": "[Swift Evolution #001] SE-0001 - `in`을 백틱 없이 함수 인자 레이블로! (Swift 2.2)",
-      "description": "Swift Evolution을 처음부터 현재까지 하나씩 소개하는 시리즈 첫 번째 에피소드!\nSE-0001 (Allow most keywords as argument labels)의 도입 배경, Before/After 코드 비교, 그리고 왜 inout/var/let 3개만 예외로 남았는지 깔끔하게 정리합니다.\n\n제안자: Doug Gregor\n도입 버전: Swift 2.2",
+      "title": "백틱 두 개가 사라진 자리 · SE-0001 | 듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기",
+      "description": "듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기\n\nSwift 2.2에서 달라진 함수 호출 한 줄을 함께 읽어봐요. 첫 제안인 SE-0001이 인자 레이블의 백틱을 어떻게 바꿨는지 살펴봅니다.",
       "tags": [
         "Swift",
         "SwiftEvolution",
@@ -473,8 +585,8 @@
       "defaultLanguage": "ko"
     },
     "short": {
-      "title": "예전 Swift에선 in: 쓸 때도 백틱을 붙였다고? | SE-0001 #Shorts",
-      "description": "Swift Evolution 역사상 1호 제안 SE-0001을 1분 만에 정리합니다!\n\n#Swift #SwiftEvolution #SE0001 #iOS개발 #Shorts",
+      "title": "백틱 두 개가 사라진 자리 · SE-0001 | 듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기 #Shorts",
+      "description": "듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기\n\nSwift 2.2에서 달라진 함수 호출 한 줄을 함께 읽어봐요. 첫 제안인 SE-0001이 인자 레이블의 백틱을 어떻게 바꿨는지 살펴봅니다.\n\n#Swift #SE0001 #Shorts",
       "tags": [
         "Swift",
         "SwiftEvolution",

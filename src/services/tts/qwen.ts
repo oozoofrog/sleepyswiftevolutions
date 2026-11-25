@@ -4,7 +4,7 @@ import path from "node:path";
 import { promisify } from "node:util";
 import { getConfig } from "../../config/env";
 import { probeAudioDurationSec } from "../../lib/audio-probe";
-import { sentencePauseSec } from "../../lib/pacing";
+import { narrationSegments, sentencePauseSec } from "../../lib/pacing";
 import { PROJECT_ROOT } from "../../lib/paths";
 import { groupAlignedWordsToCues } from "../../lib/subtitle";
 import type { Scene, SubtitleCue } from "../../schema/script";
@@ -32,16 +32,7 @@ export async function synthesizeQwenScenes(
   const voice = clone ? "voice-profile" : selectedVoice || config.qwen3Voice;
   const work = await fs.mkdtemp(path.join(outDir, ".qwen-"));
   try {
-    const segments = scenes.map(scene => {
-      const parts = scene.speech ?? [{ language: "ko", text: scene.narration, caption: scene.narration }];
-      return parts.flatMap(part => {
-        const split = /(?<=[.!?。！？])\s+/u;
-        const captions = part.caption.split(split);
-        const readings = part.text.split(split);
-        if (captions.length !== readings.length || part.caption === scene.codeReveal?.answerCue) return [part];
-        return readings.map((text, i) => ({ ...part, text, caption: captions[i] }));
-      });
-    });
+    const segments = scenes.map(narrationSegments);
     const items = segments.flatMap((parts, i) => parts.map((part, j) => ({
       id: `${i}-${j}`,
       wavPath: path.resolve(work, `${i}-${j}.wav`),

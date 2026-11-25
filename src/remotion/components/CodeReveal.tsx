@@ -35,6 +35,8 @@ export function CodeReveal({ timing, reveal }: {
   }, [reveal.parts]);
   const portrait = height > width;
   return <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", gap: 50, padding: "0 6%" }}>
+    {timing.scene.badge && <div style={{ fontFamily: FONT_SANS, fontSize: portrait ? 30 : 28,
+      color: THEME.textSecondary, textAlign: "center" }}>{timing.scene.badge}</div>}
     <div style={{ font: `600 ${portrait ? 58 : 66}px ${FONT_SANS}`, color: THEME.textPrimary,
       textAlign: "center", wordBreak: "keep-all", maxWidth: portrait ? 820 : 1600 }}><KineticHeading text={timing.scene.heading} /></div>
     <div style={{ fontFamily: FONT_MONO, fontSize: Math.min(portrait ? 64 : 94, width * 0.78 / (count * 0.62)),

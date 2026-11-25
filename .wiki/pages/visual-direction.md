@@ -5,7 +5,7 @@ created: "2026-11-26"
 updated: "2026-11-26"
 aliases: ["타이포그래피와 코드 모션"]
 tags: [swift-evolution, production]
-sources: ["2026-11-26-editorial-guide.md", "2026-11-26-decision-journal.md"]
+sources: ["2026-11-26-editorial-guide.md", "2026-11-26-decision-journal.md", "2026-11-26-term-definitions.md"]
 ---
 
 # Typography and code motion
@@ -20,3 +20,5 @@ Follow the opening with [[se-0001-history]] and time the answer to [[narration]]
 
 - [Snapshot of editorial-guide](../sources/2026-11-26-editorial-guide.md)
 - [Snapshot of decision-journal](../sources/2026-11-26-decision-journal.md)
+
+Write for beginner and intermediate Swift developers. When a technical term first appears, show a short Korean definition tied to the code on screen. Anchor the note to a matching subtitle phrase. Keep the opening puzzle free of clues until the answer begins. Apply the same rule independently to Shorts. [Source](../sources/2026-11-26-term-definitions.md)

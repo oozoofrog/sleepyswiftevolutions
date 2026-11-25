@@ -1,4 +1,4 @@
-import { SCENE_PADDING } from "./pacing";
+import { narrationSegments, SCENE_PADDING, sentencePauseSec } from "./pacing";
 import type { AudioManifest, EpisodeScript, Scene, SubtitleCue } from "../schema/script";
 import { buildFallbackCues } from "./subtitle";
 
@@ -130,13 +130,23 @@ export function buildSceneTimeline(
   let cursorFrame = 0;
 
   for (const scene of rawScenes) {
-    const speechSec = estimateNarrationDurationSec(scene.narration);
+    const segments = narrationSegments(scene);
+    const charCounts = segments.map(part => Math.max(1, part.text.replace(/\s+/gu, "").length));
+    const totalChars = charCounts.reduce((sum, count) => sum + count, 0);
+    const estimate = estimateNarrationDurationSec(segments.map(part => part.text).join(" "));
+    let speechSec = 0;
+    const localCues = segments.map((segment, index) => {
+      const startSec = speechSec;
+      const endSec = startSec + estimate * charCounts[index] / totalChars;
+      speechSec = endSec + (index + 1 < segments.length ? sentencePauseSec(segment.text) : 0);
+      return { startSec, endSec, text: segment.caption };
+    });
     const totalSec = Number((leadInSec + speechSec + tailPadSec).toFixed(3));
     const durationInFrames = Math.max(1, Math.round(totalSec * fps));
     const startSec = Number(cursorSec.toFixed(3));
     const endSec = Number((cursorSec + totalSec).toFixed(3));
 
-    const cues = buildFallbackCues(scene.narration, speechSec).map((c) => ({
+    const cues = localCues.map((c) => ({
       startSec: Number((startSec + leadInSec + c.startSec).toFixed(3)),
       endSec: Number((startSec + leadInSec + c.endSec).toFixed(3)),
       text: c.text,
