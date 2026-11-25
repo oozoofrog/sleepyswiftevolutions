@@ -5,7 +5,7 @@ created: "2026-11-26"
 updated: "2026-11-26"
 aliases: ["제작 지시사항"]
 tags: [swift-evolution, production]
-sources: ["2026-11-26-project-instructions.md", "2026-11-26-decision-journal.md"]
+sources: ["2026-11-26-project-instructions.md", "2026-11-26-decision-journal.md", "2026-11-26-episode-tools.md"]
 ---
 
 # Production instructions
@@ -18,3 +18,5 @@ The creator wants conversation decisions to accumulate in the project. Keep the 
 
 - [Snapshot of project-instructions](../sources/2026-11-26-project-instructions.md)
 - [Snapshot of decision-journal](../sources/2026-11-26-decision-journal.md)
+
+Use the voice command with one format and the changed scene IDs to preserve approved narration in the other scenes. Render that format, then use check-video to verify the media and captions. Use scene-clip to extract a listening sample from the rendered video. [Revision tools](../sources/2026-11-26-episode-tools.md)

@@ -155,6 +155,9 @@ export async function synthesizeEpisodeAudio(
       if (formats.length !== 1 || options.sceneIds?.some(id => !selected.some(scene => scene.id === id))) {
         throw new Error("부분 합성에는 한 가지 화면 형식과 해당 형식의 장면 ID가 필요합니다.");
       }
+      if (requestedProvider === "qwen3-tts" && options.voice && options.voice !== previous.voice) {
+        throw new Error("목소리를 바꾸려면 해당 형식 전체를 합성하세요.");
+      }
       if (previous.format !== format || previous.proposalId !== script.proposalId ||
           previous.provider !== requestedProvider || !["qwen3-clone", "qwen3-tts"].includes(requestedProvider)) {
         throw new Error("부분 합성에는 기존 타임라인과 같은 로컬 Qwen 제공자가 필요합니다.");

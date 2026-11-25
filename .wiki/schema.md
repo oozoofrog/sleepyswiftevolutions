@@ -26,3 +26,5 @@ Open this directory as an Obsidian vault. Keep immutable, dated snapshots in sou
 - 2026-11-26-term-definitions.md ← `_context/production-journal.md`
 
 - 2026-11-26-script-language-and-time.md ← `_context/production-journal.md`
+
+- 2026-11-26-episode-tools.md ← `README.md`

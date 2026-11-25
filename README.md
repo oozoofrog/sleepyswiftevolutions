@@ -158,3 +158,17 @@ pnpm evo upload SE-0001 --format long --publish-at 2026-12-01T18:00:00+09:00
 | `pnpm evo voice SE-0001 --tts macos-say` | macOS `say`로 로컬 오프라인 음성 테스트 |
 | `pnpm evo render SE-0001 --thumbs-only` | 썸네일 PNG만 빠르게 재생성 |
 | `pnpm evo upload SE-0001 --dry-run` | 업로드 전 메타데이터 시뮬레이션 |
+
+### 대본 한 장면을 수정한 뒤 검토하기
+
+기존 음성 타임라인이 있으면 수정한 장면만 다시 합성할 수 있습니다. `--scene`에는 해당 형식의 장면 ID를 공백으로 구분해 넣으세요. 대본이나 발음이 바뀐 장면을 모두 지정하세요. 기존 타임라인과 같은 로컬 Qwen 제공자를 사용합니다. 새 음성은 별도 경로에 저장하며, 다음 렌더는 갱신한 타임라인을 읽습니다.
+
+```sh
+export TMPDIR=/Volumes/eyedisk/tmp
+pnpm evo voice 1 --format long --scene 06-outro --tts qwen3-clone
+pnpm evo render 1 --format long --no-thumbs
+pnpm evo check-video 1 --format long
+pnpm scene-clip 1 long 06-outro /Volumes/eyedisk/tmp/SE-0001-outro-review.mp4
+```
+
+`check-video`는 형식을 생략하면 본편과 쇼츠를 모두 검사합니다. 영상과 음성을 끝까지 디코딩하고 해상도, 트랙 길이, 음성 신호, SRT 자막과 주석의 기준 구절을 확인합니다. 발음과 호흡은 `scene-clip`으로 추출한 영상을 들으며 확인하세요. 클립의 출력 경로에는 새 MP4 파일명을 지정하세요.

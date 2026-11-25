@@ -13,3 +13,5 @@
 - 2026-11-26 · Added timed definitions for technical terms to [[visual-direction]].
 
 - 2026-11-26 · Linked historical tense, precise Korean wording, requirement strength and English phrasing from [[narration]].
+
+- 2026-11-26 · Added selective narration, media checks and review clips to [[production-instructions]].

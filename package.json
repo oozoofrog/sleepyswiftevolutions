@@ -7,6 +7,7 @@
   "scripts": {
     "evo": "tsx src/cli.ts",
     "se": "tsx src/cli.ts",
+    "scene-clip": "python3 scripts/scene-clip.py",
     "typecheck": "tsc --noEmit",
     "test": "tsx --test tests/*.test.ts",
     "studio": "remotion studio src/remotion/index.ts"
