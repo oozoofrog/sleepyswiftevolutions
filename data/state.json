@@ -1,0 +1,5605 @@
+{
+  "lastSyncedAt": "2026-11-25T15:42:15.970Z",
+  "evolutionCommit": "58a97fabc7233f58af6b8a1e8d3d5a25fb4f7060",
+  "episodes": {
+    "SE-0001": {
+      "id": "SE-0001",
+      "episodeNumber": 1,
+      "title": "Allow (most) keywords as argument labels",
+      "proposalState": "implemented",
+      "swiftVersion": "2.2",
+      "stage": "rendered",
+      "updatedAt": "2026-11-25T17:18:11.617Z",
+      "formats": {
+        "long": {
+          "voicedAt": "2026-11-25T17:16:51.405Z",
+          "renderedAt": "2026-11-25T17:17:53.812Z",
+          "durationSec": 91.2
+        },
+        "short": {
+          "voicedAt": "2026-11-25T17:17:10.080Z",
+          "renderedAt": "2026-11-25T17:18:11.617Z",
+          "durationSec": 37.64
+        }
+      }
+    },
+    "SE-0002": {
+      "id": "SE-0002",
+      "episodeNumber": 2,
+      "title": "Removing currying `func` declaration syntax",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0003": {
+      "id": "SE-0003",
+      "episodeNumber": 3,
+      "title": "Removing `var` from Function Parameters",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0004": {
+      "id": "SE-0004",
+      "episodeNumber": 4,
+      "title": "Remove the `++` and `--` operators",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0005": {
+      "id": "SE-0005",
+      "episodeNumber": 5,
+      "title": "Better Translation of Objective-C APIs Into Swift",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0006": {
+      "id": "SE-0006",
+      "episodeNumber": 6,
+      "title": "Apply API Guidelines to the Standard Library",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0007": {
+      "id": "SE-0007",
+      "episodeNumber": 7,
+      "title": "Remove C-style for-loops with conditions and incrementers",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0008": {
+      "id": "SE-0008",
+      "episodeNumber": 8,
+      "title": "Add a Lazy flatMap for Sequences of Optionals",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0009": {
+      "id": "SE-0009",
+      "episodeNumber": 9,
+      "title": "Require self for accessing instance members",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0010": {
+      "id": "SE-0010",
+      "episodeNumber": 10,
+      "title": "Add StaticString.UnicodeScalarView",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0011": {
+      "id": "SE-0011",
+      "episodeNumber": 9,
+      "title": "Replace `typealias` keyword with `associatedtype` for associated type declarations",
+      "proposalState": "implemented",
+      "swiftVersion": "2.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0012": {
+      "id": "SE-0012",
+      "episodeNumber": 12,
+      "title": "Add `@noescape` to public library API",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0013": {
+      "id": "SE-0013",
+      "episodeNumber": 13,
+      "title": "Remove Partial Application of Non-Final Super Methods (Swift 2.2)",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0014": {
+      "id": "SE-0014",
+      "episodeNumber": 10,
+      "title": "Constraining `AnySequence.init`",
+      "proposalState": "implemented",
+      "swiftVersion": "2.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0015": {
+      "id": "SE-0015",
+      "episodeNumber": 11,
+      "title": "Tuple comparison operators",
+      "proposalState": "implemented",
+      "swiftVersion": "2.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0016": {
+      "id": "SE-0016",
+      "episodeNumber": 12,
+      "title": "Add initializers to Int and UInt to convert from UnsafePointer and UnsafeMutablePointer",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0017": {
+      "id": "SE-0017",
+      "episodeNumber": 13,
+      "title": "Change `Unmanaged` to use `UnsafePointer`",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0018": {
+      "id": "SE-0018",
+      "episodeNumber": 18,
+      "title": "Flexible Memberwise Initialization",
+      "proposalState": "returnedForRevision",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0019": {
+      "id": "SE-0019",
+      "episodeNumber": 14,
+      "title": "Swift Testing",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0020": {
+      "id": "SE-0020",
+      "episodeNumber": 15,
+      "title": "Swift Language Version Build Configuration",
+      "proposalState": "implemented",
+      "swiftVersion": "2.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0021": {
+      "id": "SE-0021",
+      "episodeNumber": 16,
+      "title": "Naming Functions with Argument Labels",
+      "proposalState": "implemented",
+      "swiftVersion": "2.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0022": {
+      "id": "SE-0022",
+      "episodeNumber": 17,
+      "title": "Referencing the Objective-C selector of a method",
+      "proposalState": "implemented",
+      "swiftVersion": "2.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0023": {
+      "id": "SE-0023",
+      "episodeNumber": 18,
+      "title": "API Design Guidelines",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0024": {
+      "id": "SE-0024",
+      "episodeNumber": 24,
+      "title": "Optional Value Setter `??=`",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0025": {
+      "id": "SE-0025",
+      "episodeNumber": 19,
+      "title": "Scoped Access Level",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0026": {
+      "id": "SE-0026",
+      "episodeNumber": 26,
+      "title": "Abstract classes and methods",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0027": {
+      "id": "SE-0027",
+      "episodeNumber": 27,
+      "title": "Expose code unit initializers on String",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0028": {
+      "id": "SE-0028",
+      "episodeNumber": 20,
+      "title": "Modernizing Swift's Debugging Identifiers",
+      "proposalState": "implemented",
+      "swiftVersion": "2.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0029": {
+      "id": "SE-0029",
+      "episodeNumber": 21,
+      "title": "Remove implicit tuple splat behavior from function applications",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0030": {
+      "id": "SE-0030",
+      "episodeNumber": 30,
+      "title": "Property Behaviors",
+      "proposalState": "withdrawn",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0031": {
+      "id": "SE-0031",
+      "episodeNumber": 22,
+      "title": "Adjusting `inout` Declarations for Type Decoration",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0032": {
+      "id": "SE-0032",
+      "episodeNumber": 23,
+      "title": "Add `first(where:)` method to `Sequence`",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0033": {
+      "id": "SE-0033",
+      "episodeNumber": 24,
+      "title": "Import Objective-C Constants as Swift Types",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0034": {
+      "id": "SE-0034",
+      "episodeNumber": 25,
+      "title": "Disambiguating Line Control Statements from Debugging Identifiers",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0035": {
+      "id": "SE-0035",
+      "episodeNumber": 26,
+      "title": "Limiting `inout` capture to `@noescape` contexts",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0036": {
+      "id": "SE-0036",
+      "episodeNumber": 27,
+      "title": "Requiring Leading Dot Prefixes for Enum Instance Member Implementations",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0037": {
+      "id": "SE-0037",
+      "episodeNumber": 28,
+      "title": "Clarify interaction between comments & operators",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0038": {
+      "id": "SE-0038",
+      "episodeNumber": 29,
+      "title": "Package Manager C Language Target Support",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0039": {
+      "id": "SE-0039",
+      "episodeNumber": 30,
+      "title": "Modernizing Playground Literals",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0040": {
+      "id": "SE-0040",
+      "episodeNumber": 31,
+      "title": "Replacing Equal Signs with Colons For Attribute Arguments",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0041": {
+      "id": "SE-0041",
+      "episodeNumber": 41,
+      "title": "Updating Protocol Naming Conventions for Conversions",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0042": {
+      "id": "SE-0042",
+      "episodeNumber": 42,
+      "title": "Flattening the function type of unapplied method references",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0043": {
+      "id": "SE-0043",
+      "episodeNumber": 32,
+      "title": "Declare variables in 'case' labels with multiple patterns",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0044": {
+      "id": "SE-0044",
+      "episodeNumber": 33,
+      "title": "Import as member",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0045": {
+      "id": "SE-0045",
+      "episodeNumber": 34,
+      "title": "Add prefix(while:) and drop(while:) to the stdlib",
+      "proposalState": "implemented",
+      "swiftVersion": "3.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0046": {
+      "id": "SE-0046",
+      "episodeNumber": 35,
+      "title": "Establish consistent label behavior across all parameters including first labels",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0047": {
+      "id": "SE-0047",
+      "episodeNumber": 36,
+      "title": "Defaulting non-Void functions so they warn on unused results",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0048": {
+      "id": "SE-0048",
+      "episodeNumber": 37,
+      "title": "Generic Type Aliases",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0049": {
+      "id": "SE-0049",
+      "episodeNumber": 38,
+      "title": "Move @noescape and @autoclosure to be type attributes",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0050": {
+      "id": "SE-0050",
+      "episodeNumber": 50,
+      "title": "Decoupling Floating Point Strides from Generic Implementations",
+      "proposalState": "withdrawn",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0051": {
+      "id": "SE-0051",
+      "episodeNumber": 51,
+      "title": "Conventionalizing `stride` semantics",
+      "proposalState": "withdrawn",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0052": {
+      "id": "SE-0052",
+      "episodeNumber": 39,
+      "title": "Change IteratorType post-nil guarantee",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0053": {
+      "id": "SE-0053",
+      "episodeNumber": 40,
+      "title": "Remove explicit use of `let` from Function Parameters",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0054": {
+      "id": "SE-0054",
+      "episodeNumber": 41,
+      "title": "Abolish `ImplicitlyUnwrappedOptional` type",
+      "proposalState": "implemented",
+      "swiftVersion": "4.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0055": {
+      "id": "SE-0055",
+      "episodeNumber": 42,
+      "title": "Make unsafe pointer nullability explicit using Optional",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0056": {
+      "id": "SE-0056",
+      "episodeNumber": 56,
+      "title": "Allow trailing closures in `guard` conditions",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0057": {
+      "id": "SE-0057",
+      "episodeNumber": 43,
+      "title": "Importing Objective-C Lightweight Generics",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0058": {
+      "id": "SE-0058",
+      "episodeNumber": 58,
+      "title": "Allow Swift types to provide custom Objective-C representations",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0059": {
+      "id": "SE-0059",
+      "episodeNumber": 44,
+      "title": "Update API Naming Guidelines and Rewrite Set APIs Accordingly",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0060": {
+      "id": "SE-0060",
+      "episodeNumber": 45,
+      "title": "Enforcing order of defaulted parameters",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0061": {
+      "id": "SE-0061",
+      "episodeNumber": 46,
+      "title": "Add Generic Result and Error Handling to autoreleasepool()",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0062": {
+      "id": "SE-0062",
+      "episodeNumber": 47,
+      "title": "Referencing Objective-C key-paths",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0063": {
+      "id": "SE-0063",
+      "episodeNumber": 48,
+      "title": "SwiftPM System Module Search Paths",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0064": {
+      "id": "SE-0064",
+      "episodeNumber": 49,
+      "title": "Referencing the Objective-C selector of property getters and setters",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0065": {
+      "id": "SE-0065",
+      "episodeNumber": 50,
+      "title": "A New Model for Collections and Indices",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0066": {
+      "id": "SE-0066",
+      "episodeNumber": 51,
+      "title": "Standardize function type argument syntax to require parentheses",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0067": {
+      "id": "SE-0067",
+      "episodeNumber": 52,
+      "title": "Enhanced Floating Point Protocols",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0068": {
+      "id": "SE-0068",
+      "episodeNumber": 53,
+      "title": "Expanding Swift `Self` to class members and value types",
+      "proposalState": "implemented",
+      "swiftVersion": "5.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0069": {
+      "id": "SE-0069",
+      "episodeNumber": 54,
+      "title": "Mutability and Foundation Value Types",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0070": {
+      "id": "SE-0070",
+      "episodeNumber": 55,
+      "title": "Make Optional Requirements Objective-C-only",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0071": {
+      "id": "SE-0071",
+      "episodeNumber": 56,
+      "title": "Allow (most) keywords in member references",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0072": {
+      "id": "SE-0072",
+      "episodeNumber": 57,
+      "title": "Fully eliminate implicit bridging conversions from Swift",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0073": {
+      "id": "SE-0073",
+      "episodeNumber": 73,
+      "title": "Marking closures as executing exactly once",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0074": {
+      "id": "SE-0074",
+      "episodeNumber": 74,
+      "title": "Implementation of Binary Search functions",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0075": {
+      "id": "SE-0075",
+      "episodeNumber": 58,
+      "title": "Adding a Build Configuration Import Test",
+      "proposalState": "implemented",
+      "swiftVersion": "4.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0076": {
+      "id": "SE-0076",
+      "episodeNumber": 59,
+      "title": "Add overrides taking an UnsafePointer source to non-destructive copying methods on UnsafeMutablePointer",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0077": {
+      "id": "SE-0077",
+      "episodeNumber": 60,
+      "title": "Improved operator declarations",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0078": {
+      "id": "SE-0078",
+      "episodeNumber": 78,
+      "title": "Implement a rotate algorithm, equivalent to std::rotate() in C++",
+      "proposalState": "returnedForRevision",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0079": {
+      "id": "SE-0079",
+      "episodeNumber": 61,
+      "title": "Allow using optional binding to upgrade `self` from a weak to strong reference",
+      "proposalState": "implemented",
+      "swiftVersion": "4.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0080": {
+      "id": "SE-0080",
+      "episodeNumber": 62,
+      "title": "Failable Numeric Conversion Initializers",
+      "proposalState": "implemented",
+      "swiftVersion": "3.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0081": {
+      "id": "SE-0081",
+      "episodeNumber": 63,
+      "title": "Move `where` clause to end of declaration",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0082": {
+      "id": "SE-0082",
+      "episodeNumber": 64,
+      "title": "Package Manager Editable Packages",
+      "proposalState": "implemented",
+      "swiftVersion": "3.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0083": {
+      "id": "SE-0083",
+      "episodeNumber": 83,
+      "title": "Remove bridging conversion behavior from dynamic casts",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0084": {
+      "id": "SE-0084",
+      "episodeNumber": 84,
+      "title": "Allow trailing commas in parameter lists and tuples",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0085": {
+      "id": "SE-0085",
+      "episodeNumber": 65,
+      "title": "Package Manager Command Names",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0086": {
+      "id": "SE-0086",
+      "episodeNumber": 66,
+      "title": "Drop NS Prefix in Swift Foundation",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0087": {
+      "id": "SE-0087",
+      "episodeNumber": 87,
+      "title": "Rename `lazy` to `@lazy`",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0088": {
+      "id": "SE-0088",
+      "episodeNumber": 67,
+      "title": "Modernize libdispatch for Swift 3 naming conventions",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0089": {
+      "id": "SE-0089",
+      "episodeNumber": 68,
+      "title": "Renaming `String.init<T>(_: T)`",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0090": {
+      "id": "SE-0090",
+      "episodeNumber": 90,
+      "title": "Remove `.self` and freely allow type references in expressions",
+      "proposalState": "returnedForRevision",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0091": {
+      "id": "SE-0091",
+      "episodeNumber": 69,
+      "title": "Improving operator requirements in protocols",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0092": {
+      "id": "SE-0092",
+      "episodeNumber": 70,
+      "title": "Typealiases in protocols and protocol extensions",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0093": {
+      "id": "SE-0093",
+      "episodeNumber": 71,
+      "title": "Adding a public `base` property to slices",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0094": {
+      "id": "SE-0094",
+      "episodeNumber": 72,
+      "title": "Add sequence(first:next:) and sequence(state:next:) to the stdlib",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0095": {
+      "id": "SE-0095",
+      "episodeNumber": 73,
+      "title": "Replace `protocol<P1,P2>` syntax with `P1 & P2` syntax",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0096": {
+      "id": "SE-0096",
+      "episodeNumber": 74,
+      "title": "Converting `dynamicType` from a property to an operator",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0097": {
+      "id": "SE-0097",
+      "episodeNumber": 97,
+      "title": "Normalizing naming for \"negative\" attributes",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0098": {
+      "id": "SE-0098",
+      "episodeNumber": 98,
+      "title": "Lowercase `didSet` and `willSet` for more consistent keyword casing",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0099": {
+      "id": "SE-0099",
+      "episodeNumber": 75,
+      "title": "Restructuring Condition Clauses",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0100": {
+      "id": "SE-0100",
+      "episodeNumber": 100,
+      "title": "Add sequence-based initializers and merge methods to Dictionary",
+      "proposalState": "withdrawn",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0101": {
+      "id": "SE-0101",
+      "episodeNumber": 76,
+      "title": "Reconfiguring `sizeof` and related functions into a unified `MemoryLayout` struct",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0102": {
+      "id": "SE-0102",
+      "episodeNumber": 77,
+      "title": "Remove `@noreturn` attribute and introduce an empty `Never` type",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0103": {
+      "id": "SE-0103",
+      "episodeNumber": 78,
+      "title": "Make non-escaping closures the default",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0104": {
+      "id": "SE-0104",
+      "episodeNumber": 79,
+      "title": "Protocol-oriented integers",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0105": {
+      "id": "SE-0105",
+      "episodeNumber": 105,
+      "title": "Removing Where Clauses from For-In Loops",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0106": {
+      "id": "SE-0106",
+      "episodeNumber": 80,
+      "title": "Add a `macOS` Alias for the `OSX` Platform Configuration Test",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0107": {
+      "id": "SE-0107",
+      "episodeNumber": 81,
+      "title": "UnsafeRawPointer API",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0108": {
+      "id": "SE-0108",
+      "episodeNumber": 108,
+      "title": "Remove associated type inference",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0109": {
+      "id": "SE-0109",
+      "episodeNumber": 82,
+      "title": "Remove the `Boolean` protocol",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0110": {
+      "id": "SE-0110",
+      "episodeNumber": 83,
+      "title": "Distinguish between single-tuple and multiple-argument function types",
+      "proposalState": "implemented",
+      "swiftVersion": "",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0111": {
+      "id": "SE-0111",
+      "episodeNumber": 84,
+      "title": "Remove type system significance of function argument labels",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0112": {
+      "id": "SE-0112",
+      "episodeNumber": 85,
+      "title": "Improved NSError Bridging",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0113": {
+      "id": "SE-0113",
+      "episodeNumber": 86,
+      "title": "Add integral rounding functions to FloatingPoint",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0114": {
+      "id": "SE-0114",
+      "episodeNumber": 87,
+      "title": "Updating Buffer \"Value\" Names to \"Header\" Names",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0115": {
+      "id": "SE-0115",
+      "episodeNumber": 88,
+      "title": "Rename Literal Syntax Protocols",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0116": {
+      "id": "SE-0116",
+      "episodeNumber": 89,
+      "title": "Import Objective-C `id` as Swift `Any` type",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0117": {
+      "id": "SE-0117",
+      "episodeNumber": 90,
+      "title": "Allow distinguishing between public access and public overridability",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0118": {
+      "id": "SE-0118",
+      "episodeNumber": 91,
+      "title": "Closure Parameter Names and Labels",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0119": {
+      "id": "SE-0119",
+      "episodeNumber": 119,
+      "title": "Remove access modifiers from extensions",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0120": {
+      "id": "SE-0120",
+      "episodeNumber": 92,
+      "title": "Revise `partition` Method Signature",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0121": {
+      "id": "SE-0121",
+      "episodeNumber": 93,
+      "title": "Remove `Optional` Comparison Operators",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0122": {
+      "id": "SE-0122",
+      "episodeNumber": 122,
+      "title": "Use colons for subscript declarations",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0123": {
+      "id": "SE-0123",
+      "episodeNumber": 123,
+      "title": "Disallow coercion to optionals in operator arguments",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0124": {
+      "id": "SE-0124",
+      "episodeNumber": 94,
+      "title": "`Int.init(ObjectIdentifier)` and `UInt.init(ObjectIdentifier)` should have a `bitPattern:` label",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0125": {
+      "id": "SE-0125",
+      "episodeNumber": 95,
+      "title": "Remove `NonObjectiveCBase` and `isUniquelyReferenced`",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0126": {
+      "id": "SE-0126",
+      "episodeNumber": 126,
+      "title": "Refactor Metatypes, repurpose `T.self` and `Mirror`",
+      "proposalState": "withdrawn",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0127": {
+      "id": "SE-0127",
+      "episodeNumber": 96,
+      "title": "Cleaning up stdlib Pointer and Buffer Routines",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0128": {
+      "id": "SE-0128",
+      "episodeNumber": 97,
+      "title": "Change failable UnicodeScalar initializers to failable",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0129": {
+      "id": "SE-0129",
+      "episodeNumber": 98,
+      "title": "Package Manager Test Naming Conventions",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0130": {
+      "id": "SE-0130",
+      "episodeNumber": 99,
+      "title": "Replace repeating `Character` and `UnicodeScalar` forms of String.init",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0131": {
+      "id": "SE-0131",
+      "episodeNumber": 100,
+      "title": "Add `AnyHashable` to the standard library",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0132": {
+      "id": "SE-0132",
+      "episodeNumber": 132,
+      "title": "Rationalizing Sequence end-operation names",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0133": {
+      "id": "SE-0133",
+      "episodeNumber": 101,
+      "title": "Rename `flatten()` to `joined()`",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0134": {
+      "id": "SE-0134",
+      "episodeNumber": 102,
+      "title": "Rename two UTF8-related properties on String",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0135": {
+      "id": "SE-0135",
+      "episodeNumber": 103,
+      "title": "Package Manager Support for Differentiating Packages by Swift version",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0136": {
+      "id": "SE-0136",
+      "episodeNumber": 104,
+      "title": "Memory layout of values",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0137": {
+      "id": "SE-0137",
+      "episodeNumber": 105,
+      "title": "Avoiding Lock-In to Legacy Protocol Designs",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0138": {
+      "id": "SE-0138",
+      "episodeNumber": 106,
+      "title": "UnsafeRawBufferPointer",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0139": {
+      "id": "SE-0139",
+      "episodeNumber": 107,
+      "title": "Bridge Numeric Types to `NSNumber` and Cocoa Structs to `NSValue`",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0140": {
+      "id": "SE-0140",
+      "episodeNumber": 108,
+      "title": "Warn when `Optional` converts to `Any`, and bridge `Optional` As Its Payload Or `NSNull`",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0141": {
+      "id": "SE-0141",
+      "episodeNumber": 109,
+      "title": "Availability by Swift version",
+      "proposalState": "implemented",
+      "swiftVersion": "3.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0142": {
+      "id": "SE-0142",
+      "episodeNumber": 110,
+      "title": "Permit where clauses to constrain associated types",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0143": {
+      "id": "SE-0143",
+      "episodeNumber": 111,
+      "title": "Conditional conformances",
+      "proposalState": "implemented",
+      "swiftVersion": "4.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0144": {
+      "id": "SE-0144",
+      "episodeNumber": 144,
+      "title": "Allow Single Dollar Sign as a Valid Identifier",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0145": {
+      "id": "SE-0145",
+      "episodeNumber": 112,
+      "title": "Package Manager Version Pinning",
+      "proposalState": "implemented",
+      "swiftVersion": "3.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0146": {
+      "id": "SE-0146",
+      "episodeNumber": 113,
+      "title": "Package Manager Product Definitions",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0147": {
+      "id": "SE-0147",
+      "episodeNumber": 114,
+      "title": "Move UnsafeMutablePointer.initialize(from:) to UnsafeMutableBufferPointer",
+      "proposalState": "implemented",
+      "swiftVersion": "3.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0148": {
+      "id": "SE-0148",
+      "episodeNumber": 115,
+      "title": "Generic Subscripts",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0149": {
+      "id": "SE-0149",
+      "episodeNumber": 116,
+      "title": "Package Manager Support for Top of Tree development",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0150": {
+      "id": "SE-0150",
+      "episodeNumber": 117,
+      "title": "Package Manager Support for branches",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0151": {
+      "id": "SE-0151",
+      "episodeNumber": 118,
+      "title": "Package Manager Swift Language Compatibility Version",
+      "proposalState": "implemented",
+      "swiftVersion": "3.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0152": {
+      "id": "SE-0152",
+      "episodeNumber": 119,
+      "title": "Package Manager Tools Version",
+      "proposalState": "implemented",
+      "swiftVersion": "3.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0153": {
+      "id": "SE-0153",
+      "episodeNumber": 153,
+      "title": "Compensate for the inconsistency of `@NSCopying`'s behaviour",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0154": {
+      "id": "SE-0154",
+      "episodeNumber": 120,
+      "title": "Provide Custom Collections for Dictionary Keys and Values",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0155": {
+      "id": "SE-0155",
+      "episodeNumber": 121,
+      "title": "Normalize Enum Case Representation",
+      "proposalState": "implemented",
+      "swiftVersion": "3.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0156": {
+      "id": "SE-0156",
+      "episodeNumber": 122,
+      "title": "Class and Subtype existentials",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0157": {
+      "id": "SE-0157",
+      "episodeNumber": 123,
+      "title": "Support recursive constraints on associated types",
+      "proposalState": "implemented",
+      "swiftVersion": "4.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0158": {
+      "id": "SE-0158",
+      "episodeNumber": 124,
+      "title": "Package Manager Manifest API Redesign",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0159": {
+      "id": "SE-0159",
+      "episodeNumber": 159,
+      "title": "Fix Private Access Levels",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0160": {
+      "id": "SE-0160",
+      "episodeNumber": 125,
+      "title": "Limiting `@objc` inference",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0161": {
+      "id": "SE-0161",
+      "episodeNumber": 126,
+      "title": "Smart KeyPaths: Better Key-Value Coding for Swift",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0162": {
+      "id": "SE-0162",
+      "episodeNumber": 127,
+      "title": "Package Manager Custom Target Layouts",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0163": {
+      "id": "SE-0163",
+      "episodeNumber": 128,
+      "title": "String Revision: Collection Conformance, C Interop, Transcoding",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0164": {
+      "id": "SE-0164",
+      "episodeNumber": 129,
+      "title": "Remove final support in protocol extensions",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0165": {
+      "id": "SE-0165",
+      "episodeNumber": 130,
+      "title": "Dictionary & Set Enhancements",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0166": {
+      "id": "SE-0166",
+      "episodeNumber": 131,
+      "title": "Swift Archival & Serialization",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0167": {
+      "id": "SE-0167",
+      "episodeNumber": 132,
+      "title": "Swift Encoders",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0168": {
+      "id": "SE-0168",
+      "episodeNumber": 133,
+      "title": "Multi-Line String Literals",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0169": {
+      "id": "SE-0169",
+      "episodeNumber": 134,
+      "title": "Improve Interaction Between `private` Declarations and Extensions",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0170": {
+      "id": "SE-0170",
+      "episodeNumber": 135,
+      "title": "NSNumber bridging and Numeric types",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0171": {
+      "id": "SE-0171",
+      "episodeNumber": 136,
+      "title": "Reduce with `inout`",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0172": {
+      "id": "SE-0172",
+      "episodeNumber": 137,
+      "title": "One-sided Ranges",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0173": {
+      "id": "SE-0173",
+      "episodeNumber": 138,
+      "title": "Add `MutableCollection.swapAt(_:_:)`",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0174": {
+      "id": "SE-0174",
+      "episodeNumber": 139,
+      "title": "Change `RangeReplaceableCollection.filter` to return `Self`",
+      "proposalState": "implemented",
+      "swiftVersion": "4.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0175": {
+      "id": "SE-0175",
+      "episodeNumber": 140,
+      "title": "Package Manager Revised Dependency Resolution",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0176": {
+      "id": "SE-0176",
+      "episodeNumber": 141,
+      "title": "Enforce Exclusive Access to Memory",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0177": {
+      "id": "SE-0177",
+      "episodeNumber": 177,
+      "title": "Add clamp(to:) to the stdlib",
+      "proposalState": "returnedForRevision",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0178": {
+      "id": "SE-0178",
+      "episodeNumber": 142,
+      "title": "Add `unicodeScalars` property to `Character`",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0179": {
+      "id": "SE-0179",
+      "episodeNumber": 143,
+      "title": "Swift `run` Command",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0180": {
+      "id": "SE-0180",
+      "episodeNumber": 144,
+      "title": "String Index Overhaul",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0181": {
+      "id": "SE-0181",
+      "episodeNumber": 145,
+      "title": "Package Manager C/C++ Language Standard Support",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0182": {
+      "id": "SE-0182",
+      "episodeNumber": 146,
+      "title": "String Newline Escaping",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0183": {
+      "id": "SE-0183",
+      "episodeNumber": 147,
+      "title": "Substring performance affordances",
+      "proposalState": "implemented",
+      "swiftVersion": "4.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0184": {
+      "id": "SE-0184",
+      "episodeNumber": 148,
+      "title": "Unsafe[Mutable][Raw][Buffer]Pointer: add missing methods, adjust existing labels for clarity, and remove deallocation size",
+      "proposalState": "implemented",
+      "swiftVersion": "4.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0185": {
+      "id": "SE-0185",
+      "episodeNumber": 149,
+      "title": "Synthesizing `Equatable` and `Hashable` conformance",
+      "proposalState": "implemented",
+      "swiftVersion": "4.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0186": {
+      "id": "SE-0186",
+      "episodeNumber": 150,
+      "title": "Remove ownership keyword support in protocols",
+      "proposalState": "implemented",
+      "swiftVersion": "4.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0187": {
+      "id": "SE-0187",
+      "episodeNumber": 151,
+      "title": "Introduce Sequence.compactMap(_:)",
+      "proposalState": "implemented",
+      "swiftVersion": "4.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0188": {
+      "id": "SE-0188",
+      "episodeNumber": 152,
+      "title": "Make Standard Library Index Types Hashable",
+      "proposalState": "implemented",
+      "swiftVersion": "4.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0189": {
+      "id": "SE-0189",
+      "episodeNumber": 153,
+      "title": "Restrict Cross-module Struct Initializers",
+      "proposalState": "implemented",
+      "swiftVersion": "4.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0190": {
+      "id": "SE-0190",
+      "episodeNumber": 154,
+      "title": "Target environment platform condition",
+      "proposalState": "implemented",
+      "swiftVersion": "4.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0191": {
+      "id": "SE-0191",
+      "episodeNumber": 155,
+      "title": "Eliminate `IndexDistance` from `Collection`",
+      "proposalState": "implemented",
+      "swiftVersion": "4.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0192": {
+      "id": "SE-0192",
+      "episodeNumber": 156,
+      "title": "Handling Future Enum Cases",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0193": {
+      "id": "SE-0193",
+      "episodeNumber": 157,
+      "title": "Cross-module inlining and specialization",
+      "proposalState": "implemented",
+      "swiftVersion": "4.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0194": {
+      "id": "SE-0194",
+      "episodeNumber": 158,
+      "title": "Derived Collection of Enum Cases",
+      "proposalState": "implemented",
+      "swiftVersion": "4.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0195": {
+      "id": "SE-0195",
+      "episodeNumber": 159,
+      "title": "Introduce User-defined \"Dynamic Member Lookup\" Types",
+      "proposalState": "implemented",
+      "swiftVersion": "4.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0196": {
+      "id": "SE-0196",
+      "episodeNumber": 160,
+      "title": "Compiler Diagnostic Directives",
+      "proposalState": "implemented",
+      "swiftVersion": "4.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0197": {
+      "id": "SE-0197",
+      "episodeNumber": 161,
+      "title": "Adding in-place `removeAll(where:)` to the Standard Library",
+      "proposalState": "implemented",
+      "swiftVersion": "4.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0198": {
+      "id": "SE-0198",
+      "episodeNumber": 162,
+      "title": "Playground QuickLook API Revamp",
+      "proposalState": "implemented",
+      "swiftVersion": "4.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0199": {
+      "id": "SE-0199",
+      "episodeNumber": 163,
+      "title": "Adding `toggle` to `Bool`",
+      "proposalState": "implemented",
+      "swiftVersion": "4.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0200": {
+      "id": "SE-0200",
+      "episodeNumber": 164,
+      "title": "Enhancing String Literals Delimiters to Support Raw Text",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0201": {
+      "id": "SE-0201",
+      "episodeNumber": 165,
+      "title": "Package Manager Local Dependencies",
+      "proposalState": "implemented",
+      "swiftVersion": "4.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0202": {
+      "id": "SE-0202",
+      "episodeNumber": 166,
+      "title": "Random Unification",
+      "proposalState": "implemented",
+      "swiftVersion": "4.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0203": {
+      "id": "SE-0203",
+      "episodeNumber": 203,
+      "title": "Rename Sequence.elementsEqual",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0204": {
+      "id": "SE-0204",
+      "episodeNumber": 167,
+      "title": "Add `last(where:)` and `lastIndex(where:)` Methods",
+      "proposalState": "implemented",
+      "swiftVersion": "4.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0205": {
+      "id": "SE-0205",
+      "episodeNumber": 168,
+      "title": "`withUnsafePointer(to:_:)` and `withUnsafeBytes(of:_:)` for immutable values",
+      "proposalState": "implemented",
+      "swiftVersion": "4.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0206": {
+      "id": "SE-0206",
+      "episodeNumber": 169,
+      "title": "Hashable Enhancements",
+      "proposalState": "implemented",
+      "swiftVersion": "4.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0207": {
+      "id": "SE-0207",
+      "episodeNumber": 170,
+      "title": "Add an `allSatisfy` algorithm to `Sequence`",
+      "proposalState": "implemented",
+      "swiftVersion": "4.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0208": {
+      "id": "SE-0208",
+      "episodeNumber": 171,
+      "title": "Package Manager System Library Targets",
+      "proposalState": "implemented",
+      "swiftVersion": "4.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0209": {
+      "id": "SE-0209",
+      "episodeNumber": 172,
+      "title": "Package Manager Swift Language Version API Update",
+      "proposalState": "implemented",
+      "swiftVersion": "4.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0210": {
+      "id": "SE-0210",
+      "episodeNumber": 173,
+      "title": "Add an `offset(of:)` method to `MemoryLayout`",
+      "proposalState": "implemented",
+      "swiftVersion": "4.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0211": {
+      "id": "SE-0211",
+      "episodeNumber": 174,
+      "title": "Add Unicode Properties to `Unicode.Scalar`",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0212": {
+      "id": "SE-0212",
+      "episodeNumber": 175,
+      "title": "Compiler Version Directive",
+      "proposalState": "implemented",
+      "swiftVersion": "4.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0213": {
+      "id": "SE-0213",
+      "episodeNumber": 176,
+      "title": "Literal initialization via coercion",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0214": {
+      "id": "SE-0214",
+      "episodeNumber": 177,
+      "title": "Renaming the `DictionaryLiteral` type to `KeyValuePairs`",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0215": {
+      "id": "SE-0215",
+      "episodeNumber": 178,
+      "title": "Conform `Never` to `Equatable` and `Hashable`",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0216": {
+      "id": "SE-0216",
+      "episodeNumber": 179,
+      "title": "Introduce user-defined dynamically \"callable\" types",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0217": {
+      "id": "SE-0217",
+      "episodeNumber": 217,
+      "title": "Introducing the `!!` \"Unwrap or Die\" operator to the Swift Standard Library",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0218": {
+      "id": "SE-0218",
+      "episodeNumber": 180,
+      "title": "Introduce `compactMapValues` to Dictionary",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0219": {
+      "id": "SE-0219",
+      "episodeNumber": 181,
+      "title": "Package Manager Dependency Mirroring",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0220": {
+      "id": "SE-0220",
+      "episodeNumber": 182,
+      "title": "`count(where:)`",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0221": {
+      "id": "SE-0221",
+      "episodeNumber": 183,
+      "title": "Character Properties",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0222": {
+      "id": "SE-0222",
+      "episodeNumber": 222,
+      "title": "Lazy CompactMap Sequence",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0223": {
+      "id": "SE-0223",
+      "episodeNumber": 223,
+      "title": "Accessing an Array's Uninitialized Buffer",
+      "proposalState": "withdrawn",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0224": {
+      "id": "SE-0224",
+      "episodeNumber": 184,
+      "title": "Support 'less than' operator in compilation conditions",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0225": {
+      "id": "SE-0225",
+      "episodeNumber": 185,
+      "title": "Adding `isMultiple` to `BinaryInteger`",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0226": {
+      "id": "SE-0226",
+      "episodeNumber": 186,
+      "title": "Package Manager Target Based Dependency Resolution",
+      "proposalState": "implemented",
+      "swiftVersion": "5.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0227": {
+      "id": "SE-0227",
+      "episodeNumber": 187,
+      "title": "Identity key path",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0228": {
+      "id": "SE-0228",
+      "episodeNumber": 188,
+      "title": "Fix `ExpressibleByStringInterpolation`",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0229": {
+      "id": "SE-0229",
+      "episodeNumber": 189,
+      "title": "SIMD Vectors",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0230": {
+      "id": "SE-0230",
+      "episodeNumber": 190,
+      "title": "Flatten nested optionals resulting from 'try?'",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0231": {
+      "id": "SE-0231",
+      "episodeNumber": 231,
+      "title": "Optional Iteration",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0232": {
+      "id": "SE-0232",
+      "episodeNumber": 191,
+      "title": "Remove Some Customization Points from the Standard Library's `Collection` Hierarchy",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0233": {
+      "id": "SE-0233",
+      "episodeNumber": 192,
+      "title": "Make  `Numeric`  Refine a new  `AdditiveArithmetic`  Protocol",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0234": {
+      "id": "SE-0234",
+      "episodeNumber": 193,
+      "title": "Remove `Sequence.SubSequence`",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0235": {
+      "id": "SE-0235",
+      "episodeNumber": 194,
+      "title": "Add Result to the Standard Library",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0236": {
+      "id": "SE-0236",
+      "episodeNumber": 195,
+      "title": "Package Manager Platform Deployment Settings",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0237": {
+      "id": "SE-0237",
+      "episodeNumber": 196,
+      "title": "Introduce `withContiguous{Mutable}StorageIfAvailable` methods",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0238": {
+      "id": "SE-0238",
+      "episodeNumber": 197,
+      "title": "Package Manager Target Specific Build Settings",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0239": {
+      "id": "SE-0239",
+      "episodeNumber": 198,
+      "title": "Add Codable conformance to Range types",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0240": {
+      "id": "SE-0240",
+      "episodeNumber": 199,
+      "title": "Ordered Collection Diffing",
+      "proposalState": "implemented",
+      "swiftVersion": "5.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0241": {
+      "id": "SE-0241",
+      "episodeNumber": 200,
+      "title": "Deprecate String Index Encoded Offsets",
+      "proposalState": "implemented",
+      "swiftVersion": "5.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0242": {
+      "id": "SE-0242",
+      "episodeNumber": 201,
+      "title": "Synthesize default values for the memberwise initializer",
+      "proposalState": "implemented",
+      "swiftVersion": "5.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0243": {
+      "id": "SE-0243",
+      "episodeNumber": 243,
+      "title": "Integer-convertible character literals",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0244": {
+      "id": "SE-0244",
+      "episodeNumber": 202,
+      "title": "Opaque Result Types",
+      "proposalState": "implemented",
+      "swiftVersion": "5.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0245": {
+      "id": "SE-0245",
+      "episodeNumber": 203,
+      "title": "Add an Array Initializer with Access to Uninitialized Storage",
+      "proposalState": "implemented",
+      "swiftVersion": "5.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0246": {
+      "id": "SE-0246",
+      "episodeNumber": 246,
+      "title": "Generic Math(s) Functions",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0247": {
+      "id": "SE-0247",
+      "episodeNumber": 204,
+      "title": "Contiguous Strings",
+      "proposalState": "implemented",
+      "swiftVersion": "5.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0248": {
+      "id": "SE-0248",
+      "episodeNumber": 205,
+      "title": "String Gaps and Missing APIs",
+      "proposalState": "implemented",
+      "swiftVersion": "5.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0249": {
+      "id": "SE-0249",
+      "episodeNumber": 206,
+      "title": "Key Path Expressions as Functions",
+      "proposalState": "implemented",
+      "swiftVersion": "5.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0250": {
+      "id": "SE-0250",
+      "episodeNumber": 250,
+      "title": "Swift Code Style Guidelines and Formatter",
+      "proposalState": "returnedForRevision",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0251": {
+      "id": "SE-0251",
+      "episodeNumber": 207,
+      "title": "SIMD additions",
+      "proposalState": "implemented",
+      "swiftVersion": "5.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0252": {
+      "id": "SE-0252",
+      "episodeNumber": 208,
+      "title": "Key Path Member Lookup",
+      "proposalState": "implemented",
+      "swiftVersion": "5.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0253": {
+      "id": "SE-0253",
+      "episodeNumber": 209,
+      "title": "Callable values of user-defined nominal types",
+      "proposalState": "implemented",
+      "swiftVersion": "5.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0254": {
+      "id": "SE-0254",
+      "episodeNumber": 210,
+      "title": "Static and class subscripts",
+      "proposalState": "implemented",
+      "swiftVersion": "5.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0255": {
+      "id": "SE-0255",
+      "episodeNumber": 211,
+      "title": "Implicit returns from single-expression functions",
+      "proposalState": "implemented",
+      "swiftVersion": "5.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0256": {
+      "id": "SE-0256",
+      "episodeNumber": 256,
+      "title": "Introduce `{Mutable}ContiguousCollection` protocol",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0257": {
+      "id": "SE-0257",
+      "episodeNumber": 257,
+      "title": "Eliding commas from multiline expression lists",
+      "proposalState": "returnedForRevision",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0258": {
+      "id": "SE-0258",
+      "episodeNumber": 212,
+      "title": "Property Wrappers",
+      "proposalState": "implemented",
+      "swiftVersion": "5.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0259": {
+      "id": "SE-0259",
+      "episodeNumber": 259,
+      "title": "Approximate Equality for Floating Point",
+      "proposalState": "returnedForRevision",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0260": {
+      "id": "SE-0260",
+      "episodeNumber": 213,
+      "title": "Library Evolution for Stable ABIs",
+      "proposalState": "implemented",
+      "swiftVersion": "5.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0261": {
+      "id": "SE-0261",
+      "episodeNumber": 214,
+      "title": "Identifiable Protocol",
+      "proposalState": "implemented",
+      "swiftVersion": "5.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0262": {
+      "id": "SE-0262",
+      "episodeNumber": 262,
+      "title": "Demangle Function",
+      "proposalState": "withdrawn",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0263": {
+      "id": "SE-0263",
+      "episodeNumber": 215,
+      "title": "Add a String Initializer with Access to Uninitialized Storage",
+      "proposalState": "implemented",
+      "swiftVersion": "5.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0264": {
+      "id": "SE-0264",
+      "episodeNumber": 216,
+      "title": "Standard Library Preview Package",
+      "proposalState": "implemented",
+      "swiftVersion": "",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0265": {
+      "id": "SE-0265",
+      "episodeNumber": 265,
+      "title": "Offset-Based Access to Indices, Elements, and Slices",
+      "proposalState": "returnedForRevision",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0266": {
+      "id": "SE-0266",
+      "episodeNumber": 217,
+      "title": "Synthesized `Comparable` conformance for `enum` types",
+      "proposalState": "implemented",
+      "swiftVersion": "5.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0267": {
+      "id": "SE-0267",
+      "episodeNumber": 218,
+      "title": "`where` clauses on contextually generic declarations",
+      "proposalState": "implemented",
+      "swiftVersion": "5.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0268": {
+      "id": "SE-0268",
+      "episodeNumber": 219,
+      "title": "Refine `didSet` Semantics",
+      "proposalState": "implemented",
+      "swiftVersion": "5.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0269": {
+      "id": "SE-0269",
+      "episodeNumber": 220,
+      "title": "Increase availability of implicit `self` in `@escaping` closures when reference cycles are unlikely to occur",
+      "proposalState": "implemented",
+      "swiftVersion": "5.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0270": {
+      "id": "SE-0270",
+      "episodeNumber": 221,
+      "title": "Add Collection Operations on Noncontiguous Elements",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0271": {
+      "id": "SE-0271",
+      "episodeNumber": 222,
+      "title": "Package Manager Resources",
+      "proposalState": "implemented",
+      "swiftVersion": "5.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0272": {
+      "id": "SE-0272",
+      "episodeNumber": 223,
+      "title": "Package Manager Binary Dependencies",
+      "proposalState": "implemented",
+      "swiftVersion": "5.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0273": {
+      "id": "SE-0273",
+      "episodeNumber": 224,
+      "title": "Package Manager Conditional Target Dependencies",
+      "proposalState": "implemented",
+      "swiftVersion": "5.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0274": {
+      "id": "SE-0274",
+      "episodeNumber": 225,
+      "title": "Concise magic file names",
+      "proposalState": "implemented",
+      "swiftVersion": "5.8",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0275": {
+      "id": "SE-0275",
+      "episodeNumber": 275,
+      "title": "Allow more characters (like whitespaces and punctuations) for escaped identifiers",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0276": {
+      "id": "SE-0276",
+      "episodeNumber": 226,
+      "title": "Multi-Pattern Catch Clauses",
+      "proposalState": "implemented",
+      "swiftVersion": "5.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0277": {
+      "id": "SE-0277",
+      "episodeNumber": 227,
+      "title": "Float16",
+      "proposalState": "implemented",
+      "swiftVersion": "5.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0278": {
+      "id": "SE-0278",
+      "episodeNumber": 228,
+      "title": "Package Manager Localized Resources",
+      "proposalState": "implemented",
+      "swiftVersion": "5.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0279": {
+      "id": "SE-0279",
+      "episodeNumber": 229,
+      "title": "Multiple Trailing Closures",
+      "proposalState": "implemented",
+      "swiftVersion": "5.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0280": {
+      "id": "SE-0280",
+      "episodeNumber": 230,
+      "title": "Enum cases as protocol witnesses",
+      "proposalState": "implemented",
+      "swiftVersion": "5.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0281": {
+      "id": "SE-0281",
+      "episodeNumber": 231,
+      "title": "`@main`: Type-Based Program Entry Points",
+      "proposalState": "implemented",
+      "swiftVersion": "5.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0282": {
+      "id": "SE-0282",
+      "episodeNumber": 232,
+      "title": "Clarify the Swift memory consistency model ⚛︎",
+      "proposalState": "implemented",
+      "swiftVersion": "5.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0283": {
+      "id": "SE-0283",
+      "episodeNumber": 283,
+      "title": "Tuples Conform to `Equatable`, `Comparable`, and `Hashable`",
+      "proposalState": "returnedForRevision",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0284": {
+      "id": "SE-0284",
+      "episodeNumber": 233,
+      "title": "Allow Multiple Variadic Parameters in Functions, Subscripts, and Initializers",
+      "proposalState": "implemented",
+      "swiftVersion": "5.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0285": {
+      "id": "SE-0285",
+      "episodeNumber": 234,
+      "title": "Ease the transition to concise magic file strings",
+      "proposalState": "implemented",
+      "swiftVersion": "5.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0286": {
+      "id": "SE-0286",
+      "episodeNumber": 235,
+      "title": "Forward-scan matching for trailing closures",
+      "proposalState": "implemented",
+      "swiftVersion": "5.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0287": {
+      "id": "SE-0287",
+      "episodeNumber": 236,
+      "title": "Extend implicit member syntax to cover chains of member references",
+      "proposalState": "implemented",
+      "swiftVersion": "5.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0288": {
+      "id": "SE-0288",
+      "episodeNumber": 288,
+      "title": "Adding `isPower(of:)` to `BinaryInteger`",
+      "proposalState": "previewing",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0289": {
+      "id": "SE-0289",
+      "episodeNumber": 237,
+      "title": "Result builders",
+      "proposalState": "implemented",
+      "swiftVersion": "5.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0290": {
+      "id": "SE-0290",
+      "episodeNumber": 238,
+      "title": "Unavailability Condition",
+      "proposalState": "implemented",
+      "swiftVersion": "5.6",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0291": {
+      "id": "SE-0291",
+      "episodeNumber": 239,
+      "title": "Package Collections",
+      "proposalState": "implemented",
+      "swiftVersion": "5.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0292": {
+      "id": "SE-0292",
+      "episodeNumber": 240,
+      "title": "Package Registry Service",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0293": {
+      "id": "SE-0293",
+      "episodeNumber": 241,
+      "title": "Extend Property Wrappers to Function and Closure Parameters",
+      "proposalState": "implemented",
+      "swiftVersion": "5.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0294": {
+      "id": "SE-0294",
+      "episodeNumber": 242,
+      "title": "Declaring executable targets in Package Manifests",
+      "proposalState": "implemented",
+      "swiftVersion": "5.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0295": {
+      "id": "SE-0295",
+      "episodeNumber": 243,
+      "title": "Codable synthesis for enums with associated values",
+      "proposalState": "implemented",
+      "swiftVersion": "5.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0296": {
+      "id": "SE-0296",
+      "episodeNumber": 244,
+      "title": "Async/await",
+      "proposalState": "implemented",
+      "swiftVersion": "5.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0297": {
+      "id": "SE-0297",
+      "episodeNumber": 245,
+      "title": "Concurrency Interoperability with Objective-C",
+      "proposalState": "implemented",
+      "swiftVersion": "5.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0298": {
+      "id": "SE-0298",
+      "episodeNumber": 246,
+      "title": "Async/Await: Sequences",
+      "proposalState": "implemented",
+      "swiftVersion": "5.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0299": {
+      "id": "SE-0299",
+      "episodeNumber": 247,
+      "title": "Extending Static Member Lookup in Generic Contexts",
+      "proposalState": "implemented",
+      "swiftVersion": "5.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0300": {
+      "id": "SE-0300",
+      "episodeNumber": 248,
+      "title": "Continuations for interfacing async tasks with synchronous code",
+      "proposalState": "implemented",
+      "swiftVersion": "5.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0301": {
+      "id": "SE-0301",
+      "episodeNumber": 249,
+      "title": "Package Editor Commands",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0302": {
+      "id": "SE-0302",
+      "episodeNumber": 250,
+      "title": "`Sendable` and `@Sendable` closures",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0303": {
+      "id": "SE-0303",
+      "episodeNumber": 251,
+      "title": "Package Manager Extensible Build Tools",
+      "proposalState": "implemented",
+      "swiftVersion": "5.6",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0304": {
+      "id": "SE-0304",
+      "episodeNumber": 252,
+      "title": "Structured concurrency",
+      "proposalState": "implemented",
+      "swiftVersion": "5.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0305": {
+      "id": "SE-0305",
+      "episodeNumber": 253,
+      "title": "Package Manager Binary Target Improvements",
+      "proposalState": "implemented",
+      "swiftVersion": "5.6",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0306": {
+      "id": "SE-0306",
+      "episodeNumber": 254,
+      "title": "Actors",
+      "proposalState": "implemented",
+      "swiftVersion": "5.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0307": {
+      "id": "SE-0307",
+      "episodeNumber": 255,
+      "title": "Allow interchangeable use of `CGFloat` and `Double` types",
+      "proposalState": "implemented",
+      "swiftVersion": "5.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0308": {
+      "id": "SE-0308",
+      "episodeNumber": 256,
+      "title": "`#if` for postfix member expressions",
+      "proposalState": "implemented",
+      "swiftVersion": "5.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0309": {
+      "id": "SE-0309",
+      "episodeNumber": 257,
+      "title": "Unlock existentials for all protocols",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0310": {
+      "id": "SE-0310",
+      "episodeNumber": 258,
+      "title": "Effectful Read-only Properties",
+      "proposalState": "implemented",
+      "swiftVersion": "5.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0311": {
+      "id": "SE-0311",
+      "episodeNumber": 259,
+      "title": "Task Local Values",
+      "proposalState": "implemented",
+      "swiftVersion": "5.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0312": {
+      "id": "SE-0312",
+      "episodeNumber": 312,
+      "title": "Add `indexed()` and `Collection` conformances for `enumerated()` and `zip(_:_:)`",
+      "proposalState": "returnedForRevision",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0313": {
+      "id": "SE-0313",
+      "episodeNumber": 260,
+      "title": "Improved control over actor isolation",
+      "proposalState": "implemented",
+      "swiftVersion": "5.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0314": {
+      "id": "SE-0314",
+      "episodeNumber": 261,
+      "title": "`AsyncStream` and `AsyncThrowingStream`",
+      "proposalState": "implemented",
+      "swiftVersion": "5.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0315": {
+      "id": "SE-0315",
+      "episodeNumber": 262,
+      "title": "Type placeholders (formerly, \"Placeholder types\")",
+      "proposalState": "implemented",
+      "swiftVersion": "5.6",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0316": {
+      "id": "SE-0316",
+      "episodeNumber": 263,
+      "title": "Global actors",
+      "proposalState": "implemented",
+      "swiftVersion": "5.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0317": {
+      "id": "SE-0317",
+      "episodeNumber": 264,
+      "title": "`async let` bindings",
+      "proposalState": "implemented",
+      "swiftVersion": "5.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0318": {
+      "id": "SE-0318",
+      "episodeNumber": 318,
+      "title": "Package Creation",
+      "proposalState": "returnedForRevision",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0319": {
+      "id": "SE-0319",
+      "episodeNumber": 265,
+      "title": "Conform Never to Identifiable",
+      "proposalState": "implemented",
+      "swiftVersion": "5.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0320": {
+      "id": "SE-0320",
+      "episodeNumber": 266,
+      "title": "Allow coding of non `String` / `Int` keyed `Dictionary` into a `KeyedContainer`",
+      "proposalState": "implemented",
+      "swiftVersion": "5.6",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0321": {
+      "id": "SE-0321",
+      "episodeNumber": 267,
+      "title": "Package Registry Service - Publish Endpoint",
+      "proposalState": "implemented",
+      "swiftVersion": "5.6",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0322": {
+      "id": "SE-0322",
+      "episodeNumber": 268,
+      "title": "Temporary uninitialized buffers",
+      "proposalState": "implemented",
+      "swiftVersion": "5.6",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0323": {
+      "id": "SE-0323",
+      "episodeNumber": 269,
+      "title": "Asynchronous Main Semantics",
+      "proposalState": "implemented",
+      "swiftVersion": "5.5.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0324": {
+      "id": "SE-0324",
+      "episodeNumber": 270,
+      "title": "Relax diagnostics for pointer arguments to C functions",
+      "proposalState": "implemented",
+      "swiftVersion": "5.6",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0325": {
+      "id": "SE-0325",
+      "episodeNumber": 271,
+      "title": "Additional Package Plugin APIs",
+      "proposalState": "implemented",
+      "swiftVersion": "5.6",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0326": {
+      "id": "SE-0326",
+      "episodeNumber": 272,
+      "title": "Enable multi-statement closure parameter/result type inference",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0327": {
+      "id": "SE-0327",
+      "episodeNumber": 273,
+      "title": "On Actors and Initialization",
+      "proposalState": "implemented",
+      "swiftVersion": "5.10",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0328": {
+      "id": "SE-0328",
+      "episodeNumber": 274,
+      "title": "Structural opaque result types",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0329": {
+      "id": "SE-0329",
+      "episodeNumber": 275,
+      "title": "Clock, Instant, and Duration",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0330": {
+      "id": "SE-0330",
+      "episodeNumber": 330,
+      "title": "Conditionals in Collections",
+      "proposalState": "returnedForRevision",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0331": {
+      "id": "SE-0331",
+      "episodeNumber": 276,
+      "title": "Remove Sendable conformance from unsafe pointer types",
+      "proposalState": "implemented",
+      "swiftVersion": "5.6",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0332": {
+      "id": "SE-0332",
+      "episodeNumber": 277,
+      "title": "Package Manager Command Plugins",
+      "proposalState": "implemented",
+      "swiftVersion": "5.6",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0333": {
+      "id": "SE-0333",
+      "episodeNumber": 278,
+      "title": "Expand usability of `withMemoryRebound`",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0334": {
+      "id": "SE-0334",
+      "episodeNumber": 279,
+      "title": "Pointer API Usability Improvements",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0335": {
+      "id": "SE-0335",
+      "episodeNumber": 280,
+      "title": "Introduce existential `any`",
+      "proposalState": "implemented",
+      "swiftVersion": "5.6",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0336": {
+      "id": "SE-0336",
+      "episodeNumber": 281,
+      "title": "Distributed Actor Isolation",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0337": {
+      "id": "SE-0337",
+      "episodeNumber": 282,
+      "title": "Incremental migration to concurrency checking",
+      "proposalState": "implemented",
+      "swiftVersion": "5.6",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0338": {
+      "id": "SE-0338",
+      "episodeNumber": 283,
+      "title": "Clarify the Execution of Non-Actor-Isolated Async Functions",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0339": {
+      "id": "SE-0339",
+      "episodeNumber": 284,
+      "title": "Module Aliasing For Disambiguation",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0340": {
+      "id": "SE-0340",
+      "episodeNumber": 285,
+      "title": "Unavailable From Async Attribute",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0341": {
+      "id": "SE-0341",
+      "episodeNumber": 286,
+      "title": "Opaque Parameter Declarations",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0342": {
+      "id": "SE-0342",
+      "episodeNumber": 342,
+      "title": "Statically link Swift runtime libraries by default on supported platforms",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0343": {
+      "id": "SE-0343",
+      "episodeNumber": 287,
+      "title": "Concurrency in Top-level Code",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0344": {
+      "id": "SE-0344",
+      "episodeNumber": 288,
+      "title": "Distributed Actor Runtime",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0345": {
+      "id": "SE-0345",
+      "episodeNumber": 289,
+      "title": "`if let` shorthand for shadowing an existing optional variable",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0346": {
+      "id": "SE-0346",
+      "episodeNumber": 290,
+      "title": "Lightweight same-type requirements for primary associated types",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0347": {
+      "id": "SE-0347",
+      "episodeNumber": 291,
+      "title": "Type inference from default expressions",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0348": {
+      "id": "SE-0348",
+      "episodeNumber": 292,
+      "title": "`buildPartialBlock` for result builders",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0349": {
+      "id": "SE-0349",
+      "episodeNumber": 293,
+      "title": "Unaligned Loads and Stores from Raw Memory",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0350": {
+      "id": "SE-0350",
+      "episodeNumber": 294,
+      "title": "Regex Type and Overview",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0351": {
+      "id": "SE-0351",
+      "episodeNumber": 295,
+      "title": "Regex builder DSL",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0352": {
+      "id": "SE-0352",
+      "episodeNumber": 296,
+      "title": "Implicitly Opened Existentials",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0353": {
+      "id": "SE-0353",
+      "episodeNumber": 297,
+      "title": "Constrained Existential Types",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0354": {
+      "id": "SE-0354",
+      "episodeNumber": 298,
+      "title": "Regex Literals",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0355": {
+      "id": "SE-0355",
+      "episodeNumber": 299,
+      "title": "Regex Syntax and Run-time Construction",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0356": {
+      "id": "SE-0356",
+      "episodeNumber": 300,
+      "title": "Swift Snippets",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0357": {
+      "id": "SE-0357",
+      "episodeNumber": 301,
+      "title": "Regex-powered string processing algorithms",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0358": {
+      "id": "SE-0358",
+      "episodeNumber": 302,
+      "title": "Primary Associated Types in the Standard Library",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0359": {
+      "id": "SE-0359",
+      "episodeNumber": 359,
+      "title": "Build-Time Constant Values",
+      "proposalState": "returnedForRevision",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0360": {
+      "id": "SE-0360",
+      "episodeNumber": 303,
+      "title": "Opaque result types with limited availability",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0361": {
+      "id": "SE-0361",
+      "episodeNumber": 304,
+      "title": "Extensions on bound generic types",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0362": {
+      "id": "SE-0362",
+      "episodeNumber": 305,
+      "title": "Piecemeal adoption of upcoming language improvements",
+      "proposalState": "implemented",
+      "swiftVersion": "5.8",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0363": {
+      "id": "SE-0363",
+      "episodeNumber": 306,
+      "title": "Unicode for String Processing",
+      "proposalState": "implemented",
+      "swiftVersion": "5.7",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0364": {
+      "id": "SE-0364",
+      "episodeNumber": 307,
+      "title": "Warning for Retroactive Conformances of External Types",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0365": {
+      "id": "SE-0365",
+      "episodeNumber": 308,
+      "title": "Allow implicit `self` for `weak self` captures, after `self` is unwrapped",
+      "proposalState": "implemented",
+      "swiftVersion": "5.8",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0366": {
+      "id": "SE-0366",
+      "episodeNumber": 309,
+      "title": "`consume` operator to end the lifetime of a variable binding",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0367": {
+      "id": "SE-0367",
+      "episodeNumber": 310,
+      "title": "Conditional compilation for attributes",
+      "proposalState": "implemented",
+      "swiftVersion": "5.8",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0368": {
+      "id": "SE-0368",
+      "episodeNumber": 311,
+      "title": "StaticBigInt",
+      "proposalState": "implemented",
+      "swiftVersion": "5.8",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0369": {
+      "id": "SE-0369",
+      "episodeNumber": 312,
+      "title": "Add CustomDebugStringConvertible conformance to AnyKeyPath",
+      "proposalState": "implemented",
+      "swiftVersion": "5.8",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0370": {
+      "id": "SE-0370",
+      "episodeNumber": 313,
+      "title": "Pointer Family Initialization Improvements and Better Buffer Slices",
+      "proposalState": "implemented",
+      "swiftVersion": "5.8",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0371": {
+      "id": "SE-0371",
+      "episodeNumber": 314,
+      "title": "Isolated synchronous deinit",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0372": {
+      "id": "SE-0372",
+      "episodeNumber": 315,
+      "title": "Document Sorting as Stable",
+      "proposalState": "implemented",
+      "swiftVersion": "5.8",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0373": {
+      "id": "SE-0373",
+      "episodeNumber": 316,
+      "title": "Lift all limitations on variables in result builders",
+      "proposalState": "implemented",
+      "swiftVersion": "5.8",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0374": {
+      "id": "SE-0374",
+      "episodeNumber": 317,
+      "title": "Add sleep(for:) to Clock",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0375": {
+      "id": "SE-0375",
+      "episodeNumber": 318,
+      "title": "Opening existential arguments to optional parameters",
+      "proposalState": "implemented",
+      "swiftVersion": "5.8",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0376": {
+      "id": "SE-0376",
+      "episodeNumber": 319,
+      "title": "Function Back Deployment",
+      "proposalState": "implemented",
+      "swiftVersion": "5.8",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0377": {
+      "id": "SE-0377",
+      "episodeNumber": 320,
+      "title": "`borrowing` and `consuming` parameter ownership modifiers",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0378": {
+      "id": "SE-0378",
+      "episodeNumber": 321,
+      "title": "Package Registry Authentication",
+      "proposalState": "implemented",
+      "swiftVersion": "5.8",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0379": {
+      "id": "SE-0379",
+      "episodeNumber": 379,
+      "title": "Swift Opt-In Reflection Metadata",
+      "proposalState": "returnedForRevision",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0380": {
+      "id": "SE-0380",
+      "episodeNumber": 322,
+      "title": "`if` and `switch` expressions",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0381": {
+      "id": "SE-0381",
+      "episodeNumber": 323,
+      "title": "DiscardingTaskGroups",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0382": {
+      "id": "SE-0382",
+      "episodeNumber": 324,
+      "title": "Expression Macros",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0383": {
+      "id": "SE-0383",
+      "episodeNumber": 325,
+      "title": "Deprecate @UIApplicationMain and @NSApplicationMain",
+      "proposalState": "implemented",
+      "swiftVersion": "5.10",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0384": {
+      "id": "SE-0384",
+      "episodeNumber": 326,
+      "title": "Importing Forward Declared Objective-C Interfaces and Protocols",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0385": {
+      "id": "SE-0385",
+      "episodeNumber": 385,
+      "title": "Custom Reflection Metadata",
+      "proposalState": "returnedForRevision",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0386": {
+      "id": "SE-0386",
+      "episodeNumber": 327,
+      "title": "New access modifier: `package`",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0387": {
+      "id": "SE-0387",
+      "episodeNumber": 328,
+      "title": "Swift SDKs for Cross-Compilation",
+      "proposalState": "implemented",
+      "swiftVersion": "6.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0388": {
+      "id": "SE-0388",
+      "episodeNumber": 329,
+      "title": "Convenience Async[Throwing]Stream.makeStream methods",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0389": {
+      "id": "SE-0389",
+      "episodeNumber": 330,
+      "title": "Attached Macros",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0390": {
+      "id": "SE-0390",
+      "episodeNumber": 331,
+      "title": "Noncopyable structs and enums",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0391": {
+      "id": "SE-0391",
+      "episodeNumber": 332,
+      "title": "Package Registry Publish",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0392": {
+      "id": "SE-0392",
+      "episodeNumber": 333,
+      "title": "Custom Actor Executors",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0393": {
+      "id": "SE-0393",
+      "episodeNumber": 334,
+      "title": "Value and Type Parameter Packs",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0394": {
+      "id": "SE-0394",
+      "episodeNumber": 335,
+      "title": "Package Manager Support for Custom Macros",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0395": {
+      "id": "SE-0395",
+      "episodeNumber": 336,
+      "title": "Observation",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0396": {
+      "id": "SE-0396",
+      "episodeNumber": 337,
+      "title": "Conform `Never` to `Codable`",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0397": {
+      "id": "SE-0397",
+      "episodeNumber": 338,
+      "title": "Freestanding Declaration Macros",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0398": {
+      "id": "SE-0398",
+      "episodeNumber": 339,
+      "title": "Allow Generic Types to Abstract Over Packs",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0399": {
+      "id": "SE-0399",
+      "episodeNumber": 340,
+      "title": "Tuple of value pack expansion",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0400": {
+      "id": "SE-0400",
+      "episodeNumber": 341,
+      "title": "Init Accessors",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0401": {
+      "id": "SE-0401",
+      "episodeNumber": 342,
+      "title": "Remove Actor Isolation Inference caused by Property Wrappers",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0402": {
+      "id": "SE-0402",
+      "episodeNumber": 343,
+      "title": "Generalize `conformance` macros as `extension` macros",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0403": {
+      "id": "SE-0403",
+      "episodeNumber": 403,
+      "title": "Package Manager Mixed Language Target Support",
+      "proposalState": "returnedForRevision",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0404": {
+      "id": "SE-0404",
+      "episodeNumber": 344,
+      "title": "Allow Protocols to be Nested in Non-Generic Contexts",
+      "proposalState": "implemented",
+      "swiftVersion": "5.10",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0405": {
+      "id": "SE-0405",
+      "episodeNumber": 345,
+      "title": "String Initializers with Encoding Validation",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0406": {
+      "id": "SE-0406",
+      "episodeNumber": 406,
+      "title": "Backpressure support for AsyncStream",
+      "proposalState": "returnedForRevision",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0407": {
+      "id": "SE-0407",
+      "episodeNumber": 346,
+      "title": "Member Macro Conformances",
+      "proposalState": "implemented",
+      "swiftVersion": "5.9.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0408": {
+      "id": "SE-0408",
+      "episodeNumber": 347,
+      "title": "Pack Iteration",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0409": {
+      "id": "SE-0409",
+      "episodeNumber": 348,
+      "title": "Access-level modifiers on import declarations",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0410": {
+      "id": "SE-0410",
+      "episodeNumber": 349,
+      "title": "Low-Level Atomic Operations ⚛︎",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0411": {
+      "id": "SE-0411",
+      "episodeNumber": 350,
+      "title": "Isolated default value expressions",
+      "proposalState": "implemented",
+      "swiftVersion": "5.10",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0412": {
+      "id": "SE-0412",
+      "episodeNumber": 351,
+      "title": "Strict concurrency for global variables",
+      "proposalState": "implemented",
+      "swiftVersion": "5.10",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0413": {
+      "id": "SE-0413",
+      "episodeNumber": 352,
+      "title": "Typed throws",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0414": {
+      "id": "SE-0414",
+      "episodeNumber": 353,
+      "title": "Region based Isolation",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0415": {
+      "id": "SE-0415",
+      "episodeNumber": 354,
+      "title": "Function Body Macros",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0416": {
+      "id": "SE-0416",
+      "episodeNumber": 355,
+      "title": "Subtyping for keypath literals as functions",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0417": {
+      "id": "SE-0417",
+      "episodeNumber": 356,
+      "title": "Task Executor Preference",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0418": {
+      "id": "SE-0418",
+      "episodeNumber": 357,
+      "title": "Inferring `Sendable` for methods and key path literals",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0419": {
+      "id": "SE-0419",
+      "episodeNumber": 358,
+      "title": "Swift Backtrace API",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0420": {
+      "id": "SE-0420",
+      "episodeNumber": 359,
+      "title": "Inheritance of actor isolation",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0421": {
+      "id": "SE-0421",
+      "episodeNumber": 360,
+      "title": "Generalize effect polymorphism for `AsyncSequence` and `AsyncIteratorProtocol`",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0422": {
+      "id": "SE-0422",
+      "episodeNumber": 361,
+      "title": "Expression macro as caller-side default argument",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0423": {
+      "id": "SE-0423",
+      "episodeNumber": 362,
+      "title": "Dynamic actor isolation enforcement from non-strict-concurrency contexts",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0424": {
+      "id": "SE-0424",
+      "episodeNumber": 363,
+      "title": "Custom isolation checking for SerialExecutor",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0425": {
+      "id": "SE-0425",
+      "episodeNumber": 364,
+      "title": "128-bit Integer Types",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0426": {
+      "id": "SE-0426",
+      "episodeNumber": 365,
+      "title": "BitwiseCopyable",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0427": {
+      "id": "SE-0427",
+      "episodeNumber": 366,
+      "title": "Noncopyable Generics",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0428": {
+      "id": "SE-0428",
+      "episodeNumber": 367,
+      "title": "Resolve DistributedActor protocols",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0429": {
+      "id": "SE-0429",
+      "episodeNumber": 368,
+      "title": "Partial consumption of noncopyable values",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0430": {
+      "id": "SE-0430",
+      "episodeNumber": 369,
+      "title": "`sending` parameter and result values",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0431": {
+      "id": "SE-0431",
+      "episodeNumber": 370,
+      "title": "`@isolated(any)` Function Types",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0432": {
+      "id": "SE-0432",
+      "episodeNumber": 371,
+      "title": "Borrowing and consuming pattern matching for noncopyable types",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0433": {
+      "id": "SE-0433",
+      "episodeNumber": 372,
+      "title": "Synchronous Mutual Exclusion Lock 🔒",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0434": {
+      "id": "SE-0434",
+      "episodeNumber": 373,
+      "title": "Usability of global-actor-isolated types",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0435": {
+      "id": "SE-0435",
+      "episodeNumber": 374,
+      "title": "Swift Language Version Per Target",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0436": {
+      "id": "SE-0436",
+      "episodeNumber": 375,
+      "title": "Objective-C implementations in Swift",
+      "proposalState": "implemented",
+      "swiftVersion": "6.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0437": {
+      "id": "SE-0437",
+      "episodeNumber": 376,
+      "title": "Noncopyable Standard Library Primitives",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0438": {
+      "id": "SE-0438",
+      "episodeNumber": 377,
+      "title": "Metatype Keypaths",
+      "proposalState": "implemented",
+      "swiftVersion": "6.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0439": {
+      "id": "SE-0439",
+      "episodeNumber": 378,
+      "title": "Allow trailing comma in comma-separated lists",
+      "proposalState": "implemented",
+      "swiftVersion": "6.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0440": {
+      "id": "SE-0440",
+      "episodeNumber": 379,
+      "title": "DebugDescription Macro",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0441": {
+      "id": "SE-0441",
+      "episodeNumber": 380,
+      "title": "Formalize ‘language mode’ terminology",
+      "proposalState": "implemented",
+      "swiftVersion": "6.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0442": {
+      "id": "SE-0442",
+      "episodeNumber": 381,
+      "title": "Allow TaskGroup's ChildTaskResult Type To Be Inferred",
+      "proposalState": "implemented",
+      "swiftVersion": "6.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0443": {
+      "id": "SE-0443",
+      "episodeNumber": 382,
+      "title": "Precise Control Flags over Compiler Warnings",
+      "proposalState": "implemented",
+      "swiftVersion": "6.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0444": {
+      "id": "SE-0444",
+      "episodeNumber": 383,
+      "title": "Member import visibility",
+      "proposalState": "implemented",
+      "swiftVersion": "6.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0445": {
+      "id": "SE-0445",
+      "episodeNumber": 384,
+      "title": "Improving `String.Index`'s printed descriptions",
+      "proposalState": "implemented",
+      "swiftVersion": "6.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0446": {
+      "id": "SE-0446",
+      "episodeNumber": 385,
+      "title": "Nonescapable Types",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0447": {
+      "id": "SE-0447",
+      "episodeNumber": 386,
+      "title": "Span: Safe Access to Contiguous Storage",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0448": {
+      "id": "SE-0448",
+      "episodeNumber": 448,
+      "title": "Regex lookbehind assertions",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0449": {
+      "id": "SE-0449",
+      "episodeNumber": 387,
+      "title": "Allow `nonisolated` to prevent global actor inference",
+      "proposalState": "implemented",
+      "swiftVersion": "6.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0450": {
+      "id": "SE-0450",
+      "episodeNumber": 388,
+      "title": "Package traits",
+      "proposalState": "implemented",
+      "swiftVersion": "6.1",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0451": {
+      "id": "SE-0451",
+      "episodeNumber": 389,
+      "title": "Raw identifiers",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0452": {
+      "id": "SE-0452",
+      "episodeNumber": 390,
+      "title": "Integer Generic Parameters",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0453": {
+      "id": "SE-0453",
+      "episodeNumber": 391,
+      "title": "InlineArray, a fixed-size array",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0454": {
+      "id": "SE-0454",
+      "episodeNumber": 454,
+      "title": "Custom Allocator for Toolchain",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0455": {
+      "id": "SE-0455",
+      "episodeNumber": 455,
+      "title": "SwiftPM @testable build setting",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0456": {
+      "id": "SE-0456",
+      "episodeNumber": 392,
+      "title": "Add `Span`-providing Properties to Standard Library Types",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0457": {
+      "id": "SE-0457",
+      "episodeNumber": 393,
+      "title": "Expose attosecond representation of `Duration`",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0458": {
+      "id": "SE-0458",
+      "episodeNumber": 394,
+      "title": "Opt-in Strict Memory Safety Checking",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0459": {
+      "id": "SE-0459",
+      "episodeNumber": 395,
+      "title": "Add `Collection` conformances for `enumerated()`",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0460": {
+      "id": "SE-0460",
+      "episodeNumber": 396,
+      "title": "Explicit Specialization",
+      "proposalState": "implemented",
+      "swiftVersion": "6.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0461": {
+      "id": "SE-0461",
+      "episodeNumber": 397,
+      "title": "Run nonisolated async functions on the caller's actor by default",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0462": {
+      "id": "SE-0462",
+      "episodeNumber": 398,
+      "title": "Task Priority Escalation APIs",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0463": {
+      "id": "SE-0463",
+      "episodeNumber": 399,
+      "title": "Import Objective-C completion handler parameters as `@Sendable`",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0464": {
+      "id": "SE-0464",
+      "episodeNumber": 400,
+      "title": "UTF8Span: Safe UTF-8 Processing Over Contiguous Bytes",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0465": {
+      "id": "SE-0465",
+      "episodeNumber": 401,
+      "title": "Standard Library Primitives for Nonescapable Types",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0466": {
+      "id": "SE-0466",
+      "episodeNumber": 402,
+      "title": "Control default actor isolation inference",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0467": {
+      "id": "SE-0467",
+      "episodeNumber": 403,
+      "title": "MutableSpan and MutableRawSpan: delegate mutations of contiguous memory",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0468": {
+      "id": "SE-0468",
+      "episodeNumber": 404,
+      "title": "`Hashable` conformance for `Async(Throwing)Stream.Continuation`",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0469": {
+      "id": "SE-0469",
+      "episodeNumber": 405,
+      "title": "Task Naming",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0470": {
+      "id": "SE-0470",
+      "episodeNumber": 406,
+      "title": "Global-actor isolated conformances",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0471": {
+      "id": "SE-0471",
+      "episodeNumber": 407,
+      "title": "Improved Custom SerialExecutor isolation checking for Concurrency Runtime",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0472": {
+      "id": "SE-0472",
+      "episodeNumber": 408,
+      "title": "Starting tasks synchronously from caller context",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0473": {
+      "id": "SE-0473",
+      "episodeNumber": 409,
+      "title": "Clock Epochs",
+      "proposalState": "implemented",
+      "swiftVersion": "6.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0474": {
+      "id": "SE-0474",
+      "episodeNumber": 474,
+      "title": "Yielding accessors",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0475": {
+      "id": "SE-0475",
+      "episodeNumber": 410,
+      "title": "Transactional Observation of Values",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0476": {
+      "id": "SE-0476",
+      "episodeNumber": 411,
+      "title": "Controlling the ABI of a function, initializer, property, or subscript",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0477": {
+      "id": "SE-0477",
+      "episodeNumber": 412,
+      "title": "Default Value in String Interpolations",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0478": {
+      "id": "SE-0478",
+      "episodeNumber": 478,
+      "title": "File-level defaults",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0479": {
+      "id": "SE-0479",
+      "episodeNumber": 479,
+      "title": "Method and Initializer Key Paths",
+      "proposalState": "returnedForRevision",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0480": {
+      "id": "SE-0480",
+      "episodeNumber": 413,
+      "title": "Warning Control Settings for SwiftPM",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0481": {
+      "id": "SE-0481",
+      "episodeNumber": 414,
+      "title": "`weak let`",
+      "proposalState": "implemented",
+      "swiftVersion": "6.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0482": {
+      "id": "SE-0482",
+      "episodeNumber": 415,
+      "title": "Binary Static Library Dependencies",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0483": {
+      "id": "SE-0483",
+      "episodeNumber": 416,
+      "title": "`InlineArray` Type Sugar",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0484": {
+      "id": "SE-0484",
+      "episodeNumber": 417,
+      "title": "Allow Additional Arguments to `@dynamicMemberLookup` Subscripts",
+      "proposalState": "implemented",
+      "swiftVersion": "6.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0485": {
+      "id": "SE-0485",
+      "episodeNumber": 418,
+      "title": "OutputSpan: delegate initialization of contiguous memory",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0486": {
+      "id": "SE-0486",
+      "episodeNumber": 419,
+      "title": "Migration tooling for Swift features",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0487": {
+      "id": "SE-0487",
+      "episodeNumber": 420,
+      "title": "Nonexhaustive enums",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0488": {
+      "id": "SE-0488",
+      "episodeNumber": 421,
+      "title": "Apply the extracting() slicing pattern more widely",
+      "proposalState": "implemented",
+      "swiftVersion": "6.2",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0489": {
+      "id": "SE-0489",
+      "episodeNumber": 422,
+      "title": "Improve `EncodingError` and `DecodingError`'s printed descriptions",
+      "proposalState": "implemented",
+      "swiftVersion": "6.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0490": {
+      "id": "SE-0490",
+      "episodeNumber": 490,
+      "title": "Environment Constrained Shared Libraries",
+      "proposalState": "returnedForRevision",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0491": {
+      "id": "SE-0491",
+      "episodeNumber": 423,
+      "title": "Module selectors for name disambiguation",
+      "proposalState": "implemented",
+      "swiftVersion": "6.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0492": {
+      "id": "SE-0492",
+      "episodeNumber": 424,
+      "title": "Section Placement Control",
+      "proposalState": "implemented",
+      "swiftVersion": "6.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0493": {
+      "id": "SE-0493",
+      "episodeNumber": 425,
+      "title": "Support `async` calls in `defer` bodies",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0494": {
+      "id": "SE-0494",
+      "episodeNumber": 426,
+      "title": "Add `isTriviallyIdentical(to:)` Methods for Quick Comparisons to Concrete Types",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0495": {
+      "id": "SE-0495",
+      "episodeNumber": 427,
+      "title": "C compatible functions and enums",
+      "proposalState": "implemented",
+      "swiftVersion": "6.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0496": {
+      "id": "SE-0496",
+      "episodeNumber": 428,
+      "title": "`@inline(always)` attribute",
+      "proposalState": "implemented",
+      "swiftVersion": "6.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0497": {
+      "id": "SE-0497",
+      "episodeNumber": 429,
+      "title": "Controlling function definition visibility in clients",
+      "proposalState": "implemented",
+      "swiftVersion": "6.3",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0498": {
+      "id": "SE-0498",
+      "episodeNumber": 430,
+      "title": "Expose demangle function in Runtime module",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0499": {
+      "id": "SE-0499",
+      "episodeNumber": 431,
+      "title": "Support ~Copyable, ~Escapable in simple standard library protocols",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0500": {
+      "id": "SE-0500",
+      "episodeNumber": 500,
+      "title": "Improving package creation with custom templates: SwiftPM Template Initialization",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0501": {
+      "id": "SE-0501",
+      "episodeNumber": 432,
+      "title": "HTML Coverage Report",
+      "proposalState": "implemented",
+      "swiftVersion": "6.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0502": {
+      "id": "SE-0502",
+      "episodeNumber": 433,
+      "title": "Exclude private initialized properties from memberwise initializer",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0503": {
+      "id": "SE-0503",
+      "episodeNumber": 434,
+      "title": "Suppressed Default Conformances on Associated Types With Defaults",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0504": {
+      "id": "SE-0504",
+      "episodeNumber": 435,
+      "title": "Task Cancellation Shields",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0505": {
+      "id": "SE-0505",
+      "episodeNumber": 505,
+      "title": "Delayed Enqueuing for Executors",
+      "proposalState": "returnedForRevision",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0506": {
+      "id": "SE-0506",
+      "episodeNumber": 436,
+      "title": "Advanced Observation Tracking",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0507": {
+      "id": "SE-0507",
+      "episodeNumber": 437,
+      "title": "Borrow and Mutate Accessors",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0508": {
+      "id": "SE-0508",
+      "episodeNumber": 438,
+      "title": "Array expression trailing closures",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0509": {
+      "id": "SE-0509",
+      "episodeNumber": 439,
+      "title": "Software Bill of Materials (SBOM) Generation for Swift Package Manager",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0510": {
+      "id": "SE-0510",
+      "episodeNumber": 510,
+      "title": "Introduce `Dictionary.mapKeyedValues`",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0511": {
+      "id": "SE-0511",
+      "episodeNumber": 440,
+      "title": "SwiftPM Add Target Plugin Command",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0512": {
+      "id": "SE-0512",
+      "episodeNumber": 441,
+      "title": "Document that `Mutex.withLockIfAvailable(_:)` cannot spuriously fail",
+      "proposalState": "implemented",
+      "swiftVersion": "6.0",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0513": {
+      "id": "SE-0513",
+      "episodeNumber": 513,
+      "title": "API to get the path to the current executable",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0514": {
+      "id": "SE-0514",
+      "episodeNumber": 442,
+      "title": "`Hashable` Conformance for `Dictionary.Keys`, `CollectionOfOne` and `EmptyCollection`",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0515": {
+      "id": "SE-0515",
+      "episodeNumber": 515,
+      "title": "Allow `reduce` to produce noncopyable results",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0516": {
+      "id": "SE-0516",
+      "episodeNumber": 443,
+      "title": "`Iterable`",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0517": {
+      "id": "SE-0517",
+      "episodeNumber": 444,
+      "title": "UniqueBox",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0518": {
+      "id": "SE-0518",
+      "episodeNumber": 445,
+      "title": "`~Sendable` for explicitly marking non-`Sendable` types",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0519": {
+      "id": "SE-0519",
+      "episodeNumber": 446,
+      "title": "`Ref` and `MutableRef` types for safe, first-class references",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0520": {
+      "id": "SE-0520",
+      "episodeNumber": 447,
+      "title": "Discardable result use in Task initializers",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0521": {
+      "id": "SE-0521",
+      "episodeNumber": 448,
+      "title": "Improved Syntax for Optionals of Opaque and Existential Types",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0522": {
+      "id": "SE-0522",
+      "episodeNumber": 449,
+      "title": "Source-Level Control Over Compiler Warnings",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0523": {
+      "id": "SE-0523",
+      "episodeNumber": 450,
+      "title": "Hashable conformance for `UnownedTaskExecutor`",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0524": {
+      "id": "SE-0524",
+      "episodeNumber": 451,
+      "title": "Add `withTemporaryAllocation` using `Output(Raw)Span`",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0525": {
+      "id": "SE-0525",
+      "episodeNumber": 452,
+      "title": "Safe loading API for `RawSpan`",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0526": {
+      "id": "SE-0526",
+      "episodeNumber": 526,
+      "title": "withDeadline",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0527": {
+      "id": "SE-0527",
+      "episodeNumber": 453,
+      "title": "UniqueArray",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0528": {
+      "id": "SE-0528",
+      "episodeNumber": 454,
+      "title": "`Continuation` — Safe and Performant Async Continuations",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0529": {
+      "id": "SE-0529",
+      "episodeNumber": 529,
+      "title": "Add `FilePath` to the Standard Library",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0530": {
+      "id": "SE-0530",
+      "episodeNumber": 455,
+      "title": "Async Result Support",
+      "proposalState": "implemented",
+      "swiftVersion": "6.4",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0531": {
+      "id": "SE-0531",
+      "episodeNumber": 531,
+      "title": "Literal Expressions",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0532": {
+      "id": "SE-0532",
+      "episodeNumber": 532,
+      "title": "`Optional` noncopyable improvements and generalizations",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0533": {
+      "id": "SE-0533",
+      "episodeNumber": 533,
+      "title": "Generating synchronous overloads of `async` functions with a macro",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0534": {
+      "id": "SE-0534",
+      "episodeNumber": 534,
+      "title": "Opt-in exact matching for version identifiers with build metadata",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0535": {
+      "id": "SE-0535",
+      "episodeNumber": 456,
+      "title": "Add CLI for editing global mirrors configuration",
+      "proposalState": "implemented",
+      "swiftVersion": "6.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0536": {
+      "id": "SE-0536",
+      "episodeNumber": 457,
+      "title": "Package Registry Search",
+      "proposalState": "implemented",
+      "swiftVersion": "6.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0537": {
+      "id": "SE-0537",
+      "episodeNumber": 458,
+      "title": "Section Placement Control for Functions",
+      "proposalState": "implemented",
+      "swiftVersion": "6.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0538": {
+      "id": "SE-0538",
+      "episodeNumber": 538,
+      "title": "Disconnected",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0539": {
+      "id": "SE-0539",
+      "episodeNumber": 539,
+      "title": "Enable Macros to Grant `self` Access for Property Initializers",
+      "proposalState": "returnedForRevision",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0540": {
+      "id": "SE-0540",
+      "episodeNumber": 459,
+      "title": "Default Target Settings",
+      "proposalState": "implemented",
+      "swiftVersion": "6.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0541": {
+      "id": "SE-0541",
+      "episodeNumber": 460,
+      "title": "Flexible Swift/C Interoperability for Packages",
+      "proposalState": "implemented",
+      "swiftVersion": "6.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0542": {
+      "id": "SE-0542",
+      "episodeNumber": 542,
+      "title": "Package Manager Conditional Plugin",
+      "proposalState": "returnedForRevision",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0543": {
+      "id": "SE-0543",
+      "episodeNumber": 461,
+      "title": "InlineArray: Hashable",
+      "proposalState": "implemented",
+      "swiftVersion": "6.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0544": {
+      "id": "SE-0544",
+      "episodeNumber": 544,
+      "title": "Mutation and consumption in non-`Copyable` type `deinit`s",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0545": {
+      "id": "SE-0545",
+      "episodeNumber": 462,
+      "title": "SwiftPM Build Performance Debugging Options",
+      "proposalState": "implemented",
+      "swiftVersion": "6.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0546": {
+      "id": "SE-0546",
+      "episodeNumber": 546,
+      "title": "Same-file memberwise initializer extensions",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0547": {
+      "id": "SE-0547",
+      "episodeNumber": 463,
+      "title": "SwiftPM Support for Compilation Caching",
+      "proposalState": "implemented",
+      "swiftVersion": "6.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0548": {
+      "id": "SE-0548",
+      "episodeNumber": 464,
+      "title": "resignRemoteID for remote distributed actor references",
+      "proposalState": "implemented",
+      "swiftVersion": "6.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0549": {
+      "id": "SE-0549",
+      "episodeNumber": 549,
+      "title": "Package Manager HTTP Proxy Configuration",
+      "proposalState": "returnedForRevision",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0550": {
+      "id": "SE-0550",
+      "episodeNumber": 550,
+      "title": "@instrumentation attribute for functions",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0551": {
+      "id": "SE-0551",
+      "episodeNumber": 465,
+      "title": "`Span` over a single value",
+      "proposalState": "implemented",
+      "swiftVersion": "6.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0552": {
+      "id": "SE-0552",
+      "episodeNumber": 466,
+      "title": "Rounding of `Float.pi`",
+      "proposalState": "implemented",
+      "swiftVersion": "6.5",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0553": {
+      "id": "SE-0553",
+      "episodeNumber": 553,
+      "title": "Task Identity",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0554": {
+      "id": "SE-0554",
+      "episodeNumber": 554,
+      "title": "Deployment target conditional compilation",
+      "proposalState": "rejected",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0555": {
+      "id": "SE-0555",
+      "episodeNumber": 555,
+      "title": "`inout` overload of `BorrowingIteratorProtocol.skip(by:)`",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0556": {
+      "id": "SE-0556",
+      "episodeNumber": 556,
+      "title": "Cell, ConstCell, and Volatile",
+      "proposalState": "activeReview",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0557": {
+      "id": "SE-0557",
+      "episodeNumber": 557,
+      "title": "Add `RawSpan` primitive to `Hasher`",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0558": {
+      "id": "SE-0558",
+      "episodeNumber": 558,
+      "title": "Bulk update operations for `MutableSpan` and `MutableRawSpan`",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0559": {
+      "id": "SE-0559",
+      "episodeNumber": 559,
+      "title": "Add `bidiClass` to `Unicode.Scalar.Properties`",
+      "proposalState": "activeReview",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0560": {
+      "id": "SE-0560",
+      "episodeNumber": 560,
+      "title": "Build configuration conditionals for target dependencies",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0561": {
+      "id": "SE-0561",
+      "episodeNumber": 561,
+      "title": "Span-based access to `Optional`'s storage",
+      "proposalState": "activeReview",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0562": {
+      "id": "SE-0562",
+      "episodeNumber": 562,
+      "title": "Ownership for Subscript Parameters",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0563": {
+      "id": "SE-0563",
+      "episodeNumber": 563,
+      "title": "Improve Interaction Between `@main` and Top-Level Code",
+      "proposalState": "activeReview",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0564": {
+      "id": "SE-0564",
+      "episodeNumber": 564,
+      "title": "Split continuations",
+      "proposalState": "accepted",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0565": {
+      "id": "SE-0565",
+      "episodeNumber": 565,
+      "title": "SE-0565: Allow Deprecating Package Products",
+      "proposalState": "activeReview",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0566": {
+      "id": "SE-0566",
+      "episodeNumber": 566,
+      "title": "Infer generic arguments of result builder attributes",
+      "proposalState": "activeReview",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0567": {
+      "id": "SE-0567",
+      "episodeNumber": 567,
+      "title": "Relaxed floating-point operators",
+      "proposalState": "activeReview",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0568": {
+      "id": "SE-0568",
+      "episodeNumber": 568,
+      "title": "Task cancellation scopes",
+      "proposalState": "activeReview",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    },
+    "SE-0569": {
+      "id": "SE-0569",
+      "episodeNumber": 569,
+      "title": "Move `TopLevelEncoder` and `TopLevelDecoder` to the standard library",
+      "proposalState": "activeReview",
+      "stage": "pending",
+      "updatedAt": "2026-11-25T15:42:15.970Z",
+      "formats": {}
+    }
+  },
+  "playlistCache": {}
+}

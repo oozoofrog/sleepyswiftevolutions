@@ -1,0 +1,115 @@
+{
+  "proposalId": "SE-0001",
+  "format": "short",
+  "provider": "qwen3-clone",
+  "voice": "voice-profile",
+  "fps": 30,
+  "totalDurationSec": 37.64,
+  "totalFrames": 1130,
+  "generatedAt": "2026-11-25T17:17:10.076Z",
+  "scenes": [
+    {
+      "sceneId": "s01-hook",
+      "audioFile": "short/s01-hook.mp3",
+      "durationSec": 5.12,
+      "leadInSec": 0.2,
+      "tailPadSec": 0.25,
+      "totalDurationSec": 5.57,
+      "startSec": 0,
+      "endSec": 5.57,
+      "cues": [
+        {
+          "startSec": 0.2,
+          "endSec": 3.08,
+          "text": "이 코드에서 지워도 되는 글자 두 개, 보이세요?"
+        },
+        {
+          "startSec": 3.08,
+          "endSec": 4.44,
+          "text": "in 양옆의 백틱이"
+        },
+        {
+          "startSec": 4.44,
+          "endSec": 5.32,
+          "text": "쏙 빠집니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "s01-history",
+      "audioFile": "short/s01-history.mp3",
+      "durationSec": 8.16,
+      "leadInSec": 0.2,
+      "tailPadSec": 0.25,
+      "totalDurationSec": 8.61,
+      "startSec": 5.57,
+      "endSec": 14.18,
+      "cues": [
+        {
+          "startSec": 5.77,
+          "endSec": 9.85,
+          "text": "2015년 11월에 제안서가 작성됐고, 12월에 구현됐습니다."
+        },
+        {
+          "startSec": 9.85,
+          "endSec": 13.93,
+          "text": "2016년 3월, Swift 2.2에 이 문법이 담겼습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "s02-compare",
+      "audioFile": "short/s02-compare.mp3",
+      "durationSec": 12.72,
+      "leadInSec": 0.2,
+      "tailPadSec": 0.25,
+      "totalDurationSec": 13.17,
+      "startSec": 14.18,
+      "endSec": 27.35,
+      "cues": [
+        {
+          "startSec": 14.38,
+          "endSec": 20.06,
+          "text": "원래 in은 예약어였습니다. 두 번째 인자의 레이블을 영어로 읽어 볼까요?"
+        },
+        {
+          "startSec": 20.06,
+          "endSec": 20.62,
+          "text": "in."
+        },
+        {
+          "startSec": 20.62,
+          "endSec": 27.1,
+          "text": "어디에서 찾는지를 알려 주는 말이죠. 첫 번째 제안이 적용되면서 호출할 때 백틱을 뺄 수 있게 됐습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "s03-rule",
+      "audioFile": "short/s03-rule.mp3",
+      "durationSec": 9.84,
+      "leadInSec": 0.2,
+      "tailPadSec": 0.25,
+      "totalDurationSec": 10.29,
+      "startSec": 27.35,
+      "endSec": 37.64,
+      "cues": [
+        {
+          "startSec": 27.55,
+          "endSec": 30.67,
+          "text": "당시 선언부에서는 세 단어가 예외였습니다."
+        },
+        {
+          "startSec": 30.67,
+          "endSec": 32.03,
+          "text": "inout, var, let."
+        },
+        {
+          "startSec": 32.03,
+          "endSec": 37.39,
+          "text": "이 셋은 매개변수를 꾸미는 역할도 해서, 레이블로 쓰려면 백틱이 필요했습니다."
+        }
+      ]
+    }
+  ]
+}

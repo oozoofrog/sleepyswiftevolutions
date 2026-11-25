@@ -1,0 +1,35 @@
+{
+  "name": "swift-evolutions",
+  "version": "1.0.0",
+  "description": "Swift Evolution proposal to YouTube video (16:9 + 9:16 Shorts) production and upload pipeline",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "evo": "tsx src/cli.ts",
+    "se": "tsx src/cli.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "studio": "remotion studio src/remotion/index.ts"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.547",
+    "@remotion/cli": "4.0.547",
+    "@remotion/media-utils": "4.0.547",
+    "@remotion/renderer": "4.0.547",
+    "chalk": "^5.4.1",
+    "commander": "^15.1.0",
+    "dotenv": "^16.4.7",
+    "googleapis": "^190.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "4.0.547",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5.8.2"
+  }
+}

@@ -1,0 +1,12 @@
+# Dependencies & environment
+node_modules/
+.env
+secrets/
+*.log
+.DS_Store
+
+# Generated media artifacts (comment out lines below if you want to track rendered MP4/MP3 files in git)
+episodes/*/out/*.mp4
+episodes/*/audio/**/*.mp3
+episodes/*/audio/**/*.aiff
+episodes/*/render-props.json
