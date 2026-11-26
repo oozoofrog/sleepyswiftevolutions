@@ -92,9 +92,20 @@
       "title": "Removing `var` from Function Parameters",
       "proposalState": "implemented",
       "swiftVersion": "3.0",
-      "stage": "pending",
-      "updatedAt": "2026-11-25T15:42:15.970Z",
-      "formats": {}
+      "stage": "rendered",
+      "updatedAt": "2026-11-26T08:52:36.478Z",
+      "formats": {
+        "long": {
+          "voicedAt": "2026-11-26T08:47:47.550Z",
+          "renderedAt": "2026-11-26T08:52:14.322Z",
+          "durationSec": 116
+        },
+        "short": {
+          "voicedAt": "2026-11-26T08:48:08.703Z",
+          "renderedAt": "2026-11-26T08:52:36.478Z",
+          "durationSec": 50.62
+        }
+      }
     },
     "SE-0004": {
       "id": "SE-0004",

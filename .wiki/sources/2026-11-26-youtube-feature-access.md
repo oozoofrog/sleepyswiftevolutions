@@ -1,3 +1,8 @@
+---
+type: chronicle
+date: 2026-11-26
+---
+
 # YouTube feature access
 
 On 2026-11-26 the creator reported completing phone verification. The earlier Studio screen said ID verification was unavailable. A subsequent check in Chrome showed intermediate features enabled, advanced features disabled, and a video verification link in the advanced feature notice. Eligibility beyond the link was not tested.

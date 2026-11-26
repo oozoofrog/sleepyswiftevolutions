@@ -1,0 +1,51 @@
+1
+00:00:00,350 --> 00:00:02,670
+Let’s look at one line of code together.
+
+2
+00:00:03,120 --> 00:00:08,720
+Early Swift let you declare a variable inside the parentheses after a function name.
+
+3
+00:00:09,170 --> 00:00:12,930
+If we change the number inside, what value will we see outside?
+
+4
+00:00:14,030 --> 00:00:16,190
+First, we pass the number 1 into the function.
+
+5
+00:00:16,640 --> 00:00:18,240
+The number inside becomes 2.
+
+6
+00:00:18,690 --> 00:00:21,330
+The variable outside still holds 1.
+
+7
+00:00:22,430 --> 00:00:27,150
+This time we put an ampersand before the variable name in the call.
+
+8
+00:00:27,600 --> 00:00:29,520
+The number inside becomes 2.
+
+9
+00:00:29,970 --> 00:00:33,410
+When the function finishes, 2 is written back to the variable outside.
+
+10
+00:00:34,510 --> 00:00:39,390
+Proposed in 2015, the change shipped in Swift 3 the following year.
+
+11
+00:00:40,490 --> 00:00:43,370
+In our opening example, the number outside stays at 1.
+
+12
+00:00:43,820 --> 00:00:47,580
+We can still use a local variable. What changed is where we declare it.
+
+13
+00:00:48,030 --> 00:00:49,870
+We’ll stop here for today.

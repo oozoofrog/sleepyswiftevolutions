@@ -1,0 +1,99 @@
+1
+00:00:00,400 --> 00:00:03,040
+Let’s look at one line of code together.
+
+2
+00:00:03,490 --> 00:00:08,530
+Early Swift let you declare a variable inside the parentheses after a function name.
+
+3
+00:00:08,980 --> 00:00:13,460
+If we change the number inside, what value will we see outside?
+
+4
+00:00:14,760 --> 00:00:17,080
+First, we pass the number 1 into the function.
+
+5
+00:00:17,530 --> 00:00:19,530
+The number inside becomes 2.
+
+6
+00:00:19,980 --> 00:00:22,780
+The variable outside still holds 1.
+
+7
+00:00:23,230 --> 00:00:26,190
+Inside the function, we changed a copy of the integer.
+
+8
+00:00:27,490 --> 00:00:32,290
+This time we put an ampersand before the variable name in the call.
+
+9
+00:00:32,740 --> 00:00:34,660
+The number inside becomes 2.
+
+10
+00:00:35,110 --> 00:00:39,030
+When the function finishes, 2 is written back to the variable outside.
+
+11
+00:00:39,480 --> 00:00:45,000
+Both allowed changes inside the function, so it was easy to miss the difference.
+
+12
+00:00:46,300 --> 00:00:50,860
+A proposal to reduce this confusion was recorded in November 2015.
+
+13
+00:00:51,310 --> 00:00:55,710
+Swift 2.2, released the following March, issued a warning.
+
+14
+00:00:56,160 --> 00:01:00,080
+With Swift 3 that September, this declaration became an error.
+
+15
+00:01:01,380 --> 00:01:04,500
+The original proposal covered syntax beyond function parameters.
+
+16
+00:01:04,950 --> 00:01:08,950
+For example, we can unwrap a value, modify it, and return it.
+
+17
+00:01:09,400 --> 00:01:14,920
+Under the original proposal, we would have to declare another variable after unwrapping the value.
+
+18
+00:01:15,370 --> 00:01:19,610
+After examining real code, the author asked to withdraw the entire change.
+
+19
+00:01:20,910 --> 00:01:23,710
+The core team made separate decisions for the two cases.
+
+20
+00:01:24,160 --> 00:01:30,720
+They found that exposing a function’s local variable in its signature could mislead callers.
+
+21
+00:01:31,170 --> 00:01:36,690
+In a conditional, binding a value for immediate editing was useful, so that syntax stayed.
+
+22
+00:01:37,990 --> 00:01:44,070
+Today, if we want to change a copy, we declare a local variable inside the function.
+
+23
+00:01:44,520 --> 00:01:47,720
+In our opening example, the number outside stays at 1.
+
+24
+00:01:48,170 --> 00:01:53,370
+We can still use a local variable. What changed is where we declare it.
+
+25
+00:01:53,820 --> 00:01:55,100
+We’ll stop here for today.

@@ -1,0 +1,137 @@
+{
+  "proposalId": "SE-0003",
+  "format": "short",
+  "provider": "qwen3-clone",
+  "voice": "voice-profile",
+  "fps": 30,
+  "totalDurationSec": 50.62,
+  "totalFrames": 1519,
+  "generatedAt": "2026-11-26T08:48:08.698Z",
+  "scenes": [
+    {
+      "sceneId": "01-intro",
+      "audioFile": "short/01-intro.mp3",
+      "durationSec": 12.58,
+      "leadInSec": 0.35,
+      "tailPadSec": 0.75,
+      "totalDurationSec": 13.68,
+      "startSec": 0,
+      "endSec": 13.68,
+      "cues": [
+        {
+          "startSec": 0.35,
+          "endSec": 2.67,
+          "text": "오늘도 코드 한 줄을 함께 살펴봅니다."
+        },
+        {
+          "startSec": 3.12,
+          "endSec": 8.72,
+          "text": "예전 스위프트에서는 함수 이름 뒤의 괄호 안에도 변수를 선언할 수 있었습니다."
+        },
+        {
+          "startSec": 9.17,
+          "endSec": 12.93,
+          "text": "안에서 숫자를 바꾸면 밖에서는 어떤 값이 보일지 생각해 봅니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "02-copy",
+      "audioFile": "short/02-copy.mp3",
+      "durationSec": 7.3,
+      "leadInSec": 0.35,
+      "tailPadSec": 0.75,
+      "totalDurationSec": 8.4,
+      "startSec": 13.68,
+      "endSec": 22.08,
+      "cues": [
+        {
+          "startSec": 14.03,
+          "endSec": 16.19,
+          "text": "먼저 숫자 1을 함수에 건넵니다."
+        },
+        {
+          "startSec": 16.64,
+          "endSec": 18.24,
+          "text": "안쪽 숫자가 2가 됩니다."
+        },
+        {
+          "startSec": 18.69,
+          "endSec": 21.33,
+          "text": "바깥 변수에는 여전히 1이 남습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "03-writeback",
+      "audioFile": "short/03-writeback.mp3",
+      "durationSec": 10.98,
+      "leadInSec": 0.35,
+      "tailPadSec": 0.75,
+      "totalDurationSec": 12.08,
+      "startSec": 22.08,
+      "endSec": 34.16,
+      "cues": [
+        {
+          "startSec": 22.43,
+          "endSec": 27.15,
+          "text": "이번에는 호출할 때 변수 이름 앞에 앰퍼샌드 기호를 붙입니다."
+        },
+        {
+          "startSec": 27.6,
+          "endSec": 29.52,
+          "text": "안쪽 숫자가 2가 됩니다."
+        },
+        {
+          "startSec": 29.97,
+          "endSec": 33.41,
+          "text": "함수가 끝나면 바깥 변수에도 2가 기록됩니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "04-short-history",
+      "audioFile": "short/04-short-history.mp3",
+      "durationSec": 4.88,
+      "leadInSec": 0.35,
+      "tailPadSec": 0.75,
+      "totalDurationSec": 5.98,
+      "startSec": 34.16,
+      "endSec": 40.14,
+      "cues": [
+        {
+          "startSec": 34.51,
+          "endSec": 39.39,
+          "text": "2015년에 나온 이 제안은 이듬해 스위프트 3에 반영됐습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "07-outro",
+      "audioFile": "short/07-outro.mp3",
+      "durationSec": 9.38,
+      "leadInSec": 0.35,
+      "tailPadSec": 0.75,
+      "totalDurationSec": 10.48,
+      "startSec": 40.14,
+      "endSec": 50.62,
+      "cues": [
+        {
+          "startSec": 40.49,
+          "endSec": 43.37,
+          "text": "처음 코드에서 밖에 남는 숫자는 1입니다."
+        },
+        {
+          "startSec": 43.82,
+          "endSec": 47.58,
+          "text": "함수 안의 변수가 사라진 게 아니라, 선언하는 자리가 바뀌었습니다."
+        },
+        {
+          "startSec": 48.03,
+          "endSec": 49.87,
+          "text": "오늘은 여기서 마칩니다."
+        }
+      ]
+    }
+  ]
+}

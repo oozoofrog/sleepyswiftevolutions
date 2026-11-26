@@ -1,3 +1,8 @@
+---
+type: chronicle
+date: 2026-11-26
+---
+
 # Project knowledge
 
 Read [_context/editorial-direction.md](_context/editorial-direction.md) for the current production guidance. Consult [_context/production-journal.md](_context/production-journal.md) for the reasoning and earlier trials.

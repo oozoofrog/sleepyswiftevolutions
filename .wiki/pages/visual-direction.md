@@ -1,6 +1,7 @@
 ---
 title: Typography and code motion
-type: concept
+type: guide
+page_kind: concept
 created: "2026-11-26"
 updated: "2026-11-26"
 aliases: ["타이포그래피와 코드 모션"]
@@ -24,3 +25,5 @@ Follow the opening with [[se-0001-history]] and time the answer to [[narration]]
 Write for beginner and intermediate Swift developers. When a technical term first appears, show a short Korean definition tied to the code on screen. Anchor the note to a matching subtitle phrase. Keep the opening puzzle free of clues until the answer begins. Apply the same rule independently to Shorts. [Source](../sources/2026-11-26-term-definitions.md)
 
 The creator selected the sleeping frog from concept three and approved the simplified profile icon. Use muted Swift orange, closed eyelids and a short line for the book. Keep the banner sparse. Use the SVG masters for edits and the PNG exports for upload. [Channel art](../sources/2026-11-26-channel-art.md)
+
+For SE-0003, the creator requested varied motion and quiet background music. See [[2026-11-26-production-mode]].

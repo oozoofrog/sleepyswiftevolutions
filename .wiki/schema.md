@@ -1,4 +1,5 @@
 ---
+type: guide
 wiki: Swift Evolution production
 project: swift-evolutions
 created: "2026-11-26"
@@ -7,7 +8,7 @@ version: 1
 
 # Wiki schema
 
-Open this directory as an Obsidian vault. Keep immutable, dated snapshots in sources and current summaries in pages. Use lowercase kebab-case filenames, wiki links and source metadata. The initial page types are summary, concept and entity. When a source changes, keep its prior snapshot and ingest a new uniquely dated revision. Update the affected pages, index counts and change log. The source register below identifies the authoritative project paths. Resolve relative links inside snapshots against the original file location.
+Open this directory as an Obsidian vault. Keep immutable, dated snapshots in sources and current summaries in pages. Use lowercase kebab-case filenames, wiki links and source metadata. Use project-wiki types in frontmatter. Use guide for production guidance and chronicle for historical records and dated source snapshots. Use episode for request retrospectives. The optional page_kind field preserves the earlier summary, concept and entity classifications. When a source changes, keep its prior snapshot and ingest a new uniquely dated revision. Update the affected pages, index counts and change log. The source register below identifies the authoritative project paths. Resolve relative links inside snapshots against the original file location.
 
 - 2026-11-26-pipeline.md ← `README.md`
 - 2026-11-26-project-instructions.md ← `AGENTS.md`
@@ -34,3 +35,5 @@ Open this directory as an Obsidian vault. Keep immutable, dated snapshots in sou
 - 2026-11-26-channel-publication.md ← `_context/production-journal.md`
 
 - 2026-11-26-episode-titles.md ← `_context/production-journal.md`
+
+- 2026-11-26-production-mode.md ← `_context/production-journal.md` and `.agents/skills/oozoofrog-mode/SKILL.md`

@@ -1,6 +1,7 @@
 ---
 title: Series production
-type: summary
+type: guide
+page_kind: summary
 created: "2026-11-26"
 updated: "2026-11-26"
 aliases: ["제작 개요"]

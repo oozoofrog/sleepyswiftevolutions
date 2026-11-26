@@ -1,6 +1,7 @@
 ---
 title: Production instructions
-type: summary
+type: guide
+page_kind: summary
 created: "2026-11-26"
 updated: "2026-11-26"
 aliases: ["제작 지시사항"]
@@ -40,3 +41,9 @@ For unfamiliar historical syntax, show a dated original example, explain how it 
 Show the verified English name, account and sourced photo during named mentions. [Episode 2 photo and account references](../../episodes/SE-0002/research.md#on-screen-identities).
 
 Search for a photograph and verify that its terms permit commercial use. If the search does not establish permission, omit the photograph, show the verified name and account, and proceed without requesting a file from the creator. See [[2026-11-26-se-0002-history]].
+
+Invoke `$oozoofrog-mode` to apply the project’s series conventions. See [[2026-11-26-production-mode]].
+
+The creator selected the full series production cycle as the scope of the project mode. The first episode made with the mode is [SE-0003](../../episodes/SE-0003/research.md).
+
+Consider a present-day comparison when it answers the opening question. Keep the input and observation point fixed, and label the compiler used. This is a proposed format. See [[2026-11-26-swift-version-comparison]].

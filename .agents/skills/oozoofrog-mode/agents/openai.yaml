@@ -1,0 +1,6 @@
+interface:
+  display_name: "oozoofrog 모드"
+  short_description: "스위프트 진화의 역사 시리즈에서 합의한 에피소드 제작 방식"
+  default_prompt: "$oozoofrog-mode 방식으로 다음 Swift Evolution 편을 준비해 주세요."
+policy:
+  allow_implicit_invocation: false

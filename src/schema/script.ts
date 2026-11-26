@@ -62,6 +62,11 @@ export const SceneSchema = z.object({
     focus: z.string().min(1),
     example: z.string().min(1),
   })).min(1).optional(),
+  valueFlow: z.object({
+    mode: z.enum(["local", "inout"]),
+    mutateCue: z.string().trim().min(1),
+    returnCue: z.string().trim().min(1),
+  }).optional(),
   codeReveal: z.object({
     parts: z.array(z.union([z.string().min(1), z.object({ remove: z.string().min(1) })])).min(2),
     answerCue: z.string().trim().min(1),
@@ -78,6 +83,18 @@ export const SceneSchema = z.object({
 }).superRefine((scene, ctx) => {
   if (scene.type === "history" && !scene.milestones) {
     ctx.addIssue({ code: "custom", path: ["milestones"], message: "연혁 장면에는 출처가 있는 사건이 필요합니다." });
+  }
+  if (scene.valueFlow) {
+    const { mutateCue, returnCue } = scene.valueFlow;
+    const speeches = scene.shortNarration ? [scene.speech, scene.shortSpeech] : [scene.speech];
+    for (const speech of speeches) {
+      const mutation = speech?.findIndex(part => part.caption.includes(mutateCue)) ?? -1;
+      const completion = speech?.findIndex(part => part.caption.includes(returnCue)) ?? -1;
+      if (!scene.code || mutation < 1 || completion <= mutation) {
+        ctx.addIssue({ code: "custom", path: ["valueFlow"], message: "코드와 호출, 대입, 종료 순서의 음성 구간이 필요합니다." });
+        break;
+      }
+    }
   }
   const reveal = scene.codeReveal;
   if (reveal && (!reveal.parts.some(part => typeof part !== "string") ||
@@ -119,6 +136,7 @@ export type YouTubeFormatMeta = z.infer<typeof YouTubeFormatMetaSchema>;
 
 export const EpisodeScriptSchema = z.object({
   schemaVersion: z.literal(1),
+  backgroundMusic: z.string().regex(/^[a-zA-Z0-9_-]+\.(m4a|mp3|wav)$/).optional(),
   proposalId: z.string().regex(/^SE-\d{4,}$/),
   episodeNumber: z.number().int().positive(),
   swiftVersion: z.string().min(1),

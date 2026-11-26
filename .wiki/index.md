@@ -1,6 +1,7 @@
 ---
+type: home
 page_count: 5
-source_count: 17
+source_count: 22
 last_updated: "2026-11-26"
 ---
 
@@ -19,3 +20,7 @@ last_updated: "2026-11-26"
 - [[2026-11-26-proposal-archive|제안서 원문과 제작 진행도]]
 
 - [[2026-11-26-se-0002-history|두 번째 제안의 역사와 인물 사진 조사]]
+
+- [[2026-11-26-production-mode|시리즈 제작 모드와 3편 연출 요청]]
+
+- [[2026-11-26-swift-version-comparison|당시 Swift와 현재 Swift 비교 구성안]]

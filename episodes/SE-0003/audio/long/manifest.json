@@ -1,0 +1,221 @@
+{
+  "proposalId": "SE-0003",
+  "format": "long",
+  "provider": "qwen3-clone",
+  "voice": "voice-profile",
+  "fps": 30,
+  "totalDurationSec": 116,
+  "totalFrames": 3480,
+  "generatedAt": "2026-11-26T08:47:47.544Z",
+  "scenes": [
+    {
+      "sceneId": "01-intro",
+      "audioFile": "long/01-intro.mp3",
+      "durationSec": 13.06,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 14.36,
+      "startSec": 0,
+      "endSec": 14.36,
+      "cues": [
+        {
+          "startSec": 0.4,
+          "endSec": 3.04,
+          "text": "오늘도 코드 한 줄을 함께 살펴봅니다."
+        },
+        {
+          "startSec": 3.49,
+          "endSec": 8.53,
+          "text": "예전 스위프트에서는 함수 이름 뒤의 괄호 안에도 변수를 선언할 수 있었습니다."
+        },
+        {
+          "startSec": 8.98,
+          "endSec": 13.46,
+          "text": "안에서 숫자를 바꾸면 밖에서는 어떤 값이 보일지 생각해 봅니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "02-copy",
+      "audioFile": "long/02-copy.mp3",
+      "durationSec": 11.43,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 12.73,
+      "startSec": 14.36,
+      "endSec": 27.09,
+      "cues": [
+        {
+          "startSec": 14.76,
+          "endSec": 17.08,
+          "text": "먼저 숫자 1을 함수에 건넵니다."
+        },
+        {
+          "startSec": 17.53,
+          "endSec": 19.53,
+          "text": "안쪽 숫자가 2가 됩니다."
+        },
+        {
+          "startSec": 19.98,
+          "endSec": 22.78,
+          "text": "바깥 변수에는 여전히 1이 남습니다."
+        },
+        {
+          "startSec": 23.23,
+          "endSec": 26.19,
+          "text": "함수 안에서 바꾼 것은 정수의 복사본입니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "03-writeback",
+      "audioFile": "long/03-writeback.mp3",
+      "durationSec": 17.51,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 18.81,
+      "startSec": 27.09,
+      "endSec": 45.9,
+      "cues": [
+        {
+          "startSec": 27.49,
+          "endSec": 32.29,
+          "text": "이번에는 호출할 때 변수 이름 앞에 앰퍼샌드 기호를 붙입니다."
+        },
+        {
+          "startSec": 32.74,
+          "endSec": 34.66,
+          "text": "안쪽 숫자가 2가 됩니다."
+        },
+        {
+          "startSec": 35.11,
+          "endSec": 39.03,
+          "text": "함수가 끝나면 바깥 변수에도 2가 기록됩니다."
+        },
+        {
+          "startSec": 39.48,
+          "endSec": 45,
+          "text": "둘 다 안에서는 값을 바꿀 수 있어서, 예전에는 이 차이를 놓치기 쉬웠습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "04-dates",
+      "audioFile": "long/04-dates.mp3",
+      "durationSec": 13.78,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 15.08,
+      "startSec": 45.9,
+      "endSec": 60.98,
+      "cues": [
+        {
+          "startSec": 46.3,
+          "endSec": 50.86,
+          "text": "이 혼동을 줄이자는 제안은 2015년 11월에 기록됐습니다."
+        },
+        {
+          "startSec": 51.31,
+          "endSec": 55.71,
+          "text": "이듬해 3월에 나온 스위프트 2.2에서는 경고가 떴습니다."
+        },
+        {
+          "startSec": 56.16,
+          "endSec": 60.08,
+          "text": "9월에 나온 스위프트 3부터는 이 선언이 오류가 됐습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "05-draft",
+      "audioFile": "long/05-draft.mp3",
+      "durationSec": 18.23,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 19.53,
+      "startSec": 60.98,
+      "endSec": 80.51,
+      "cues": [
+        {
+          "startSec": 61.38,
+          "endSec": 64.5,
+          "text": "처음 제안은 함수 밖의 문법까지 다뤘습니다."
+        },
+        {
+          "startSec": 64.95,
+          "endSec": 68.95,
+          "text": "예를 들어 값이 있으면 꺼내서 고친 다음 돌려주는 코드가 있습니다."
+        },
+        {
+          "startSec": 69.4,
+          "endSec": 74.92,
+          "text": "처음 제안대로라면 값을 꺼낸 뒤 수정할 변수를 한 번 더 선언해야 했습니다."
+        },
+        {
+          "startSec": 75.37,
+          "endSec": 79.61,
+          "text": "실제 코드를 살펴본 제안자는 변경을 전부 철회하자고 했습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "06-decision",
+      "audioFile": "long/06-decision.mp3",
+      "durationSec": 15.78,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 17.08,
+      "startSec": 80.51,
+      "endSec": 97.59,
+      "cues": [
+        {
+          "startSec": 80.91,
+          "endSec": 83.71,
+          "text": "코어 팀은 두 경우를 나눠서 결정했습니다."
+        },
+        {
+          "startSec": 84.16,
+          "endSec": 90.72,
+          "text": "함수 안에서만 쓸 변수를 선언부에 드러내면 호출하는 쪽에서 오해하기 쉽다고 봤습니다."
+        },
+        {
+          "startSec": 91.17,
+          "endSec": 96.69,
+          "text": "반면 조건문에서는 꺼낸 값을 바로 고치는 쓰임이 있어 그 문법을 남겼습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "07-outro",
+      "audioFile": "long/07-outro.mp3",
+      "durationSec": 17.11,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 18.41,
+      "startSec": 97.59,
+      "endSec": 116,
+      "cues": [
+        {
+          "startSec": 97.99,
+          "endSec": 104.07,
+          "text": "지금도 함수 안에서 복사본을 바꾸고 싶다면 그 안에 지역 변수를 선언합니다."
+        },
+        {
+          "startSec": 104.52,
+          "endSec": 107.72,
+          "text": "처음 코드에서 밖에 남는 숫자는 1입니다."
+        },
+        {
+          "startSec": 108.17,
+          "endSec": 113.37,
+          "text": "함수 안의 변수가 사라진 게 아니라, 선언하는 자리가 바뀌었습니다."
+        },
+        {
+          "startSec": 113.82,
+          "endSec": 115.1,
+          "text": "오늘은 여기서 마칩니다."
+        }
+      ]
+    }
+  ]
+}

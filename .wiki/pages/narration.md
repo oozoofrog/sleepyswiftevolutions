@@ -1,6 +1,7 @@
 ---
 title: Narration and voice review
-type: concept
+type: guide
+page_kind: concept
 created: "2026-11-26"
 updated: "2026-11-26"
 aliases: ["음성과 발음"]

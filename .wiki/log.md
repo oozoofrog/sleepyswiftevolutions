@@ -1,3 +1,7 @@
+---
+type: chronicle
+---
+
 # Wiki change log
 
 - 2026-11-26 · Initialized the project vault and ingested five sources. Indexed the pipeline, working agreements, visual direction, narration feedback and the sourced SE-0001 chronology.
@@ -41,3 +45,9 @@
 - 2026-11-26 · Recorded the contributor identification rule in [[production-instructions]].
 
 - 2026-11-26 · Closed the portrait search for Groff and De Franceschi in [[2026-11-26-se-0002-history]].
+
+- 2026-11-26 · Added [[2026-11-26-production-mode]] to [[production-instructions]] and [[visual-direction]].
+
+- 2026-11-26 · Recorded the proposed comparison format and SE-0003 compiler results in [[2026-11-26-swift-version-comparison]].
+
+- 2026-11-26 · Migrated legacy document metadata to the project-wiki schema.

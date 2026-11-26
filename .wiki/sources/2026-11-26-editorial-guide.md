@@ -1,3 +1,8 @@
+---
+type: chronicle
+date: 2026-11-26
+---
+
 # Swift Evolution editorial direction
 
 ## Open with a question the viewer can answer

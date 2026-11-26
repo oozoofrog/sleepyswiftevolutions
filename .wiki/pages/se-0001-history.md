@@ -1,6 +1,7 @@
 ---
 title: SE-0001 chronology
-type: entity
+type: chronicle
+page_kind: entity
 created: "2026-11-26"
 updated: "2026-11-26"
 aliases: ["첫 제안의 역사"]

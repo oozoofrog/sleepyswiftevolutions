@@ -1,0 +1,15 @@
+# SE-0003 · Why parameter and pattern bindings diverged
+
+The initial proposal predates the public Swift Evolution process. The core team's decision identifies that history and says the original change did not receive the usual public review. Use the archived January discussion to explain the reconsideration. The first repository entry dates the written record.
+
+| Record | On-screen use |
+| --- | --- |
+| [First proposal, 11 November 2015](https://github.com/swiftlang/swift-evolution/commit/f14e8ef97aa298974b48226aff1f02bdf22352db) and [original text](https://github.com/swiftlang/swift-evolution/blob/8cd734260bc60d6d49dbfb48de5632e63bf200cc/proposals/0003-remove-var-parameters-patterns.md) | The original scope covered function parameters and pattern bindings, including optional binding and case patterns. An Int parameter marked var could change locally. An inout parameter gave the caller the final value. |
+| [Author's reconsideration, 22 January 2016 UTC](https://forums.swift.org/t/1159/1) | A value might be extracted, modified and then returned or assigned back. Losing mutable bindings burdened this existing code. The author proposed withdrawing the whole change. The optional integer on screen is a simplified example of the stated get–modify–return pattern. |
+| [Core team rationale, 29 January 2016 UTC](https://forums.swift.org/t/1230/1) | The team separated parameter lists from patterns. A function's local mutation was an implementation detail and could be mistaken for write-back. Patterns retained both var and let for consistency. The case-pattern discussion acknowledged potential confusion but kept var there too. |
+| [Compiler change, 30 January 2016 UTC](https://github.com/swiftlang/swift/commit/8a5ed405bf1f92ec3fc97fa46e52528d2e8d67d9) and [proposal revision, 1 February 2016 UTC](https://github.com/swiftlang/swift-evolution/commit/faff3215518b71965499b5b5be3475e0be850a01) | The compiler commit implements the error in Swift 3 mode. The revised text narrows the removal to function parameters. |
+| [Final proposal](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0003-remove-var-parameters.md), [Swift 2.2 release](https://www.swift.org/blog/swift-2.2-released/), [Swift 3.0 release](https://www.swift.org/blog/swift-3.0-released/) | Swift 2.2 shipped on 21 March 2016 with a deprecation warning. Swift 3.0 shipped on 13 September 2016. The video labels the old declaration explicitly and uses current syntax for inout. |
+
+The animation shows the observable values for an integer. It represents value semantics and write-back, without claiming that the compiler always allocates or physically moves two objects. The modern local variable in the final code illustrates the migration and prints the local value. The caller's integer stays at 1.
+
+The video's Korean narration identifies the author and decision-making group by their roles. It includes no personal portraits or quotations. The linked final proposal credits Ashley Garland and identifies the review manager.

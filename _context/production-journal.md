@@ -103,3 +103,9 @@ The creator asked production to search independently and omit unavailable photos
 ## 2026-11-26 · SE-0002 publication
 
 YouTube Studio confirmed public visibility for the [episode](https://youtu.be/yyuOi1WzzRA) and [Short](https://www.youtube.com/shorts/f_8nk8azIzw). Both subtitle pages listed published Korean, English, Japanese and Simplified Chinese tracks.
+
+## 2026-11-26 · SE-0003 motion and music
+
+The creator requested more varied motion graphics and quiet background music for this episode. The production direction pairs the local copy and write-back examples with different motions. Evaluation of the new music and motion belongs to the SE-0003 review. The project-local oozoofrog-mode draft draws on the established conventions from SE-0001 and SE-0002.
+
+The creator selected the full production cycle as the scope of the project mode. SE-0003 rendered to 116.0 seconds in landscape and 50.63 seconds in portrait. The locally composed score uses soft sustained notes without percussion. The two cue-driven diagrams show assignment followed by local disposal or write-back. Both outputs passed the media check. The subtitle tracks share 25 landscape cues and 13 portrait cues per language. [Research and decision history](../episodes/SE-0003/research.md).

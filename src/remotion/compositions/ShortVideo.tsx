@@ -1,3 +1,4 @@
+import { BackgroundMusic } from "../components/BackgroundMusic";
 import { PersonCard } from "../components/PersonCard";
 import { TermNote } from "../components/TermNote";
 import { KineticHeading } from "../components/KineticHeading";
@@ -17,6 +18,7 @@ import type { AudioManifest, EpisodeScript } from "../../schema/script";
 import { Background } from "../components/Background";
 import { ProposalHistory } from "../components/ProposalHistory";
 import { CodeWalkthrough } from "../components/CodeWalkthrough";
+import { ParameterValueFlow } from "../components/ParameterValueFlow";
 import { CodeReveal } from "../components/CodeReveal";
 import { ComparisonArrow } from "../components/ComparisonArrow";
 import { CodePanel } from "../components/CodePanel";
@@ -53,6 +55,10 @@ const ShortSceneView: React.FC<{
   );
 
   if (scene.type === "history") return <ProposalHistory scene={scene} />;
+
+  if (scene.valueFlow && scene.code) {
+    return <ParameterValueFlow timing={timing} flow={scene.valueFlow} snippet={scene.code} />;
+  }
 
   if (scene.codeSteps && scene.code) return <CodeWalkthrough timing={timing} snippet={scene.code} steps={scene.codeSteps} />;
 
@@ -254,6 +260,7 @@ export const ShortVideo: React.FC<ShortVideoProps> = ({ script, manifest }) => {
         />
       </div>
 
+      {script.backgroundMusic && <BackgroundMusic file={script.backgroundMusic} />}
       {timeline.scenes.map((timing) => (
         <Sequence
           key={timing.scene.id}

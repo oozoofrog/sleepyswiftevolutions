@@ -1,3 +1,8 @@
+---
+type: chronicle
+date: 2026-11-26
+---
+
 # Production journal
 
 ## 2026-11-26 · Narration
