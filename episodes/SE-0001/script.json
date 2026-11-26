@@ -12,7 +12,7 @@
   "proposalUrl": "https://github.com/swiftlang/swift-evolution/blob/main/proposals/0001-keywords-as-argument-labels.md",
   "thumbnail": {
     "eyebrow": "EP.001 · SWIFT 2.2",
-    "headline": "백틱 두 개가\n사라진 자리",
+    "headline": "백틱이 사라졌다",
     "subheadline": "듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기",
     "codeBefore": "indexOf(value, `in`: list)",
     "codeAfter": "indexOf(value, in: list)"
@@ -567,8 +567,8 @@
   ],
   "youtube": {
     "long": {
-      "title": "백틱 두 개가 사라진 자리 · SE-0001 | 듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기",
-      "description": "듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기\n\nSwift 2.2에서 달라진 함수 호출 한 줄을 함께 읽어봐요. 첫 제안인 SE-0001이 인자 레이블의 백틱을 어떻게 바꿨는지 살펴봅니다.",
+      "title": "백틱이 사라졌다",
+      "description": "듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기\n\nSwift 2.2에서 달라진 함수 호출 한 줄을 함께 읽어봐요. 첫 제안인 SE-0001이 인자 레이블의 백틱을 어떻게 바꿨는지 살펴봅니다.\n\n공식 제안서 · SE-0001\nhttps://github.com/swiftlang/swift-evolution/blob/main/proposals/0001-keywords-as-argument-labels.md",
       "tags": [
         "Swift",
         "SwiftEvolution",
@@ -585,7 +585,7 @@
       "defaultLanguage": "ko"
     },
     "short": {
-      "title": "백틱 두 개가 사라진 자리 · SE-0001 | 듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기 #Shorts",
+      "title": "백틱이 사라졌다",
       "description": "듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기\n\nSwift 2.2에서 달라진 함수 호출 한 줄을 함께 읽어봐요. 첫 제안인 SE-0001이 인자 레이블의 백틱을 어떻게 바꿨는지 살펴봅니다.\n\n#Swift #SE0001 #Shorts",
       "tags": [
         "Swift",

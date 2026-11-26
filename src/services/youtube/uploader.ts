@@ -317,29 +317,25 @@ export async function uploadEpisodeToYouTube(
       }
     }
 
-    // Korean SRT captions
+    // Upload each available language as a selectable subtitle track.
     let captionsUploaded = false;
     if (uploadCaptions && payload.subtitlesExists) {
-      try {
-        await youtube.captions.insert({
-          part: ["snippet"],
-          requestBody: {
-            snippet: {
-              videoId,
-              language: "ko",
-              name: "한국어",
-              isDraft: false,
-            },
-          },
-          media: {
-            mimeType: "application/x-subrip",
-            body: createReadStream(payload.subtitlesPath),
-          },
-        });
-        captionsUploaded = true;
-      } catch (err) {
-        const msg = err instanceof Error ? err.message : String(err);
-        warnings.push(`자막(.srt) 업로드 건너뜀 (${msg}).`);
+      for (const [language, name] of [
+        ["ko", "한국어"], ["en", "English"], ["ja", "日本語"], ["zh-Hans", "中文（简体）"],
+      ]) {
+        const file = language === "ko" ? payload.subtitlesPath
+          : payload.subtitlesPath.replace(/\.srt$/, `.${language}.srt`);
+        if (!(await fileExistsAndSize(file)).exists) continue;
+        try {
+          await youtube.captions.insert({
+            part: ["snippet"],
+            requestBody: { snippet: { videoId, language, name, isDraft: false } },
+            media: { mimeType: "application/x-subrip", body: createReadStream(file) },
+          });
+          captionsUploaded = true;
+        } catch (err) {
+          warnings.push(`${language} 자막 업로드 실패: ${err instanceof Error ? err.message : String(err)}`);
+        }
       }
     }
 

@@ -1,5 +1,5 @@
 import { checkVideo } from "./services/check-video";
-import { spawn } from "node:child_process";
+import { execFileSync, spawn } from "node:child_process";
 import fs from "node:fs/promises";
 import path from "node:path";
 import chalk from "chalk";
@@ -7,13 +7,14 @@ import { Command } from "commander";
 import type { TtsProviderName, YouTubePrivacy } from "./config/env";
 import {
   fetchProposalMarkdown,
+  hasProposalSource,
   findProposal,
   getProposalGithubUrl,
   loadEvolutionFeed,
   syncEvolutionFeed,
 } from "./lib/evolution";
 import { parseProposalNumber, PROJECT_ROOT, type VideoFormat } from "./lib/paths";
-import { computeProgressSummary, loadWorkspaceState } from "./lib/state";
+import { computeProgressSummary, formatStage, productionStage, loadWorkspaceState } from "./lib/state";
 import { formatChapterTimestamp } from "./lib/subtitle";
 import { buildSceneTimeline, getEffectiveShortsScenes } from "./lib/timeline";
 import { prepareStudioProps, renderEpisode } from "./services/renderer";
@@ -50,8 +51,10 @@ program
 program
   .command("sync")
   .description("swift.org에서 최신 evolution.json을 내려받아 data/state.json과 동기화합니다")
-  .action(async () => {
+  .option("--documents", "공식 원문과 참고 파일을 모두 저장하고 검증합니다")
+  .action(async (opts: { documents?: boolean }) => {
     const { feed, addedCount, updatedCount } = await syncEvolutionFeed();
+    if (opts.documents) execFileSync("python3", [path.join(PROJECT_ROOT, "scripts/sync-proposals.py")], { stdio: "inherit" });
     console.log(chalk.green(`✔ Swift Evolution 피드 동기화 완료`));
     console.log(`  - 총 Proposal: ${feed.proposals.length}개`);
     console.log(`  - 신규 추가: ${addedCount}개 / 메타 갱신: ${updatedCount}개`);
@@ -78,6 +81,10 @@ program
       } (${summary.targetCount}개 / 전체 ${summary.totalFeedProposals}개)`,
     );
     console.log("─────────────────────────────────────────");
+    const targets = feed.proposals.filter(p => (opts.all || p.status.state === "implemented") &&
+      (!opts.version || p.status.version === opts.version));
+    const available = await Promise.all(targets.map(hasProposalSource));
+    console.log(`  검증된 원문: ${available.filter(Boolean).length}/${targets.length}`);
     console.log(`  pending     (미착수)    : ${summary.byStage.pending}`);
     console.log(`  initialized (초기화)    : ${summary.byStage.initialized}`);
     console.log(`  scripted    (대본 완료) : ${summary.byStage.scripted}`);
@@ -113,7 +120,7 @@ program
       const filtered = sorted.filter((p) => {
         if (opts.state !== "all" && p.status.state !== opts.state) return false;
         if (opts.version && p.status.version !== opts.version) return false;
-        const stage = state.episodes[p.id]?.stage ?? "pending";
+        const stage = productionStage(state.episodes[p.id]);
         if (opts.stage && stage !== opts.stage) return false;
         return true;
       });
@@ -121,11 +128,11 @@ program
       const shown = filtered.slice(0, limit);
       for (const p of shown) {
         const ep = state.episodes[p.id];
-        const stage = ep?.stage ?? "pending";
+        const stage = productionStage(ep);
         const ver = p.status.version ?? p.status.state;
         const epNum = ep?.episodeNumber ? `#${String(ep.episodeNumber).padStart(3, "0")}` : "    ";
         console.log(
-          `${chalk.bold(p.id)} ${chalk.gray(epNum)} [${ver.padEnd(11)}] (${stage.padEnd(11)}) ${p.title}`,
+          `${chalk.bold(p.id)} ${chalk.gray(epNum)} [${ver.padEnd(11)}] (${stage.padEnd(11)}) ${p.title} · 원문 ${await hasProposalSource(p) ? "확보" : "미확보"} · 본편 ${formatStage(ep, "long")} · 쇼츠 ${formatStage(ep, "short")}`,
         );
       }
       console.log(chalk.gray(`\n표시: ${shown.length} / 조건 일치 ${filtered.length}개`));
@@ -148,7 +155,7 @@ program
     console.log(chalk.bold.cyan(`\n다음 작업 대상: ${proposal.id} (EP.${String(episodeNumber).padStart(3, "0")})`));
     console.log(`  제목     : ${proposal.title}`);
     console.log(`  버전/상태: Swift ${proposal.status.version ?? "-"} (${proposal.status.state})`);
-    console.log(`  현재 단계: ${ep?.stage ?? "pending"}`);
+    console.log(`  현재 단계: ${productionStage(ep)}`);
     console.log(`  원문 URL : ${getProposalGithubUrl(proposal)}`);
     console.log(chalk.gray(`\n시작 명령: pnpm evo init ${proposal.id}\n`));
   });

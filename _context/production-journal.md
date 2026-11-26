@@ -55,3 +55,19 @@ Apply korean-product-writing to narration, captions and screen copy. Name the co
 ## 2026-11-26 · Reusable episode tools
 
 Use the voice command with one format and the changed scene IDs to preserve approved narration in the other scenes. Render that format, then use check-video to verify the media and captions. Use scene-clip to extract a listening sample from the rendered video. [Command reference](../README.md)
+
+## 2026-11-26 · Channel identity
+
+The creator selected the sleeping frog from concept three and approved the simplified profile icon. Use muted Swift orange, closed eyelids and a short line for the book. Keep the banner sparse. Use the SVG masters for edits and the PNG exports for upload.
+
+## 2026-11-26 · Publication and caption languages
+
+The creator intends to monetize the channel and approved public publication of the SE-0001 landscape episode and Short. Provide separate selectable Korean, English, Japanese and Chinese subtitle tracks. For the first episode, Chinese uses Simplified Chinese. Use the Korean SRT cue times for each translation. Check actual monetization eligibility in Studio.
+
+## 2026-11-26 · Episode titles
+
+Use a concrete subject and a verb that names the change in episode titles. Reserve counts for an opening puzzle when the count helps the viewer inspect the code. For SE-0001, the creator chose “백틱이 사라졌다”.
+
+## 2026-11-26 · Source coverage
+
+The creator requested all proposal documents and progress tracking. The download command verified 605 upstream files. Each feed ID tracks one landscape episode and one Short.

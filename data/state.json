@@ -1,5 +1,5 @@
 {
-  "lastSyncedAt": "2026-11-25T15:42:15.970Z",
+  "lastSyncedAt": "2026-11-26T04:52:33.332Z",
   "evolutionCommit": "58a97fabc7233f58af6b8a1e8d3d5a25fb4f7060",
   "episodes": {
     "SE-0001": {
@@ -8,18 +8,40 @@
       "title": "Allow (most) keywords as argument labels",
       "proposalState": "implemented",
       "swiftVersion": "2.2",
-      "stage": "rendered",
-      "updatedAt": "2026-11-25T17:51:20.839Z",
+      "stage": "uploaded",
+      "updatedAt": "2026-11-25T18:18:11.272Z",
       "formats": {
         "long": {
           "voicedAt": "2026-11-25T17:49:12.099Z",
           "renderedAt": "2026-11-25T17:51:20.839Z",
-          "durationSec": 95.81
+          "durationSec": 95.81,
+          "upload": {
+            "videoId": "Bp3WBFXDxLc",
+            "url": "https://youtu.be/Bp3WBFXDxLc",
+            "uploadedAt": "2026-11-25T18:18:11.272Z",
+            "privacyStatus": "public",
+            "title": "백틱이 사라졌다",
+            "playlists": [
+              "Swift Evolution 처음부터 끝까지"
+            ],
+            "captionsUploaded": true,
+            "thumbnailUploaded": false
+          }
         },
         "short": {
           "voicedAt": "2026-11-25T17:49:40.753Z",
           "renderedAt": "2026-11-25T17:50:40.078Z",
-          "durationSec": 46.751
+          "durationSec": 46.751,
+          "upload": {
+            "videoId": "7Z5pgqvliU4",
+            "url": "https://www.youtube.com/shorts/7Z5pgqvliU4",
+            "uploadedAt": "2026-11-25T18:18:11.272Z",
+            "privacyStatus": "public",
+            "title": "백틱이 사라졌다",
+            "playlists": [],
+            "captionsUploaded": true,
+            "thumbnailUploaded": false
+          }
         }
       }
     },

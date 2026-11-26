@@ -1,0 +1,47 @@
+1
+00:00:00,430 --> 00:00:03,870
+Can you spot the two characters we can drop?
+
+2
+00:00:04,670 --> 00:00:06,510
+The backticks on either side of in
+
+3
+00:00:06,510 --> 00:00:07,230
+just disappear.
+
+4
+00:00:08,580 --> 00:00:12,580
+The idea first came up in November 2015.
+
+5
+00:00:13,030 --> 00:00:19,110
+It was implemented that December and shipped with Swift 2.2 the following March.
+
+6
+00:00:20,210 --> 00:00:23,010
+Where does this function look for the value?
+
+7
+00:00:23,660 --> 00:00:25,100
+In a collection.
+
+8
+00:00:25,550 --> 00:00:28,030
+It searches the collection that follows the label.
+
+9
+00:00:28,480 --> 00:00:33,040
+Starting with Swift 2.2, this label could be written without backticks.
+
+10
+00:00:34,140 --> 00:00:37,020
+Three words were exceptions in declarations at the time.
+
+11
+00:00:37,470 --> 00:00:39,710
+inout, var, let.
+
+12
+00:00:40,160 --> 00:00:46,000
+They also modified parameters, so using them as labels there required backticks.

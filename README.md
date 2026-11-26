@@ -172,3 +172,10 @@ pnpm scene-clip 1 long 06-outro /Volumes/eyedisk/tmp/SE-0001-outro-review.mp4
 ```
 
 `check-video`는 형식을 생략하면 본편과 쇼츠를 모두 검사합니다. 영상과 음성을 끝까지 디코딩하고 해상도, 트랙 길이, 음성 신호, SRT 자막과 주석의 기준 구절을 확인합니다. 발음과 호흡은 `scene-clip`으로 추출한 영상을 들으며 확인하세요. 클립의 출력 경로에는 새 MP4 파일명을 지정하세요.
+
+### 전체 제안서와 영상 제작 진행도
+
+- `pnpm evo sync --documents`는 공식 피드와 같은 커밋에서 전체 제안서와 참고 자료를 받아 `data/proposals/`에 저장합니다. 파일마다 Git 해시를 확인하며 재실행하면 누락되거나 달라진 파일을 복구합니다.
+- `pnpm evo status --all`은 모든 제안의 검증된 원문 수와 영상 제작 단계를 집계합니다. 두 영상의 진행도가 다르면 앞 단계에 있는 영상이 해당 제안의 진행도를 결정합니다.
+- `pnpm evo list --state all --limit 1000`은 제안별 원문 확보 여부, 본편 단계, 쇼츠 단계를 보여줍니다.
+- `pnpm evo next --all`로 다음 제안을 확인하고 `pnpm evo init next --all`로 제작을 시작합니다. 대본과 영상 제작 명령은 같은 원문 캐시를 사용합니다.

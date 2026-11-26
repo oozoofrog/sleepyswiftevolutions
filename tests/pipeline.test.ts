@@ -125,3 +125,18 @@ test("preview keeps a question pause and joins a mid-sentence reveal", () => {
   assert.ok(Math.abs(lead.startSec - question.endSec - 0.65) < 0.001);
   assert.equal(lead.endSec, reveal.startSec);
 });
+
+import { formatStage, productionStage } from "../src/lib/state";
+import { EpisodeStateSchema } from "../src/schema/evolution";
+
+test("a rendered landscape video does not mark the voiced Short as rendered", () => {
+  const episode = EpisodeStateSchema.parse({
+    id: "SE-0001", title: "Example", proposalState: "implemented", episodeNumber: 1,
+    updatedAt: "now", stage: "rendered",
+    formats: { long: { renderedAt: "now" }, short: { voicedAt: "now" } },
+  });
+  assert.equal(formatStage(episode, "long"), "rendered");
+  assert.equal(formatStage(episode, "short"), "voiced");
+  assert.equal(productionStage(episode), "voiced");
+  assert.equal(productionStage(undefined), "pending");
+});

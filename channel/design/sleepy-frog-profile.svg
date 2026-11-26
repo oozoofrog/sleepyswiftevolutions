@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 376 376" role="img" aria-labelledby="title">
+  <title id="title">책에 턱을 괴고 잠든 개구리</title>
+  <rect width="376" height="376" rx="74" fill="#A63917"/>
+  <g id="sleepy-frog">
+    <path fill="#F8EBD2" d="M42 247C38 228 44 211 53 201C56 152 86 116 129 120C147 120 160 132 171 133C183 131 188 111 202 99C219 84 241 79 260 85C285 92 298 114 301 139C326 157 334 183 329 207C325 241 291 259 246 267C201 275 94 279 63 271C51 268 44 259 42 247Z"/>
+    <g fill="none" stroke="#A63917" stroke-width="10" stroke-linecap="round">
+      <path d="M111 180Q144 188 168 165"/><path d="M228 151Q254 155 278 137"/>
+    </g>
+    <path d="M129 288L242 283" fill="none" stroke="#F8EBD2" stroke-width="11" stroke-linecap="round"/>
+  </g>
+</svg>

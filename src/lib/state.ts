@@ -70,6 +70,22 @@ export async function updateEpisodeState(
   return nextEpisode;
 }
 
+export function formatStage(ep: EpisodeState | undefined, format: "long" | "short"): EpisodeStage {
+  if (!ep) return "pending";
+  const progress = ep.formats[format];
+  if (progress?.upload) return "uploaded";
+  if (progress?.renderedAt) return "rendered";
+  if (progress?.voicedAt) return "voiced";
+  if (!ep.formats.long && !ep.formats.short) return ep.stage;
+  return STAGE_ORDER[ep.stage] >= STAGE_ORDER.scripted ? "scripted" : ep.stage;
+}
+
+export function productionStage(ep: EpisodeState | undefined): EpisodeStage {
+  const long = formatStage(ep, "long");
+  const short = formatStage(ep, "short");
+  return STAGE_ORDER[long] <= STAGE_ORDER[short] ? long : short;
+}
+
 export interface ProgressSummary {
   totalFeedProposals: number;
   targetCount: number;
@@ -119,7 +135,7 @@ export function computeProgressSummary(
 
     targetCount += 1;
     const ep = state.episodes[proposal.id];
-    const stage: EpisodeStage = ep?.stage ?? "pending";
+    const stage = productionStage(ep);
     byStage[stage] += 1;
 
     if (ep?.formats.long?.upload) longUploadedCount += 1;

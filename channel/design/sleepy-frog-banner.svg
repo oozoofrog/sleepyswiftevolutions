@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="0 0 2560 1440" role="img" aria-labelledby="title desc">
+  <title id="title">잠이오는 스위프트 진화의 역사</title>
+  <desc id="desc">어두운 갈색 바탕에 책을 베고 잠든 개구리와 채널 이름이 나란히 놓여 있습니다.</desc>
+  <rect width="2560" height="1440" fill="#292320"/>
+  <g transform="translate(563 579) scale(.75)">
+    <rect width="376" height="376" rx="74" fill="#A63917"/>
+    <g id="sleepy-frog">
+    <path fill="#F8EBD2" d="M42 247C38 228 44 211 53 201C56 152 86 116 129 120C147 120 160 132 171 133C183 131 188 111 202 99C219 84 241 79 260 85C285 92 298 114 301 139C326 157 334 183 329 207C325 241 291 259 246 267C201 275 94 279 63 271C51 268 44 259 42 247Z"/>
+    <g fill="none" stroke="#A63917" stroke-width="10" stroke-linecap="round">
+      <path d="M111 180Q144 188 168 165"/><path d="M228 151Q254 155 278 137"/>
+    </g>
+    <path d="M129 288L242 283" fill="none" stroke="#F8EBD2" stroke-width="11" stroke-linecap="round"/>
+  </g>
+  </g>
+  <g id="channel-name" fill="#F8EBD2" font-family="Apple SD Gothic Neo, Noto Sans CJK KR, NanumGothic, sans-serif">
+    <text x="929" y="686" font-size="48" fill="#D7B79C">잠이오는</text>
+    <text x="925" y="800" font-size="90" font-weight="600" letter-spacing="-2">스위프트 진화의 역사</text>
+  </g>
+</svg>

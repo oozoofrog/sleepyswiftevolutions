@@ -15,3 +15,15 @@
 - 2026-11-26 · Linked historical tense, precise Korean wording, requirement strength and English phrasing from [[narration]].
 
 - 2026-11-26 · Added selective narration, media checks and review clips to [[production-instructions]].
+
+- 2026-11-26 · Recorded the selected channel icon and banner artwork in [[visual-direction]].
+
+- 2026-11-26 · Recorded monetization intent and four caption languages in [[production-instructions]].
+
+- 2026-11-26 · Added the title preference to [[production-instructions]].
+
+- 2026-11-26 · Recorded phone verification and the remaining conditions for Shorts links in [[2026-11-26-youtube-feature-access]].
+
+- 2026-11-26 · Recorded the reported video verification submission in [[2026-11-26-youtube-feature-access]].
+
+- 2026-11-26 · Verified the official source archive and added [[2026-11-26-proposal-archive]].

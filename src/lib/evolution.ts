@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
 import {
@@ -150,7 +151,7 @@ export async function findProposal(
       const ep = state.episodes[proposal.id];
       const longDone = Boolean(ep?.formats.long?.upload);
       const shortDone = Boolean(ep?.formats.short?.upload);
-      if (ep?.stage === "uploaded" || (longDone && shortDone)) {
+      if ((longDone && shortDone) || (ep?.stage === "uploaded" && !ep.formats.long && !ep.formats.short)) {
         continue;
       }
 
@@ -194,6 +195,26 @@ export function findNextProposalAfter(
   });
 }
 
+function matchesProposal(markdown: string, proposal: EvolutionProposal): boolean {
+  if (!proposal.sha) return markdown.length > 0;
+  const hash = createHash("sha1").update(`blob ${Buffer.byteLength(markdown)}\0`).update(markdown);
+  return hash.digest("hex") === proposal.sha;
+}
+
+async function readCachedProposal(proposal: EvolutionProposal): Promise<string | undefined> {
+  try {
+    const markdown = await fs.readFile(path.join(PROPOSALS_CACHE_DIR, proposal.link), "utf8");
+    if (matchesProposal(markdown, proposal)) return markdown;
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
+  }
+  return undefined;
+}
+
+export async function hasProposalSource(proposal: EvolutionProposal): Promise<boolean> {
+  return (await readCachedProposal(proposal)) !== undefined;
+}
+
 /**
  * Loads proposal markdown from data/proposals/ cache or fetches it from GitHub.
  */
@@ -203,16 +224,12 @@ export async function fetchProposalMarkdown(
 ): Promise<string> {
   const cachePath = path.join(PROPOSALS_CACHE_DIR, proposal.link);
   if (!forceRefresh) {
-    try {
-      return await fs.readFile(cachePath, "utf8");
-    } catch (error) {
-      if ((error as NodeJS.ErrnoException)?.code !== "ENOENT") {
-        throw error;
-      }
-    }
+    const markdown = await readCachedProposal(proposal);
+    if (markdown !== undefined) return markdown;
   }
 
-  const url = getProposalRawUrl(proposal);
+  const { commit } = await loadEvolutionFeed();
+  const url = `https://raw.githubusercontent.com/swiftlang/swift-evolution/${commit}/proposals/${proposal.link}`;
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error(
@@ -221,6 +238,9 @@ export async function fetchProposalMarkdown(
   }
   const markdown = await response.text();
   await fs.mkdir(path.dirname(cachePath), { recursive: true });
-  await fs.writeFile(cachePath, markdown, "utf8");
+  if (!matchesProposal(markdown, proposal)) throw new Error(`원문 해시 불일치: ${proposal.id}`);
+  const tmp = `${cachePath}.tmp-${process.pid}-${Date.now()}`;
+  await fs.writeFile(tmp, markdown, "utf8");
+  await fs.rename(tmp, cachePath);
   return markdown;
 }
