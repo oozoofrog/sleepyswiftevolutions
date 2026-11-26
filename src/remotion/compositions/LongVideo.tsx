@@ -1,3 +1,4 @@
+import { PersonCard } from "../components/PersonCard";
 import { TermNote } from "../components/TermNote";
 import { KineticHeading } from "../components/KineticHeading";
 import React from "react";
@@ -15,6 +16,7 @@ import { buildSceneTimeline, type ResolvedSceneTiming } from "../../lib/timeline
 import type { AudioManifest, EpisodeScript, Scene } from "../../schema/script";
 import { Background } from "../components/Background";
 import { ProposalHistory } from "../components/ProposalHistory";
+import { CodeWalkthrough } from "../components/CodeWalkthrough";
 import { CodeReveal } from "../components/CodeReveal";
 import { ComparisonArrow } from "../components/ComparisonArrow";
 import { CodePanel } from "../components/CodePanel";
@@ -162,6 +164,8 @@ const LongSceneView: React.FC<{
 
   if (scene.type === "history") return <ProposalHistory scene={scene} />;
 
+  if (scene.codeSteps && scene.code) return <CodeWalkthrough timing={timing} snippet={scene.code} steps={scene.codeSteps} />;
+
   if (scene.codeReveal) {
     return <CodeReveal timing={timing} reveal={scene.codeReveal} />;
   }
@@ -274,7 +278,7 @@ const LongSceneView: React.FC<{
       );
     }
 
-    if (scene.type === "problem" || scene.type === "code-focus") {
+    if (scene.type === "problem" || scene.type === "code-focus" || (scene.type === "outro" && scene.code)) {
       const snippet = scene.code ?? scene.codeBefore ?? scene.codeAfter;
       const tone = scene.type === "problem" && scene.codeBefore ? "before" : "neutral";
       return (
@@ -296,7 +300,7 @@ const LongSceneView: React.FC<{
             }}
           >
             {scene.bullets && scene.bullets.length > 0 && <BulletList items={scene.bullets} />}
-            {snippet && <CodePanel snippet={snippet} tone={tone} fontSize={24} delayFrames={6} />}
+            {snippet && <CodePanel snippet={snippet} tone={tone} fontSize={scene.type === "outro" && snippet.code.length <= 18 ? 66 : 24} delayFrames={6} />}
           </div>
 
           {scene.callout && <CalloutBanner text={scene.callout} />}
@@ -478,6 +482,7 @@ export const LongVideo: React.FC<LongVideoProps> = ({ script, manifest }) => {
         >
           <LongSceneView script={script} timing={timing} />
           <TermNote timing={timing} />
+          <PersonCard timing={timing} />
           {timing.audioFile && (
             <Sequence from={timing.leadInFrames}>
               <Audio src={staticFile(timing.audioFile)} />

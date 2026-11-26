@@ -1,0 +1,571 @@
+{
+  "schemaVersion": 1,
+  "proposalId": "SE-0002",
+  "episodeNumber": 2,
+  "swiftVersion": "3.0",
+  "proposalState": "implemented",
+  "proposalTitle": "Removing currying `func` declaration syntax",
+  "koreanTitle": "두 번째 괄호가 함수 선언에서 사라졌다",
+  "authors": [
+    "Joe Groff"
+  ],
+  "proposalUrl": "https://github.com/swiftlang/swift-evolution/blob/main/proposals/0002-remove-currying.md",
+  "thumbnail": {
+    "eyebrow": "SE-0002 · SWIFT 3.0",
+    "headline": "두 번째 괄호가 사라졌다",
+    "subheadline": "함수 선언에서 사라진 문법",
+    "codeBefore": "func add(x: Int)(y: Int)",
+    "codeAfter": "func add(_ x: Int) -> (Int) -> Int"
+  },
+  "scenes": [
+    {
+      "id": "01-hook",
+      "type": "intro",
+      "chapterTitle": "옛 함수 선언",
+      "heading": "함수 하나에 괄호 두 쌍",
+      "speech": [
+        {
+          "language": "ko",
+          "text": "오늘도 코드 한 줄을 함께 살펴봅니다.",
+          "caption": "오늘도 코드 한 줄을 함께 살펴봅니다."
+        },
+        {
+          "language": "ko",
+          "text": "예전 스위프트에서는 함수를 이렇게 쓰기도 했습니다.",
+          "caption": "예전 스위프트에서는 함수를 이렇게 쓰기도 했습니다."
+        },
+        {
+          "language": "ko",
+          "text": "함수 이름은 하나인데, 옆에 괄호가 두 쌍 있습니다.",
+          "caption": "함수 이름은 하나인데, 옆에 괄호가 두 쌍 있습니다."
+        },
+        {
+          "language": "ko",
+          "text": "먼저 이를 넣으면, 그 수를 기억하는 함수가 돌아옵니다.",
+          "caption": "먼저 2를 넣으면, 그 수를 기억하는 함수가 돌아옵니다."
+        },
+        {
+          "language": "ko",
+          "text": "그 함수에 삼을 넣으면, 그때 오가 나옵니다.",
+          "caption": "그 함수에 3을 넣으면, 그때 5가 나옵니다."
+        }
+      ],
+      "narration": "오늘도 코드 한 줄을 함께 살펴봅니다. 예전 스위프트에서는 함수를 이렇게 쓰기도 했습니다. 함수 이름은 하나인데, 옆에 괄호가 두 쌍 있습니다. 먼저 2를 넣으면, 그 수를 기억하는 함수가 돌아옵니다. 그 함수에 3을 넣으면, 그때 5가 나옵니다.",
+      "deliveryNote": "첫 줄을 보여 준 뒤 한 박자 쉰다. 첫 번째 수와 두 번째 수를 또렷하게 읽는다.",
+      "badge": "듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기",
+      "code": {
+        "label": "Swift 3 이전 · 함수 선언",
+        "code": "func add(x: Int)(y: Int) -> Int {\n    return x + y\n}"
+      },
+      "codeSteps": [
+        {
+          "cue": "먼저 2를 넣으면, 그 수를 기억하는 함수가 돌아옵니다.",
+          "focus": "(x: Int)",
+          "example": "let addTwo = add(2)"
+        },
+        {
+          "cue": "그 함수에 3을 넣으면, 그때 5가 나옵니다.",
+          "focus": "(y: Int)",
+          "example": "addTwo(3)   // 5"
+        }
+      ]
+    },
+    {
+      "id": "02-history",
+      "type": "history",
+      "chapterTitle": "제안에서 Swift 3까지",
+      "heading": "제안에서 Swift 3까지",
+      "speech": [
+        {
+          "language": "ko",
+          "text": "이 문법을 없애자는 제안은 이천십오 년 십일월에 나왔습니다.",
+          "caption": "이 문법을 없애자는 제안은 2015년 11월에 나왔습니다."
+        },
+        {
+          "language": "ko",
+          "text": "이듬해 일월에 구현됐고, 구월에 나온 스위프트 쓰리에 반영됐습니다.",
+          "caption": "이듬해 1월에 구현됐고, 9월에 나온 Swift 3에 반영됐습니다."
+        }
+      ],
+      "narration": "이 문법을 없애자는 제안은 2015년 11월에 나왔습니다. 이듬해 1월에 구현됐고, 9월에 나온 Swift 3에 반영됐습니다.",
+      "deliveryNote": "‘이듬해’ 앞에서 숨을 들이쉬고, 날짜보다 ‘구현’과 ‘반영’에 힘을 준다.",
+      "milestones": [
+        {
+          "date": "2015.11.04",
+          "event": "제안서 첫 기록",
+          "sourceUrl": "https://github.com/swiftlang/swift-evolution/commit/604c4f6dea75"
+        },
+        {
+          "date": "2016.01.21",
+          "event": "옛 선언을 오류로 처리",
+          "sourceUrl": "https://github.com/swiftlang/swift/commit/983a674e0ca35a85532d70a3eb61e71a6d024108"
+        },
+        {
+          "date": "2016.09.13",
+          "event": "Swift 3.0 출시",
+          "sourceUrl": "https://www.swift.org/blog/swift-3.0-released/"
+        }
+      ]
+    },
+    {
+      "id": "03-old",
+      "type": "code-focus",
+      "chapterTitle": "괄호마다 값을 하나씩",
+      "heading": "괄호마다 값을 하나씩",
+      "speech": [
+        {
+          "language": "ko",
+          "text": "예전에는 함수를 선언할 때 괄호 두 쌍을 나란히 쓸 수 있었습니다.",
+          "caption": "예전에는 함수를 선언할 때 괄호 두 쌍을 나란히 쓸 수 있었습니다."
+        },
+        {
+          "language": "ko",
+          "text": "여러 값을 받는 함수를 이렇게 값을 하나씩 받는 함수로 나누는 방식을 커링이라고 합니다.",
+          "caption": "여러 값을 받는 함수를 이렇게 값을 하나씩 받는 함수로 나누는 방식을 커링이라고 합니다."
+        }
+      ],
+      "narration": "예전에는 함수를 선언할 때 괄호 두 쌍을 나란히 쓸 수 있었습니다. 여러 값을 받는 함수를 이렇게 값을 하나씩 받는 함수로 나누는 방식을 커링이라고 합니다.",
+      "deliveryNote": "괄호 두 쌍을 눈으로 짚고 쉰다. ‘커링’은 천천히 한 번만 읽는다.",
+      "code": {
+        "label": "예전 선언",
+        "code": "func add(x: Int)(y: Int) -> Int {\n    return x + y\n}"
+      },
+      "termNotes": [
+        {
+          "term": "커링",
+          "meaning": "여러 값을 하나씩 받도록 함수를 나누는 방법",
+          "cue": "커링"
+        }
+      ]
+    },
+    {
+      "id": "03-why",
+      "type": "code-focus",
+      "heading": "두 번째 괄호는 누구의 것일까",
+      "chapterTitle": "조 그로프의 문제 제기",
+      "speech": [
+        {
+          "language": "ko",
+          "caption": "제안을 쓴 조 그로프가 짚은 문제는 두 번째 괄호에서 시작합니다.",
+          "text": "제안을 쓴 조 그로프가 짚은 문제는 두 번째 괄호에서 시작합니다."
+        },
+        {
+          "language": "ko",
+          "caption": "같은 함수의 다음 인자로 보면 이름을 붙이는 규칙도 이어집니다.",
+          "text": "같은 함수의 다음 인자로 보면 이름을 붙이는 규칙도 이어집니다."
+        },
+        {
+          "language": "ko",
+          "caption": "새 함수의 첫 인자로 보면 이야기가 달라집니다.",
+          "text": "새 함수의 첫 인자로 보면 이야기가 달라집니다."
+        },
+        {
+          "language": "ko",
+          "caption": "그로프는 표준 라이브러리에서도 드물게 쓰는 표기를 위해 이런 규칙을 계속 늘릴 이유가 적다고 봤습니다.",
+          "text": "그로프는 표준 라이브러리에서도 드물게 쓰는 표기를 위해 이런 규칙을 계속 늘릴 이유가 적다고 봤습니다."
+        }
+      ],
+      "narration": "제안을 쓴 조 그로프가 짚은 문제는 두 번째 괄호에서 시작합니다. 같은 함수의 다음 인자로 보면 이름을 붙이는 규칙도 이어집니다. 새 함수의 첫 인자로 보면 이야기가 달라집니다. 그로프는 표준 라이브러리에서도 드물게 쓰는 표기를 위해 이런 규칙을 계속 늘릴 이유가 적다고 봤습니다.",
+      "code": {
+        "code": "func add(x: Int)(y: Int) -> Int",
+        "label": "예전 선언 · 두 번째 인자의 이름"
+      },
+      "deliveryNote": "코드를 짚은 뒤 잠시 쉬고, 마지막 문장을 낮게 마친다.",
+      "people": [
+        {
+          "cue": "그로프",
+          "name": "Joe Groff",
+          "account": "GitHub @jckarter",
+          "profile": "https://github.com/jckarter"
+        }
+      ]
+    },
+    {
+      "id": "04-edit",
+      "type": "code-focus",
+      "heading": "괄호 하나가 바꾼 예제의 뜻",
+      "chapterTitle": "2015년 12월 · 제안서 수정",
+      "speech": [
+        {
+          "language": "ko",
+          "caption": "처음 남아 있는 제안서에는 이미 채택됐다고 적혀 있습니다.",
+          "text": "처음 남아 있는 제안서에는 이미 채택됐다고 적혀 있습니다."
+        },
+        {
+          "language": "ko",
+          "caption": "그 뒤 12월에는 새 문법을 설명하는 예제 자체가 한 번 고쳐졌습니다.",
+          "text": "그 뒤 십이월에는 새 문법을 설명하는 예제 자체가 한 번 고쳐졌습니다."
+        },
+        {
+          "language": "ko",
+          "caption": "처음 코드에서는 인자가 함수처럼 보였습니다.",
+          "text": "처음 코드에서는 인자가 함수처럼 보였습니다."
+        },
+        {
+          "language": "ko",
+          "caption": "닫는 괄호를 앞으로 옮기자 문자열을 받아 숫자를 돌려준다는 뜻이 분명해졌습니다.",
+          "text": "닫는 괄호를 앞으로 옮기자 문자열을 받아 숫자를 돌려준다는 뜻이 분명해졌습니다."
+        }
+      ],
+      "narration": "처음 남아 있는 제안서에는 이미 채택됐다고 적혀 있습니다. 그 뒤 12월에는 새 문법을 설명하는 예제 자체가 한 번 고쳐졌습니다. 처음 코드에서는 인자가 함수처럼 보였습니다. 닫는 괄호를 앞으로 옮기자 문자열을 받아 숫자를 돌려준다는 뜻이 분명해졌습니다.",
+      "code": {
+        "code": "// 수정 전\n(y: String -> Float) in\n// 수정 후\n(y: String) -> Float in",
+        "label": "제안서의 클로저 예제 발췌"
+      },
+      "deliveryNote": "코드를 짚은 뒤 잠시 쉬고, 마지막 문장을 낮게 마친다."
+    },
+    {
+      "id": "04-new",
+      "type": "code-compare",
+      "chapterTitle": "함수 선언의 변화",
+      "heading": "두 번째 값을 받는 곳",
+      "speech": [
+        {
+          "language": "ko",
+          "text": "달라진 부분은 함수 선언입니다. 두 번째 괄호 대신 화살표 뒤에 돌려줄 함수의 타입을 적습니다.",
+          "caption": "달라진 부분은 함수 선언입니다. 두 번째 괄호 대신 화살표 뒤에 돌려줄 함수의 타입을 적습니다."
+        },
+        {
+          "language": "ko",
+          "text": "아래 중괄호 안에 있는 코드가 클로저입니다. 나중에 받은 수를 처음 수에 더합니다.",
+          "caption": "아래 중괄호 안에 있는 코드가 클로저입니다. 나중에 받은 수를 처음 수에 더합니다."
+        }
+      ],
+      "narration": "달라진 부분은 함수 선언입니다. 두 번째 괄호 대신 화살표 뒤에 돌려줄 함수의 타입을 적습니다. 아래 중괄호 안에 있는 코드가 클로저입니다. 나중에 받은 수를 처음 수에 더합니다.",
+      "deliveryNote": "‘선언’에서 짧게 끊고, 화살표를 따라가듯 뒷부분을 이어 읽는다.",
+      "codeBefore": {
+        "label": "예전 선언",
+        "code": "func add(x: Int)(y: Int) -> Int {\n    return x + y\n}"
+      },
+      "codeAfter": {
+        "label": "함수를 반환하는 선언",
+        "code": "func add(_ x: Int)\n    -> (Int) -> Int {\n    return { y in x + y }\n}"
+      },
+      "termNotes": [
+        {
+          "term": "클로저",
+          "meaning": "바깥의 값을 기억할 수 있는 코드 블록",
+          "cue": "클로저"
+        }
+      ]
+    },
+    {
+      "id": "05-result",
+      "type": "code-focus",
+      "chapterTitle": "2를 기억하는 함수",
+      "heading": "2를 기억하는 함수",
+      "speech": [
+        {
+          "language": "ko",
+          "text": "이 함수는 처음에 받은 숫자 이를 기억합니다.",
+          "caption": "이 함수는 처음에 받은 숫자 2를 기억합니다."
+        },
+        {
+          "language": "ko",
+          "text": "여기에 삼을 넣으면 오가 나옵니다.",
+          "caption": "여기에 3을 넣으면 5가 나옵니다."
+        }
+      ],
+      "narration": "이 함수는 처음에 받은 숫자 2를 기억합니다. 여기에 3을 넣으면 5가 나옵니다.",
+      "deliveryNote": "처음 수를 떠올릴 만큼 쉰 뒤, 마지막 ‘오’는 힘을 빼고 읽는다.",
+      "code": {
+        "label": "호출 결과",
+        "code": "let addTwo = add(2)\naddTwo(3)   // 5\nadd(2)(3)   // 5"
+      }
+    },
+    {
+      "id": "05-debate",
+      "type": "code-focus",
+      "heading": "밑줄 하나로 자리를 남긴다면",
+      "chapterTitle": "2016년 2월 · 채택 뒤의 대화",
+      "speech": [
+        {
+          "language": "ko",
+          "caption": "선언 문법을 없앤 뒤에도 질문은 남았습니다.",
+          "text": "선언 문법을 없앤 뒤에도 질문은 남았습니다."
+        },
+        {
+          "language": "ko",
+          "caption": "에리카 새던과 다비데 데 프란체스키는 나중에 채울 인자 자리에 밑줄을 쓰자는 초안을 냈습니다.",
+          "text": "에리카 새던과 다비데 데 프란체스키는 나중에 채울 인자 자리에 밑줄을 쓰자는 초안을 냈습니다."
+        },
+        {
+          "language": "ko",
+          "caption": "크리스 래트너는 밑줄이 이미 값을 버린다는 뜻으로 쓰인다고 지적했습니다.",
+          "text": "크리스 래트너는 밑줄이 이미 값을 버린다는 뜻으로 쓰인다고 지적했습니다."
+        },
+        {
+          "language": "ko",
+          "caption": "같은 기호가 여기서는 값을 기다린다는 뜻이 되니 헷갈릴 수 있다는 의견이었습니다.",
+          "text": "같은 기호가 여기서는 값을 기다린다는 뜻이 되니 헷갈릴 수 있다는 의견이었습니다."
+        },
+        {
+          "language": "ko",
+          "caption": "이 밑줄 표기는 이번 결정에 포함되지 않았습니다.",
+          "text": "이 밑줄 표기는 이번 결정에 포함되지 않았습니다."
+        }
+      ],
+      "narration": "선언 문법을 없앤 뒤에도 질문은 남았습니다. 에리카 새던과 다비데 데 프란체스키는 나중에 채울 인자 자리에 밑줄을 쓰자는 초안을 냈습니다. 크리스 래트너는 밑줄이 이미 값을 버린다는 뜻으로 쓰인다고 지적했습니다. 같은 기호가 여기서는 값을 기다린다는 뜻이 되니 헷갈릴 수 있다는 의견이었습니다. 이 밑줄 표기는 이번 결정에 포함되지 않았습니다.",
+      "code": {
+        "code": "// 후속 초안의 아이디어\ncombine(2, _)",
+        "label": "토론용 예시 · Swift 3 문법 아님"
+      },
+      "deliveryNote": "코드를 짚은 뒤 잠시 쉬고, 마지막 문장을 낮게 마친다.",
+      "people": [
+        {
+          "cue": "새던",
+          "name": "Erica Sadun",
+          "account": "GitHub @erica",
+          "profile": "https://github.com/erica",
+          "photo": {
+            "file": "people/erica.png",
+            "source": "https://github.com/swiftlang/swift-org-website/blob/main/assets/images/property-wrappers-blog/erica.png",
+            "credit": "Swift.org · Apache 2.0"
+          }
+        },
+        {
+          "cue": "데 프란체스키",
+          "name": "Davide De Franceschi",
+          "account": "GitHub @DeFrenZ",
+          "profile": "https://github.com/DeFrenZ"
+        },
+        {
+          "cue": "래트너",
+          "name": "Chris Lattner",
+          "account": "GitHub @lattner",
+          "profile": "https://github.com/lattner",
+          "photo": {
+            "file": "people/lattner.jpg",
+            "source": "https://commons.wikimedia.org/wiki/File:FOSDEM_2011_-_Chris_Lattner_-_LLVM_(cropped).jpg",
+            "credit": "Alexandre Dulaunoy · CC BY-SA 2.0"
+          }
+        }
+      ]
+    },
+    {
+      "id": "06-close",
+      "type": "outro",
+      "chapterTitle": "오늘의 한 줄",
+      "heading": "호출에는 두 쌍이 남았다",
+      "code": {
+        "label": "선언과 호출",
+        "code": "// Swift 3 이전의 선언\nfunc add(x: Int)(y: Int) -> Int\n\n// 지금도 가능한 호출\nadd(2)(3)   // 5"
+      },
+      "speech": [
+        {
+          "language": "ko",
+          "text": "처음 본 코드로 돌아갑니다. 호출할 때는 여전히 괄호를 두 번 쓸 수 있습니다.",
+          "caption": "처음 본 코드로 돌아갑니다. 호출할 때는 여전히 괄호를 두 번 쓸 수 있습니다."
+        },
+        {
+          "language": "ko",
+          "text": "스위프트 쓰리에서 사라진 부분은 함수 선언의 두 번째 괄호입니다.",
+          "caption": "Swift 3에서 사라진 부분은 함수 선언의 두 번째 괄호입니다."
+        },
+        {
+          "language": "ko",
+          "text": "오늘은 여기서 마칩니다.",
+          "caption": "오늘은 여기서 마칩니다."
+        }
+      ],
+      "narration": "처음 본 코드로 돌아갑니다. 호출할 때는 여전히 괄호를 두 번 쓸 수 있습니다. Swift 3에서 사라진 부분은 함수 선언의 두 번째 괄호입니다. 오늘은 여기서 마칩니다.",
+      "deliveryNote": "‘선언’에 힘을 주고 한 박자 쉰다. 마지막 ‘마칩니다’는 낮고 편안하게 읽는다."
+    }
+  ],
+  "youtube": {
+    "long": {
+      "title": "두 번째 괄호가 함수 선언에서 사라졌다",
+      "description": "Swift 3에서 커링 함수 선언이 사라진 뒤에도 add(2)(3)은 어떻게 동작하는지 살펴봅니다.\n\nhttps://github.com/swiftlang/swift-evolution/blob/main/proposals/0002-remove-currying.md\n\n제안서 예제 수정 · https://github.com/swiftlang/swift-evolution/commit/714ab1cb2f\n후속 토론 · https://forums.swift.org/t/1284/4\n\n등장 인물\nJoe Groff · https://github.com/jckarter\nErica Sadun · https://github.com/erica\nDavide De Franceschi · https://github.com/DeFrenZ\nChris Lattner · https://github.com/lattner\nSwift.org · Apache 2.0 · https://github.com/swiftlang/swift-org-website/blob/main/assets/images/property-wrappers-blog/erica.png · https://github.com/swiftlang/swift-org-website/blob/main/LICENSE.md\nAlexandre Dulaunoy · CC BY-SA 2.0 · https://commons.wikimedia.org/wiki/File:FOSDEM_2011_-_Chris_Lattner_-_LLVM_(cropped).jpg · https://creativecommons.org/licenses/by-sa/2.0/",
+      "tags": [
+        "Swift",
+        "스위프트",
+        "Swift Evolution",
+        "SE-0002",
+        "커링",
+        "클로저"
+      ],
+      "playlistNames": [
+        "Swift Evolution 처음부터 끝까지"
+      ],
+      "categoryId": "28",
+      "defaultLanguage": "ko"
+    },
+    "short": {
+      "title": "두 번째 괄호가 함수 선언에서 사라졌다",
+      "description": "Swift 3에서 커링 함수 선언이 사라진 뒤에도 add(2)(3)은 어떻게 동작하는지 살펴봅니다.\n\nhttps://github.com/swiftlang/swift-evolution/blob/main/proposals/0002-remove-currying.md\n\n제안서 예제 수정 · https://github.com/swiftlang/swift-evolution/commit/714ab1cb2f\n후속 토론 · https://forums.swift.org/t/1284/4\n\n등장 인물\nJoe Groff · https://github.com/jckarter",
+      "tags": [
+        "Swift",
+        "스위프트",
+        "Swift Evolution",
+        "SE-0002",
+        "커링",
+        "클로저"
+      ],
+      "playlistNames": [
+        "Swift Evolution Shorts"
+      ],
+      "categoryId": "28",
+      "defaultLanguage": "ko"
+    }
+  },
+  "shortsScenes": [
+    {
+      "id": "01-hook",
+      "type": "intro",
+      "chapterTitle": "옛 함수 선언",
+      "heading": "함수 하나에 괄호 두 쌍",
+      "speech": [
+        {
+          "language": "ko",
+          "text": "오늘도 코드 한 줄을 함께 살펴봅니다.",
+          "caption": "오늘도 코드 한 줄을 함께 살펴봅니다."
+        },
+        {
+          "language": "ko",
+          "text": "예전 스위프트에서는 함수를 이렇게 쓰기도 했습니다.",
+          "caption": "예전 스위프트에서는 함수를 이렇게 쓰기도 했습니다."
+        },
+        {
+          "language": "ko",
+          "text": "이를 넣으면 함수가 돌아옵니다.",
+          "caption": "2를 넣으면 함수가 돌아옵니다."
+        },
+        {
+          "language": "ko",
+          "text": "여기에 삼을 넣으면 오가 나옵니다.",
+          "caption": "여기에 3을 넣으면 5가 나옵니다."
+        }
+      ],
+      "narration": "오늘도 코드 한 줄을 함께 살펴봅니다. 예전 스위프트에서는 함수를 이렇게 쓰기도 했습니다. 2를 넣으면 함수가 돌아옵니다. 여기에 3을 넣으면 5가 나옵니다.",
+      "deliveryNote": "첫 줄을 보여 준 뒤 한 박자 쉰다. 첫 번째 수와 두 번째 수를 또렷하게 읽는다.",
+      "badge": "듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기",
+      "code": {
+        "label": "Swift 3 이전 · 함수 선언",
+        "code": "func add(x: Int)(y: Int) -> Int {\n    return x + y\n}"
+      },
+      "codeSteps": [
+        {
+          "cue": "2를 넣으면 함수가 돌아옵니다.",
+          "focus": "(x: Int)",
+          "example": "let addTwo = add(2)"
+        },
+        {
+          "cue": "여기에 3을 넣으면 5가 나옵니다.",
+          "focus": "(y: Int)",
+          "example": "addTwo(3)   // 5"
+        }
+      ]
+    },
+    {
+      "id": "02-history",
+      "type": "history",
+      "chapterTitle": "제안에서 Swift 3까지",
+      "heading": "제안에서 Swift 3까지",
+      "speech": [
+        {
+          "language": "ko",
+          "caption": "2015년에 나온 이 제안은 이듬해 9월 Swift 3에 반영됐습니다.",
+          "text": "이천십오 년에 나온 이 제안은 이듬해 구월 스위프트 쓰리에 반영됐습니다."
+        }
+      ],
+      "narration": "2015년에 나온 이 제안은 이듬해 9월 Swift 3에 반영됐습니다.",
+      "deliveryNote": "‘이듬해’ 앞에서 숨을 들이쉬고, 날짜보다 ‘구현’과 ‘반영’에 힘을 준다.",
+      "milestones": [
+        {
+          "date": "2015.11.04",
+          "event": "제안서 첫 기록",
+          "sourceUrl": "https://github.com/swiftlang/swift-evolution/commit/604c4f6dea75"
+        },
+        {
+          "date": "2016.01.21",
+          "event": "옛 선언을 오류로 처리",
+          "sourceUrl": "https://github.com/swiftlang/swift/commit/983a674e0ca35a85532d70a3eb61e71a6d024108"
+        },
+        {
+          "date": "2016.09.13",
+          "event": "Swift 3.0 출시",
+          "sourceUrl": "https://www.swift.org/blog/swift-3.0-released/"
+        }
+      ]
+    },
+    {
+      "id": "03-context",
+      "type": "code-focus",
+      "heading": "괄호를 두고 갈린 해석",
+      "chapterTitle": "제안의 배경",
+      "speech": [
+        {
+          "language": "ko",
+          "caption": "조 그로프는 두 번째 괄호를 같은 함수의 인자로 볼지, 새 함수의 시작으로 볼지에 따라 이름 규칙이 모호해진다고 짚었습니다.",
+          "text": "조 그로프는 두 번째 괄호를 같은 함수의 인자로 볼지, 새 함수의 시작으로 볼지에 따라 이름 규칙이 모호해진다고 짚었습니다."
+        }
+      ],
+      "narration": "조 그로프는 두 번째 괄호를 같은 함수의 인자로 볼지, 새 함수의 시작으로 볼지에 따라 이름 규칙이 모호해진다고 짚었습니다.",
+      "code": {
+        "code": "func add(x: Int)(y: Int) -> Int",
+        "label": "옛 선언의 두 인자 목록"
+      },
+      "deliveryNote": "코드를 짚은 뒤 잠시 쉬고, 마지막 문장을 낮게 마친다.",
+      "people": [
+        {
+          "cue": "그로프",
+          "name": "Joe Groff",
+          "account": "GitHub @jckarter",
+          "profile": "https://github.com/jckarter"
+        }
+      ]
+    },
+    {
+      "id": "04-new",
+      "type": "code-compare",
+      "chapterTitle": "함수 선언의 변화",
+      "heading": "두 번째 값을 받는 곳",
+      "speech": [
+        {
+          "language": "ko",
+          "text": "스위프트 쓰리부터는 돌려줄 함수를 화살표 뒤에 적습니다.",
+          "caption": "Swift 3부터는 돌려줄 함수를 화살표 뒤에 적습니다."
+        }
+      ],
+      "narration": "Swift 3부터는 돌려줄 함수를 화살표 뒤에 적습니다.",
+      "deliveryNote": "‘선언’에서 짧게 끊고, 화살표를 따라가듯 뒷부분을 이어 읽는다.",
+      "codeBefore": {
+        "label": "예전 선언",
+        "code": "func add(x: Int)(y: Int) -> Int {\n    return x + y\n}"
+      },
+      "codeAfter": {
+        "label": "함수를 반환하는 선언",
+        "code": "func add(_ x: Int)\n    -> (Int) -> Int {\n    return { y in x + y }\n}"
+      }
+    },
+    {
+      "id": "06-close",
+      "type": "outro",
+      "chapterTitle": "오늘의 한 줄",
+      "heading": "호출에는 두 쌍이 남았다",
+      "code": {
+        "label": "선언과 호출",
+        "code": "// Swift 3 이전의 선언\nfunc add(x: Int)(y: Int) -> Int\n\n// 지금도 가능한 호출\nadd(2)(3)   // 5"
+      },
+      "speech": [
+        {
+          "language": "ko",
+          "text": "호출할 때는 여전히 괄호를 두 번 쓸 수 있습니다.",
+          "caption": "호출할 때는 여전히 괄호를 두 번 쓸 수 있습니다."
+        },
+        {
+          "language": "ko",
+          "text": "스위프트 쓰리에서 사라진 부분은 함수 선언의 두 번째 괄호입니다.",
+          "caption": "Swift 3에서 사라진 부분은 함수 선언의 두 번째 괄호입니다."
+        },
+        {
+          "language": "ko",
+          "text": "오늘은 여기서 마칩니다.",
+          "caption": "오늘은 여기서 마칩니다."
+        }
+      ],
+      "narration": "호출할 때는 여전히 괄호를 두 번 쓸 수 있습니다. Swift 3에서 사라진 부분은 함수 선언의 두 번째 괄호입니다. 오늘은 여기서 마칩니다.",
+      "deliveryNote": "‘선언’에 힘을 주고 한 박자 쉰다. 마지막 ‘마칩니다’는 낮고 편안하게 읽는다."
+    }
+  ]
+}

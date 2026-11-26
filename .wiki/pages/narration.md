@@ -16,7 +16,7 @@ Use measured speech cues for [[visual-direction]]. Record listening feedback thr
 
 Coach one stress word per thought. Keep a question open long enough for the viewer to inspect the code. Leave 0.45 seconds after statements and 0.65 after questions when another sentence follows. The current landscape and portrait scene gaps are 1.30 and 1.10 seconds. The existing episode was retimed with its original synthesized speech. Source noise and synthetic artifacts remain separate diagnostic possibilities.
 
-Use the creator’s phrasing “보이죠? 쏙 빠져요.” as the example for a shared discovery. Give each sentence one job: point at the code or explain what changed.
+Use the earlier “보이죠? 쏙 빠져요.” example for pacing. The creator now wants all Korean narration sentences and matching captions to end in 다. Use conversational 합니다체 and pose puzzles indirectly. Give each sentence one job: point at the code or explain what changed.
 
 ## Source snapshots
 

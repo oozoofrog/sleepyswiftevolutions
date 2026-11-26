@@ -1,4 +1,5 @@
 import { execFile } from "node:child_process";
+import { randomBytes } from "node:crypto";
 import fs from "node:fs/promises";
 import http from "node:http";
 import path from "node:path";
@@ -81,7 +82,9 @@ export async function runYouTubeAuthFlow(): Promise<{
   const redirectUri = `http://127.0.0.1:${port}/oauth2callback`;
 
   const oauth2Client = new google.auth.OAuth2(clientId, clientSecret, redirectUri);
+  const state = randomBytes(32).toString("hex");
   const authUrl = oauth2Client.generateAuthUrl({
+    state,
     access_type: "offline",
     prompt: "consent",
     scope: YOUTUBE_SCOPES,
@@ -90,8 +93,8 @@ export async function runYouTubeAuthFlow(): Promise<{
   const code = await new Promise<string>((resolve, reject) => {
     const timeout = setTimeout(() => {
       server.close();
-      reject(new Error("OAuth 인증 대기 시간이 초과되었습니다 (3분). 다시 시도해 주세요."));
-    }, 180_000);
+      reject(new Error("OAuth 인증 대기 시간이 초과되었습니다 (15분). 다시 시도해 주세요."));
+    }, 900_000);
 
     const server = http.createServer((req, res) => {
       const reqUrl = new URL(req.url || "/", `http://127.0.0.1:${port}`);
@@ -101,12 +104,18 @@ export async function runYouTubeAuthFlow(): Promise<{
         return;
       }
 
+      if (reqUrl.searchParams.get("state") !== state) {
+        res.writeHead(400);
+        res.end("Invalid OAuth state.");
+        return;
+      }
+
       const errorParam = reqUrl.searchParams.get("error");
       const authCode = reqUrl.searchParams.get("code");
 
       if (errorParam) {
         res.writeHead(400, { "Content-Type": "text/html; charset=utf-8" });
-        res.end(`<h2>YouTube 인증 실패</h2><p>${errorParam}</p>`);
+        res.end("<h2>YouTube 인증 요청이 거부되었습니다.</h2>");
         clearTimeout(timeout);
         server.close();
         reject(new Error(`YouTube OAuth 인증 거부/오류: ${errorParam}`));
@@ -178,5 +187,11 @@ export async function getAuthorizedYouTubeClient(): Promise<youtube_v3.Youtube> 
     void saveTokensSecurely(config.youtube.tokenPath, merged);
   });
 
-  return google.youtube({ version: "v3", auth: oauth2Client });
+  const youtube = google.youtube({ version: "v3", auth: oauth2Client });
+  const expectedChannelId = "UCCtGyB0lbnsT0ES0Yuwhwjg";
+  const response = await youtube.channels.list({ part: ["id"], mine: true });
+  if (!response.data.items?.some(channel => channel.id === expectedChannelId)) {
+    throw new Error("잠이오는 스위프트 진화의 역사 채널로 다시 인증해 주세요.");
+  }
+  return youtube;
 }

@@ -13,22 +13,21 @@ export { getEffectiveShortsScenes };
 /**
  * Generates a starter script.json template for manual or agent-assisted editing.
  */
-const editorialGuide = "korean-product-writing 원칙에 따라 한 문장에 한 가지를 설명하고 대상과 동작을 구체적으로 말하세요. 제안 당시 의도와 출시된 변경은 날짜가 있는 과거형으로, 현재 동작은 확인한 버전을 기준으로, 미출시 동작은 상태와 조건을 밝혀 쓰세요. RFC 2119의 의무·권고·선택 구분과 ASD-STE100의 명료성 원칙을 한국어 해요체에 맞게 적용하세요. 영어는 뜻이 이어지는 짧은 영어 구절로 묶어 en 음성으로 합성하세요. 제목에는 무엇이 어떻게 달라졌는지 동사로 쓰세요. 예를 들어 SE-0001은 “백틱이 사라졌다”입니다. 초보자부터 중급자까지 볼 수 있도록 전문 용어가 처음 들리는 장면에 termNotes를 넣으세요. term은 용어, meaning은 현재 코드에 맞춘 짧은 한글 풀이, cue는 해당 자막에서 그대로 가져온 구절입니다. 시리즈 이름은 “듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기”입니다. 첫 화면의 badge와 썸네일 subheadline에 이 이름을 쓰세요. 늦은 밤 동료에게 이야기하듯 편안하게 읽고, 썸네일에는 그 편에서 달라진 점을 짧게 쓰세요. 첫 질문과 답 직후, 제안서 최초 기록·구현 기록·해당 Swift 버전과 정식 출시 시기를 history 장면으로 짧게 소개하세요. milestones 배열에 확인된 사건을 시간순으로 최대 3개 넣으세요. 각 항목은 date(표시할 날짜), event(사건), sourceUrl(공식 출처 URL)로 구성합니다. 제안서 이력과 공식 출시 발표로 확인한 날짜만 쓰고, 미출시 제안은 확인된 상태까지만 소개하세요. 첫 화면에 제목이 약속한 코드를 보여주고, 시청자가 눈으로 답을 찾을 수 있는 질문을 하나 던지세요. 코드가 바뀌는 지점에 강조와 설명을 맞추세요. 친한 동료와 같은 코드를 보며 발견한 내용을 나누듯 쓰세요. 예를 들어 “두 개, 보이죠?”로 시선을 맞추고 “쏙 빠져요.”로 짧게 받으세요. 해요체를 기본으로 하되 매번 확인을 요구하거나 감탄사를 덧붙이지 마세요. 삭제를 보여주는 첫 장면은 heading에 질문을 쓰고 codeReveal.parts에 한 줄의 코드를 순서대로 나누세요. 남길 부분은 문자열, 지울 부분은 {\"remove\":\"문자\"}입니다. 답이 들리는 단어로 새 speech 구간을 시작하고 그 caption 전체를 codeReveal.answerCue에 넣으세요.";
+const editorialGuide = "korean-product-writing 원칙에 따라 한 문장에 한 가지를 설명하고 대상과 동작을 구체적으로 말하세요. 제안 당시 의도와 출시된 변경은 날짜가 있는 과거형으로, 현재 동작은 확인한 버전을 기준으로, 미출시 동작은 상태와 조건을 밝혀 쓰세요. RFC 2119의 의무·권고·선택 구분과 ASD-STE100의 명료성 원칙을 한국어 합니다체에 맞게 적용하세요. 영어는 뜻이 이어지는 짧은 영어 구절로 묶어 en 음성으로 합성하세요. 제목에는 무엇이 어떻게 달라졌는지 동사로 쓰세요. 예를 들어 SE-0001은 “백틱이 사라졌다”입니다. 초보자부터 중급자까지 볼 수 있도록 전문 용어가 처음 들리는 장면에 termNotes를 넣으세요. term은 용어, meaning은 현재 코드에 맞춘 짧은 한글 풀이, cue는 해당 자막에서 그대로 가져온 구절입니다. 시리즈 이름은 “듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기”입니다. 첫 화면의 badge와 썸네일 subheadline에 이 이름을 쓰세요. 늦은 밤 동료에게 이야기하듯 편안하게 읽고, 썸네일에는 그 편에서 달라진 점을 짧게 쓰세요. 첫 질문과 답 직후, 제안서 최초 기록·구현 기록·해당 Swift 버전과 정식 출시 시기를 history 장면으로 짧게 소개하세요. milestones 배열에 확인된 사건을 시간순으로 최대 3개 넣으세요. 각 항목은 date(표시할 날짜), event(사건), sourceUrl(공식 출처 URL)로 구성합니다. 제안서 이력과 공식 출시 발표로 확인한 날짜만 쓰고, 미출시 제안은 확인된 상태까지만 소개하세요. 첫 화면에 제목이 약속한 코드를 보여주고, 시청자가 눈으로 답을 찾을 수 있는 질문을 하나 던지세요. 코드가 바뀌는 지점에 강조와 설명을 맞추세요. 친한 동료와 같은 코드를 보며 발견한 내용을 나누듯 쓰세요. 한국어 낭독문과 해당 자막은 모두 ‘다.’로 끝내세요. 시청자가 답을 생각하도록 ‘어떤 값이 돌아올지 잠시 생각해 봅니다.’처럼 간접 질문을 쓰세요. 삭제를 보여주는 첫 장면은 heading에 질문을 쓰고 codeReveal.parts에 한 줄의 코드를 순서대로 나누세요. 남길 부분은 문자열, 지울 부분은 {\"remove\":\"문자\"}입니다. 답이 들리는 단어로 새 speech 구간을 시작하고 그 caption 전체를 codeReveal.answerCue에 넣으세요.";
+
+const researchGuide = "인물을 언급할 때는 해당 speech 자막에서 cue를 골라 장면의 people 배열에 영문 이름(name), 플랫폼과 @아이디(account), 공식 프로필 URL(profile)을 기록하세요. 출처와 사용 조건이 확인된 실제 사진은 에피소드의 audio/people에 저장하고 photo의 file, source, credit을 채우세요. 공동 저자는 각각 표시하고 설명란에 프로필과 사진 출처를 남기세요. 사진 출처는 직접 조사하세요. 수익화 영상에 쓸 수 있는지 확인되지 않으면 조사 결과를 기록하고 영문 이름과 계정만 표시하세요. 대본 작성 전에 공식 원문 최초판과 최종판, 변경 이력과 PR, 제안·리뷰 토론, 결정 공지, 구현과 출시 기록을 조사해 에피소드 폴더의 research.md에 날짜·발언자·근거 링크를 남기세요. 본편에서는 당시의 문제, 의견이 갈린 이유, 검토한 대안, 실제 수정과 최종 결정이 어떻게 이어졌는지 장면으로 설명하세요. 쇼츠에도 결정의 이유를 하나 담으세요. 예제 수정과 설계 변경, 당사자의 의견과 공식 결정, 채택 전 논쟁과 후속 논의를 구분하세요. 찾지 못한 기록은 조사 노트에 밝히고 대화를 창작하지 마세요.";
+
+const bookendGuide = "오래전에 사라진 문법은 시청자가 처음 본다고 가정하세요. 도입에서 사용 시기를 표시하고 당시 선언과 구체적인 실행 결과를 먼저 보여준 뒤, 제안 당시의 쟁점으로 넘어가세요. 마지막에는 그 선언과 현재 가능한 호출을 함께 보여주세요. 본편과 쇼츠 모두 첫 화면에 코드를 띄우고 “오늘도 코드 한 줄을 함께 살펴봅니다.”로 시작하세요. 그 편에서 생각해 볼 문제 하나를 짚고 답을 보여주기 전에 한 박자 기다리세요. 끝에서는 첫 코드를 다시 보여주고 질문의 답과 제안의 의미를 연결하세요. “오늘은 여기서 마칩니다.” 뒤에 코드를 잠시 남기세요.";
 
 const speechGuide = `각 장면의 deliveryNote에는 가장 또렷하게 읽을 단어와 숨을 고를 지점을 한두 문장으로 쓰세요. 녹음 메모에서는 실제 들숨과 시청자가 코드를 볼 기다림을 구분하세요. 주어와 서술어는 한 호흡으로 이으세요. 코칭은 narration이나 speech.text에 넣지 마세요. 문장이 끝나면 다음 발화 전에 쉴 수 있도록 speech를 한 문장씩 나누세요. 한 문장 안에서 코드만 따로 읽을 때는 불필요한 마침표를 넣지 마세요. 화면과 자막(narration)에는 원래 철자를 유지하세요. 한영 혼용 장면에는 speech 배열을 작성하세요. 각 구간의 caption을 순서대로 합치면 narration과 같아야 합니다. language는 ko 또는 en, text는 실제 낭독문입니다. 영어 제안 제목은 한 구절로 묶고, 한국어 문장 안의 약어나 버전은 문맥에 맞게 풀어 읽으세요. 예: {"language":"en","caption":"indexOf","text":"index of"}, {"language":"ko","caption":"API를 호출합니다.","text":"에이피아이를 호출합니다."}. 코드의 구두점은 의미가 있을 때만 읽으세요. shortNarration을 따로 쓰면 shortSpeech도 별도로 작성하세요.`;
 
 export function buildStarterScript(
   proposal: EvolutionProposal,
   episodeNumber: number,
-  nextProposal?: EvolutionProposal,
 ): EpisodeScript {
   const swiftVersion = proposal.status.version ?? proposal.status.state;
   const authorNames = proposal.authors.map((a) => a.name);
   const config = getConfig();
-
-  const nextHint = nextProposal
-    ? `다음 영상에서는 ${nextProposal.id} (${nextProposal.title})를 다룹니다.`
-    : "구독과 좋아요로 다음 Swift Evolution 에피소드를 받아보세요.";
 
   return {
     schemaVersion: 1,
@@ -55,7 +54,7 @@ export function buildStarterScript(
         heading: "이 코드에서 무엇이 달라질까요?",
         code: { code: "// TODO: 원문에서 질문에 맞는 짧은 코드로 교체하세요" },
         subheading: `Swift ${swiftVersion} · ${authorNames.join(", ") || "Swift Evolution"}`,
-        narration: "이 코드에서 무엇이 달라질까요?",
+        narration: "오늘도 코드 한 줄을 함께 살펴봅니다. 이 코드에서 무엇이 달라질지 잠시 생각해 봅니다.",
         badge: `Swift ${swiftVersion}`,
         includeInShort: true,
       },
@@ -90,14 +89,11 @@ export function buildStarterScript(
       {
         id: "04-outro",
         type: "outro",
-        chapterTitle: "정리 및 다음 예고",
-        heading: "핵심 요약",
-        narration: `${proposal.id} 핵심 정리는 여기까지입니다. ${nextHint}`,
-        bullets: [
-          `${proposal.id} 핵심 변화 한 줄 요약`,
-          nextHint,
-        ],
-        includeInShort: false,
+        chapterTitle: "오늘의 한 줄",
+        heading: "[첫 질문의 답]",
+        narration: "[첫 코드에서 확인한 변화 한 가지]. 오늘은 여기서 마칩니다.",
+        code: { code: "// TODO: 첫 질문의 답을 보여주는 코드" },
+        includeInShort: true,
       },
     ],
     youtube: {
@@ -162,7 +158,9 @@ export function buildAgentPromptMarkdown(
 
 ## 작성 규칙
 
-${editorialGuide} [시리즈 연출 근거](../../_context/editorial-direction.md)
+${researchGuide}
+
+${editorialGuide} ${bookendGuide} [시리즈 연출 근거](../../_context/editorial-direction.md)
 
 1. **언어/톤**: 한국어 개발자 유튜브 스타일(친절하고 명쾌하며 실무 중심). ${speechGuide}
 2. **16:9 일반 영상 (\`scenes\`)**:
@@ -225,7 +223,7 @@ export async function scaffoldEpisode(
 
   let scriptWritten = false;
   if (!scriptExists || options?.force) {
-    const starter = buildStarterScript(proposal, episodeNumber, nextProposal);
+    const starter = buildStarterScript(proposal, episodeNumber);
     await fs.writeFile(paths.scriptJson, `${JSON.stringify(starter, null, 2)}\n`, "utf8");
     scriptWritten = true;
   }
@@ -346,7 +344,9 @@ Swift Evolution 제안서를 깊이 분석하여 16:9 해설 영상(2~3분)과 9
 규칙:
 - scenes는 5~7개로 구성하고, 첫 씬은 코드 질문(intro와 codeReveal 또는 code-focus와 code), 마지막 씬은 outro로 작성하세요.
 - 코드 예제는 반드시 실제 Proposal 원문에 근거하여 정확하게 작성하고, 한 코드 블록당 10줄 이하로 화면 가독성을 지키세요.
-- ${editorialGuide}
+- ${researchGuide}
+
+${editorialGuide} ${bookendGuide}
 - ${speechGuide}
 
 Proposal 원문:
@@ -396,6 +396,17 @@ export async function generateScriptWithLlm(
   const config = getConfig();
   const provider = resolveLlmProvider(options?.provider);
   const nextProposal = findNextProposalAfter(feed, proposal.id);
+  const researchPath = path.join(getEpisodePaths(proposal.id).dir, "research.md");
+  let research: string;
+  try {
+    research = (await fs.readFile(researchPath, "utf8")).trim();
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
+    research = "";
+  }
+  if (!research || !/https?:\/\//.test(research)) {
+    throw new Error(`대본 생성 전에 근거 링크가 있는 조사 노트를 작성하세요: ${researchPath}`);
+  }
   const { system, user } = buildLlmSystemAndUserPrompts(
     proposal,
     episodeNumber,
@@ -403,6 +414,7 @@ export async function generateScriptWithLlm(
     nextProposal,
   );
 
+  const researchedPrompt = `${user}\n\n출처별 조사 노트:\n${research}`;
   let rawText = "";
 
   if (provider === "openai") {
@@ -417,7 +429,7 @@ export async function generateScriptWithLlm(
         response_format: { type: "json_object" },
         messages: [
           { role: "system", content: system },
-          { role: "user", content: user },
+          { role: "user", content: researchedPrompt },
         ],
         temperature: 0.4,
       }),
@@ -441,7 +453,7 @@ export async function generateScriptWithLlm(
         model: config.llm.anthropicModel,
         max_tokens: 4096,
         system,
-        messages: [{ role: "user", content: user }],
+        messages: [{ role: "user", content: researchedPrompt }],
         temperature: 0.4,
       }),
     });
@@ -461,7 +473,7 @@ export async function generateScriptWithLlm(
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         systemInstruction: { parts: [{ text: system }] },
-        contents: [{ role: "user", parts: [{ text: user }] }],
+        contents: [{ role: "user", parts: [{ text: researchedPrompt }] }],
         generationConfig: {
           responseMimeType: "application/json",
           temperature: 0.4,

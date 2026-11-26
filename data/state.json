@@ -51,9 +51,40 @@
       "title": "Removing currying `func` declaration syntax",
       "proposalState": "implemented",
       "swiftVersion": "3.0",
-      "stage": "pending",
-      "updatedAt": "2026-11-25T15:42:15.970Z",
-      "formats": {}
+      "stage": "uploaded",
+      "updatedAt": "2026-11-26T07:14:07.054070+00:00",
+      "formats": {
+        "long": {
+          "voicedAt": "2026-11-26T06:28:04.870Z",
+          "renderedAt": "2026-11-26T06:41:14.865Z",
+          "durationSec": 153.17,
+          "upload": {
+            "videoId": "yyuOi1WzzRA",
+            "url": "https://youtu.be/yyuOi1WzzRA",
+            "uploadedAt": "2026-11-26T07:07:07.916468+00:00",
+            "privacyStatus": "public",
+            "title": "두 번째 괄호가 함수 선언에서 사라졌다",
+            "playlists": [],
+            "captionsUploaded": true,
+            "thumbnailUploaded": false
+          }
+        },
+        "short": {
+          "voicedAt": "2026-11-26T06:28:14.824Z",
+          "renderedAt": "2026-11-26T06:41:31.887Z",
+          "durationSec": 46.711,
+          "upload": {
+            "videoId": "f_8nk8azIzw",
+            "url": "https://www.youtube.com/shorts/f_8nk8azIzw",
+            "uploadedAt": "2026-11-26T07:14:07.054070+00:00",
+            "privacyStatus": "public",
+            "title": "두 번째 괄호가 함수 선언에서 사라졌다",
+            "playlists": [],
+            "captionsUploaded": true,
+            "thumbnailUploaded": false
+          }
+        }
+      }
     },
     "SE-0003": {
       "id": "SE-0003",

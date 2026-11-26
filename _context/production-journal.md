@@ -71,3 +71,35 @@ Use a concrete subject and a verb that names the change in episode titles. Reser
 ## 2026-11-26 · Source coverage
 
 The creator requested all proposal documents and progress tracking. The download command verified 605 upstream files. Each feed ID tracks one landscape episode and one Short.
+
+## 2026-11-26 · SE-0002
+
+The opening hides the second call to show the function returned by the first call. The comparison then shows the change to the declaration. Both formats use the registered reference voice. Each has separate Korean, English, Japanese and Simplified Chinese SRT files. The production state records both local renders.
+
+## 2026-11-26 · A recognizable beginning and ending
+
+The creator asked for a consistent delivery style at both ends. In the first SE-0002 cut the demonstration ended at the value 5. The new close returns to the opening call and states what changed in the declaration. Both formats share a spoken invitation and sign-off. The exact phrases have not yet received creator feedback.
+
+## 2026-11-26 · Korean sentence endings
+
+The creator requested sentences ending in 다. SE-0002 now uses 합니다체 for the opening, body and closing in both formats. Keep the quiet pacing and use indirect questions to let viewers think before the reveal.
+
+## 2026-11-26 · Research and narrate the deliberation
+
+The creator requested that each episode explain the human discussion, revisions and decision as well as the code. SE-0002 now includes the author's rationale, a documented example correction and a separately dated follow-up debate. The research notes identify the missing separate decision announcement. Future script generation includes the episode's linked research notes.
+
+## 2026-11-26 · A historical opening for SE-0002
+
+The creator noted that current viewers may never have encountered the removed syntax and requested a reshoot. In both formats the historical declaration stays on screen while the two parameter groups are highlighted in turn. The initial calls appear with the matching speech cues. The last frame pairs the old declaration with the current call.
+
+## 2026-11-26 · On-screen contributor identification
+
+The creator requested English names, social IDs and photos during mentions. SE-0002 uses verified GitHub handles. The Swift.org archive supplies the Sadun photo and Wikimedia Commons supplies the credited Lattner portrait. Suitable portraits for Groff and De Franceschi remain open.
+
+## 2026-11-26 · Portrait search concluded
+
+The creator asked production to search independently and omit unavailable photos. The review of the [Joe Groff profile](https://github.com/jckarter), the [Davide De Franceschi profile](https://github.com/DeFrenZ), Wikimedia Commons and Openverse did not identify a portrait of either contributor with verified commercial reuse terms. Both appear by name and GitHub handle when mentioned.
+
+## 2026-11-26 · SE-0002 publication
+
+YouTube Studio confirmed public visibility for the [episode](https://youtu.be/yyuOi1WzzRA) and [Short](https://www.youtube.com/shorts/f_8nk8azIzw). Both subtitle pages listed published Korean, English, Japanese and Simplified Chinese tracks.

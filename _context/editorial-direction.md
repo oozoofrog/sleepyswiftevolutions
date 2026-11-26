@@ -40,7 +40,7 @@ Give each scene a deliveryNote. Pick one stress word per thought and one place t
 
 Current production defaults add 0.45 seconds after a completed sentence and 0.65 after a question within the scene. Allow 1.30 seconds between landscape scenes and 1.10 seconds between portrait scenes. Keep a mid-sentence language change or reveal cue connected. Check the rendered audio at a scene boundary because the source can already contain silence.
 
-Write as if two colleagues are looking at the same line of code. The creator's reference is “보이죠? 쏙 빠져요.” Let the first sentence direct attention and the next describe what changes. Keep technical nouns exact and use conversational Korean endings. Vary confirmation questions across the episode.
+Write as if two colleagues are looking at the same line of code. The earlier reference “보이죠? 쏙 빠져요.” guides pacing. The current preference uses 합니다체. Let the first sentence direct attention and the next describe what changes. Keep technical nouns exact and end each spoken Korean sentence and its caption with 다. Invite the viewer to consider a question indirectly.
 
 For a human recording, provide a separate Korean reading sheet. Mark a comfortable inhale and a listener's silent beat differently. Keep instructions off the spoken line and keep the reveal verb attached to its subject. Use emphasis sparingly. [SE-0001 recording script](../episodes/SE-0001/reading-ko.md)
 
@@ -65,3 +65,21 @@ The creator selected the sleeping frog from concept three and approved the simpl
 ## 2026-11-26 · Episode titles
 
 Use a concrete subject and a verb that names the change in episode titles. Reserve counts for an opening puzzle when the count helps the viewer inspect the code. For SE-0001, the creator chose “백틱이 사라졌다”.
+
+## Series opening and closing
+
+Open both formats on the episode’s code. Say “오늘도 코드 한 줄을 함께 살펴봅니다.” Pose one episode-specific puzzle using a declarative sentence and leave time to inspect the code. Close on the same example with the answer and its historical significance. Say “오늘은 여기서 마칩니다.” Leave the example on screen during the final breath. The spoken phrases are a production choice for this revision.
+
+## Tell the history behind each decision
+
+Before writing each episode, build a sourced research.md in the episode folder. Read the earliest proposal, final text, meaningful diffs and pull requests, pitch and review exchanges, formal decision if available, implementation and release evidence. Trace the practical problem, attributed positions, alternatives, changes, decision scope and consequences into the long-form narration. Keep one reason in the Short. Record missing evidence. Label post-decision debates and example corrections explicitly. An implemented status alone does not explain who decided what or why.
+
+## Introduce unfamiliar historical syntax
+
+When a proposal removed an unfamiliar form, show the historical declaration with an era label before asking the viewer to reason about it. Walk through a small input and result, then introduce the terminology and disagreement. Return to the declaration and surviving behavior at the end.
+
+## Identify people as they are mentioned
+
+During each named mention, display the verified English name, platform and account handle with a sourced portrait. For a joint contribution show both people. Include profile links and the photo credits in the video description. Until a suitable portrait is available, keep the verified identification visible and record the missing photo.
+
+Search for a photograph and verify that its terms permit commercial use. If the search does not establish permission, omit the photograph, show the verified name and account, and proceed without requesting a file from the creator.

@@ -25,7 +25,7 @@ import {
 } from "./services/script-generator";
 import { DEFAULT_RECORDING_SCRIPT, listAudioInputDevices, recordVoiceProfile, registerVoiceProfile } from "./services/voice-profile";
 import { synthesizeEpisodeAudio } from "./services/tts/index";
-import { runYouTubeAuthFlow } from "./services/youtube/auth";
+import { getAuthorizedYouTubeClient, runYouTubeAuthFlow } from "./services/youtube/auth";
 import { uploadEpisodeToYouTube } from "./services/youtube/uploader";
 
 function parseFormatOption(raw?: string): VideoFormat | "both" {
@@ -489,6 +489,14 @@ program
   );
 
 const youtubeCmd = program.command("youtube").description("YouTube OAuth 인증 관리");
+youtubeCmd
+  .command("status")
+  .description("저장된 인증 정보로 채널 접근 권한을 확인합니다")
+  .action(async () => {
+    await getAuthorizedYouTubeClient();
+    console.log(chalk.green("잠이오는 스위프트 진화의 역사 채널 인증을 확인했습니다."));
+  });
+
 youtubeCmd
   .command("auth")
   .description("Google OAuth 2.0 인증을 완료하고 secrets/youtube-token.json을 저장합니다")

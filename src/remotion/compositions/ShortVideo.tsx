@@ -1,3 +1,4 @@
+import { PersonCard } from "../components/PersonCard";
 import { TermNote } from "../components/TermNote";
 import { KineticHeading } from "../components/KineticHeading";
 import React from "react";
@@ -15,6 +16,7 @@ import { buildSceneTimeline, type ResolvedSceneTiming } from "../../lib/timeline
 import type { AudioManifest, EpisodeScript } from "../../schema/script";
 import { Background } from "../components/Background";
 import { ProposalHistory } from "../components/ProposalHistory";
+import { CodeWalkthrough } from "../components/CodeWalkthrough";
 import { CodeReveal } from "../components/CodeReveal";
 import { ComparisonArrow } from "../components/ComparisonArrow";
 import { CodePanel } from "../components/CodePanel";
@@ -51,6 +53,8 @@ const ShortSceneView: React.FC<{
   );
 
   if (scene.type === "history") return <ProposalHistory scene={scene} />;
+
+  if (scene.codeSteps && scene.code) return <CodeWalkthrough timing={timing} snippet={scene.code} steps={scene.codeSteps} />;
 
   if (scene.codeReveal) {
     return <CodeReveal timing={timing} reveal={scene.codeReveal} />;
@@ -146,7 +150,7 @@ const ShortSceneView: React.FC<{
           <CodePanel
             snippet={snippet}
             tone={scene.type === "problem" && scene.codeBefore ? "before" : "neutral"}
-            fontSize={27}
+            fontSize={scene.type === "outro" && snippet.code.length <= 18 ? 54 : 27}
             delayFrames={4}
           />
         )}
@@ -258,6 +262,7 @@ export const ShortVideo: React.FC<ShortVideoProps> = ({ script, manifest }) => {
         >
           <ShortSceneView script={script} timing={timing} />
           <TermNote timing={timing} />
+          <PersonCard timing={timing} />
           {timing.audioFile && (
             <Sequence from={timing.leadInFrames}>
               <Audio src={staticFile(timing.audioFile)} />

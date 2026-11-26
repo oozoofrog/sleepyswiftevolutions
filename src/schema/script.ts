@@ -39,6 +39,17 @@ export const SceneSchema = z.object({
     meaning: z.string().trim().min(1),
     cue: z.string().trim().min(1),
   })).optional(),
+  people: z.array(z.object({
+    cue: z.string().trim().min(1),
+    name: z.string().trim().min(1),
+    account: z.string().trim().min(1),
+    profile: z.string().url(),
+    photo: z.object({
+      file: z.string().regex(/^people\/[\w.-]+$/),
+      source: z.string().url(),
+      credit: z.string().min(1),
+    }).optional(),
+  })).optional(),
   deliveryNote: z.string().trim().min(1).optional(),
   speech: SpeechSchema.optional(),
   milestones: z.array(z.object({
@@ -46,6 +57,11 @@ export const SceneSchema = z.object({
     event: z.string().trim().min(1),
     sourceUrl: z.string().url(),
   })).min(1).max(3).optional(),
+  codeSteps: z.array(z.object({
+    cue: z.string().min(1),
+    focus: z.string().min(1),
+    example: z.string().min(1),
+  })).min(1).optional(),
   codeReveal: z.object({
     parts: z.array(z.union([z.string().min(1), z.object({ remove: z.string().min(1) })])).min(2),
     answerCue: z.string().trim().min(1),

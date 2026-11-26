@@ -27,3 +27,17 @@
 - 2026-11-26 · Recorded the reported video verification submission in [[2026-11-26-youtube-feature-access]].
 
 - 2026-11-26 · Verified the official source archive and added [[2026-11-26-proposal-archive]].
+
+- 2026-11-26 · Added [[2026-11-26-se-0002-history]] and rendered the landscape and portrait episodes.
+
+- 2026-11-26 · Recorded the revised opening and closing in [[production-instructions]].
+
+- 2026-11-26 · Updated [[narration]] for the creator’s requested Korean sentence endings.
+
+- 2026-11-26 · Expanded [[2026-11-26-se-0002-history]] with primary sources for the revision and follow-up debate. Updated [[production-instructions]] for future scripts.
+
+- 2026-11-26 · Updated [[production-instructions]] with the historical opening used in the SE-0002 reshoot.
+
+- 2026-11-26 · Recorded the contributor identification rule in [[production-instructions]].
+
+- 2026-11-26 · Closed the portrait search for Groff and De Franceschi in [[2026-11-26-se-0002-history]].

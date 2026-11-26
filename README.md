@@ -76,6 +76,8 @@ pnpm evo next
 pnpm evo init SE-0001
 ```
 - **방법 A (AI 에이전트 / 직접 작성)**: `episodes/SE-0001/prompt.md`를 참고해 `episodes/SE-0001/script.json`을 완성합니다.
+두 방법 모두 대본을 쓰기 전에 에피소드 폴더에 `research.md`를 작성합니다. 최초 제안, 실제 토론, 수정 전후, 결정과 출시 기록을 대조하고 각 주장에 원문 링크를 붙입니다. 별도 결정문을 찾지 못했다면 확인한 기록의 범위를 명시합니다. API 대본 생성 명령은 이 노트를 대본 입력에 포함합니다. [SE-0002 조사 예시](episodes/SE-0002/research.md)
+
 - **방법 B (LLM API 자동 생성)**: `.env`에 `OPENAI_API_KEY` / `ANTHROPIC_API_KEY` / `GEMINI_API_KEY` 중 하나를 넣고 실행합니다.
   ```bash
   pnpm evo script SE-0001
@@ -122,6 +124,7 @@ pnpm evo build next --llm   # 또는 대본 작성 후 pnpm evo build SE-0002
 5. 아래 명령으로 로컬 OAuth 인증을 진행해 `secrets/youtube-token.json`을 발급받습니다:
    ```bash
    pnpm evo youtube auth
+   pnpm evo youtube status
    ```
 
 > **참고**: 커스텀 썸네일 API(`thumbnails.set`)는 YouTube 채널이 **전화번호 인증(중급 기능)** 되어 있어야 정상 적용됩니다. 미인증 채널이어도 영상 업로드는 성공하며 경고만 표시됩니다.

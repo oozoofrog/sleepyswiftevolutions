@@ -1,0 +1,39 @@
+1
+00:00:00,350 --> 00:00:03,070
+Let’s look at a line of code together.
+
+2
+00:00:03,520 --> 00:00:07,520
+Swift once let you declare a function like this.
+
+3
+00:00:07,970 --> 00:00:09,970
+Pass in 2 and a function comes back.
+
+4
+00:00:10,420 --> 00:00:12,420
+Pass it 3 and you get 5.
+
+5
+00:00:13,520 --> 00:00:18,640
+Proposed in 2015, the change shipped with Swift 3 the following September.
+
+6
+00:00:19,741 --> 00:00:29,261
+Joe Groff noted that labeling became ambiguous: did the second list continue the function or start a new one?
+
+7
+00:00:30,361 --> 00:00:34,521
+From Swift 3 on, the returned function’s type goes after the arrow.
+
+8
+00:00:35,621 --> 00:00:38,661
+You can still use both pairs when calling the function.
+
+9
+00:00:39,111 --> 00:00:43,831
+Swift 3 removed the second parameter list from the declaration.
+
+10
+00:00:44,281 --> 00:00:45,961
+Let’s leave it there for today.

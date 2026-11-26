@@ -28,3 +28,15 @@ Use a concrete subject and a verb that names the change in episode titles. Reser
 Check advanced feature access before adding the full episode as the related video on a Short. [YouTube verification and Shorts links](../sources/2026-11-26-youtube-feature-access.md)
 
 Use [[2026-11-26-proposal-archive]] for source verification and per-format production progress.
+
+For the declaration and call distinction in episode 2, see [[2026-11-26-se-0002-history]].
+
+Use the same spoken invitation and sign-off for both formats. Keep the question and closing answer specific to the episode. See the [opening and closing direction](../../_context/editorial-direction.md#series-opening-and-closing).
+
+Research each proposal’s deliberation and revisions before scripting. Use the [SE-0002 evidence table](../../episodes/SE-0002/research.md) as an example. Put the supported story into narration. Distinguish a later conversation from the decision it followed.
+
+For unfamiliar historical syntax, show a dated original example, explain how it behaved, and only then introduce the debate. See the SE-0002 reshoot in the [editorial guide](../../_context/editorial-direction.md#introduce-unfamiliar-historical-syntax).
+
+Show the verified English name, account and sourced photo during named mentions. [Episode 2 photo and account references](../../episodes/SE-0002/research.md#on-screen-identities).
+
+Search for a photograph and verify that its terms permit commercial use. If the search does not establish permission, omit the photograph, show the verified name and account, and proceed without requesting a file from the creator. See [[2026-11-26-se-0002-history]].

@@ -27,6 +27,11 @@ export async function checkVideo(id: string, format: VideoFormat) {
     const row = manifest.scenes[i];
     if (row.sceneId !== scene.id) throw new Error(`타임라인 장면 순서를 확인하세요: ${scene.id}`);
     const triggers = (scene.termNotes ?? []).map(note => note.cue);
+    for (const person of scene.people ?? []) triggers.push(person.cue);
+    for (const step of scene.codeSteps ?? []) {
+      if (!scene.code?.code.includes(step.focus)) throw new Error(`강조할 코드가 없습니다: ${step.focus}`);
+      triggers.push(step.cue);
+    }
     if (scene.codeReveal) triggers.push(scene.codeReveal.answerCue);
     for (const trigger of triggers) {
       if (!row.cues.some(c => c.text.includes(trigger))) throw new Error(`${scene.id} 자막에 표시 시점이 없습니다: ${trigger}`);
