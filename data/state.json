@@ -188,18 +188,42 @@
       "title": "Better Translation of Objective-C APIs Into Swift",
       "proposalState": "implemented",
       "swiftVersion": "3.0",
-      "stage": "rendered",
-      "updatedAt": "2026-11-27T10:33:11.398Z",
+      "stage": "uploaded",
+      "updatedAt": "2026-11-27T10:43:54.755Z",
       "formats": {
         "long": {
           "voicedAt": "2026-11-27T07:24:16.123Z",
           "renderedAt": "2026-11-27T10:33:11.398Z",
-          "durationSec": 200.826
+          "durationSec": 200.826,
+          "upload": {
+            "videoId": "9AfPnSVwAzM",
+            "url": "https://youtu.be/9AfPnSVwAzM",
+            "uploadedAt": "2026-11-27T10:43:40.030Z",
+            "privacyStatus": "public",
+            "title": "to가 괄호 안으로 들어갔다 · SE-0005",
+            "playlists": [
+              "Swift Evolution 처음부터 끝까지"
+            ],
+            "captionsUploaded": true,
+            "thumbnailUploaded": true
+          }
         },
         "short": {
           "voicedAt": "2026-11-27T05:19:12.311Z",
           "renderedAt": "2026-11-27T10:02:19.153Z",
-          "durationSec": 56.297
+          "durationSec": 56.297,
+          "upload": {
+            "videoId": "Kt6ZzVVQaPY",
+            "url": "https://www.youtube.com/shorts/Kt6ZzVVQaPY",
+            "uploadedAt": "2026-11-27T10:43:54.753Z",
+            "privacyStatus": "public",
+            "title": "to가 괄호 안으로 들어갔다 · SE-0005 #Shorts",
+            "playlists": [
+              "Swift Evolution Shorts"
+            ],
+            "captionsUploaded": true,
+            "thumbnailUploaded": true
+          }
         }
       }
     },

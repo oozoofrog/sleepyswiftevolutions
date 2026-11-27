@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "kind": "project",
+  "lang": "ko",
+  "project": "swift-evolutions",
+  "folders": {
+    "dashboards": "00 대시보드",
+    "episodes": "10 작업 기록",
+    "lessons": "20 교훈",
+    "instruction_guide": "30 지시 가이드",
+    "response_guide": "40 대응 가이드",
+    "knowledge": "50 지식",
+    "retros": "60 회고",
+    "templates": "90 템플릿"
+  },
+  "created": "2026-11-27"
+}
