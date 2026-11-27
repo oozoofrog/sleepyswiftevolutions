@@ -2,7 +2,7 @@ import React from "react";
 import { AbsoluteFill } from "remotion";
 import type { EpisodeScript } from "../../schema/script";
 import { CodePanel } from "../components/CodePanel";
-import { FONT_MONO, FONT_SANS, stageBackground, THEME } from "../theme";
+import { FONT_LABEL, FONT_SANS, stageBackground, THEME } from "../theme";
 
 export interface ThumbnailProps {
   script: EpisodeScript;
@@ -15,7 +15,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({ script, variant }) => {
   const accent = thumbnail.accentColor || THEME.swiftOrange;
 
   return (
-    <AbsoluteFill
+    <AbsoluteFill className={script.visualStyle}
       style={{
         backgroundColor: THEME.bgDeep,
         backgroundImage: stageBackground(accent),
@@ -45,7 +45,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({ script, variant }) => {
             style={{
               background: THEME.swiftGradient,
               color: THEME.bgDeep,
-              fontFamily: FONT_MONO,
+              fontFamily: FONT_LABEL,
               fontWeight: 900,
               fontSize: isShort ? 36 : 34,
               padding: "10px 24px",
@@ -57,7 +57,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({ script, variant }) => {
           </span>
           <span
             style={{
-              fontFamily: FONT_MONO,
+              fontFamily: FONT_LABEL,
               fontWeight: 700,
               fontSize: isShort ? 26 : 24,
               color: THEME.sky,
@@ -106,7 +106,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({ script, variant }) => {
         {thumbnail.subheadline && (
           <div
             style={{
-              fontFamily: FONT_MONO,
+              fontFamily: FONT_SANS,
               fontWeight: 600,
               fontSize: isShort ? 28 : 25,
               color: THEME.textSecondary,

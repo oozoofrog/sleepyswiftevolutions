@@ -5,13 +5,11 @@ import { FONT_SANS, THEME } from "../theme";
 
 interface ProgressTimelineProps {
   scenes: ResolvedSceneTiming[];
-  totalFrames: number;
   variant: "long" | "short";
 }
 
 export const ProgressTimeline: React.FC<ProgressTimelineProps> = ({
   scenes,
-  totalFrames,
   variant,
 }) => {
   const frame = useCurrentFrame();
@@ -64,11 +62,11 @@ export const ProgressTimeline: React.FC<ProgressTimelineProps> = ({
     <div
       style={{
         position: "absolute",
-        bottom: 20,
+        bottom: 34,
         left: 72,
         right: 72,
         display: "flex",
-        alignItems: "center",
+        alignItems: "flex-end",
         gap: 10,
         zIndex: 20,
       }}
@@ -79,13 +77,13 @@ export const ProgressTimeline: React.FC<ProgressTimelineProps> = ({
           0,
           Math.min(1, (frame - s.startFrame) / Math.max(1, s.durationInFrames)),
         );
-        const widthPct = (s.durationInFrames / Math.max(1, totalFrames)) * 100;
 
         return (
           <div
             key={s.scene.id}
             style={{
-              width: `${widthPct}%`,
+              flex: `${Math.max(1, s.durationInFrames)} 1 0px`,
+              minWidth: 0,
               display: "flex",
               flexDirection: "column",
               gap: 6,
@@ -94,12 +92,12 @@ export const ProgressTimeline: React.FC<ProgressTimelineProps> = ({
             <div
               style={{
                 fontFamily: FONT_SANS,
-                fontSize: 15,
+                fontSize: 20,
+                lineHeight: "24px",
                 fontWeight: isActive ? 700 : 500,
                 color: isActive ? THEME.textPrimary : THEME.textMuted,
-                whiteSpace: "nowrap",
-                overflow: "hidden",
-                textOverflow: "ellipsis",
+                wordBreak: "keep-all",
+                overflowWrap: "anywhere",
               }}
             >
               {s.scene.chapterTitle}

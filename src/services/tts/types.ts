@@ -9,6 +9,7 @@ export interface TtsSynthesizeOptions {
 }
 
 export interface TtsSynthesizeResult {
+  endingDigest?: string;
   audioPath: string;
   durationSec: number;
   cues: SubtitleCue[];

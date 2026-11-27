@@ -12,4 +12,10 @@ The initial proposal predates the public Swift Evolution process. The core team'
 
 The animation shows the observable values for an integer. It represents value semantics and write-back, without claiming that the compiler always allocates or physically moves two objects. The modern local variable in the final code illustrates the migration and prints the local value. The caller's integer stays at 1.
 
-The video's Korean narration identifies the author and decision-making group by their roles. It includes no personal portraits or quotations. The linked final proposal credits Ashley Garland and identifies the review manager.
+The final proposal credits [Ashley Garland](https://github.com/bitjammer) as author. The January reconsideration describes the cost of removing mutable bindings. In [reply 2](https://forums.swift.org/t/1159/2), [Joe Groff](https://github.com/jckarter) noted that readers could mistakenly expect mutations in an optional binding to write back. [Chris Lattner](https://github.com/lattner) announced the [core team’s decision](https://forums.swift.org/t/1230/1). The film paraphrases each position. The public photo search did not establish commercial portrait rights for Garland or Groff. Lattner’s photo is credited to Alexandre Dulaunoy, [FOSDEM 2011, cropped version](https://commons.wikimedia.org/wiki/File:FOSDEM_2011_-_Chris_Lattner_-_LLVM_(cropped).jpg), [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
+
+## Current toolchain comparison
+
+Apple Swift 6.4.2, Swift 6 language mode, executed the closing local-variable example with the shared call shown on screen. Its two print statements produced 2 inside the function and 1 at the call site. Printing the caller after the separate inout example produced 2. The Swift 2 panel illustrates the value semantics documented by SE-0003. Its historical syntax was checked against the proposal text.
+
+The background recording evening-keys.m4a was synthesized locally from an original four-chord arrangement with slow note attacks. The recording contains no external sample or added room effect.

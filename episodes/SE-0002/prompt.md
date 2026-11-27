@@ -143,3 +143,7 @@ include:
   operators might also be nice.
 
 ```
+
+Use the Korean ending release check in the project production skill. Compare the final export at its delivery speed with the approved two-line sample.
+
+Use the series opening lead-in and listen to the first intended consonant at final playback speed.

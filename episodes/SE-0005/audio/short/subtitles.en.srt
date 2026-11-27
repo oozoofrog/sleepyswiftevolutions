@@ -1,0 +1,51 @@
+1
+00:00:00,450 --> 00:00:02,620
+Today, we'll look at a line of code together.
+
+2
+00:00:03,151 --> 00:00:09,521
+Before Swift arrived, developers were already building iPhone apps in a programming language called Objective-C.
+
+3
+00:00:10,036 --> 00:00:14,396
+Swift could use Apple’s interface toolkit, UIKit, for the same drawing operations.
+
+4
+00:00:14,945 --> 00:00:20,865
+For this call in Swift, the proposal aimed to remove repeated words and make the destination clear.
+
+5
+00:00:21,980 --> 00:00:25,750
+The second line moves the path’s current point to the point we just created.
+
+6
+00:00:26,269 --> 00:00:29,119
+We can drop one word from the name on the second line and still understand the call.
+
+7
+00:00:30,299 --> 00:00:32,219
+The first line already shows the point’s type.
+
+8
+00:00:32,735 --> 00:00:37,244
+In the December draft, only Point disappeared. To still ended the method name.
+
+9
+00:00:38,400 --> 00:00:41,250
+In Swift 3, the method name ends with move.
+
+10
+00:00:41,788 --> 00:00:43,608
+The word to now comes immediately before the destination.
+
+11
+00:00:44,110 --> 00:00:47,110
+Placing the pencil at the starting point leaves the paper unmarked.
+
+12
+00:00:47,602 --> 00:00:50,822
+Connect the corners and stroke the path, and a paper airplane appears.
+
+13
+00:00:51,344 --> 00:00:55,514
+Written this way, the call shows where to move without repeating “point”.

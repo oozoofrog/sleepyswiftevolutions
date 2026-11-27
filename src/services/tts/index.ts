@@ -171,7 +171,7 @@ export async function synthesizeEpisodeAudio(
       await fs.access(audioPath);
       const offset = entry.startSec + entry.leadInSec;
       retained.set(scene.id, {
-        audioPath, durationSec: entry.durationSec, provider: previous.provider, voice: previous.voice,
+        audioPath, endingDigest: entry.endingDigest, durationSec: entry.durationSec, provider: previous.provider, voice: previous.voice,
         cues: entry.cues.map(c => ({...c, startSec: c.startSec - offset, endSec: c.endSec - offset})),
       });
     }
@@ -179,7 +179,7 @@ export async function synthesizeEpisodeAudio(
       ? await fs.mkdtemp(path.join(paths.formatAudioDir(format), "revision-"))
       : paths.formatAudioDir(format);
     const qwenResults = requestedProvider === "qwen3-clone" || requestedProvider === "qwen3-tts"
-      ? await synthesizeQwenScenes(selected, outputDir, requestedProvider, options.voice ?? previous?.voice)
+      ? await synthesizeQwenScenes(selected, outputDir, requestedProvider, options.voice ?? previous?.voice, scenes[0]?.id, format === "short" ? script.shortCloneTempo : undefined)
       : undefined;
     const generated = new Map(selected.map((scene, i) => [scene.id, qwenResults?.[i]]));
 
@@ -209,6 +209,7 @@ export async function synthesizeEpisodeAudio(
       audioEntries.push({
         sceneId: scene.id,
         audioFile: path.relative(paths.audioDir, result.audioPath),
+        endingDigest: result.endingDigest,
         durationSec: result.durationSec,
         leadInSec,
         tailPadSec,

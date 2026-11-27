@@ -38,7 +38,7 @@ Use short, staggered word motion for headings. Keep code in a stable monospaced 
 
 Give each scene a deliveryNote. Pick one stress word per thought and one place to breathe. For a question, articulate the choice clearly and wait for the viewer. In a code reveal, keep the subject and its verb connected. Close a factual statement with a firm ending. Preserve the creator's everyday voice. The Qwen Base clone uses reference audio and spoken text; the delivery note guides the writer and the reference take.
 
-Current production defaults add 0.45 seconds after a completed sentence and 0.65 after a question within the scene. Allow 1.30 seconds between landscape scenes and 1.10 seconds between portrait scenes. Keep a mid-sentence language change or reveal cue connected. Check the rendered audio at a scene boundary because the source can already contain silence.
+Current production defaults add 0.57 seconds after a Korean sentence ending in 다, 0.45 after other declarative sentences and 0.65 after a question within the scene. Allow 1.30 seconds between landscape scenes and 1.10 seconds between portrait scenes. Keep a mid-sentence language change or reveal cue connected. Check the rendered audio at a scene boundary because the source can already contain silence.
 
 Write as if two colleagues are looking at the same line of code. The earlier reference “보이죠? 쏙 빠져요.” guides pacing. The current preference uses 합니다체. Let the first sentence direct attention and the next describe what changes. Keep technical nouns exact and end each spoken Korean sentence and its caption with 다. Invite the viewer to consider a question indirectly.
 
@@ -64,11 +64,11 @@ The creator selected the sleeping frog from concept three and approved the simpl
 
 ## 2026-11-26 · Episode titles
 
-Use a concrete subject and a verb that names the change in episode titles. Reserve counts for an opening puzzle when the count helps the viewer inspect the code. For SE-0001, the creator chose “백틱이 사라졌다”.
+Use a concrete subject and a verb that names the change in episode titles. Reserve counts for an opening puzzle when the count helps the viewer inspect the code. For SE-0001, the creator chose “백틱이 사라졌다”. For a chapter about a naming decision, put the identifier or prefix under discussion in the chapter label.
 
 ## Series opening and closing
 
-Open both formats on the episode’s code. Say “오늘도 코드 한 줄을 함께 살펴봅니다.” Pose one episode-specific puzzle using a declarative sentence and leave time to inspect the code. Close on the same example with the answer and its historical significance. Say “오늘은 여기서 마칩니다.” Leave the example on screen during the final breath. The spoken phrases are a production choice for this revision.
+Open both formats on the episode’s code. Say “오늘도 코드 한 줄을 함께 살펴보겠습니다.” Pose one episode-specific puzzle using a declarative sentence and leave time to inspect the code. Close on the same example with the answer and its historical significance. End both the full episode and the Short with a spoken sentence that names the problem the proposal aimed to solve. Tie it to the opening example and check it against the proposal’s motivation. For a rejected or withdrawn proposal, describe the intended goal without implying it shipped. Leave the example on screen during the final breath. The creator chose the opening wording. When the presenter introduces a next step, use the intentional ending “-겠습니다”. Describe a visible operation in the present tense and an earlier decision in the past tense. Give the viewer a concrete clue and a pause. [Creator feedback and episode examples](../.wiki/sources/2026-11-27-narrator-intent.md)
 
 ## Tell the history behind each decision
 
@@ -83,3 +83,55 @@ When a proposal removed an unfamiliar form, show the historical declaration with
 During each named mention, display the verified English name, platform and account handle with a sourced portrait. For a joint contribution show both people. Include profile links and the photo credits in the video description. Until a suitable portrait is available, keep the verified identification visible and record the missing photo.
 
 Search for a photograph and verify that its terms permit commercial use. If the search does not establish permission, omit the photograph, show the verified name and account, and proceed without requesting a file from the creator.
+
+When introducing a contributor, explain what they proposed, challenged, or announced. Use a short role label on the card and link their proposal or specific reply.
+
+Give each spoken line a visual action. Stage new objects in reading order, then hold the result through the pause. Tie each code highlight to the expression discussed in that line.
+
+Compare Korean declarative endings against the [approved sample](../episodes/SE-0003/out/new-reference-full-vowel.m4a). Listen for the final vowel before the pause.
+
+Keep the actual code structure readable across alternative visual treatments. Preserve the same readable source, but choose the composition, material, point of view and sequence of actions for each style.
+
+The current series baseline is to show the code and its observable result directly when viewers can follow the change on screen. Use a metaphor only to clarify a specific difficulty. When one is needed, start it in the script. Choose who or what changes, what stays behind, and what this means for a viewer. Check the depicted event against the corresponding code.
+
+When a Korean metaphor depends on a social convention, identify an attested use, its speaker, listener and purpose before drafting dialogue.
+
+Before writing the transition from a comparison to code, state what a listener would expect to happen next in the scene. Check whether the code addresses that expectation.
+
+Use a quicker pace for Shorts. Preserve speech pitch and align captions and code motion with the accelerated audio.
+
+For Korean cloned narration ending in 다, synthesize a following phrase and cut it at the aligned pause using the SE-0003 approved method. Review the released vowel at the final playback speed.
+
+Reduce stationary hiss on the isolated synthesized voice before loudness normalization. Preserve the aligned vowel release and sample count. Compare noise, sibilants and breath at matching playback gain.
+
+When noise is localized to the opening, audition the first sentence separately and retain the accepted next sentence in the comparison.
+
+For hiss confined to the first sentence, use the approved lead-in retake as the listening reference.
+
+For a Korean clone opening, synthesize the lead-in with the opening sentence, align both and cut in their shared pause. Keep later accepted sentences and their cue times when repairing an existing recording.
+
+Render narration as selectable Korean, English, Japanese and Simplified Chinese caption tracks. Keep the narration text out of the picture. Preserve cue times for code highlights, definitions and contributor cards.
+
+Each episode tells the history of a decision. Use the [research workflow](historical-research.md) and the episode notebook to reconstruct the contemporary problem, competing uses, and implementation.
+
+Use Apple system typography for titles, names and explanation text. Use Menlo for Swift code. Allow Apple SD Gothic Neo to supply Hangul glyphs in code comments. Apply the same families in landscape, portrait and thumbnails. Use Atkinson Hyperlegible Next for contributor handles and compact proposal, episode and version labels.
+
+## Publication after a YouTube API quota error
+
+If the YouTube Data API reports a quota limit, continue the authorized publication in YouTube Studio in Chrome. Verify the active channel and the requested visibility. Check the upload receipt and the channel content list before uploading a file. When a video ID exists, open that video and complete only the missing items. Confirm the saved thumbnail, each published subtitle language, playlist membership and visibility after reopening Studio. Record any control Studio does not offer.
+
+## Show what the code operates on
+
+Use an observable result from the example’s domain when it helps the viewer understand the API. In SE-0005, first let the pencil settle at the point passed to `move(to:)`. Leave the paper blank through that cue. Show the paper airplane forming when the example adds segments and strokes the path. Keep the starting point visible as the narration returns to the argument label. [Creator feedback and episode evidence](../.wiki/sources/2026-11-27-domain-visuals.md)
+
+## Time code changes and emphasis separately
+
+Reveal the new listing when the example changes. Keep the code neutral through greetings and historical context. Mark the exact code fragment when the narrator identifies it. If the narrator names two lines in succession, time each one to its own reference. Verify the words against the final audio for each edition. [Creator feedback and SE-0005 example](../.wiki/sources/2026-11-27-spoken-code-references.md)
+
+When one code example becomes another, keep shared letters visible as they move to their new positions. Let removed punctuation recede and introduce new punctuation at its destination. Leave time to read the edited expression. [SE-0005 research and example](../.wiki/sources/2026-11-27-glyph-motion.md)
+
+Use an entrance and exit at scene and explanatory graphic changes. For the first SE-0005 drawing, introduce the surface, then the point, then the pencil. Reserve the actual stroke for the drawing instruction. [Creator feedback and example](../.wiki/sources/2026-11-27-drawing-entrance.md)
+
+On the first spoken reference to a code fragment, fade a background in behind just those characters. On later references to the same spelling, enlarge the text briefly and return it to its original size. Track mentions across scenes within each edition. [Creator decision and sample](../.wiki/sources/2026-11-27-pinpoint-code-emphasis.md)
+
+When content continues into the next layout, keep it visible and move or resize it from its outgoing bounds. Reveal new content from the edge facing the retained item. Check the frames immediately before, during and after the change in each aspect ratio. [Creator feedback and rendered examples](../.wiki/sources/2026-11-27-shared-layout.md)

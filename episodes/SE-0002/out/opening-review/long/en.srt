@@ -1,0 +1,123 @@
+1
+00:00:00,450 --> 00:00:02,950
+This addition has two pairs of parentheses.
+
+2
+00:00:03,570 --> 00:00:06,430
+Pass 2 in the first pair, then pause.
+
+3
+00:00:07,050 --> 00:00:10,320
+What comes back is a function waiting for the second number.
+
+4
+00:00:10,940 --> 00:00:13,440
+Pass 3 to that function and you get 5.
+
+5
+00:00:14,790 --> 00:00:18,940
+The proposal to remove this syntax dates to November 2015.
+
+6
+00:00:19,540 --> 00:00:23,870
+The change was implemented in January and shipped with Swift 3 that September.
+
+7
+00:00:25,220 --> 00:00:29,980
+Swift once let you write two parameter lists in a function declaration.
+
+8
+00:00:30,600 --> 00:00:36,150
+Turning a function into a chain of functions that each take one value is called currying.
+
+9
+00:00:37,500 --> 00:00:41,990
+Joe Groff, the author, located the problem in the second parameter list.
+
+10
+00:00:42,610 --> 00:00:46,720
+If it continues the same function’s arguments, its labeling rules carry on.
+
+11
+00:00:47,340 --> 00:00:50,620
+Treat it as the first argument of a new function and the rules can differ.
+
+12
+00:00:51,240 --> 00:00:58,020
+Groff saw little reason to keep adding rules for notation seldom useful in the standard library.
+
+13
+00:00:59,370 --> 00:01:02,990
+The earliest surviving proposal already says it was accepted.
+
+14
+00:01:03,610 --> 00:01:08,150
+In December, the migration example itself was corrected.
+
+15
+00:01:08,770 --> 00:01:11,660
+In the original example, the parameter appeared to be a function.
+
+16
+00:01:12,280 --> 00:01:17,320
+Moving the closing parenthesis made it clear the closure takes a string and returns a number.
+
+17
+00:01:18,670 --> 00:01:21,000
+The declaration changed.
+
+18
+00:01:21,620 --> 00:01:26,010
+In place of the second parameter list, we write the returned function’s type after the arrow.
+
+19
+00:01:26,630 --> 00:01:29,230
+The braces below hold a closure.
+
+20
+00:01:29,850 --> 00:01:32,190
+It adds the next number to the first one.
+
+21
+00:01:33,540 --> 00:01:36,620
+This function remembers the 2 we passed in first.
+
+22
+00:01:37,240 --> 00:01:39,300
+Pass it 3 and you get 5.
+
+23
+00:01:40,650 --> 00:01:43,790
+Even after the declaration syntax was removed, one question remained.
+
+24
+00:01:44,410 --> 00:01:50,820
+Erica Sadun and Davide De Franceschi proposed putting an underscore where an argument would be supplied later.
+
+25
+00:01:51,440 --> 00:01:56,540
+Chris Lattner pointed out that an underscore already meant discarding a value.
+
+26
+00:01:57,130 --> 00:02:02,400
+In his view, using it here to wait for a value could confuse readers.
+
+27
+00:02:03,020 --> 00:02:06,420
+That placeholder syntax was outside this decision.
+
+28
+00:02:07,770 --> 00:02:09,510
+Let’s return to the opening line.
+
+29
+00:02:10,130 --> 00:02:13,100
+You can still use both pairs when calling the function.
+
+30
+00:02:13,720 --> 00:02:17,700
+Swift 3 removed the second parameter list from the declaration.
+
+31
+00:02:18,320 --> 00:02:20,000
+Let’s leave it there for today.

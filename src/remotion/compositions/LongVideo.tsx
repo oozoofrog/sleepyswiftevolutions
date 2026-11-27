@@ -1,3 +1,5 @@
+import { SceneTransition, sharedPanels } from "../components/SceneTransition";
+import { DirectedScene } from "../components/DirectedScene";
 import { BackgroundMusic } from "../components/BackgroundMusic";
 import { PersonCard } from "../components/PersonCard";
 import { TermNote } from "../components/TermNote";
@@ -25,7 +27,6 @@ import { CodePanel } from "../components/CodePanel";
 import { ProgressTimeline } from "../components/ProgressTimeline";
 import { ProposalBadge } from "../components/ProposalBadge";
 import { SceneTitle } from "../components/SceneTitle";
-import { SubtitleBar } from "../components/SubtitleBar";
 import { FONT_MONO, FONT_SANS, THEME } from "../theme";
 
 export interface LongVideoProps {
@@ -150,7 +151,8 @@ const CalloutBanner: React.FC<{ text: string }> = ({ text }) => {
 const LongSceneView: React.FC<{
   script: EpisodeScript;
   timing: ResolvedSceneTiming;
-}> = ({ script, timing }) => {
+  preceding?: ResolvedSceneTiming;
+}> = ({ script, timing, preceding }) => {
   const { scene } = timing;
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
@@ -163,6 +165,8 @@ const LongSceneView: React.FC<{
     { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
   );
   const sceneOpacity = Math.min(fadeIn, fadeOut);
+
+  if (scene.speech?.some(part => part.direction)) return <DirectedScene timing={timing} preceding={preceding?.scene} showStageLabels={script.showStageLabels} animateLineHighlight={script.animateLineHighlight} sharedLayout={script.sceneTransition === "shared-layout"} />;
 
   if (scene.type === "history") return <ProposalHistory scene={scene} />;
 
@@ -255,7 +259,8 @@ const LongSceneView: React.FC<{
     }
 
     if (scene.type === "code-compare" && scene.codeBefore && scene.codeAfter) {
-      const afterFrame = Math.max(1, Math.min(38, Math.floor(timing.durationInFrames / 4)));
+      const parallel = scene.comparisonStyle === "parallel";
+      const afterFrame = parallel ? 4 : Math.max(1, Math.min(38, Math.floor(timing.durationInFrames / 4)));
       return (
         <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 22 }}>
           <SceneTitle
@@ -269,16 +274,17 @@ const LongSceneView: React.FC<{
             style={{
               flex: 1,
               display: "grid",
-              gridTemplateColumns: "1fr 54px 1fr",
+              gridTemplateColumns: parallel ? "1fr 1fr" : "1fr 54px 1fr",
               alignItems: "center",
               gap: 18,
             }}
           >
-            <CodePanel snippet={scene.codeBefore} tone="before" fontSize={23} delayFrames={4} />
-            <ComparisonArrow endFrame={afterFrame} />
-            <CodePanel snippet={scene.codeAfter} tone="after" fontSize={23} delayFrames={afterFrame} />
+            <CodePanel snippet={scene.codeBefore} tone="before" fontSize={scene.code || parallel ? 35 : 23} delayFrames={4} />
+            {!parallel && <ComparisonArrow endFrame={afterFrame} />}
+            <CodePanel snippet={scene.codeAfter} tone="after" fontSize={scene.code || parallel ? 35 : 23} delayFrames={afterFrame} />
           </div>
 
+          {scene.code && <CodePanel snippet={scene.code} fontSize={32} delayFrames={afterFrame} />}
           {scene.callout && <CalloutBanner text={scene.callout} />}
         </div>
       );
@@ -435,10 +441,10 @@ export const LongVideo: React.FC<LongVideoProps> = ({ script, manifest }) => {
   const currentScene = timeline.scenes.find(
     (s) => frame >= s.startFrame && frame < s.startFrame + s.durationInFrames,
   );
-  const showCompactHeader = currentScene?.scene.type !== "intro";
+  const showCompactHeader = currentScene?.scene.type !== "intro" || Boolean(currentScene.scene.speech?.[0]?.direction);
 
   return (
-    <AbsoluteFill style={{ backgroundColor: THEME.bgDeep }}>
+    <AbsoluteFill className={script.visualStyle} style={{ backgroundColor: THEME.bgDeep }}>
       <Background accentColor={script.thumbnail.accentColor} />
 
       {/* Compact persistent header for non-intro scenes */}
@@ -480,26 +486,37 @@ export const LongVideo: React.FC<LongVideoProps> = ({ script, manifest }) => {
       )}
 
       {/* Per-scene visuals and narration audio */}
-      {script.backgroundMusic && <BackgroundMusic file={script.backgroundMusic} />}
-      {timeline.scenes.map((timing) => (
-        <Sequence
-          key={timing.scene.id}
-          from={timing.startFrame}
-          durationInFrames={timing.durationInFrames}
-        >
-          <LongSceneView script={script} timing={timing} />
-          <TermNote timing={timing} />
-          <PersonCard timing={timing} />
-          {timing.audioFile && (
-            <Sequence from={timing.leadInFrames}>
-              <Audio src={staticFile(timing.audioFile)} />
-            </Sequence>
-          )}
-        </Sequence>
-      ))}
+      {script.backgroundMusic && <BackgroundMusic music={script.backgroundMusic} cues={timeline.allCues} />}
+      {timeline.scenes.map((timing, index) => {
+        const previous = timeline.scenes[index - 1], next = timeline.scenes[index + 1];
+        const spatial = script.sceneTransition === "shared-layout";
+        const panels = spatial && sharedPanels(previous, timing);
+        const frames = spatial && next ? next.startFrame - timing.startFrame : timing.durationInFrames;
+        return (
+          <Sequence
+            key={timing.scene.id}
+            from={timing.startFrame}
+            durationInFrames={frames}
+          >
+            <SceneTransition frames={frames} enabled={Boolean(script.sceneTransition)}
+              continues={spatial && Boolean(sharedPanels(timing, next))}
+              shared={panels ? { ...panels, previousFrame: timing.startFrame - previous.startFrame - 1,
+                previous: <LongSceneView script={script} timing={previous} preceding={timeline.scenes[index - 2]} />,
+              } : undefined}>
+              <LongSceneView script={script} timing={timing} preceding={timeline.scenes[index - 1]} />
+              <TermNote spatial={spatial} fadeOut={Boolean(script.sceneTransition)} timing={timing} />
+              <PersonCard spatial={spatial} fadeOut={Boolean(script.sceneTransition)} timing={timing} />
+            </SceneTransition>
+            {timing.audioFile && (
+              <Sequence from={timing.leadInFrames}>
+                <Audio src={staticFile(timing.audioFile)} />
+              </Sequence>
+            )}
+          </Sequence>
+        );
+      })}
 
-      <SubtitleBar cues={timeline.allCues} variant="long" />
-      <ProgressTimeline scenes={timeline.scenes} totalFrames={timeline.totalFrames} variant="long" />
+      <ProgressTimeline scenes={timeline.scenes} variant="long" />
     </AbsoluteFill>
   );
 };

@@ -4,116 +4,116 @@
   "provider": "qwen3-clone",
   "voice": "voice-profile",
   "fps": 30,
-  "totalDurationSec": 46.711,
-  "totalFrames": 1402,
-  "generatedAt": "2026-11-26T06:28:14.817Z",
+  "totalDurationSec": 43.05,
+  "totalFrames": 1292,
+  "generatedAt": "2026-11-26T14:07:19.076Z",
   "scenes": [
     {
       "sceneId": "01-hook",
-      "audioFile": "short/revision-UwFQDJ/01-hook.mp3",
-      "durationSec": 12.07,
+      "endingDigest": "2ebc9929f29dfec42512f1cac339e8dd1fb4a5c9ed56b19000884d51b9f4fed4",
+      "audioFile": "short/opening-retake/01-hook.wav",
+      "durationSec": 9.18,
       "leadInSec": 0.35,
       "tailPadSec": 0.75,
-      "totalDurationSec": 13.17,
+      "totalDurationSec": 10.28,
       "startSec": 0,
-      "endSec": 13.17,
+      "endSec": 10.28,
       "cues": [
         {
-          "startSec": 0.35,
-          "endSec": 3.07,
-          "text": "오늘도 코드 한 줄을 함께 살펴봅니다."
+          "startSec": 0.4,
+          "endSec": 2.85,
+          "text": "이 덧셈에는 괄호가 두 쌍 있습니다."
         },
         {
-          "startSec": 3.52,
-          "endSec": 7.52,
-          "text": "예전 스위프트에서는 함수를 이렇게 쓰기도 했습니다."
+          "startSec": 3.47,
+          "endSec": 6.39,
+          "text": "첫 괄호에 2를 넣고 잠깐 멈춥니다."
         },
         {
-          "startSec": 7.97,
-          "endSec": 9.97,
-          "text": "2를 넣으면 함수가 돌아옵니다."
-        },
-        {
-          "startSec": 10.42,
-          "endSec": 12.42,
-          "text": "여기에 3을 넣으면 5가 나옵니다."
+          "startSec": 7.01,
+          "endSec": 9.53,
+          "text": "그 함수에 3을 건네면 5가 나옵니다."
         }
       ]
     },
     {
       "sceneId": "02-history",
-      "audioFile": "short/revision-7Eri4q/02-history.mp3",
-      "durationSec": 5.121,
+      "endingDigest": "25e22c3b9e4f0ff4d399413795c7cf8f381b8d44a94dc8b80500c3651e158f82",
+      "audioFile": "short/02-history.mp3",
+      "durationSec": 4.37,
       "leadInSec": 0.35,
       "tailPadSec": 0.75,
-      "totalDurationSec": 6.221,
-      "startSec": 13.17,
-      "endSec": 19.391,
+      "totalDurationSec": 5.47,
+      "startSec": 10.28,
+      "endSec": 15.75,
       "cues": [
         {
-          "startSec": 13.52,
-          "endSec": 18.64,
+          "startSec": 10.64,
+          "endSec": 15,
           "text": "2015년에 나온 이 제안은 이듬해 9월 Swift 3에 반영됐습니다."
         }
       ]
     },
     {
       "sceneId": "03-context",
-      "audioFile": "short/revision-W4Huqv/03-context.mp3",
-      "durationSec": 9.52,
+      "endingDigest": "31f15d366b8c38f64bd48843eecbce15275ac4304bd4021ae36ae0b8702a3620",
+      "audioFile": "short/03-context.mp3",
+      "durationSec": 9.02,
       "leadInSec": 0.35,
       "tailPadSec": 0.75,
-      "totalDurationSec": 10.62,
-      "startSec": 19.391,
-      "endSec": 30.011,
+      "totalDurationSec": 10.12,
+      "startSec": 15.75,
+      "endSec": 25.87,
       "cues": [
         {
-          "startSec": 19.741,
-          "endSec": 29.261,
+          "startSec": 16.15,
+          "endSec": 25.12,
           "text": "조 그로프는 두 번째 괄호를 같은 함수의 인자로 볼지, 새 함수의 시작으로 볼지에 따라 이름 규칙이 모호해진다고 짚었습니다."
         }
       ]
     },
     {
       "sceneId": "04-new",
-      "audioFile": "short/revision-UwFQDJ/04-new.mp3",
-      "durationSec": 4.16,
+      "endingDigest": "3428079077a8608f2f7c448a5bbcfb8b3ee7d057af6cac1328eccff782ecf45d",
+      "audioFile": "short/04-new.mp3",
+      "durationSec": 4.69,
       "leadInSec": 0.35,
       "tailPadSec": 0.75,
-      "totalDurationSec": 5.26,
-      "startSec": 30.011,
-      "endSec": 35.271,
+      "totalDurationSec": 5.79,
+      "startSec": 25.87,
+      "endSec": 31.66,
       "cues": [
         {
-          "startSec": 30.361,
-          "endSec": 34.521,
+          "startSec": 26.27,
+          "endSec": 30.91,
           "text": "Swift 3부터는 돌려줄 함수를 화살표 뒤에 적습니다."
         }
       ]
     },
     {
       "sceneId": "06-close",
+      "endingDigest": "fc016cf4c4d71a5b2b1a48edd1064dd774930def0885849833c503c74a220a82",
       "audioFile": "short/06-close.mp3",
-      "durationSec": 10.34,
+      "durationSec": 10.29,
       "leadInSec": 0.35,
       "tailPadSec": 0.75,
-      "totalDurationSec": 11.44,
-      "startSec": 35.271,
-      "endSec": 46.711,
+      "totalDurationSec": 11.39,
+      "startSec": 31.66,
+      "endSec": 43.05,
       "cues": [
         {
-          "startSec": 35.621,
-          "endSec": 38.661,
+          "startSec": 32.06,
+          "endSec": 35.03,
           "text": "호출할 때는 여전히 괄호를 두 번 쓸 수 있습니다."
         },
         {
-          "startSec": 39.111,
-          "endSec": 43.831,
+          "startSec": 35.65,
+          "endSec": 40.18,
           "text": "Swift 3에서 사라진 부분은 함수 선언의 두 번째 괄호입니다."
         },
         {
-          "startSec": 44.281,
-          "endSec": 45.961,
+          "startSec": 40.8,
+          "endSec": 42.3,
           "text": "오늘은 여기서 마칩니다."
         }
       ]

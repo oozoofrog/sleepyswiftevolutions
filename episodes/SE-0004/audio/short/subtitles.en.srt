@@ -1,0 +1,19 @@
+1
+00:00:00,515 --> 00:00:04,085
+Guess which number this line saved in early Swift.
+
+2
+00:00:05,235 --> 00:00:07,515
+The opening line saved four.
+
+3
+00:00:08,135 --> 00:00:09,515
+First, we save four.
+
+4
+00:00:10,135 --> 00:00:13,275
+Then the original variable changes to five.
+
+5
+00:00:13,895 --> 00:00:21,005
+Swift removed these operators so the next reader could reach the same answer simply by reading the two lines in order.

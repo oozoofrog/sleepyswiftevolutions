@@ -5,5 +5,5 @@ import { stageBackground, THEME } from "../theme";
 export const Background: React.FC<{ accentColor?: string }> = ({
   accentColor = THEME.swiftOrange,
 }) => (
-  <AbsoluteFill style={{ background: stageBackground(accentColor), borderTop: `4px solid ${accentColor}` }} />
+  <AbsoluteFill className="stage-backdrop" style={{ background: stageBackground(accentColor), borderTop: `4px solid ${accentColor}` }} />
 );

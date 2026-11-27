@@ -1,0 +1,66 @@
+{
+  "Bp3WBFXDxLc": {
+    "ep": "SE-0001",
+    "fmt": "long",
+    "digest": "cb3ee1cd1e5335ed8d1d9def80b89e6209412919bfc26406657a93fbef5ab856",
+    "previous": [
+      "Bp3WBFXDxLc",
+      "hIp_bxKm9oU"
+    ],
+    "id": "BCloT9Y5SpA",
+    "uploadedAt": "2026-11-26T14:49:25.119Z",
+    "playlists": [
+      "Swift Evolution 처음부터 끝까지"
+    ],
+    "thumb": true,
+    "verified": true
+  },
+  "7Z5pgqvliU4": {
+    "ep": "SE-0001",
+    "fmt": "short",
+    "digest": "38de87c28fbaa4dcf117fe2d7f7fd9c0788e995635f1098fa08978a7c7eb06b5",
+    "previous": [
+      "7Z5pgqvliU4",
+      "r3FHVOt7NSg"
+    ],
+    "id": "Aqy13i5eY-E",
+    "uploadedAt": "2026-11-26T14:49:28.056Z",
+    "playlists": [
+      "Swift Evolution Shorts"
+    ],
+    "thumb": true,
+    "verified": true
+  },
+  "yyuOi1WzzRA": {
+    "ep": "SE-0002",
+    "fmt": "long",
+    "digest": "a4e6615f446d01f8fff17bc31f07228c773b561614621944cf3d5c649756ceda",
+    "previous": [
+      "yyuOi1WzzRA",
+      "QzViUpMYnu4"
+    ],
+    "id": "sLRMYzEjkMk",
+    "uploadedAt": "2026-11-26T14:49:30.647Z",
+    "playlists": [
+      "Swift Evolution 처음부터 끝까지"
+    ],
+    "thumb": true,
+    "verified": true
+  },
+  "f_8nk8azIzw": {
+    "ep": "SE-0002",
+    "fmt": "short",
+    "digest": "77833399bee8fc4aef618e43ac87d908dce623b5103225433c54d75e862d9792",
+    "previous": [
+      "f_8nk8azIzw",
+      "drFIAV2nfOI"
+    ],
+    "id": "saPWHFEelo8",
+    "uploadedAt": "2026-11-27T03:28:59.842123+00:00",
+    "playlists": [
+      "Swift Evolution Shorts"
+    ],
+    "thumb": true,
+    "verified": true
+  }
+}

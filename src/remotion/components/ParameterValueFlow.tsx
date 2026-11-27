@@ -12,13 +12,19 @@ function progress(now: number, start: number, duration: number) {
   });
 }
 
-function ValueSlot({ label, name, visibility, change }: {
-  label: string; name: string; visibility: number; change: number;
+// A brief compression keeps the baseline anchored before launch and at contact.
+function compression(now: number, start: number, duration: number) {
+  return 0.055 * Math.sin(Math.PI * progress(now, start, duration));
+}
+
+function ValueSlot({ label, name, visibility, change, squash, enter }: {
+  label: string; name: string; visibility: number; change: number; squash: number; enter: number;
 }) {
-  return <div style={{ textAlign: "center", width: 134, zIndex: 1 }}>
+  return <div style={{ textAlign: "center", width: 134, zIndex: 1, opacity: enter, transform: `translateY(${(1 - enter) * 24}px)` }}>
     <div style={{ font: `500 29px ${FONT_SANS}`, color: THEME.textSecondary, whiteSpace: "nowrap", display: "flex", justifyContent: "center" }}>{label} · {name}</div>
     <div style={{ marginTop: 18, background: THEME.bgNavy, border: `2px solid ${THEME.borderHighlight}`,
       borderRadius: 24, width: 130, height: 100, overflow: "hidden", position: "relative",
+      transformOrigin: "center bottom", transform: `scale(${1 + squash}, ${1 / (1 + squash)})`,
       font: `600 64px/100px ${FONT_MONO}`, color: THEME.swiftAmber }}>
       <div style={{ opacity: visibility, transform: `translateY(${-100 * change}px)` }}>1</div>
       <div style={{ opacity: visibility, transform: `translateY(${-100 * change}px)` }}>2</div>
@@ -26,8 +32,8 @@ function ValueSlot({ label, name, visibility, change }: {
   </div>;
 }
 
-export function ParameterValueFlow({ timing, flow, snippet }: {
-  timing: ResolvedSceneTiming; flow: NonNullable<Scene["valueFlow"]>; snippet: CodeSnippet;
+export function ParameterValueFlow({ timing, flow, snippet, direction }: {
+  timing: ResolvedSceneTiming; flow: NonNullable<Scene["valueFlow"]>; snippet: CodeSnippet; direction?: React.ReactNode;
 }) {
   const { fps, width, height } = useVideoConfig();
   const now = useCurrentFrame() / fps;
@@ -38,24 +44,37 @@ export function ParameterValueFlow({ timing, flow, snippet }: {
   };
   const assignment = cueStart(flow.mutateCue, duration * 0.43);
   const finish = cueStart(flow.returnCue, duration * 0.74);
-  const clone = progress(now, 0.18, Math.min(0.95, Math.max(0.1, assignment - 0.22)));
+  const firstPhrase = timing.cues[0];
+  const copyStart = firstPhrase ? firstPhrase.startSec - timing.startSec : 0.18;
+  const anticipation = 0.27;
+  const flight = 0.94;
+  const copyFlight = copyStart + anticipation;
+  const returnFlight = finish + anticipation;
+  const clone = progress(now, copyFlight, flight);
   const mutate = progress(now, assignment, 0.5);
-  const leave = progress(now, finish, 0.9);
   const writingBack = flow.mode === "inout";
-  const movingBack = now >= finish && writingBack;
-  const travel = movingBack ? 1 - leave : clone;
-  const tokenOpacity = travel > 0 && travel < 1 ? Math.sin(Math.PI * travel) : 0;
+  const movingBack = writingBack && now >= finish;
+  const leave = progress(now, writingBack ? returnFlight : finish, writingBack ? flight : 0.6);
+  const phase = movingBack ? leave : clone;
+  const travel = movingBack ? 1 - phase : phase;
+  const arc = Math.sin(Math.PI * phase);
+  const tokenOpacity = Math.min(1, phase * 8, (1 - phase) * 8);
+  const callerSquash = compression(now, copyStart, anticipation)
+    + (writingBack ? compression(now, returnFlight + flight, 0.31) : 0);
+  const localSquash = compression(now, copyFlight + flight, 0.31)
+    + (writingBack ? compression(now, finish, anticipation) : 0);
   const portrait = height > width;
-  return <AbsoluteFill style={{ justifyContent: "center", gap: 32, padding: portrait ? "0 7%" : "0 14%" }}>
+  return <AbsoluteFill style={{ justifyContent: "center", gap: direction ? 20 : 32, padding: portrait ? "0 7%" : "0 14%" }}>
     <SceneTitle eyebrow={timing.scene.badge} heading={timing.scene.heading} />
-    <CodePanel snippet={snippet} fontSize={portrait ? 33 : 42} animate={false}/>
+    {direction}
+    <CodePanel snippet={snippet} fontSize={portrait ? 33 : direction ? 35 : 42} animate={Boolean(direction)}/>
     <div style={{ position: "relative", alignSelf: "center", width: "88%", marginTop: 16, display: "flex",
       justifyContent: "space-between" }}>
-      <div style={{ position: "absolute", bottom: 50, left: 66, right: 66, borderTop: `2px solid ${THEME.borderSubtle}` }} />
-      <ValueSlot name="x" label="호출한 곳" visibility={1} change={writingBack ? progress(leave, 0.84, 0.16) : 0}/>
-      <ValueSlot name="i" label="함수 안" visibility={clone * (1 - leave)} change={mutate}/>
+      <div style={{ position: "absolute", bottom: 50, left: 66, right: 66, transformOrigin: "left", transform: `scaleX(${progress(now, 0.15, 0.55)})`, borderTop: `2px solid ${THEME.borderSubtle}` }} />
+      <ValueSlot enter={progress(now, 0, 0.38)} name="x" label="호출한 곳" squash={callerSquash} visibility={1} change={writingBack ? progress(leave, 0.84, 0.16) : 0}/>
+      <ValueSlot enter={progress(now, 0.12, 0.38)} name="i" label="함수 안" squash={localSquash} visibility={progress(clone, 0.80, 0.20) * (1 - leave)} change={mutate}/>
       <div style={{ position: "absolute", bottom: 50, left: 66, right: 66, zIndex: 2 }}>
-        <div style={{ position: "absolute", left: `${travel * 100}%`, transform: "translate(-50%, -50%)",
+        <div style={{ position: "absolute", left: `${travel * 100}%`, transform: `translate(-50%, -50%) translateY(${-arc * (portrait ? 29 : 38)}px) scale(${1 + arc * 0.06}, ${1 / (1 + arc * 0.06)})`,
           borderRadius: 50, width: 68, height: 68, backgroundColor: THEME.swiftAmber, color: THEME.bgDeep,
           textAlign: "center", font: `600 40px/68px ${FONT_MONO}`, opacity: tokenOpacity }}>
           {movingBack ? "2" : "1"}

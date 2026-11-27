@@ -1,3 +1,6 @@
+import { execFile } from "node:child_process";
+import { randomUUID } from "node:crypto";
+import { promisify } from "node:util";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { bundle } from "@remotion/bundler";
@@ -19,6 +22,8 @@ import {
 } from "../schema/script";
 import { loadAndValidateScript } from "./script-generator";
 
+import { checkEndings, checkRenderedFile } from "./ending-check";
+
 const MACOS_CHROME_FALLBACK = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 
 async function loadOptionalManifest(
@@ -36,6 +41,31 @@ async function loadOptionalManifest(
     }
     throw error;
   }
+}
+
+const run = promisify(execFile);
+
+async function prepareNarration(script: EpisodeScript, format: VideoFormat, allowSilentPreview = false) {
+  const manifest = await loadOptionalManifest(script.proposalId, format);
+  if (!manifest && allowSilentPreview) return undefined;
+  await checkEndings(script, format, manifest);
+  if (!manifest || script.narrationMix !== "soft") return manifest;
+  const { audioDir } = getEpisodePaths(script.proposalId);
+  for (const scene of manifest.scenes) {
+    const target = scene.audioFile.replace(/\.[^./]+$/, ".soft.m4a");
+    const temporary = path.join(audioDir, target + "." + randomUUID() + ".m4a");
+    try {
+      // Keep the original take and cue times. Only the render copy receives EQ.
+      await run("ffmpeg", ["-v", "error", "-i", path.join(audioDir, scene.audioFile),
+        "-af", "highpass=f=65,equalizer=f=215:t=q:w=1.3:g=-3.5,equalizer=f=520:t=q:w=1.1:g=-2,treble=f=5600:g=-1.8,lowpass=f=10500,volume=1.12",
+        "-c:a", "aac", "-b:a", "144k", temporary]);
+      await fs.rename(temporary, path.join(audioDir, target));
+      scene.audioFile = target;
+    } finally {
+      await fs.rm(temporary, { force: true });
+    }
+  }
+  return manifest;
 }
 
 async function resolveBrowserExecutable(): Promise<string | undefined> {
@@ -72,7 +102,7 @@ export async function prepareStudioProps(
   hasManifest: boolean;
 }> {
   const script = await loadAndValidateScript(proposalId);
-  const manifest = await loadOptionalManifest(script.proposalId, format);
+  const manifest = await prepareNarration(script, format, true);
   const paths = getEpisodePaths(script.proposalId);
 
   await fs.mkdir(paths.audioDir, { recursive: true });
@@ -129,6 +159,12 @@ export async function renderEpisode(
   await fs.mkdir(paths.audioDir, { recursive: true });
   await fs.mkdir(paths.outDir, { recursive: true });
 
+  const manifests = new Map<VideoFormat, AudioManifest | undefined>();
+  for (const format of formats) {
+    manifests.set(format, thumbsOnly
+      ? await loadOptionalManifest(script.proposalId, format)
+      : await prepareNarration(script, format));
+  }
   const browserExecutable = await resolveBrowserExecutable();
   const serveUrl = await bundle({
     entryPoint: REMOTION_ENTRY,
@@ -139,7 +175,7 @@ export async function renderEpisode(
 
   try {
     for (const format of formats) {
-      const manifest = await loadOptionalManifest(script.proposalId, format);
+      const manifest = manifests.get(format);
       const timeline = buildSceneTimeline(script, format, manifest);
       const inputProps: RenderInputProps = {
         script,
@@ -178,6 +214,7 @@ export async function renderEpisode(
             }
           },
         });
+        if (manifest?.scenes.some(s => s.endingDigest)) await checkRenderedFile(outputLocation, manifest, true);
         renderedVideoPath = outputLocation;
       }
 

@@ -19,72 +19,426 @@
   },
   "scenes": [
     {
-      "id": "01-intro",
-      "type": "intro",
-      "chapterTitle": "인트로",
-      "heading": "이 코드에서 지워도 되는 글자 두 개, 보이죠?",
-      "subheading": "Allow (most) keywords as argument labels",
-      "narration": "이 코드에서 지워도 되는 글자 두 개, 보이죠? in 양옆의 백틱이 쏙 빠져요.",
-      "badge": "듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기",
-      "includeInShort": true,
+      "id": "01-opening",
+      "type": "code-focus",
+      "chapterTitle": "7을 어디에서 찾는지 읽어봅니다",
+      "heading": "7을 어디에서 찾는지 읽어봅니다",
+      "narration": "세 숫자 가운데 칠이 몇 번째 자리에 있는지 찾아봅니다. 아래 줄을 보면, 칠 다음에 목록 이름이 나옵니다. 그 사이에 있는 in은 어디에서 찾을지를 알려 줍니다. 예전 스위프트에서는 그 짧은 단어 양옆에 백틱을 하나씩 써야 했습니다.",
       "speech": [
         {
           "language": "ko",
-          "caption": "이 코드에서 지워도 되는 글자 두 개, 보이죠?",
-          "text": "이 코드에서 지워도 되는 글자 두 개, 보이죠?"
+          "caption": "세 숫자 가운데 칠이 몇 번째 자리에 있는지 찾아봅니다.",
+          "text": "세 숫자 가운데 칠이 몇 번째 자리에 있는지 찾아봅니다.",
+          "direction": {
+            "stages": [
+              "[4, 7, 9]"
+            ],
+            "panel": "code",
+            "lines": [
+              1
+            ]
+          }
         },
         {
           "language": "ko",
-          "caption": "in 양옆의 백틱이",
-          "text": "인 양옆의 백틱이"
+          "caption": "아래 줄을 보면, 칠 다음에 목록 이름이 나옵니다.",
+          "text": "아래 줄을 보면, 칠 다음에 목록 이름이 나옵니다.",
+          "direction": {
+            "stages": [
+              "7"
+            ],
+            "panel": "code",
+            "lines": [
+              2
+            ]
+          }
         },
         {
           "language": "ko",
-          "caption": "쏙 빠져요.",
-          "text": "쏙 빠져요."
+          "caption": "그 사이에 있는 in은 어디에서 찾을지를 알려 줍니다.",
+          "text": "그 사이에 있는 인은 어디에서 찾을지를 알려 줍니다.",
+          "direction": {
+            "stages": [
+              "in: list"
+            ],
+            "panel": "code",
+            "lines": [
+              2
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "caption": "예전 스위프트에서는 그 짧은 단어 양옆에 백틱을 하나씩 써야 했습니다.",
+          "text": "예전 스위프트에서는 그 짧은 단어 양옆에 백틱을 하나씩 써야 했습니다.",
+          "direction": {
+            "stages": [
+              "`in`"
+            ],
+            "panel": "code",
+            "lines": [
+              2
+            ]
+          }
         }
       ],
-      "codeReveal": {
-        "parts": [
-          "indexOf(value, ",
-          {
-            "remove": "`"
-          },
-          "in",
-          {
-            "remove": "`"
-          },
-          ": list)"
-        ],
-        "answerCue": "쏙 빠져요."
+      "code": {
+        "label": "Swift 2.2 이전",
+        "code": "let list = [4, 7, 9]\nindexOf(7, `in`: list)"
       },
-      "deliveryNote": "같은 화면을 보고 있는 동료에게 묻듯 “두 개, 보이죠?”를 가볍게 올려 읽어요. 한 박자 쉬고 “백틱이 쏙 빠져요”를 한 호흡에 말해요.",
+      "deliveryNote": "문장 사이에 숨을 쉽니다. 강조한 줄을 읽을 시간을 둡니다.",
       "termNotes": [
         {
           "term": "백틱",
-          "meaning": "이름을 감쌀 때 쓰는 기호 ( ` )",
-          "cue": "백틱이"
+          "meaning": "이름 양옆에 쓰는 기호 ( ` )",
+          "cue": "백틱"
         }
       ]
     },
     {
-      "id": "01-history",
-      "type": "history",
-      "heading": "SE-0001이 Swift에 들어오기까지",
-      "chapterTitle": "제안부터 출시까지",
+      "id": "02-origin",
+      "type": "code-focus",
+      "chapterTitle": "이름을 읽는 두 가지 자리",
+      "heading": "이름을 읽는 두 가지 자리",
+      "narration": "반복문에서 in은 스위프트 문법의 일부입니다. 함수를 부르는 아랫줄에서는 역할이 달라집니다. 콜론 앞에서 다음 값이 무엇인지 알려 주는 이름입니다. 이런 이름을 인자 레이블이라고 합니다. 2015년 11월, 더그 그레거는 이 자리에서는 키워드도 그대로 쓰자고 제안했습니다.",
       "speech": [
         {
           "language": "ko",
-          "caption": "이 얘기가 처음 나온 건 2015년 11월이에요.",
-          "text": "이 얘기가 처음 나온 건 이천십오 년 십일월이에요."
+          "caption": "반복문에서 in은 스위프트 문법의 일부입니다.",
+          "text": "반복문에서 인은 스위프트 문법의 일부입니다.",
+          "direction": {
+            "stages": [
+              "for … in"
+            ],
+            "panel": "code",
+            "lines": [
+              1
+            ]
+          }
         },
         {
           "language": "ko",
-          "caption": "그해 12월에 구현됐고, 이듬해 3월에 나온 Swift 2.2부터 쓸 수 있었어요.",
-          "text": "그해 십이월에 구현됐고, 이듬해 삼월에 나온 스위프트 이 점 이부터 쓸 수 있었어요."
+          "caption": "함수를 부르는 아랫줄에서는 역할이 달라집니다.",
+          "text": "함수를 부르는 아랫줄에서는 역할이 달라집니다.",
+          "direction": {
+            "stages": [
+              "indexOf(…)"
+            ],
+            "panel": "code",
+            "lines": [
+              2
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "caption": "콜론 앞에서 다음 값이 무엇인지 알려 주는 이름입니다. 이런 이름을 인자 레이블이라고 합니다.",
+          "text": "콜론 앞에서 다음 값이 무엇인지 알려 주는 이름입니다. 이런 이름을 인자 레이블이라고 합니다.",
+          "direction": {
+            "stages": [
+              "인자 레이블"
+            ],
+            "panel": "code",
+            "lines": [
+              2
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "caption": "2015년 11월, 더그 그레거는 이 자리에서는 키워드도 그대로 쓰자고 제안했습니다.",
+          "text": "이천십오 년 십일월, 더그 그레거는 이 자리에서는 키워드도 그대로 쓰자고 제안했습니다.",
+          "direction": {
+            "stages": [
+              "2015.11"
+            ],
+            "panel": "code",
+            "lines": [
+              2
+            ]
+          }
         }
       ],
-      "narration": "이 얘기가 처음 나온 건 2015년 11월이에요. 그해 12월에 구현됐고, 이듬해 3월에 나온 Swift 2.2부터 쓸 수 있었어요.",
+      "code": {
+        "label": "Swift 2.2 이전",
+        "code": "for item in list { }\nindexOf(7, `in`: list)"
+      },
+      "deliveryNote": "문장 사이에 숨을 쉽니다. 강조한 줄을 읽을 시간을 둡니다.",
+      "people": [
+        {
+          "cue": "더그 그레거",
+          "name": "Doug Gregor",
+          "account": "@DougGregor",
+          "role": "SE-0001 제안자",
+          "profile": "https://github.com/DougGregor"
+        }
+      ]
+    },
+    {
+      "id": "03-import",
+      "type": "code-focus",
+      "chapterTitle": "이름을 바꾸면 해결될까",
+      "heading": "이름을 바꾸면 해결될까",
+      "narration": "새 함수를 만드는 사람이라면 이름을 within으로 고를 수도 있었습니다. 이미 있던 Objective-C 코드를 스위프트로 가져올 때는 사정이 달랐습니다. 아래는 어느 뷰 안에서 터치가 일어났는지 묻는 호출입니다. 여기에도 in이 어울립니다. 제안서가 살핀 가져오기 사례에서는 이름을 고치거나 백틱을 붙여야 하는 API가 이백 개 가까이 됐습니다.",
+      "speech": [
+        {
+          "language": "ko",
+          "caption": "새 함수를 만드는 사람이라면 이름을 within으로 고를 수도 있었습니다.",
+          "text": "새 함수를 만드는 사람이라면 이름을 위딘으로 고를 수도 있었습니다.",
+          "direction": {
+            "stages": [
+              "within:"
+            ],
+            "panel": "code",
+            "lines": [
+              1
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "caption": "이미 있던 Objective-C 코드를 스위프트로 가져올 때는 사정이 달랐습니다.",
+          "text": "이미 있던 오브젝티브 씨 코드를 스위프트로 가져올 때는 사정이 달랐습니다.",
+          "direction": {
+            "stages": [
+              "Objective-C"
+            ],
+            "panel": "code",
+            "lines": [
+              2
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "caption": "아래는 어느 뷰 안에서 터치가 일어났는지 묻는 호출입니다. 여기에도 in이 어울립니다.",
+          "text": "아래는 어느 뷰 안에서 터치가 일어났는지 묻는 호출입니다. 여기에도 인이 어울립니다.",
+          "direction": {
+            "stages": [
+              "in: view"
+            ],
+            "panel": "code",
+            "lines": [
+              2
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "caption": "제안서가 살핀 가져오기 사례에서는 이름을 고치거나 백틱을 붙여야 하는 API가 이백 개 가까이 됐습니다.",
+          "text": "제안서가 살핀 가져오기 사례에서는 이름을 고치거나 백틱을 붙여야 하는 API가 이백 개 가까이 됐습니다.",
+          "direction": {
+            "stages": [
+              "약 200개"
+            ],
+            "panel": "code",
+            "lines": [
+              2
+            ]
+          }
+        }
+      ],
+      "code": {
+        "label": "제안서에 나온 대안과 당시 API",
+        "code": "indexOf(7, within: list)\nevent.touchesMatching([.Began], `in`: view)"
+      },
+      "deliveryNote": "문장 사이에 숨을 쉽니다. 강조한 줄을 읽을 시간을 둡니다."
+    },
+    {
+      "id": "04-choice",
+      "type": "code-focus",
+      "chapterTitle": "왜 in 하나만 고치지 않았을까",
+      "heading": "왜 in 하나만 고치지 않았을까",
+      "narration": "그중 키워드와 부딪힌 사례의 약 90퍼센트는 in이었습니다. 그래서 제안서에는 in 한 단어만 특별히 취급하는 방법도 나옵니다. 그렇게 하면 아래 줄의 프로토콜처럼 다른 키워드는 여전히 백틱으로 감싸야 합니다. 채택된 방법은 단어가 놓인 자리를 보는 것이었습니다. 호출 괄호 안에서 이름 다음에 콜론이 오면 레이블로 읽을 수 있습니다.",
+      "speech": [
+        {
+          "language": "ko",
+          "caption": "그중 키워드와 부딪힌 사례의 약 90퍼센트는 in이었습니다.",
+          "text": "그중 키워드와 부딪힌 사례의 약 구십 퍼센트는 인이었습니다.",
+          "direction": {
+            "stages": [
+              "약 90%"
+            ],
+            "panel": "code",
+            "lines": [
+              1
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "caption": "그래서 제안서에는 in 한 단어만 특별히 취급하는 방법도 나옵니다.",
+          "text": "그래서 제안서에는 인 한 단어만 특별히 취급하는 방법도 나옵니다.",
+          "direction": {
+            "stages": [
+              "in"
+            ],
+            "panel": "code",
+            "lines": [
+              1
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "caption": "그렇게 하면 아래 줄의 프로토콜처럼 다른 키워드는 여전히 백틱으로 감싸야 합니다.",
+          "text": "그렇게 하면 아래 줄의 프로토콜처럼 다른 키워드는 여전히 백틱으로 감싸야 합니다.",
+          "direction": {
+            "stages": [
+              "protocol:"
+            ],
+            "panel": "code",
+            "lines": [
+              2
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "caption": "채택된 방법은 단어가 놓인 자리를 보는 것이었습니다. 호출 괄호 안에서 이름 다음에 콜론이 오면 레이블로 읽을 수 있습니다.",
+          "text": "채택된 방법은 단어가 놓인 자리를 보는 것이었습니다. 호출 괄호 안에서 이름 다음에 콜론이 오면 레이블로 읽을 수 있습니다.",
+          "direction": {
+            "stages": [
+              "이름 + 콜론"
+            ],
+            "panel": "code",
+            "lines": [
+              2
+            ]
+          }
+        }
+      ],
+      "code": {
+        "label": "Swift 2.2에서 허용된 호출",
+        "code": "indexOf(7, in: list)\nNSXPCInterface(protocol: SomeProtocolType.Protocol)"
+      },
+      "deliveryNote": "문장 사이에 숨을 쉽니다. 강조한 줄을 읽을 시간을 둡니다."
+    },
+    {
+      "id": "05-boundary",
+      "type": "code-focus",
+      "chapterTitle": "선언에는 예외가 남았습니다",
+      "heading": "선언에는 예외가 남았습니다",
+      "narration": "함수를 선언할 때도 목록 앞에 in을 쓸 수 있게 됐습니다. 다만 당시 선언에서 인아웃과 바, 렛은 매개변수의 성질을 지정하는 말이었습니다. 그래서 두 번째 줄처럼 인아웃 자체를 이름으로 쓰려면 백틱이 필요했습니다.",
+      "speech": [
+        {
+          "language": "ko",
+          "caption": "함수를 선언할 때도 목록 앞에 in을 쓸 수 있게 됐습니다.",
+          "text": "함수를 선언할 때도 목록 앞에 인을 쓸 수 있게 됐습니다.",
+          "direction": {
+            "stages": [
+              "in list"
+            ],
+            "panel": "code",
+            "lines": [
+              1
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "caption": "다만 당시 선언에서 인아웃과 바, 렛은 매개변수의 성질을 지정하는 말이었습니다.",
+          "text": "다만 당시 선언에서 인아웃과 바, 렛은 매개변수의 성질을 지정하는 말이었습니다.",
+          "direction": {
+            "stages": [
+              "inout · var · let"
+            ],
+            "panel": "code",
+            "lines": [
+              2
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "caption": "그래서 두 번째 줄처럼 인아웃 자체를 이름으로 쓰려면 백틱이 필요했습니다.",
+          "text": "그래서 두 번째 줄처럼 인아웃 자체를 이름으로 쓰려면 백틱이 필요했습니다.",
+          "direction": {
+            "stages": [
+              "`inout`"
+            ],
+            "panel": "code",
+            "lines": [
+              2
+            ]
+          }
+        }
+      ],
+      "code": {
+        "label": "Swift 2.2 당시 선언 일부",
+        "code": "func search(in list: [Int])\nfunc addParameter(name: String, `inout`: Bool)"
+      },
+      "deliveryNote": "문장 사이에 숨을 쉽니다. 강조한 줄을 읽을 시간을 둡니다."
+    },
+    {
+      "id": "06-return",
+      "type": "code-focus",
+      "chapterTitle": "다시 같은 목록에서 찾습니다",
+      "heading": "다시 같은 목록에서 찾습니다",
+      "narration": "이 변경은 2015년 12월에 구현 완료로 기록됐고, 2016년 3월에 나온 Swift 2.2에 실렸습니다. 처음 보았던 호출에서 백틱 두 개를 빼 봅니다. 지금의 스위프트로 두 줄을 각각 실행해도 결과는 일입니다. 배열의 첫 자리를 영으로 세기 때문입니다. 칠을 찾는 방법은 그대로입니다. 어디에서 찾는지 알려 주는 in을 이제는 그대로 읽을 수 있습니다.",
+      "speech": [
+        {
+          "language": "ko",
+          "caption": "이 변경은 2015년 12월에 구현 완료로 기록됐고, 2016년 3월에 나온 Swift 2.2에 실렸습니다.",
+          "text": "이 변경은 이천십오 년 12월에 구현 완료로 기록됐고, 이천십육 년 삼월에 나온 스위프트 이 점 이에 실렸습니다.",
+          "direction": {
+            "stages": [
+              "2016.03.21"
+            ],
+            "panel": "code",
+            "lines": [
+              2
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "caption": "처음 보았던 호출에서 백틱 두 개를 빼 봅니다.",
+          "text": "처음 보았던 호출에서 백틱 두 개를 빼 봅니다.",
+          "direction": {
+            "stages": [
+              "`in` → in"
+            ],
+            "panel": "code",
+            "lines": [
+              2
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "caption": "지금의 스위프트로 두 줄을 각각 실행해도 결과는 일입니다. 배열의 첫 자리를 영으로 세기 때문입니다.",
+          "text": "지금의 스위프트로 두 줄을 각각 실행해도 결과는 일입니다. 배열의 첫 자리를 영으로 세기 때문입니다.",
+          "direction": {
+            "stages": [
+              "출력  1"
+            ],
+            "panel": "code",
+            "lines": [
+              3
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "caption": "칠을 찾는 방법은 그대로입니다. 어디에서 찾는지 알려 주는 in을 이제는 그대로 읽을 수 있습니다.",
+          "text": "칠을 찾는 방법은 그대로입니다. 어디에서 찾는지 알려 주는 인을 이제는 그대로 읽을 수 있습니다.",
+          "direction": {
+            "stages": [
+              "in: list"
+            ],
+            "panel": "code",
+            "lines": [
+              2
+            ]
+          }
+        }
+      ],
+      "code": {
+        "label": "같은 배열 · 현재 컴파일러 실행 결과",
+        "code": "indexOf(7, `in`: list)\nindexOf(7, in: list)\n// 1"
+      },
+      "deliveryNote": "문장 사이에 숨을 쉽니다. 강조한 줄을 읽을 시간을 둡니다.",
       "milestones": [
         {
           "date": "2015.11.04",
@@ -100,469 +454,150 @@
           "date": "2016.03.21",
           "event": "Swift 2.2 정식 출시",
           "sourceUrl": "https://www.swift.org/blog/swift-2.2-released/"
-        }
-      ],
-      "deliveryNote": "연도는 같은 높이로 가볍게 지나갑니다. ‘제안서’와 ‘구현’을 구분하고 마지막 ‘스위프트 이 점 이’를 분명히 읽습니다."
-    },
-    {
-      "id": "02-problem",
-      "type": "problem",
-      "chapterTitle": "도입 배경과 불편함",
-      "heading": "가장 자연스러운 이름이 예약어일 때",
-      "subheading": "컬렉션에서 값을 찾을 때, 'in'보다 좋은 이름이 있을까요?",
-      "narration": "리스트에서 값 하나를 찾는다고 해 봐요. 함수 이름을 한번 읽어 볼게요. index of a value in a collection. 어떤 값을 어디에서 찾는지 이름만 봐도 보이죠? 예전엔 in이 예약어라서 양옆에 백틱을 붙여야 했어요.",
-      "bullets": [
-        "함수 인자 레이블에 in, repeat, defer 같은 키워드를 그대로 못 씀",
-        "개발자들이 억지로 within 같은 어색한 대체 이름을 선택하게 됨",
-        "Objective-C 브릿징 API 약 200개에 백틱(`) 탈출이나 재명명이 필요했음"
-      ],
-      "codeBefore": {
-        "label": "Problem · Swift 2.1",
-        "filename": "CollectionLookup.swift",
-        "code": "// 백틱 없이는 컴파일 오류!\nindexOf(value, `in`: collection)\nevent.touchesMatching([.Began], `in`: view)\nNSXPCInterface(`protocol`: Service.self)",
-        "highlightLines": [
-          2,
-          3,
-          4
-        ],
-        "diffRemovedLines": [
-          2,
-          3,
-          4
-        ]
-      },
-      "callout": "Survey 결과, 충돌 키워드의 90%가 바로 'in' 하나 때문이었습니다.",
-      "includeInShort": true,
-      "speech": [
-        {
-          "language": "ko",
-          "caption": "리스트에서 값 하나를 찾는다고 해 봐요.",
-          "text": "리스트에서 값 하나를 찾는다고 해 봐요."
-        },
-        {
-          "language": "ko",
-          "caption": "함수 이름을 한번 읽어 볼게요.",
-          "text": "함수 이름을 한번 읽어 볼게요."
-        },
-        {
-          "language": "en",
-          "caption": "index of a value in a collection.",
-          "text": "Index of a value in a collection."
-        },
-        {
-          "language": "ko",
-          "caption": "어떤 값을 어디에서 찾는지 이름만 봐도 보이죠?",
-          "text": "어떤 값을 어디에서 찾는지 이름만 봐도 보이죠?"
-        },
-        {
-          "language": "ko",
-          "caption": "예전엔 in이 예약어라서 양옆에 백틱을 붙여야 했어요.",
-          "text": "예전엔 인이 예약어라서 양옆에 백틱을 붙여야 했어요."
-        }
-      ],
-      "deliveryNote": "예시를 건네듯 시작합니다. 영어 호출은 한 덩어리로 읽고, 다시 한국어로 돌아오면 ‘예약어’에 힘을 줍니다.",
-      "termNotes": [
-        {
-          "term": "예약어",
-          "meaning": "Swift가 문법에 쓰려고 정해 둔 단어",
-          "cue": "예약어"
-        }
-      ]
-    },
-    {
-      "id": "03-compare",
-      "type": "code-compare",
-      "chapterTitle": "Before & After",
-      "heading": "Swift 2.2에서 바뀐 호출 방식",
-      "subheading": "같은 값을 넘겨도 in 양옆의 백틱을 생략할 수 있었어요.",
-      "narration": "왼쪽 코드에서 두 번째 인자를 봐요. 오른쪽도 같은 리스트를 넘기죠? 달라진 건 in 양옆의 백틱 두 개예요. 예전에 쓰던 호출도 그대로 동작해요.",
-      "codeBefore": {
-        "label": "Before · Swift 2.1",
-        "filename": "Before.swift",
-        "code": "func touchesMatching(\n  phase: NSTouchPhase,\n  `in` view: NSView?\n) -> Set<NSTouch>\n\nindexOf(value, `in`: list)",
-        "highlightLines": [
-          3,
-          6
-        ],
-        "diffRemovedLines": [
-          3,
-          6
-        ]
-      },
-      "codeAfter": {
-        "label": "After · Swift 2.2",
-        "filename": "After.swift",
-        "code": "func touchesMatching(\n  phase: NSTouchPhase,\n  in view: NSView?\n) -> Set<NSTouch>\n\nindexOf(value, in: list)",
-        "highlightLines": [
-          3,
-          6
-        ],
-        "diffAddedLines": [
-          3,
-          6
-        ]
-      },
-      "callout": "백틱을 붙인 호출도 그대로 쓸 수 있었어요.",
-      "includeInShort": true,
-      "speech": [
-        {
-          "language": "ko",
-          "caption": "왼쪽 코드에서 두 번째 인자를 봐요.",
-          "text": "왼쪽 코드에서 두 번째 인자를 봐요."
-        },
-        {
-          "language": "ko",
-          "caption": "오른쪽도 같은 리스트를 넘기죠?",
-          "text": "오른쪽도 같은 리스트를 넘기죠?"
-        },
-        {
-          "language": "ko",
-          "caption": "달라진 건 in 양옆의 백틱 두 개예요.",
-          "text": "달라진 건 인 양옆의 백틱 두 개예요."
-        },
-        {
-          "language": "ko",
-          "caption": "예전에 쓰던 호출도 그대로 동작해요.",
-          "text": "예전에 쓰던 호출도 그대로 동작해요."
-        }
-      ],
-      "deliveryNote": "‘왼쪽’에서 시선을 짚어 주고, ‘오른쪽’에서 앞보다 살짝 높은 음으로 시작합니다. 결론인 ‘그대로 동작합니다’는 안정되게 내립니다.",
-      "termNotes": [
-        {
-          "term": "인자",
-          "meaning": "함수를 부를 때 건네는 값",
-          "cue": "인자를"
-        }
-      ]
-    },
-    {
-      "id": "04-exceptions",
-      "type": "code-focus",
-      "chapterTitle": "단 3가지 예외 규칙",
-      "heading": "제목에 '(most)'가 붙은 이유",
-      "subheading": "Swift 2.2의 함수 선언에서 예외였던 세 단어",
-      "narration": "제안서 제목을 보면 이런 말이 있어요. most keywords. 대부분의 키워드라는 뜻이죠. 그럼 어떤 단어가 빠졌을까요? inout, var, let. 당시엔 이 셋이 선언부에서 매개변수를 꾸미기도 했어요. 그래서 레이블로 쓰려면 백틱을 남겨 둬야 했죠.",
-      "bullets": [
-        "호출식에서는 '<키워드>:' 형태가 모호하지 않아 전부 안전하게 파싱 가능",
-        "선언부에서는 inout, var, let이 파라미터 수식어와 충돌해 예외로 남김",
-        "in만 문맥 의존 키워드로 푸는 대안보다 훨씬 단순하고 일관된 규칙을 택함"
-      ],
-      "code": {
-        "label": "Exception · Declarations",
-        "filename": "Parameters.swift",
-        "code": "// 일반 키워드(in, repeat 등)는 바로 선언 가능\nfunc search(value: Int, in list: [Int])\n\n// inout, var, let 3개만 선언부에서 백틱 필요\nfunc addParameter(name: String, `inout`: Bool)",
-        "highlightLines": [
-          2,
-          5
-        ],
-        "diffAddedLines": [
-          2
-        ]
-      },
-      "callout": "예외는 단 3개: inout, var, let",
-      "includeInShort": false,
-      "speech": [
-        {
-          "language": "ko",
-          "caption": "제안서 제목을 보면 이런 말이 있어요.",
-          "text": "제안서 제목을 보면 이런 말이 있어요."
-        },
-        {
-          "language": "en",
-          "caption": "most keywords.",
-          "text": "Most keywords."
-        },
-        {
-          "language": "ko",
-          "caption": "대부분의 키워드라는 뜻이죠.",
-          "text": "대부분의 키워드라는 뜻이죠."
-        },
-        {
-          "language": "ko",
-          "caption": "그럼 어떤 단어가 빠졌을까요?",
-          "text": "그럼 어떤 단어가 빠졌을까요?"
-        },
-        {
-          "language": "en",
-          "caption": "inout, var, let.",
-          "text": "In out, var, let."
-        },
-        {
-          "language": "ko",
-          "caption": "당시엔 이 셋이 선언부에서 매개변수를 꾸미기도 했어요.",
-          "text": "당시엔 이 셋이 선언부에서 매개변수를 꾸미기도 했어요."
-        },
-        {
-          "language": "ko",
-          "caption": "그래서 레이블로 쓰려면 백틱을 남겨 둬야 했죠.",
-          "text": "그래서 레이블로 쓰려면 백틱을 남겨 둬야 했죠."
-        }
-      ],
-      "deliveryNote": "most keywords에서 most를 강조합니다. 세 단어는 일정한 간격으로 읽고, 한국어 설명은 마지막 단어가 끝난 뒤 시작합니다.",
-      "termNotes": [
-        {
-          "term": "매개변수",
-          "meaning": "함수 안에서 전달받은 값을 부르는 이름",
-          "cue": "매개변수"
-        },
-        {
-          "term": "인자 레이블",
-          "meaning": "호출할 때 값 앞에 붙이는 이름. 여기서는 in",
-          "cue": "레이블"
-        }
-      ]
-    },
-    {
-      "id": "05-key-points",
-      "type": "key-points",
-      "chapterTitle": "핵심 포인트 정리",
-      "heading": "SE-0001이 남긴 Swift의 API 철학",
-      "narration": "당시 제안서에는 다른 이름도 나와요. within. 백틱을 피하려고 고른 이름이에요. Swift 2.2부터는 짧게 in이라고 쓸 수 있게 됐어요.",
-      "bullets": [
-        "호출부에서 in, protocol, default 등을 백틱 없이 바로 사용",
-        "inout·var·let 3개 키워드만 선언부 모호성 때문에 예외 유지",
-        "제안서 조사에서 이름 변경이나 백틱이 필요했던 API는 약 200개"
-      ],
-      "callout": "호출할 때는 레이블을 읽는 것만으로 각 인자의 역할을 알 수 있습니다.",
-      "includeInShort": false,
-      "speech": [
-        {
-          "language": "ko",
-          "caption": "당시 제안서에는 다른 이름도 나와요.",
-          "text": "당시 제안서에는 다른 이름도 나와요."
-        },
-        {
-          "language": "en",
-          "caption": "within.",
-          "text": "Within."
-        },
-        {
-          "language": "ko",
-          "caption": "백틱을 피하려고 고른 이름이에요.",
-          "text": "백틱을 피하려고 고른 이름이에요."
-        },
-        {
-          "language": "ko",
-          "caption": "Swift 2.2부터는 짧게 in이라고 쓸 수 있게 됐어요.",
-          "text": "스위프트 이 점 이부터는 짧게 인이라고 쓸 수 있게 됐어요."
-        }
-      ],
-      "deliveryNote": "첫 문장은 한 사람에게 답하듯 읽습니다. ‘짧은 이름’을 또렷하게 하고 종결은 짧게 마칩니다."
-    },
-    {
-      "id": "06-outro",
-      "type": "outro",
-      "chapterTitle": "마무리 & 다음 예고",
-      "heading": "값을 어디에서 찾을까요?",
-      "subheading": "in 다음에 오는 값이 검색 대상이에요.",
-      "narration": "이 함수에서 in은 값을 어디에서 찾을지 알려 줘요. 다음 편에서는 스위프트가 커링 문법을 없앤 이유를 살펴볼게요.",
-      "bullets": [
-        "SE-0001 핵심: inout, var, let을 제외한 키워드의 인자 레이블 허용 (Swift 2.2)",
-        "다음 에피소드 예고: SE-0002 - Removing currying func declaration syntax"
-      ],
-      "includeInShort": false,
-      "speech": [
-        {
-          "language": "ko",
-          "caption": "이 함수에서 in은 값을 어디에서 찾을지 알려 줘요.",
-          "text": "이 함수에서 인은 값을 어디에서 찾을지 알려 줘요."
-        },
-        {
-          "language": "ko",
-          "caption": "다음 편에서는 스위프트가 커링 문법을 없앤 이유를 살펴볼게요.",
-          "text": "다음 편에서는 스위프트가 커링 문법을 없앤 이유를 살펴볼게요."
-        }
-      ],
-      "deliveryNote": "‘백틱이 사라졌습니다’에서 결론을 맺습니다. 숨을 한 번 고른 뒤 다음 편을 평소 말투로 소개합니다.",
-      "termNotes": [
-        {
-          "term": "커링",
-          "meaning": "값을 하나씩 받는 함수로 나누는 방식",
-          "cue": "커링"
         }
       ]
     }
   ],
   "shortsScenes": [
     {
-      "id": "s01-hook",
-      "type": "intro",
-      "chapterTitle": "훅",
-      "heading": "이 코드에서 지워도 되는 글자 두 개, 보이죠?",
-      "subheading": "Swift 2.2 · Allow (most) keywords as argument labels",
-      "narration": "이 코드에서 지워도 되는 글자 두 개, 보이죠? in 양옆의 백틱이 쏙 빠져요.",
+      "id": "s01-find",
+      "type": "code-focus",
+      "chapterTitle": "어디에서 찾는지 알려 주는 이름",
+      "heading": "어디에서 찾는지 알려 주는 이름",
+      "narration": "목록에서 칠을 찾는 코드입니다. 예전 스위프트에서는 어디에서 찾는지 알려 주는 in에 백틱을 붙였습니다.",
       "speech": [
         {
           "language": "ko",
-          "caption": "이 코드에서 지워도 되는 글자 두 개, 보이죠?",
-          "text": "이 코드에서 지워도 되는 글자 두 개, 보이죠?"
+          "caption": "목록에서 칠을 찾는 코드입니다.",
+          "text": "목록에서 칠을 찾는 코드입니다.",
+          "direction": {
+            "stages": [
+              "[4, 7, 9]"
+            ],
+            "panel": "code",
+            "lines": [
+              1
+            ]
+          }
         },
         {
           "language": "ko",
-          "caption": "in 양옆의 백틱이",
-          "text": "인 양옆의 백틱이"
-        },
-        {
-          "language": "ko",
-          "caption": "쏙 빠져요.",
-          "text": "쏙 빠져요."
+          "caption": "예전 스위프트에서는 어디에서 찾는지 알려 주는 in에 백틱을 붙였습니다.",
+          "text": "예전 스위프트에서는 어디에서 찾는지 알려 주는 인에 백틱을 붙였습니다.",
+          "direction": {
+            "stages": [
+              "`in`"
+            ],
+            "panel": "code",
+            "lines": [
+              2
+            ]
+          }
         }
       ],
-      "codeReveal": {
-        "parts": [
-          "indexOf(value, ",
-          {
-            "remove": "`"
-          },
-          "in",
-          {
-            "remove": "`"
-          },
-          ": list)"
-        ],
-        "answerCue": "쏙 빠져요."
+      "code": {
+        "label": "Swift 2.2 이전",
+        "code": "let list = [4, 7, 9]\nindexOf(7, `in`: list)"
       },
-      "deliveryNote": "같은 화면을 보고 있는 동료에게 묻듯 “두 개, 보이죠?”를 가볍게 올려 읽어요. 한 박자 쉬고 “백틱이 쏙 빠져요”를 한 호흡에 말해요.",
-      "badge": "듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기",
-      "termNotes": [
-        {
-          "term": "백틱",
-          "meaning": "이름을 감쌀 때 쓰는 기호 ( ` )",
-          "cue": "백틱이"
-        }
-      ]
+      "deliveryNote": "문장 사이에 숨을 쉽니다. 강조한 줄을 읽을 시간을 둡니다."
     },
     {
-      "id": "s01-history",
-      "type": "history",
-      "heading": "SE-0001이 Swift에 들어오기까지",
-      "chapterTitle": "제안부터 출시까지",
+      "id": "s02-choice",
+      "type": "code-focus",
+      "chapterTitle": "콜론 앞의 in",
+      "heading": "콜론 앞의 in",
+      "narration": "반복문에서는 in이 문법의 일부입니다. 하지만 함수를 부를 때는 바로 뒤에 콜론이 있어 이름이라는 걸 알아볼 수 있습니다. 덕분에 2016년 3월에 나온 Swift 2.2부터는 이 자리의 백틱을 생략할 수 있게 됐습니다.",
       "speech": [
         {
           "language": "ko",
-          "caption": "이 얘기가 처음 나온 건 2015년 11월이에요.",
-          "text": "이 얘기가 처음 나온 건 이천십오 년 십일월이에요."
+          "caption": "반복문에서는 in이 문법의 일부입니다.",
+          "text": "반복문에서는 인이 문법의 일부입니다.",
+          "direction": {
+            "stages": [
+              "for … in"
+            ],
+            "panel": "code",
+            "lines": [
+              1
+            ]
+          }
         },
         {
           "language": "ko",
-          "caption": "그해 12월에 구현됐고, 이듬해 3월에 나온 Swift 2.2부터 쓸 수 있었어요.",
-          "text": "그해 십이월에 구현됐고, 이듬해 삼월에 나온 스위프트 이 점 이부터 쓸 수 있었어요."
-        }
-      ],
-      "narration": "이 얘기가 처음 나온 건 2015년 11월이에요. 그해 12월에 구현됐고, 이듬해 3월에 나온 Swift 2.2부터 쓸 수 있었어요.",
-      "milestones": [
-        {
-          "date": "2015.11.04",
-          "event": "제안서 첫 기록",
-          "sourceUrl": "https://github.com/swiftlang/swift-evolution/commit/463051803866a2ab8e199f39b6c8c4d2ec5a0b4b"
+          "caption": "하지만 함수를 부를 때는 바로 뒤에 콜론이 있어 이름이라는 걸 알아볼 수 있습니다.",
+          "text": "하지만 함수를 부를 때는 바로 뒤에 콜론이 있어 이름이라는 걸 알아볼 수 있습니다.",
+          "direction": {
+            "stages": [
+              "in: list"
+            ],
+            "panel": "code",
+            "lines": [
+              2
+            ]
+          }
         },
         {
-          "date": "2015.12.23",
-          "event": "구현 완료 기록",
-          "sourceUrl": "https://github.com/swiftlang/swift-evolution/commit/960107656dff24fbbf047c801a42f83c5eca1504"
-        },
-        {
-          "date": "2016.03.21",
-          "event": "Swift 2.2 정식 출시",
-          "sourceUrl": "https://www.swift.org/blog/swift-2.2-released/"
+          "language": "ko",
+          "caption": "덕분에 2016년 3월에 나온 Swift 2.2부터는 이 자리의 백틱을 생략할 수 있게 됐습니다.",
+          "text": "덕분에 이천십육 년 삼월에 나온 스위프트 이 점 이부터는 이 자리의 백틱을 생략할 수 있게 됐습니다.",
+          "direction": {
+            "stages": [
+              "Swift 2.2"
+            ],
+            "panel": "code",
+            "lines": [
+              2
+            ]
+          }
         }
       ],
-      "deliveryNote": "연도는 같은 높이로 가볍게 지나갑니다. ‘제안서’와 ‘구현’을 구분하고 마지막 ‘스위프트 이 점 이’를 분명히 읽습니다."
+      "code": {
+        "label": "반복문과 Swift 2.2 호출",
+        "code": "for item in list { }\nindexOf(7, in: list)"
+      },
+      "deliveryNote": "문장 사이에 숨을 쉽니다. 강조한 줄을 읽을 시간을 둡니다."
     },
     {
-      "id": "s02-compare",
-      "type": "code-compare",
-      "chapterTitle": "Before & After",
-      "heading": "Swift 2.2에서 빠진 백틱 두 개",
-      "narration": "이 함수는 어디에서 값을 찾을까요? in a collection. 바로 뒤에 오는 컬렉션에서 찾아요. Swift 2.2부터는 이 레이블을 백틱 없이 쓸 수 있었어요.",
-      "codeBefore": {
-        "label": "Before · Swift 2.1",
-        "code": "indexOf(value, `in`: collection)\nNSXPCInterface(`protocol`: Service.self)",
-        "diffRemovedLines": [
-          1,
-          2
-        ]
-      },
-      "codeAfter": {
-        "label": "After · Swift 2.2",
-        "code": "indexOf(value, in: collection)\nNSXPCInterface(protocol: Service.self)",
-        "diffAddedLines": [
-          1,
-          2
-        ]
-      },
+      "id": "s03-result",
+      "type": "code-focus",
+      "chapterTitle": "같은 칠을 찾습니다",
+      "heading": "같은 칠을 찾습니다",
+      "narration": "백틱을 쓴 호출도 계속 동작합니다. 두 줄 모두 같은 목록에서 같은 칠을 찾습니다. 결과도 일로 같습니다.",
       "speech": [
         {
           "language": "ko",
-          "caption": "이 함수는 어디에서 값을 찾을까요?",
-          "text": "이 함수는 어디에서 값을 찾을까요?"
-        },
-        {
-          "language": "en",
-          "caption": "in a collection.",
-          "text": "In a collection."
+          "caption": "백틱을 쓴 호출도 계속 동작합니다.",
+          "text": "백틱을 쓴 호출도 계속 동작합니다.",
+          "direction": {
+            "stages": [
+              "`in` → in"
+            ],
+            "panel": "code",
+            "lines": [
+              1
+            ]
+          }
         },
         {
           "language": "ko",
-          "caption": "바로 뒤에 오는 컬렉션에서 찾아요.",
-          "text": "바로 뒤에 오는 컬렉션에서 찾아요."
-        },
-        {
-          "language": "ko",
-          "caption": "Swift 2.2부터는 이 레이블을 백틱 없이 쓸 수 있었어요.",
-          "text": "스위프트 이 점 이부터는 이 레이블을 백틱 없이 쓸 수 있었어요."
+          "caption": "두 줄 모두 같은 목록에서 같은 칠을 찾습니다. 결과도 일로 같습니다.",
+          "text": "두 줄 모두 같은 목록에서 같은 칠을 찾습니다. 결과도 일로 같습니다.",
+          "direction": {
+            "stages": [
+              "출력  1"
+            ],
+            "panel": "code",
+            "lines": [
+              3
+            ]
+          }
         }
       ],
-      "deliveryNote": "영어 in은 짧고 또렷하게 읽습니다. 바로 뒤 설명의 ‘어디에서’를 강조해 레이블의 뜻이 들리게 합니다.",
-      "termNotes": [
-        {
-          "term": "컬렉션",
-          "meaning": "여러 값을 모아 둔 것. 배열이 한 예예요",
-          "cue": "컬렉션"
-        },
-        {
-          "term": "인자 레이블",
-          "meaning": "호출할 때 값 앞에 붙이는 이름. 여기서는 in",
-          "cue": "레이블"
-        }
-      ]
-    },
-    {
-      "id": "s03-rule",
-      "type": "key-points",
-      "chapterTitle": "핵심 1줄",
-      "heading": "당시 함수 선언에 남은 세 가지 예외",
-      "narration": "당시 선언부에선 세 단어가 예외였어요. inout, var, let. 이 셋은 매개변수를 꾸밀 때도 쓰여서, 레이블로 쓰려면 백틱이 필요했어요.",
-      "bullets": [
-        "대부분 키워드(in, protocol, repeat 등) 자유롭게 사용",
-        "예외 단 3개: inout · var · let"
-      ],
-      "callout": "다음 편: SE-0002 커링 문법 제거",
-      "speech": [
-        {
-          "language": "ko",
-          "caption": "당시 선언부에선 세 단어가 예외였어요.",
-          "text": "당시 선언부에선 세 단어가 예외였어요."
-        },
-        {
-          "language": "en",
-          "caption": "inout, var, let.",
-          "text": "In out, var, let."
-        },
-        {
-          "language": "ko",
-          "caption": "이 셋은 매개변수를 꾸밀 때도 쓰여서, 레이블로 쓰려면 백틱이 필요했어요.",
-          "text": "이 셋은 매개변수를 꾸밀 때도 쓰여서, 레이블로 쓰려면 백틱이 필요했어요."
-        }
-      ],
-      "deliveryNote": "‘세 단어’로 예고한 뒤 inout, var, let을 같은 박자로 읽습니다. 마지막 ‘백틱’이 잘 들리도록 끝까지 발음합니다.",
-      "termNotes": [
-        {
-          "term": "매개변수",
-          "meaning": "함수 안에서 전달받은 값을 부르는 이름",
-          "cue": "매개변수"
-        }
-      ]
+      "code": {
+        "label": "현재 컴파일러에서 두 호출 비교",
+        "code": "indexOf(7, `in`: list)\nindexOf(7, in: list)\n// 1"
+      },
+      "deliveryNote": "문장 사이에 숨을 쉽니다. 강조한 줄을 읽을 시간을 둡니다."
     }
   ],
   "youtube": {
@@ -600,5 +635,6 @@
       "categoryId": "28",
       "defaultLanguage": "ko"
     }
-  }
+  },
+  "backgroundMusic": "evening-keys.m4a"
 }

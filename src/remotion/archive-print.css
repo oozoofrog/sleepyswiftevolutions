@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "Atkinson Hyperlegible Next";
+  src: url("./fonts/AtkinsonHyperlegibleNext.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200 800;
+}
+
+/* Warm charcoal stock, printed folio rules and matte ink for the history edition. */
+.archive-print, .archive-print .stage-backdrop {
+  background: radial-gradient(ellipse at 30% 20%, #443c33 0%, #352e28 43%, #27231f 100%) !important;
+  color: #f0e3cc;
+}
+.archive-print .stage-backdrop { border-top: 0 !important; }
+.archive-print::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px solid #aa98714d;
+  outline: 1px solid #aa987124;
+  outline-offset: -5px;
+  z-index: 19;
+  pointer-events: none;
+}
+.archive-print::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("./paper-grain.png") repeat;
+  mix-blend-mode: soft-light;
+  opacity: .24;
+  pointer-events: none;
+  z-index: 40;
+}
+.archive-print h1 {
+  color: #f1e3c9 !important;
+  font-weight: 700 !important;
+  text-shadow: none !important;
+}
+.archive-print .code-panel {
+  background: #383831 !important;
+  border: 1px solid #827966 !important;
+  border-radius: 5px !important;
+  box-shadow: 2px 4px 0 #211f1aaa !important;
+}
+.archive-print .code-panel > div:first-child:not(:only-child) {
+  background: #444239;
+  color: #e5c394;
+}
+.archive-print .code-panel > div:first-child:has(> span) {
+  background: #444239 !important;
+  border-bottom-color: #817661 !important;
+}
+.archive-print .code-panel > div:first-child > div > div { opacity: .5; filter: saturate(.4); }
+.archive-print .code-panel span { filter: saturate(.78); }
+.archive-print .proposal-badge > span {
+  box-shadow: none !important;
+  border-radius: 3px !important;
+  color: #e8d8bb !important;
+  background: #4e4438 !important;
+  border: 1px solid #8e7960 !important;
+}
+.archive-print .proposal-badge > span:first-child { background: #a85938 !important; color: #fff3dd !important; }
+.archive-print .contributor-card {
+  background: #302b24 !important;
+  border-radius: 4px !important;
+  border-color: #b29872 !important;
+  box-shadow: none !important;
+}

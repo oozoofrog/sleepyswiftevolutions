@@ -1,99 +1,103 @@
 1
-00:00:00,400 --> 00:00:03,040
+00:00:00,400 --> 00:00:03,380
 Let’s look at one line of code together.
 
 2
-00:00:03,490 --> 00:00:08,530
+00:00:03,950 --> 00:00:09,210
 Early Swift let you declare a variable inside the parentheses after a function name.
 
 3
-00:00:08,980 --> 00:00:13,460
+00:00:09,780 --> 00:00:14,000
 If we change the number inside, what value will we see outside?
 
 4
-00:00:14,760 --> 00:00:17,080
+00:00:15,300 --> 00:00:17,840
 First, we pass the number 1 into the function.
 
 5
-00:00:17,530 --> 00:00:19,530
+00:00:18,410 --> 00:00:20,110
 The number inside becomes 2.
 
 6
-00:00:19,980 --> 00:00:22,780
+00:00:20,680 --> 00:00:23,380
 The variable outside still holds 1.
 
 7
-00:00:23,230 --> 00:00:26,190
+00:00:23,950 --> 00:00:27,030
 Inside the function, we changed a copy of the integer.
 
 8
-00:00:27,490 --> 00:00:32,290
+00:00:28,330 --> 00:00:32,840
 This time we put an ampersand before the variable name in the call.
 
 9
-00:00:32,740 --> 00:00:34,660
+00:00:33,410 --> 00:00:35,110
 The number inside becomes 2.
 
 10
-00:00:35,110 --> 00:00:39,030
+00:00:35,680 --> 00:00:38,800
 When the function finishes, 2 is written back to the variable outside.
 
 11
-00:00:39,480 --> 00:00:45,000
+00:00:39,370 --> 00:00:44,990
 Both allowed changes inside the function, so it was easy to miss the difference.
 
 12
-00:00:46,300 --> 00:00:50,860
+00:00:46,290 --> 00:00:50,750
 A proposal to reduce this confusion was recorded in November 2015.
 
 13
-00:00:51,310 --> 00:00:55,710
+00:00:51,320 --> 00:00:55,280
 Swift 2.2, released the following March, issued a warning.
 
 14
-00:00:56,160 --> 00:01:00,080
-With Swift 3 that September, this declaration became an error.
+00:00:55,850 --> 00:01:00,740
+Swift 3 shipped that September. You could no longer put var before a parameter.
 
 15
-00:01:01,380 --> 00:01:04,500
-The original proposal covered syntax beyond function parameters.
+00:01:02,040 --> 00:01:08,360
+Ashley Garland proposed removing var from both parameters and conditional bindings.
 
 16
-00:01:04,950 --> 00:01:08,950
+00:01:08,930 --> 00:01:13,190
 For example, we can unwrap a value, modify it, and return it.
 
 17
-00:01:09,400 --> 00:01:14,920
+00:01:13,760 --> 00:01:19,130
 Under the original proposal, we would have to declare another variable after unwrapping the value.
 
 18
-00:01:15,370 --> 00:01:19,610
+00:01:19,700 --> 00:01:23,690
 After examining real code, the author asked to withdraw the entire change.
 
 19
-00:01:20,910 --> 00:01:23,710
-The core team made separate decisions for the two cases.
+00:01:24,260 --> 00:01:32,070
+Swift compiler engineer Joe Groff noted that readers could mistake a change to the unwrapped value for a change to the original.
 
 20
-00:01:24,160 --> 00:01:30,720
-They found that exposing a function’s local variable in its signature could mislead callers.
+00:01:33,370 --> 00:01:37,340
+Chris Lattner reported that the core team had reached separate decisions for the two cases.
 
 21
-00:01:31,170 --> 00:01:36,690
-In a conditional, binding a value for immediate editing was useful, so that syntax stayed.
+00:01:37,910 --> 00:01:43,480
+They found that exposing a function’s local variable in its signature could mislead callers.
 
 22
-00:01:37,990 --> 00:01:44,070
-Today, if we want to change a copy, we declare a local variable inside the function.
+00:01:44,050 --> 00:01:49,610
+In a conditional, binding a value for immediate editing was useful, so that syntax stayed.
 
 23
-00:01:44,520 --> 00:01:47,720
-In our opening example, the number outside stays at 1.
+00:01:50,910 --> 00:01:56,080
+Today, if we want to change a copy, we declare a local variable inside the function.
 
 24
-00:01:48,170 --> 00:01:53,370
-We can still use a local variable. What changed is where we declare it.
+00:01:56,650 --> 00:01:59,410
+In our opening example, the number outside stays at 1.
 
 25
-00:01:53,820 --> 00:01:55,100
+00:01:59,980 --> 00:02:04,200
+We can still use a local variable. What changed is where we declare it.
+
+26
+00:02:04,770 --> 00:02:06,250
 We’ll stop here for today.

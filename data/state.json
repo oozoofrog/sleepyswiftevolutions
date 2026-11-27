@@ -9,38 +9,40 @@
       "proposalState": "implemented",
       "swiftVersion": "2.2",
       "stage": "uploaded",
-      "updatedAt": "2026-11-25T18:18:11.272Z",
+      "updatedAt": "2026-11-27T03:37:36.920Z",
       "formats": {
         "long": {
-          "voicedAt": "2026-11-25T17:49:12.099Z",
-          "renderedAt": "2026-11-25T17:51:20.839Z",
-          "durationSec": 95.81,
+          "voicedAt": "2026-11-26T14:02:04.078Z",
+          "renderedAt": "2026-11-26T14:46:01.514Z",
+          "durationSec": 135.47,
           "upload": {
-            "videoId": "Bp3WBFXDxLc",
-            "url": "https://youtu.be/Bp3WBFXDxLc",
-            "uploadedAt": "2026-11-25T18:18:11.272Z",
+            "videoId": "BCloT9Y5SpA",
+            "url": "https://youtu.be/BCloT9Y5SpA",
+            "uploadedAt": "2026-11-26T14:49:25.119Z",
             "privacyStatus": "public",
             "title": "백틱이 사라졌다",
             "playlists": [
               "Swift Evolution 처음부터 끝까지"
             ],
             "captionsUploaded": true,
-            "thumbnailUploaded": false
+            "thumbnailUploaded": true
           }
         },
         "short": {
-          "voicedAt": "2026-11-25T17:49:40.753Z",
-          "renderedAt": "2026-11-25T17:50:40.078Z",
-          "durationSec": 46.751,
+          "voicedAt": "2026-11-26T14:02:28.052Z",
+          "renderedAt": "2026-11-26T14:46:12.287Z",
+          "durationSec": 36,
           "upload": {
-            "videoId": "7Z5pgqvliU4",
-            "url": "https://www.youtube.com/shorts/7Z5pgqvliU4",
-            "uploadedAt": "2026-11-25T18:18:11.272Z",
+            "videoId": "Aqy13i5eY-E",
+            "url": "https://www.youtube.com/shorts/Aqy13i5eY-E",
+            "uploadedAt": "2026-11-26T14:49:28.056Z",
             "privacyStatus": "public",
             "title": "백틱이 사라졌다",
-            "playlists": [],
+            "playlists": [
+              "Swift Evolution Shorts"
+            ],
             "captionsUploaded": true,
-            "thumbnailUploaded": false
+            "thumbnailUploaded": true
           }
         }
       }
@@ -52,36 +54,40 @@
       "proposalState": "implemented",
       "swiftVersion": "3.0",
       "stage": "uploaded",
-      "updatedAt": "2026-11-26T07:14:07.054070+00:00",
+      "updatedAt": "2026-11-27T03:38:55.028Z",
       "formats": {
         "long": {
-          "voicedAt": "2026-11-26T06:28:04.870Z",
-          "renderedAt": "2026-11-26T06:41:14.865Z",
-          "durationSec": 153.17,
+          "voicedAt": "2026-11-26T14:07:36.283Z",
+          "renderedAt": "2026-11-26T14:46:59.534Z",
+          "durationSec": 140.9,
           "upload": {
-            "videoId": "yyuOi1WzzRA",
-            "url": "https://youtu.be/yyuOi1WzzRA",
-            "uploadedAt": "2026-11-26T07:07:07.916468+00:00",
+            "videoId": "sLRMYzEjkMk",
+            "url": "https://youtu.be/sLRMYzEjkMk",
+            "uploadedAt": "2026-11-26T14:49:30.647Z",
             "privacyStatus": "public",
             "title": "두 번째 괄호가 함수 선언에서 사라졌다",
-            "playlists": [],
+            "playlists": [
+              "Swift Evolution 처음부터 끝까지"
+            ],
             "captionsUploaded": true,
-            "thumbnailUploaded": false
+            "thumbnailUploaded": true
           }
         },
         "short": {
-          "voicedAt": "2026-11-26T06:28:14.824Z",
-          "renderedAt": "2026-11-26T06:41:31.887Z",
-          "durationSec": 46.711,
+          "voicedAt": "2026-11-26T14:07:19.090Z",
+          "renderedAt": "2026-11-26T14:47:12.654Z",
+          "durationSec": 43.05,
           "upload": {
-            "videoId": "f_8nk8azIzw",
-            "url": "https://www.youtube.com/shorts/f_8nk8azIzw",
-            "uploadedAt": "2026-11-26T07:14:07.054070+00:00",
+            "videoId": "saPWHFEelo8",
+            "url": "https://www.youtube.com/shorts/saPWHFEelo8",
+            "uploadedAt": "2026-11-27T03:28:59.842123+00:00",
             "privacyStatus": "public",
             "title": "두 번째 괄호가 함수 선언에서 사라졌다",
-            "playlists": [],
+            "playlists": [
+              "Swift Evolution Shorts"
+            ],
             "captionsUploaded": true,
-            "thumbnailUploaded": false
+            "thumbnailUploaded": true
           }
         }
       }
@@ -92,18 +98,42 @@
       "title": "Removing `var` from Function Parameters",
       "proposalState": "implemented",
       "swiftVersion": "3.0",
-      "stage": "rendered",
-      "updatedAt": "2026-11-26T08:52:36.478Z",
+      "stage": "uploaded",
+      "updatedAt": "2026-11-26T11:27:01.206Z",
       "formats": {
         "long": {
-          "voicedAt": "2026-11-26T08:47:47.550Z",
-          "renderedAt": "2026-11-26T08:52:14.322Z",
-          "durationSec": 116
+          "voicedAt": "2026-11-26T09:43:54.823Z",
+          "renderedAt": "2026-11-26T11:20:58.858Z",
+          "durationSec": 127.15,
+          "upload": {
+            "videoId": "u5nvrmvWV6k",
+            "url": "https://youtu.be/u5nvrmvWV6k",
+            "uploadedAt": "2026-11-26T11:26:42.470Z",
+            "privacyStatus": "public",
+            "title": "함수 매개변수에서 var가 사라졌다",
+            "playlists": [
+              "Swift Evolution 처음부터 끝까지"
+            ],
+            "captionsUploaded": true,
+            "thumbnailUploaded": true
+          }
         },
         "short": {
-          "voicedAt": "2026-11-26T08:48:08.703Z",
-          "renderedAt": "2026-11-26T08:52:36.478Z",
-          "durationSec": 50.62
+          "voicedAt": "2026-11-26T09:44:05.792Z",
+          "renderedAt": "2026-11-26T11:21:54.858Z",
+          "durationSec": 62.19,
+          "upload": {
+            "videoId": "MBWF30JTksI",
+            "url": "https://www.youtube.com/shorts/MBWF30JTksI",
+            "uploadedAt": "2026-11-26T11:27:01.205Z",
+            "privacyStatus": "public",
+            "title": "함수 매개변수에서 var가 사라졌다 #Shorts",
+            "playlists": [
+              "Swift Evolution Shorts"
+            ],
+            "captionsUploaded": true,
+            "thumbnailUploaded": true
+          }
         }
       }
     },
@@ -113,9 +143,44 @@
       "title": "Remove the `++` and `--` operators",
       "proposalState": "implemented",
       "swiftVersion": "3.0",
-      "stage": "pending",
-      "updatedAt": "2026-11-25T15:42:15.970Z",
-      "formats": {}
+      "stage": "uploaded",
+      "updatedAt": "2026-11-27T03:23:25.091Z",
+      "formats": {
+        "long": {
+          "voicedAt": "2026-11-27T00:32:47.249Z",
+          "renderedAt": "2026-11-27T00:43:14.781Z",
+          "durationSec": 127.345,
+          "upload": {
+            "videoId": "RsiNU-QPenY",
+            "url": "https://youtu.be/RsiNU-QPenY",
+            "uploadedAt": "2026-11-27T01:05:18.605Z",
+            "privacyStatus": "public",
+            "title": "스위프트에서 ++가 사라졌다 · SE-0004",
+            "playlists": [
+              "Swift Evolution 처음부터 끝까지"
+            ],
+            "captionsUploaded": true,
+            "thumbnailUploaded": true
+          }
+        },
+        "short": {
+          "voicedAt": "2026-11-27T00:33:02.610Z",
+          "renderedAt": "2026-11-27T00:43:24.224Z",
+          "durationSec": 21.755,
+          "upload": {
+            "videoId": "w3ciGFJrPS4",
+            "url": "https://www.youtube.com/shorts/w3ciGFJrPS4",
+            "uploadedAt": "2026-11-27T01:05:29.628Z",
+            "privacyStatus": "public",
+            "title": "스위프트에서 ++가 사라졌다 · SE-0004 #Shorts",
+            "playlists": [
+              "Swift Evolution Shorts"
+            ],
+            "captionsUploaded": true,
+            "thumbnailUploaded": true
+          }
+        }
+      }
     },
     "SE-0005": {
       "id": "SE-0005",
@@ -123,9 +188,20 @@
       "title": "Better Translation of Objective-C APIs Into Swift",
       "proposalState": "implemented",
       "swiftVersion": "3.0",
-      "stage": "pending",
-      "updatedAt": "2026-11-25T15:42:15.970Z",
-      "formats": {}
+      "stage": "rendered",
+      "updatedAt": "2026-11-27T10:33:11.398Z",
+      "formats": {
+        "long": {
+          "voicedAt": "2026-11-27T07:24:16.123Z",
+          "renderedAt": "2026-11-27T10:33:11.398Z",
+          "durationSec": 200.826
+        },
+        "short": {
+          "voicedAt": "2026-11-27T05:19:12.311Z",
+          "renderedAt": "2026-11-27T10:02:19.153Z",
+          "durationSec": 56.297
+        }
+      }
     },
     "SE-0006": {
       "id": "SE-0006",
@@ -5665,5 +5741,8 @@
       "formats": {}
     }
   },
-  "playlistCache": {}
+  "playlistCache": {
+    "Swift Evolution 처음부터 끝까지": "PLGhO13AECGZA",
+    "Swift Evolution Shorts": "PLfIjTtT2lhw8"
+  }
 }

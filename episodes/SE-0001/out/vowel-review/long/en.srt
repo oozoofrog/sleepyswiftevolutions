@@ -1,0 +1,91 @@
+1
+00:00:00,450 --> 00:00:04,190
+Let's find the position of 7 among these three numbers.
+
+2
+00:00:04,810 --> 00:00:07,830
+On the next line, the list follows the 7.
+
+3
+00:00:08,450 --> 00:00:12,200
+The word in tells us where to look.
+
+4
+00:00:12,820 --> 00:00:18,090
+Early Swift required a backtick on each side of that word.
+
+5
+00:00:19,440 --> 00:00:22,250
+In a loop, in is part of Swift’s grammar.
+
+6
+00:00:22,870 --> 00:00:26,060
+In the call below, it has a different role.
+
+7
+00:00:26,680 --> 00:00:33,070
+Before the colon, it names the value that follows. This name is an argument label.
+
+8
+00:00:33,690 --> 00:00:39,640
+In November 2015, Doug Gregor proposed allowing keywords in that position.
+
+9
+00:00:40,990 --> 00:00:45,060
+When designing a new function, you could choose within instead.
+
+10
+00:00:45,680 --> 00:00:50,320
+Importing existing Objective-C code into Swift was a different matter.
+
+11
+00:00:50,940 --> 00:00:56,930
+This call asks which touches occurred within a view. Here, in fits naturally.
+
+12
+00:00:57,550 --> 00:01:03,980
+The proposal identified nearly 200 imported APIs that needed renaming or backticks.
+
+13
+00:01:05,330 --> 00:01:09,980
+About 90% of the keyword conflicts involved in.
+
+14
+00:01:10,600 --> 00:01:15,050
+The proposal also considered making an exception just for in.
+
+15
+00:01:15,670 --> 00:01:20,850
+Other keywords, like protocol below, would still need backticks under that approach.
+
+16
+00:01:21,470 --> 00:01:30,490
+The adopted rule uses position. Inside a call, a name followed by a colon can be read as a label.
+
+17
+00:01:31,840 --> 00:01:35,280
+A declaration could now use in before the list as well.
+
+18
+00:01:35,900 --> 00:01:41,880
+In declarations of that era, inout, var and let specified properties of a parameter.
+
+19
+00:01:42,500 --> 00:01:47,150
+Using inout itself as a name still required backticks.
+
+20
+00:01:48,500 --> 00:01:55,940
+Implementation was recorded in December 2015. Swift 2.2 shipped in March 2016.
+
+21
+00:01:56,530 --> 00:01:59,770
+Let's remove both backticks from the original call.
+
+22
+00:02:00,390 --> 00:02:07,500
+Both calls produce 1 in modern Swift. Array indices start at zero.
+
+23
+00:02:08,120 --> 00:02:14,570
+The search is unchanged. We can now read in directly as the place to look.

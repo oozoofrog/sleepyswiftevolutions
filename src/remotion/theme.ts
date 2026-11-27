@@ -37,9 +37,11 @@ export const THEME = {
 } as const;
 
 export const FONT_SANS =
-  '"Pretendard", "Apple SD Gothic Neo", "Nanum Gothic", -apple-system, BlinkMacSystemFont, sans-serif';
+  '-apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif';
 
-export const FONT_MONO = '"D2Coding", "SF Mono", "JetBrains Mono", Menlo, monospace';
+export const FONT_LABEL = '"Atkinson Hyperlegible Next", ' + FONT_SANS;
+
+export const FONT_MONO = 'Menlo, "Apple SD Gothic Neo", monospace';
 
 export const SYNTAX_COLORS: Record<SwiftTokenKind, string> = {
   keyword: "#FF91C8",

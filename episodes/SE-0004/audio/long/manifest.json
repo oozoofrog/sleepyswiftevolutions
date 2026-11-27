@@ -1,0 +1,215 @@
+{
+  "proposalId": "SE-0004",
+  "format": "long",
+  "provider": "qwen3-clone",
+  "voice": "voice-profile",
+  "fps": 30,
+  "totalDurationSec": 127.345,
+  "totalFrames": 3821,
+  "generatedAt": "2026-11-27T00:32:47.209Z",
+  "scenes": [
+    {
+      "sceneId": "01-question",
+      "endingDigest": "ae1ce2b4d1b6c6fd4460578b5e44f7c3bfe14becf384e050b2116f7f4f5cb5f3",
+      "audioFile": "long/01-question.mp3",
+      "durationSec": 10.885,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 12.185,
+      "startSec": 0,
+      "endSec": 12.185,
+      "cues": [
+        {
+          "startSec": 0.665,
+          "endSec": 3.805,
+          "text": "오늘은 예전 스위프트 코드 한 줄을 살펴봅니다."
+        },
+        {
+          "startSec": 4.425,
+          "endSec": 5.595,
+          "text": "넷에서 시작합니다."
+        },
+        {
+          "startSec": 6.215,
+          "endSec": 11.285,
+          "text": "더하기 기호가 뒤에 붙으면 어떤 숫자가 저장될지 잠시 생각해 봅니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "02-order",
+      "endingDigest": "000662509f8227204af03cb647b98231369098d27e91051da24fd7a3381f3c25",
+      "audioFile": "long/02-order.mp3",
+      "durationSec": 9.74,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 11.04,
+      "startSec": 12.185,
+      "endSec": 23.225,
+      "cues": [
+        {
+          "startSec": 12.625,
+          "endSec": 17.215,
+          "text": "먼저 넷을 저장하고 나서 원래 변수의 값을 다섯으로 올립니다."
+        },
+        {
+          "startSec": 17.805,
+          "endSec": 22.325,
+          "text": "기호를 변수 앞에 붙였다면 먼저 값을 올려서 다섯을 저장했습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "03-choice",
+      "endingDigest": "498cef58e6f75e0a29bfece6949235e60dd5fb719c3babb18210a80be8055de9",
+      "audioFile": "long/revision-vYEsJQ/03-choice.mp3",
+      "durationSec": 24.13,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 25.43,
+      "startSec": 23.225,
+      "endSec": 48.655,
+      "cues": [
+        {
+          "startSec": 23.675,
+          "endSec": 27.895,
+          "text": "크리스 래트너가 남긴 가장 이른 기록은 이천십오년 십일월입니다."
+        },
+        {
+          "startSec": 28.515,
+          "endSec": 31.415,
+          "text": "문서를 열어 보면 이미 채택됐다고 적혀 있습니다."
+        },
+        {
+          "startSec": 32.035,
+          "endSec": 36.175,
+          "text": "제안서에는 값을 돌려주는 기능만 없애는 대안도 나옵니다."
+        },
+        {
+          "startSec": 36.795,
+          "endSec": 40.635,
+          "text": "그렇게 하면 기호를 앞에 쓰든 뒤에 쓰든 같은 일을 합니다."
+        },
+        {
+          "startSec": 41.255,
+          "endSec": 47.755,
+          "text": "이미 한 줄로 하나를 더할 수 있는데, 같은 뜻의 표기를 둘 더 배울 이유가 줄어듭니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "03b-debate",
+      "endingDigest": "25c6e0fcff858dade5f961a1cf720d02534d730c9c098bef8353c369023b4ff5",
+      "audioFile": "long/revision-vYEsJQ/03b-debate.mp3",
+      "durationSec": 29.51,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 30.81,
+      "startSec": 48.655,
+      "endSec": 79.465,
+      "cues": [
+        {
+          "startSec": 49.105,
+          "endSec": 52.925,
+          "text": "그해 십이월, 데이비드 자지키는 한 걸음 더 나아갑니다."
+        },
+        {
+          "startSec": 53.545,
+          "endSec": 59.255,
+          "text": "개발자가 직접 만든 기호까지 값 뒤에 붙이지 못하게 하면 어떻겠냐는 질문입니다."
+        },
+        {
+          "startSec": 59.875,
+          "endSec": 62.755,
+          "text": "조너선 헐에게는 이미 쓰고 있는 코드가 있었습니다."
+        },
+        {
+          "startSec": 63.375,
+          "endSec": 69.035,
+          "text": "문법 규칙 뒤에 별표를 붙이면 그 규칙을 몇 번이든 반복할 수 있다는 뜻이었습니다."
+        },
+        {
+          "startSec": 69.655,
+          "endSec": 71.995,
+          "text": "자지키도 그 쓰임에 동의했습니다."
+        },
+        {
+          "startSec": 72.615,
+          "endSec": 78.565,
+          "text": "그가 문제 삼은 건 같은 기호를 앞에 두느냐 뒤에 두느냐에 따라 뜻까지 달라지는 점이었습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "04-release",
+      "endingDigest": "d36426735b1a157f06af163fad06c068e920820f2e204f1cdc86638eef7756df",
+      "audioFile": "long/revision-vYEsJQ/04-release.mp3",
+      "durationSec": 22.33,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 23.63,
+      "startSec": 79.465,
+      "endSec": 103.095,
+      "cues": [
+        {
+          "startSec": 79.895,
+          "endSec": 85.045,
+          "text": "이천십육년 삼월에 나온 스위프트 이 점 이에서는 이 기호를 쓰면 경고가 떴습니다."
+        },
+        {
+          "startSec": 85.665,
+          "endSec": 89.635,
+          "text": "옛 코드를 고치려면 컴파일러가 그 기호를 알아봐야 했습니다."
+        },
+        {
+          "startSec": 90.255,
+          "endSec": 95.845,
+          "text": "래트너는 사월에 경고를 오류로 바꾸고, 수정할 곳을 알려 주는 진단을 남겼습니다."
+        },
+        {
+          "startSec": 96.465,
+          "endSec": 102.195,
+          "text": "그해 구월, 스위프트 삼에서 하나를 더하거나 빼던 네 가지 표기가 모두 사라졌습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "05-answer",
+      "endingDigest": "5fa276d384bd32a13365b868615554ff8c5592f92574016265c875331b7195b0",
+      "audioFile": "long/revision-bDDON4/05-answer.mp3",
+      "durationSec": 22.95,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 24.25,
+      "startSec": 103.095,
+      "endSec": 127.345,
+      "cues": [
+        {
+          "startSec": 103.545,
+          "endSec": 105.795,
+          "text": "처음 본 코드에서 답은 넷입니다."
+        },
+        {
+          "startSec": 106.415,
+          "endSec": 107.885,
+          "text": "먼저 넷을 저장합니다."
+        },
+        {
+          "startSec": 108.505,
+          "endSec": 112.025,
+          "text": "그다음에 원래 변수의 값이 다섯으로 바뀝니다."
+        },
+        {
+          "startSec": 112.615,
+          "endSec": 118.405,
+          "text": "예전에는 이 순서를 알려면 더하기 기호가 앞에 붙었는지 뒤에 붙었는지 봐야 했습니다."
+        },
+        {
+          "startSec": 119.025,
+          "endSec": 126.445,
+          "text": "스위프트가 이 기호를 없앤 건, 다음 사람이 두 줄을 위에서부터 읽는 것만으로 같은 답을 얻을 수 있게 하려는 선택이었습니다."
+        }
+      ]
+    }
+  ]
+}

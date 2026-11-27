@@ -1,0 +1,27 @@
+1
+00:00:00,333 --> 00:00:02,183
+This code looks for 7 in a list.
+
+2
+00:00:02,700 --> 00:00:07,233
+Early Swift put backticks around the in that tells us where to look.
+
+3
+00:00:08,192 --> 00:00:10,575
+In a loop, in is part of the grammar.
+
+4
+00:00:11,092 --> 00:00:15,658
+In a call, the colon after it identifies it as a label.
+
+5
+00:00:16,175 --> 00:00:21,492
+Swift 2.2, released in March 2016, allowed the backticks to be omitted here.
+
+6
+00:00:22,450 --> 00:00:24,442
+The call with backticks still works.
+
+7
+00:00:24,958 --> 00:00:29,375
+Both calls find the same 7 in the same list. Both return 1.

@@ -11,6 +11,8 @@ import { type AudioManifest, AudioManifestSchema, type EpisodeScript } from "../
 import { loadAndValidateScript } from "../script-generator";
 import { getAuthorizedYouTubeClient } from "./auth";
 
+import { checkEndings, checkRenderedFile } from "../ending-check";
+
 export interface UploadEpisodeOptions {
   format?: VideoFormat | "both";
   privacy?: YouTubePrivacy;
@@ -126,6 +128,9 @@ export async function buildUploadPayload(
     fileExistsAndSize(subtitlesPath),
   ]);
 
+  if (videoInfo.exists && await checkEndings(script, format, manifest)) {
+    await checkRenderedFile(videoPath, manifest!, false);
+  }
   const meta = script.youtube[format];
   let title = meta.title.trim();
   if (format === "short" && !/#shorts/i.test(title) && title.length <= 92) {

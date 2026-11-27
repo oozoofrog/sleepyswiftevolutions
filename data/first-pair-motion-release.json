@@ -1,0 +1,57 @@
+{
+  "Bp3WBFXDxLc": {
+    "ep": "SE-0001",
+    "fmt": "long",
+    "old": "Bp3WBFXDxLc",
+    "title": "백틱이 사라졌다",
+    "newId": "hIp_bxKm9oU",
+    "thumb": true,
+    "captions": [
+      "en",
+      "ko",
+      "ja",
+      "ko",
+      "zh-Hans"
+    ],
+    "originalRecord": {
+      "videoId": "Bp3WBFXDxLc",
+      "url": "https://youtu.be/Bp3WBFXDxLc",
+      "uploadedAt": "2026-11-25T18:18:11.272Z",
+      "privacyStatus": "public",
+      "title": "백틱이 사라졌다",
+      "playlists": [
+        "Swift Evolution 처음부터 끝까지"
+      ],
+      "captionsUploaded": true,
+      "thumbnailUploaded": false
+    },
+    "originalPrivacyVerified": "unlisted",
+    "newPrivacyVerified": "unlisted"
+  },
+  "7Z5pgqvliU4": {
+    "ep": "SE-0001",
+    "fmt": "short",
+    "old": "7Z5pgqvliU4",
+    "title": "백틱이 사라졌다",
+    "newId": "r3FHVOt7NSg",
+    "originalPrivacyVerified": "unlisted",
+    "newPrivacyVerified": "unlisted"
+  },
+  "yyuOi1WzzRA": {
+    "ep": "SE-0002",
+    "fmt": "long",
+    "old": "yyuOi1WzzRA",
+    "title": "두 번째 괄호가 함수 선언에서 사라졌다",
+    "newId": "QzViUpMYnu4",
+    "thumb": true,
+    "originalPrivacyVerified": "unlisted"
+  },
+  "f_8nk8azIzw": {
+    "ep": "SE-0002",
+    "fmt": "short",
+    "old": "f_8nk8azIzw",
+    "title": "두 번째 괄호가 함수 선언에서 사라졌다",
+    "newId": "drFIAV2nfOI",
+    "originalPrivacyVerified": "unlisted"
+  }
+}

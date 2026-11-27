@@ -4,274 +4,278 @@
   "provider": "qwen3-clone",
   "voice": "voice-profile",
   "fps": 30,
-  "totalDurationSec": 153.17,
-  "totalFrames": 4596,
-  "generatedAt": "2026-11-26T06:28:04.866Z",
+  "totalDurationSec": 140.9,
+  "totalFrames": 4227,
+  "generatedAt": "2026-11-26T14:07:36.279Z",
   "scenes": [
     {
       "sceneId": "01-hook",
-      "audioFile": "long/revision-a9om0A/01-hook.mp3",
-      "durationSec": 18.6,
+      "endingDigest": "a320a64f1086d466ca23d483285b0cd7a1e494049c83b3b2059bdb588d5b667f",
+      "audioFile": "long/opening-retake/01-hook.wav",
+      "durationSec": 13.04,
       "leadInSec": 0.4,
       "tailPadSec": 0.9,
-      "totalDurationSec": 19.9,
+      "totalDurationSec": 14.34,
       "startSec": 0,
-      "endSec": 19.9,
+      "endSec": 14.34,
       "cues": [
         {
-          "startSec": 0.4,
-          "endSec": 2.8,
-          "text": "오늘도 코드 한 줄을 함께 살펴봅니다."
+          "startSec": 0.45,
+          "endSec": 2.95,
+          "text": "이 덧셈에는 괄호가 두 쌍 있습니다."
         },
         {
-          "startSec": 3.25,
-          "endSec": 6.37,
-          "text": "예전 스위프트에서는 함수를 이렇게 쓰기도 했습니다."
+          "startSec": 3.57,
+          "endSec": 6.43,
+          "text": "첫 괄호에 2를 넣고 잠깐 멈춥니다."
         },
         {
-          "startSec": 6.82,
-          "endSec": 11.06,
-          "text": "함수 이름은 하나인데, 옆에 괄호가 두 쌍 있습니다."
+          "startSec": 7.05,
+          "endSec": 10.32,
+          "text": "이때 돌아온 것은 두 번째 숫자를 기다리는 함수입니다."
         },
         {
-          "startSec": 11.51,
-          "endSec": 15.35,
-          "text": "먼저 2를 넣으면, 그 수를 기억하는 함수가 돌아옵니다."
-        },
-        {
-          "startSec": 15.8,
-          "endSec": 19,
-          "text": "그 함수에 3을 넣으면, 그때 5가 나옵니다."
+          "startSec": 10.94,
+          "endSec": 13.44,
+          "text": "그 함수에 3을 건네면 5가 나옵니다."
         }
       ]
     },
     {
       "sceneId": "02-history",
+      "endingDigest": "147e3b13f7842d83ac69681396019269711340c5b5ee04517d76506b81722ac0",
       "audioFile": "long/02-history.mp3",
-      "durationSec": 9.41,
+      "durationSec": 9.13,
       "leadInSec": 0.4,
       "tailPadSec": 0.9,
-      "totalDurationSec": 10.71,
-      "startSec": 19.9,
-      "endSec": 30.61,
+      "totalDurationSec": 10.43,
+      "startSec": 14.34,
+      "endSec": 24.77,
       "cues": [
         {
-          "startSec": 20.3,
-          "endSec": 24.3,
+          "startSec": 14.79,
+          "endSec": 18.94,
           "text": "이 문법을 없애자는 제안은 2015년 11월에 나왔습니다."
         },
         {
-          "startSec": 24.75,
-          "endSec": 29.71,
+          "startSec": 19.54,
+          "endSec": 23.87,
           "text": "이듬해 1월에 구현됐고, 9월에 나온 Swift 3에 반영됐습니다."
         }
       ]
     },
     {
       "sceneId": "03-old",
+      "endingDigest": "543965c6a902ae0e06c7ac8b6a1af77772ca58f8f9388a38c2b37973e6c20458",
       "audioFile": "long/03-old.mp3",
-      "durationSec": 13.09,
+      "durationSec": 10.98,
       "leadInSec": 0.4,
       "tailPadSec": 0.9,
-      "totalDurationSec": 14.39,
-      "startSec": 30.61,
-      "endSec": 45,
+      "totalDurationSec": 12.28,
+      "startSec": 24.77,
+      "endSec": 37.05,
       "cues": [
         {
-          "startSec": 31.01,
-          "endSec": 37.01,
+          "startSec": 25.22,
+          "endSec": 29.98,
           "text": "예전에는 함수를 선언할 때 괄호 두 쌍을 나란히 쓸 수 있었습니다."
         },
         {
-          "startSec": 37.46,
-          "endSec": 44.1,
+          "startSec": 30.6,
+          "endSec": 36.15,
           "text": "여러 값을 받는 함수를 이렇게 값을 하나씩 받는 함수로 나누는 방식을 커링이라고 합니다."
         }
       ]
     },
     {
       "sceneId": "03-why",
-      "audioFile": "long/revision-iUvkAr/03-why.mp3",
-      "durationSec": 20.47,
+      "endingDigest": "4772c08ecdaaf54fbd00abbd553e6d960af79ccdad6d3bc8d3625f62f32826da",
+      "audioFile": "long/03-why.mp3",
+      "durationSec": 20.57,
       "leadInSec": 0.4,
       "tailPadSec": 0.9,
-      "totalDurationSec": 21.77,
-      "startSec": 45,
-      "endSec": 66.77,
+      "totalDurationSec": 21.87,
+      "startSec": 37.05,
+      "endSec": 58.92,
       "cues": [
         {
-          "startSec": 45.4,
-          "endSec": 49.8,
+          "startSec": 37.5,
+          "endSec": 41.99,
           "text": "제안을 쓴 조 그로프가 짚은 문제는 두 번째 괄호에서 시작합니다."
         },
         {
-          "startSec": 50.25,
-          "endSec": 54.33,
+          "startSec": 42.61,
+          "endSec": 46.72,
           "text": "같은 함수의 다음 인자로 보면 이름을 붙이는 규칙도 이어집니다."
         },
         {
-          "startSec": 54.78,
-          "endSec": 58.14,
+          "startSec": 47.34,
+          "endSec": 50.62,
           "text": "새 함수의 첫 인자로 보면 이야기가 달라집니다."
         },
         {
-          "startSec": 58.59,
-          "endSec": 65.87,
+          "startSec": 51.24,
+          "endSec": 58.02,
           "text": "그로프는 표준 라이브러리에서도 드물게 쓰는 표기를 위해 이런 규칙을 계속 늘릴 이유가 적다고 봤습니다."
         }
       ]
     },
     {
       "sceneId": "04-edit",
-      "audioFile": "long/revision-iUvkAr/04-edit.mp3",
-      "durationSec": 20.55,
+      "endingDigest": "06b249a1146bfe373e39c7878087b13bbe45b3ce6eec04279adaffa315d048ac",
+      "audioFile": "long/04-edit.mp3",
+      "durationSec": 18,
       "leadInSec": 0.4,
       "tailPadSec": 0.9,
-      "totalDurationSec": 21.85,
-      "startSec": 66.77,
-      "endSec": 88.62,
+      "totalDurationSec": 19.3,
+      "startSec": 58.92,
+      "endSec": 78.22,
       "cues": [
         {
-          "startSec": 67.17,
-          "endSec": 70.85,
+          "startSec": 59.37,
+          "endSec": 62.99,
           "text": "처음 남아 있는 제안서에는 이미 채택됐다고 적혀 있습니다."
         },
         {
-          "startSec": 71.3,
-          "endSec": 76.98,
+          "startSec": 63.61,
+          "endSec": 68.15,
           "text": "그 뒤 12월에는 새 문법을 설명하는 예제 자체가 한 번 고쳐졌습니다."
         },
         {
-          "startSec": 77.43,
-          "endSec": 80.95,
+          "startSec": 68.77,
+          "endSec": 71.66,
           "text": "처음 코드에서는 인자가 함수처럼 보였습니다."
         },
         {
-          "startSec": 81.4,
-          "endSec": 87.72,
+          "startSec": 72.28,
+          "endSec": 77.32,
           "text": "닫는 괄호를 앞으로 옮기자 문자열을 받아 숫자를 돌려준다는 뜻이 분명해졌습니다."
         }
       ]
     },
     {
       "sceneId": "04-new",
+      "endingDigest": "ed98f45d223b3e174e2c41523ef876fdead12ee3058adb0562c2475a3247007c",
       "audioFile": "long/04-new.mp3",
-      "durationSec": 14.79,
+      "durationSec": 13.57,
       "leadInSec": 0.4,
       "tailPadSec": 0.9,
-      "totalDurationSec": 16.09,
-      "startSec": 88.62,
-      "endSec": 104.71,
+      "totalDurationSec": 14.87,
+      "startSec": 78.22,
+      "endSec": 93.09,
       "cues": [
         {
-          "startSec": 89.02,
-          "endSec": 91.02,
+          "startSec": 78.67,
+          "endSec": 81,
           "text": "달라진 부분은 함수 선언입니다."
         },
         {
-          "startSec": 91.47,
-          "endSec": 96.99,
+          "startSec": 81.62,
+          "endSec": 86.01,
           "text": "두 번째 괄호 대신 화살표 뒤에 돌려줄 함수의 타입을 적습니다."
         },
         {
-          "startSec": 97.44,
-          "endSec": 100.96,
+          "startSec": 86.63,
+          "endSec": 89.23,
           "text": "아래 중괄호 안에 있는 코드가 클로저입니다."
         },
         {
-          "startSec": 101.41,
-          "endSec": 103.81,
+          "startSec": 89.85,
+          "endSec": 92.19,
           "text": "나중에 받은 수를 처음 수에 더합니다."
         }
       ]
     },
     {
       "sceneId": "05-result",
+      "endingDigest": "f589b07648748fa7080d3aef5fb247eca3ad150335d1123013bd0d985535429b",
       "audioFile": "long/05-result.mp3",
-      "durationSec": 6.05,
+      "durationSec": 5.81,
       "leadInSec": 0.4,
       "tailPadSec": 0.9,
-      "totalDurationSec": 7.35,
-      "startSec": 104.71,
-      "endSec": 112.06,
+      "totalDurationSec": 7.11,
+      "startSec": 93.09,
+      "endSec": 100.2,
       "cues": [
         {
-          "startSec": 105.11,
-          "endSec": 108.07,
+          "startSec": 93.54,
+          "endSec": 96.62,
           "text": "이 함수는 처음에 받은 숫자 2를 기억합니다."
         },
         {
-          "startSec": 108.52,
-          "endSec": 111.16,
+          "startSec": 97.24,
+          "endSec": 99.3,
           "text": "여기에 3을 넣으면 5가 나옵니다."
         }
       ]
     },
     {
       "sceneId": "05-debate",
-      "audioFile": "long/revision-iUvkAr/05-debate.mp3",
-      "durationSec": 25.24,
+      "endingDigest": "9f71f766feb1551dfaf79ed942009804f45ce719debf7138084489b18c17eaef",
+      "audioFile": "long/05-debate.mp3",
+      "durationSec": 25.82,
       "leadInSec": 0.4,
       "tailPadSec": 0.9,
-      "totalDurationSec": 26.54,
-      "startSec": 112.06,
-      "endSec": 138.6,
+      "totalDurationSec": 27.12,
+      "startSec": 100.2,
+      "endSec": 127.32,
       "cues": [
         {
-          "startSec": 112.46,
-          "endSec": 115.58,
+          "startSec": 100.65,
+          "endSec": 103.79,
           "text": "선언 문법을 없앤 뒤에도 질문은 남았습니다."
         },
         {
-          "startSec": 116.03,
-          "endSec": 123.07,
+          "startSec": 104.41,
+          "endSec": 110.82,
           "text": "에리카 새던과 다비데 데 프란체스키는 나중에 채울 인자 자리에 밑줄을 쓰자는 초안을 냈습니다."
         },
         {
-          "startSec": 123.52,
-          "endSec": 128.56,
+          "startSec": 111.44,
+          "endSec": 116.54,
           "text": "크리스 래트너는 밑줄이 이미 값을 버린다는 뜻으로 쓰인다고 지적했습니다."
         },
         {
-          "startSec": 129.01,
-          "endSec": 134.61,
+          "startSec": 117.13,
+          "endSec": 122.4,
           "text": "같은 기호가 여기서는 값을 기다린다는 뜻이 되니 헷갈릴 수 있다는 의견이었습니다."
         },
         {
-          "startSec": 135.06,
-          "endSec": 137.7,
+          "startSec": 123.02,
+          "endSec": 126.42,
           "text": "이 밑줄 표기는 이번 결정에 포함되지 않았습니다."
         }
       ]
     },
     {
       "sceneId": "06-close",
+      "endingDigest": "903e4862def67729d582037e3a5092eb5ae5b10960545ff9a61dd4bd01479c7e",
       "audioFile": "long/06-close.mp3",
-      "durationSec": 13.27,
+      "durationSec": 12.28,
       "leadInSec": 0.4,
       "tailPadSec": 0.9,
-      "totalDurationSec": 14.57,
-      "startSec": 138.6,
-      "endSec": 153.17,
+      "totalDurationSec": 13.58,
+      "startSec": 127.32,
+      "endSec": 140.9,
       "cues": [
         {
-          "startSec": 139,
-          "endSec": 140.68,
+          "startSec": 127.77,
+          "endSec": 129.51,
           "text": "처음 본 코드로 돌아갑니다."
         },
         {
-          "startSec": 141.13,
-          "endSec": 144.73,
+          "startSec": 130.13,
+          "endSec": 133.1,
           "text": "호출할 때는 여전히 괄호를 두 번 쓸 수 있습니다."
         },
         {
-          "startSec": 145.18,
-          "endSec": 150.22,
+          "startSec": 133.72,
+          "endSec": 137.7,
           "text": "Swift 3에서 사라진 부분은 함수 선언의 두 번째 괄호입니다."
         },
         {
-          "startSec": 150.67,
-          "endSec": 152.27,
+          "startSec": 138.32,
+          "endSec": 140,
           "text": "오늘은 여기서 마칩니다."
         }
       ]

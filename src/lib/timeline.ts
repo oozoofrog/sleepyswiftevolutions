@@ -1,5 +1,5 @@
 import { narrationSegments, SCENE_PADDING, sentencePauseSec } from "./pacing";
-import type { AudioManifest, EpisodeScript, Scene, SubtitleCue } from "../schema/script";
+import type { AudioManifest, CodeTarget, EpisodeScript, Scene, SubtitleCue } from "../schema/script";
 import { buildFallbackCues } from "./subtitle";
 
 export const DEFAULT_FPS = 30;
@@ -31,6 +31,7 @@ export function getEffectiveShortsScenes(script: EpisodeScript): Scene[] {
 
 export interface ResolvedSceneTiming {
   scene: Scene;
+  repeatedTargets?: ReadonlySet<CodeTarget>;
   startSec: number;
   endSec: number;
   startFrame: number;
@@ -38,6 +39,24 @@ export interface ResolvedSceneTiming {
   leadInFrames: number;
   audioFile?: string;
   cues: SubtitleCue[];
+}
+
+function markRepeatedTargets(scenes: ResolvedSceneTiming[]): ResolvedSceneTiming[] {
+  const seen = new Set<string>();
+  return scenes.map(timing => {
+    const repeatedTargets = new Set<CodeTarget>();
+    for (const part of timing.scene.speech ?? []) {
+      for (const ref of part.direction?.references ?? []) {
+        const targets = ref.targets ?? [];
+        for (const target of targets) {
+          if (seen.has(target.text)) repeatedTargets.add(target);
+        }
+        // Targets named together share the same first mention.
+        for (const target of targets) seen.add(target.text);
+      }
+    }
+    return { ...timing, repeatedTargets };
+  });
 }
 
 export interface ResolvedTimeline {
@@ -117,7 +136,7 @@ export function buildSceneTimeline(
       fps,
       totalDurationSec: manifest.totalDurationSec,
       totalFrames: Math.max(manifest.totalFrames, cursorFrame),
-      scenes: resolved,
+      scenes: markRepeatedTargets(resolved),
       allCues,
     };
   }
@@ -170,7 +189,7 @@ export function buildSceneTimeline(
     fps,
     totalDurationSec: Number(cursorSec.toFixed(3)),
     totalFrames: Math.max(1, cursorFrame),
-    scenes: resolved,
+    scenes: markRepeatedTargets(resolved),
     allCues,
   };
 }

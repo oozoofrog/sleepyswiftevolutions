@@ -8,5 +8,8 @@ secrets/
 # Generated media artifacts (comment out lines below if you want to track rendered MP4/MP3 files in git)
 episodes/*/out/*.mp4
 episodes/*/audio/**/*.mp3
+episodes/*/audio/**/*.soft.m4a
 episodes/*/audio/**/*.aiff
 episodes/*/render-props.json
+episodes/*/audio/*/gentle-endings/*.wav
+scripts/__pycache__/

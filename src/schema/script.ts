@@ -21,10 +21,31 @@ export const SceneTypeSchema = z.enum([
 ]);
 export type SceneType = z.infer<typeof SceneTypeSchema>;
 
+const DrawingCue = z.object({ cue: z.string().trim().min(1), offsetSec: z.number().nonnegative() });
+const DrawingPoint = z.object({ x: z.number(), y: z.number() });
+
+const CodePanelName = z.enum(["code", "codeBefore", "codeAfter"]);
+const CodeTargetSchema = z.object({ line: z.number().int().positive(), text: z.string().min(1) });
+export type CodeTarget = z.infer<typeof CodeTargetSchema>;
+const SpokenReference = z.object({
+  phrase: z.string().trim().min(1),
+  offsetSec: z.number().nonnegative(),
+  lines: z.array(z.number().int().positive()).min(1),
+  panel: CodePanelName.optional(),
+  targets: z.array(CodeTargetSchema).min(1).optional(),
+});
+
 const SpeechSchema = z.array(z.object({
   language: z.enum(["ko", "en"]),
   text: z.string().trim().min(1),
   caption: z.string().trim().min(1),
+  direction: z.object({
+    drawingPhase: z.enum(["ready", "move", "hold", "draw", "complete"]).optional(),
+    stages: z.array(z.string().min(1)).min(1).max(3),
+    panel: CodePanelName.optional(),
+    references: z.array(SpokenReference).optional(),
+    lines: z.array(z.number().int().positive()).optional(),
+  }).optional(),
 })).min(1);
 
 export const SceneSchema = z.object({
@@ -43,6 +64,7 @@ export const SceneSchema = z.object({
     cue: z.string().trim().min(1),
     name: z.string().trim().min(1),
     account: z.string().trim().min(1),
+    role: z.string().trim().min(1).optional(),
     profile: z.string().url(),
     photo: z.object({
       file: z.string().regex(/^people\/[\w.-]+$/),
@@ -73,6 +95,15 @@ export const SceneSchema = z.object({
   }).optional(),
   bullets: z.array(z.string()).optional(),
   badge: z.string().optional(),
+  pathDestination: DrawingPoint.optional(),
+  drawingEntrance: z.object({ mark: DrawingCue, place: DrawingCue }).optional(),
+  drawingCorners: z.array(DrawingPoint).min(1).optional(),
+  comparisonStyle: z.literal("parallel").optional(),
+  comparisonFocus: z.object({
+    cue: z.string().trim().min(1),
+    codeBefore: z.string().min(1),
+    codeAfter: z.string().min(1),
+  }).optional(),
   codeBefore: CodeSnippetSchema.optional(),
   codeAfter: CodeSnippetSchema.optional(),
   code: CodeSnippetSchema.optional(),
@@ -96,6 +127,20 @@ export const SceneSchema = z.object({
       }
     }
   }
+  if (scene.drawingEntrance) {
+    for (const event of Object.values(scene.drawingEntrance)) {
+      if (!scene.pathDestination || !scene.drawingCorners || !scene.speech?.some(part => part.caption.startsWith(event.cue))) {
+        ctx.addIssue({ code: "custom", path: ["drawingEntrance"], message: "시작점과 꼭짓점 및 대사에 있는 시작 문구가 필요합니다." });
+      }
+    }
+  }
+  const focus = scene.comparisonFocus;
+  if (focus && (scene.comparisonStyle !== "parallel" ||
+      !scene.speech?.some(part => part.caption.startsWith(focus.cue)) ||
+      (["codeBefore", "codeAfter"] as const).some(panel =>
+        scene[panel]?.code.split(focus[panel]).length !== 2 || focus[panel].includes("\n")))) {
+    ctx.addIssue({ code: "custom", path: ["comparisonFocus"], message: "비교할 두 코드에 각각 한 번 나오는 구절과 대사의 시작 문구가 필요합니다." });
+  }
   const reveal = scene.codeReveal;
   if (reveal && (!reveal.parts.some(part => typeof part !== "string") ||
       !reveal.parts.some(part => typeof part === "string") ||
@@ -106,6 +151,35 @@ export const SceneSchema = z.object({
   for (const [key, narration] of [["speech", scene.narration], ["shortSpeech", scene.shortNarration]] as const) {
     const parts = scene[key];
     if (!parts) continue;
+    if (parts.some(part => part.direction)) {
+      parts.forEach(({ direction }, index) => {
+        const snippet = direction?.panel && scene[direction.panel];
+        direction?.references?.forEach((ref, i, refs) => {
+          const panel = ref.panel ?? direction.panel;
+          const code = panel && scene[panel];
+          const targetLines = new Set<number>();
+          for (const { line, text } of ref.targets ?? []) {
+            const content = code?.code.split("\n")[line - 1] ?? "";
+            if (!ref.lines.includes(line) || targetLines.has(line) || content.indexOf(text) < 0 ||
+                content.indexOf(text) !== content.lastIndexOf(text)) {
+              ctx.addIssue({ code: "custom", path: [key, index, "direction", "references", i, "targets"],
+                message: "각 줄에서 한 번만 나오는 코드 조각을 하나씩 지정하세요." });
+            }
+            targetLines.add(line);
+          }
+          if (!code || !parts[index].caption.includes(ref.phrase) ||
+              ref.lines.some(line => line > code.code.split("\n").length) ||
+              (i > 0 && ref.offsetSec <= refs[i - 1].offsetSec)) {
+            ctx.addIssue({ code: "custom", path: [key, index, "direction", "references", i],
+              message: "대사에 있는 문구와 해당 코드 줄을 발화 시간 순서로 지정하세요." });
+          }
+        });
+        if (!direction || (direction.panel && !snippet) ||
+            direction.lines?.some(line => !snippet || line > snippet.code.split("\n").length)) {
+          ctx.addIssue({ code: "custom", path: [key, index, "direction"], message: "각 대사의 연출과 실제 코드 줄을 지정해야 합니다." });
+        }
+      });
+    }
     const compact = (value: string) => value.replace(/\s+/gu, "");
     if (!narration || compact(parts.map(part => part.caption).join("")) !== compact(narration)) {
       ctx.addIssue({ code: "custom", path: [key], message: "구간 자막을 이어 붙인 내용이 해당 narration과 일치해야 합니다." });
@@ -134,9 +208,20 @@ export const YouTubeFormatMetaSchema = z.object({
 });
 export type YouTubeFormatMeta = z.infer<typeof YouTubeFormatMetaSchema>;
 
+const MusicFile = z.string().regex(/^[a-zA-Z0-9_-]+\.(m4a|mp3|wav)$/);
+
 export const EpisodeScriptSchema = z.object({
   schemaVersion: z.literal(1),
-  backgroundMusic: z.string().regex(/^[a-zA-Z0-9_-]+\.(m4a|mp3|wav)$/).optional(),
+  visualStyle: z.literal("archive-print").optional(),
+  showStageLabels: z.boolean().optional(),
+  sceneTransition: z.enum(["fade-through", "shared-layout"]).optional(),
+  animateLineHighlight: z.boolean().optional(),
+  shortCloneTempo: z.number().min(1).max(2).optional(),
+  narrationMix: z.literal("soft").optional(),
+  backgroundMusic: z.union([
+    MusicFile,
+    z.object({ file: MusicFile, duckUnderNarration: z.literal(true) }),
+  ]).optional(),
   proposalId: z.string().regex(/^SE-\d{4,}$/),
   episodeNumber: z.number().int().positive(),
   swiftVersion: z.string().min(1),
@@ -164,6 +249,7 @@ export type SubtitleCue = z.infer<typeof SubtitleCueSchema>;
 
 export const SceneAudioEntrySchema = z.object({
   sceneId: z.string(),
+  endingDigest: z.string().regex(/^[a-f0-9]{64}$/).optional(),
   audioFile: z.string(),
   durationSec: z.number().positive(),
   leadInSec: z.number().nonnegative(),

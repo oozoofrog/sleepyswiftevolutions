@@ -4,134 +4,149 @@
   "provider": "qwen3-clone",
   "voice": "voice-profile",
   "fps": 30,
-  "totalDurationSec": 50.62,
-  "totalFrames": 1519,
-  "generatedAt": "2026-11-26T08:48:08.698Z",
+  "totalDurationSec": 62.19,
+  "totalFrames": 1866,
+  "generatedAt": "2026-11-26T11:19:01.079151+00:00",
   "scenes": [
     {
       "sceneId": "01-intro",
-      "audioFile": "short/01-intro.mp3",
-      "durationSec": 12.58,
+      "audioFile": "short/approved-vowel/01-intro.mp3",
+      "durationSec": 13.6,
       "leadInSec": 0.35,
       "tailPadSec": 0.75,
-      "totalDurationSec": 13.68,
+      "totalDurationSec": 14.7,
       "startSec": 0,
-      "endSec": 13.68,
+      "endSec": 14.7,
       "cues": [
         {
           "startSec": 0.35,
-          "endSec": 2.67,
+          "endSec": 3.33,
           "text": "오늘도 코드 한 줄을 함께 살펴봅니다."
         },
         {
-          "startSec": 3.12,
-          "endSec": 8.72,
+          "startSec": 3.9,
+          "endSec": 9.16,
           "text": "예전 스위프트에서는 함수 이름 뒤의 괄호 안에도 변수를 선언할 수 있었습니다."
         },
         {
-          "startSec": 9.17,
-          "endSec": 12.93,
+          "startSec": 9.73,
+          "endSec": 13.95,
           "text": "안에서 숫자를 바꾸면 밖에서는 어떤 값이 보일지 생각해 봅니다."
         }
-      ]
+      ],
+      "endingDigest": "afc6a22e657403a57b5e254b54bd405b7ced4086f9a0a124c98bef28847dba70"
     },
     {
       "sceneId": "02-copy",
-      "audioFile": "short/02-copy.mp3",
-      "durationSec": 7.3,
+      "audioFile": "short/approved-vowel/02-copy.mp3",
+      "durationSec": 8.08,
       "leadInSec": 0.35,
       "tailPadSec": 0.75,
-      "totalDurationSec": 8.4,
-      "startSec": 13.68,
-      "endSec": 22.08,
+      "totalDurationSec": 9.18,
+      "startSec": 14.7,
+      "endSec": 23.88,
       "cues": [
         {
-          "startSec": 14.03,
-          "endSec": 16.19,
+          "startSec": 15.05,
+          "endSec": 17.59,
           "text": "먼저 숫자 1을 함수에 건넵니다."
         },
         {
-          "startSec": 16.64,
-          "endSec": 18.24,
+          "startSec": 18.16,
+          "endSec": 19.86,
           "text": "안쪽 숫자가 2가 됩니다."
         },
         {
-          "startSec": 18.69,
-          "endSec": 21.33,
+          "startSec": 20.43,
+          "endSec": 23.13,
           "text": "바깥 변수에는 여전히 1이 남습니다."
         }
-      ]
+      ],
+      "endingDigest": "2ec7edc4dd8cc492d0f6753a5f323737211fad96b7d955954c0254d4a3dc4af2"
     },
     {
       "sceneId": "03-writeback",
-      "audioFile": "short/03-writeback.mp3",
-      "durationSec": 10.98,
+      "audioFile": "short/approved-vowel/03-writeback.mp3",
+      "durationSec": 10.47,
       "leadInSec": 0.35,
       "tailPadSec": 0.75,
-      "totalDurationSec": 12.08,
-      "startSec": 22.08,
-      "endSec": 34.16,
+      "totalDurationSec": 11.57,
+      "startSec": 23.88,
+      "endSec": 35.45,
       "cues": [
         {
-          "startSec": 22.43,
-          "endSec": 27.15,
+          "startSec": 24.23,
+          "endSec": 28.74,
           "text": "이번에는 호출할 때 변수 이름 앞에 앰퍼샌드 기호를 붙입니다."
         },
         {
-          "startSec": 27.6,
-          "endSec": 29.52,
+          "startSec": 29.31,
+          "endSec": 31.01,
           "text": "안쪽 숫자가 2가 됩니다."
         },
         {
-          "startSec": 29.97,
-          "endSec": 33.41,
+          "startSec": 31.58,
+          "endSec": 34.7,
           "text": "함수가 끝나면 바깥 변수에도 2가 기록됩니다."
         }
-      ]
+      ],
+      "endingDigest": "40289785b3c776e9fe26a270112b680eb4ba12c261ac8ea2e7ca22dc993d565f"
     },
     {
       "sceneId": "04-short-history",
-      "audioFile": "short/04-short-history.mp3",
-      "durationSec": 4.88,
+      "audioFile": "short/approved-vowel/04-short-history.mp3",
+      "durationSec": 14.94,
       "leadInSec": 0.35,
       "tailPadSec": 0.75,
-      "totalDurationSec": 5.98,
-      "startSec": 34.16,
-      "endSec": 40.14,
+      "totalDurationSec": 16.04,
+      "startSec": 35.45,
+      "endSec": 51.49,
       "cues": [
         {
-          "startSec": 34.51,
-          "endSec": 39.39,
-          "text": "2015년에 나온 이 제안은 이듬해 스위프트 3에 반영됐습니다."
+          "startSec": 35.8,
+          "endSec": 40.35,
+          "text": "애슐리 갈런드는 매개변수와 조건문에서 var를 빼자고 했습니다."
+        },
+        {
+          "startSec": 40.92,
+          "endSec": 46.18,
+          "text": "조 그로프는 조건문에서 꺼낸 값을 원래 값으로 착각하기 쉽다고 지적했습니다."
+        },
+        {
+          "startSec": 46.75,
+          "endSec": 50.74,
+          "text": "이듬해 스위프트 3에서는 매개변수의 var만 사라졌습니다."
         }
-      ]
+      ],
+      "endingDigest": "c6b6d765d6cb3e2d594937529ed76bd722157bddd45ffdfa8500281d25f7e345"
     },
     {
       "sceneId": "07-outro",
-      "audioFile": "short/07-outro.mp3",
-      "durationSec": 9.38,
+      "audioFile": "short/approved-vowel/07-outro.mp3",
+      "durationSec": 9.6,
       "leadInSec": 0.35,
       "tailPadSec": 0.75,
-      "totalDurationSec": 10.48,
-      "startSec": 40.14,
-      "endSec": 50.62,
+      "totalDurationSec": 10.7,
+      "startSec": 51.49,
+      "endSec": 62.19,
       "cues": [
         {
-          "startSec": 40.49,
-          "endSec": 43.37,
+          "startSec": 51.84,
+          "endSec": 54.6,
           "text": "처음 코드에서 밖에 남는 숫자는 1입니다."
         },
         {
-          "startSec": 43.82,
-          "endSec": 47.58,
+          "startSec": 55.17,
+          "endSec": 59.39,
           "text": "함수 안의 변수가 사라진 게 아니라, 선언하는 자리가 바뀌었습니다."
         },
         {
-          "startSec": 48.03,
-          "endSec": 49.87,
+          "startSec": 59.96,
+          "endSec": 61.44,
           "text": "오늘은 여기서 마칩니다."
         }
-      ]
+      ],
+      "endingDigest": "6cae2caa28d2398ed49297eb04586ce93e3ea7305fbaab77f1724dc41dd92c33"
     }
   ]
 }

@@ -140,3 +140,26 @@ test("a rendered landscape video does not mark the voiced Short as rendered", ()
   assert.equal(productionStage(episode), "voiced");
   assert.equal(productionStage(undefined), "pending");
 });
+
+test("code focus counts exact spellings across scenes and starts fresh in each edition", () => {
+  const scene = (id: string) => ({
+    ...SAMPLE_SCRIPT.scenes[0], id, narration: "점을 만듭니다.", code: { code: "CGPoint" },
+    speech: [{ language: "ko" as const, text: "점을 만듭니다.", caption: "점을 만듭니다.",
+      direction: { stages: ["점"], panel: "code" as const,
+        references: [{ phrase: "점", offsetSec: 0.1, lines: [1], targets: [{ line: 1, text: "Point" }] }] } }],
+  });
+  const first = scene("first");
+  const second = scene("second");
+  const script = { ...SAMPLE_SCRIPT, scenes: [first, second, scene("outro")], shortsScenes: [second, scene("short-outro")] };
+  const long = buildSceneTimeline(script, "long");
+  const short = buildSceneTimeline(script, "short");
+  assert.equal(long.scenes[0].repeatedTargets?.size, 0);
+  const target = second.speech[0].direction.references[0].targets[0];
+  assert.ok(long.scenes[1].repeatedTargets?.has(target));
+  assert.equal(short.scenes[0].repeatedTargets?.size, 0);
+  assert.ok(EpisodeScriptSchema.safeParse(script).success);
+  second.code.code = "CGPoint + CGPoint";
+  assert.equal(EpisodeScriptSchema.safeParse(script).success, false);
+  second.code.code = "end";
+  assert.equal(EpisodeScriptSchema.safeParse(script).success, false);
+});

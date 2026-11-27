@@ -126,3 +126,11 @@ general.
 ```
 
 연혁 출처는 [SE-0001 제작 저널](../../_context/production-journal.md)을 참조하세요.
+
+Use the Korean ending release check in the project production skill. Compare the final export at its delivery speed with the approved two-line sample.
+
+For noise review, select a quiet passage and a sentence ending from the same take. Use the voice-only comparison in the narration guide.
+
+For opening-only hiss, compare the isolated first sentence to the approved opening retake before assembling the episode.
+
+Use the series opening lead-in and listen to the first intended consonant at final playback speed.

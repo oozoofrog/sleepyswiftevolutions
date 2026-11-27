@@ -8,6 +8,7 @@ export const SCENE_PADDING = {
 export function sentencePauseSec(spoken: string): number {
   const end = spoken.trim().replace(/["'”’）)]+$/u, "");
   if (/[?？]$/u.test(end)) return 0.65;
+  if (/다[.!。！]$/u.test(end)) return 0.57;
   return /[.!。！]$/u.test(end) ? 0.45 : 0;
 }
 

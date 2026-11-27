@@ -4,117 +4,88 @@
   "provider": "qwen3-clone",
   "voice": "voice-profile",
   "fps": 30,
-  "totalDurationSec": 46.751,
-  "totalFrames": 1403,
-  "generatedAt": "2026-11-25T17:49:40.740Z",
+  "totalDurationSec": 36,
+  "totalFrames": 1080,
+  "generatedAt": "2026-11-26T14:02:28.048Z",
   "scenes": [
     {
-      "sceneId": "s01-hook",
-      "audioFile": "short/s01-hook.mp3",
-      "durationSec": 7.13,
+      "sceneId": "s01-find",
+      "audioFile": "short/opening-retake/s01-find.wav",
+      "durationSec": 8.33,
       "leadInSec": 0.35,
       "tailPadSec": 0.75,
-      "totalDurationSec": 8.23,
+      "totalDurationSec": 9.43,
       "startSec": 0,
-      "endSec": 8.23,
+      "endSec": 9.43,
       "cues": [
         {
-          "startSec": 0.43,
-          "endSec": 3.87,
-          "text": "이 코드에서 지워도 되는 글자 두 개, 보이죠?"
+          "startSec": 0.4,
+          "endSec": 2.62,
+          "text": "목록에서 칠을 찾는 코드입니다."
         },
         {
-          "startSec": 4.67,
-          "endSec": 6.51,
-          "text": "in 양옆의 백틱이"
-        },
-        {
-          "startSec": 6.51,
-          "endSec": 7.23,
-          "text": "쏙 빠져요."
+          "startSec": 3.24,
+          "endSec": 8.68,
+          "text": "예전 스위프트에서는 어디에서 찾는지 알려 주는 in에 백틱을 붙였습니다."
         }
-      ]
+      ],
+      "endingDigest": "a32cf732d60e9bd888644c34ae41a03ec8bf0d42296f2aa47c7a8d458736db8d"
     },
     {
-      "sceneId": "s01-history",
-      "audioFile": "short/s01-history.mp3",
-      "durationSec": 10.53,
+      "sceneId": "s02-choice",
+      "audioFile": "short/s02-choice.mp3",
+      "durationSec": 16.01,
       "leadInSec": 0.35,
       "tailPadSec": 0.75,
-      "totalDurationSec": 11.63,
-      "startSec": 8.23,
-      "endSec": 19.86,
+      "totalDurationSec": 17.11,
+      "startSec": 9.43,
+      "endSec": 26.54,
       "cues": [
         {
-          "startSec": 8.58,
-          "endSec": 12.58,
-          "text": "이 얘기가 처음 나온 건 2015년 11월이에요."
+          "startSec": 9.83,
+          "endSec": 12.69,
+          "text": "반복문에서는 in이 문법의 일부입니다."
         },
         {
-          "startSec": 13.03,
-          "endSec": 19.11,
-          "text": "그해 12월에 구현됐고, 이듬해 3월에 나온 Swift 2.2부터 쓸 수 있었어요."
+          "startSec": 13.31,
+          "endSec": 18.79,
+          "text": "하지만 함수를 부를 때는 바로 뒤에 콜론이 있어 이름이라는 걸 알아볼 수 있습니다."
+        },
+        {
+          "startSec": 19.41,
+          "endSec": 25.79,
+          "text": "덕분에 2016년 3월에 나온 Swift 2.2부터는 이 자리의 백틱을 생략할 수 있게 됐습니다."
         }
-      ]
+      ],
+      "endingDigest": "ddffbc8fbd384cd7b873c8c0ae71d0270eb9e346adcba1fd19821fb6e08bd471"
     },
     {
-      "sceneId": "s02-compare",
-      "audioFile": "short/s02-compare.mp3",
-      "durationSec": 12.83,
+      "sceneId": "s03-result",
+      "audioFile": "short/s03-result.mp3",
+      "durationSec": 8.36,
       "leadInSec": 0.35,
       "tailPadSec": 0.75,
-      "totalDurationSec": 13.93,
-      "startSec": 19.86,
-      "endSec": 33.79,
+      "totalDurationSec": 9.46,
+      "startSec": 26.54,
+      "endSec": 36,
       "cues": [
         {
-          "startSec": 20.21,
-          "endSec": 23.01,
-          "text": "이 함수는 어디에서 값을 찾을까요?"
+          "startSec": 26.94,
+          "endSec": 29.33,
+          "text": "백틱을 쓴 호출도 계속 동작합니다."
         },
         {
-          "startSec": 23.66,
-          "endSec": 25.1,
-          "text": "in a collection."
+          "startSec": 29.95,
+          "endSec": 33.07,
+          "text": "두 줄 모두 같은 목록에서 같은 칠을 찾습니다."
         },
         {
-          "startSec": 25.55,
-          "endSec": 28.03,
-          "text": "바로 뒤에 오는 컬렉션에서 찾아요."
-        },
-        {
-          "startSec": 28.48,
-          "endSec": 33.04,
-          "text": "Swift 2.2부터는 이 레이블을 백틱 없이 쓸 수 있었어요."
+          "startSec": 33.69,
+          "endSec": 35.25,
+          "text": "결과도 일로 같습니다."
         }
-      ]
-    },
-    {
-      "sceneId": "s03-rule",
-      "audioFile": "short/s03-rule.mp3",
-      "durationSec": 11.861,
-      "leadInSec": 0.35,
-      "tailPadSec": 0.75,
-      "totalDurationSec": 12.961,
-      "startSec": 33.79,
-      "endSec": 46.751,
-      "cues": [
-        {
-          "startSec": 34.14,
-          "endSec": 37.02,
-          "text": "당시 선언부에선 세 단어가 예외였어요."
-        },
-        {
-          "startSec": 37.47,
-          "endSec": 39.71,
-          "text": "inout, var, let."
-        },
-        {
-          "startSec": 40.16,
-          "endSec": 46.0,
-          "text": "이 셋은 매개변수를 꾸밀 때도 쓰여서, 레이블로 쓰려면 백틱이 필요했어요."
-        }
-      ]
+      ],
+      "endingDigest": "d64e0aa508b0ebe9ac0439d819496506f523de42e065231ca34c46582253bc9a"
     }
   ]
 }

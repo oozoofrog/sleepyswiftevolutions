@@ -1,0 +1,139 @@
+1
+00:00:01,140 --> 00:00:03,700
+Today, we'll look at a line of code together.
+
+2
+00:00:04,365 --> 00:00:10,925
+Before Swift arrived, developers were already building iPhone apps in a programming language called Objective-C.
+
+3
+00:00:11,565 --> 00:00:17,445
+To put text or drawings on screen, they used UIKit, Apple’s toolkit for building app interfaces.
+
+4
+00:00:18,045 --> 00:00:21,905
+The second line sets the starting point for the drawing.
+
+5
+00:00:22,525 --> 00:00:27,195
+Developers writing apps in Swift could use that same UIKit feature.
+
+6
+00:00:27,845 --> 00:00:32,765
+We already created a point on the first line, yet the name on the second line says “point” again.
+
+7
+00:00:33,365 --> 00:00:40,765
+The proposal would change how names were imported to remove repetition and show what each argument was for.
+
+8
+00:00:42,150 --> 00:00:44,270
+The first line creates a point.
+
+9
+00:00:44,905 --> 00:00:49,015
+The second line moves the path’s current point there.
+
+10
+00:00:49,655 --> 00:00:52,835
+We can drop one word from the name on the second line and still understand the call.
+
+11
+00:00:54,200 --> 00:00:56,130
+The word for “point” appears twice.
+
+12
+00:00:56,765 --> 00:01:04,935
+Doug Gregor and Dave Abrahams proposed removing such repetition when importing Objective-C methods into Swift.
+
+13
+00:01:05,595 --> 00:01:10,165
+In their December proposal, only the trailing Point disappeared.
+
+14
+00:01:10,775 --> 00:01:15,455
+To still tells us where to move, and it’s still outside the parentheses.
+
+15
+00:01:16,761 --> 00:01:22,740
+During the public review the following January, Radek Pietruszewski looked at a method for enumerating a collection.
+
+16
+00:01:23,396 --> 00:01:26,726
+This method visits the items one by one.
+
+17
+00:01:27,376 --> 00:01:30,016
+The options specify the order or manner of the visit.
+
+18
+00:01:30,596 --> 00:01:37,066
+He argued that putting options inside the parentheses makes the next value’s purpose clear.
+
+19
+00:01:37,696 --> 00:01:42,676
+Doug Gregor then tested a rule that split the name at with.
+
+20
+00:01:43,316 --> 00:01:48,646
+Applying that rule changed names in 201 Cocoa API files.
+
+21
+00:01:50,006 --> 00:01:55,296
+In February, the discussion broadened to other words expressing direction or relationships.
+
+22
+00:01:55,916 --> 00:02:01,286
+Dave Abrahams reported what the guidelines working group found when reading a range of calls.
+
+23
+00:02:01,916 --> 00:02:07,266
+The group preferred reading the preposition inside the parentheses, together with its argument.
+
+24
+00:02:07,906 --> 00:02:11,936
+The next day, Doug Gregor implemented the rule in the compiler.
+
+25
+00:02:12,551 --> 00:02:18,051
+Now the action sits before the parentheses and the destination goes inside.
+
+26
+00:02:19,451 --> 00:02:23,341
+In some cases, shortening a name could make a difference harder to see.
+
+27
+00:02:23,996 --> 00:02:30,056
+Assign a Swift array to another variable and append to one: the other’s count stays the same.
+
+28
+00:02:30,696 --> 00:02:37,706
+If two variables refer to the same mutable array object, both see the added item.
+
+29
+00:02:38,366 --> 00:02:46,076
+Dave Abrahams warned that removing the NS prefix would make that difference easy to miss.
+
+30
+00:02:47,296 --> 00:02:52,976
+The March 3 acceptance announcement left Foundation prefix removal to a separate proposal.
+
+31
+00:02:54,351 --> 00:02:59,791
+Let's return to our opening example in Swift 3, released that September.
+
+32
+00:03:00,406 --> 00:03:03,376
+The path’s current point is still the same point as before.
+
+33
+00:03:03,996 --> 00:03:07,666
+Placing the pencil at the starting point leaves the paper unmarked.
+
+34
+00:03:08,336 --> 00:03:14,246
+Now we’ll connect the corners of a paper airplane, stroking the path after each new segment.
+
+35
+00:03:14,896 --> 00:03:19,916
+The idea was to make the destination clear without repeating the word for “point”.

@@ -1,0 +1,129 @@
+{
+  "proposalId": "SE-0005",
+  "format": "short",
+  "provider": "qwen3-clone",
+  "voice": "voice-profile",
+  "fps": 30,
+  "totalDurationSec": 56.297,
+  "totalFrames": 1689,
+  "generatedAt": "2026-11-27T05:19:12.306Z",
+  "scenes": [
+    {
+      "sceneId": "s00-context",
+      "endingDigest": "03452f3402f3df18727c4f232bb07f142e7c28fc970b2db392e3d8fcd2261e7c",
+      "audioFile": "short/revision-cJhfBn/s00-context.mp3",
+      "durationSec": 20.509,
+      "leadInSec": 0.35,
+      "tailPadSec": 0.75,
+      "totalDurationSec": 21.609,
+      "startSec": 0,
+      "endSec": 21.609,
+      "cues": [
+        {
+          "startSec": 0.433,
+          "endSec": 2.633,
+          "text": "오늘도 코드 한 줄을 함께 살펴보겠습니다."
+        },
+        {
+          "startSec": 3.15,
+          "endSec": 9.508,
+          "text": "Swift가 나오기 전부터 개발자들은 Objective-C라는 프로그래밍 언어로 아이폰 앱을 만들었습니다."
+        },
+        {
+          "startSec": 10.025,
+          "endSec": 14.417,
+          "text": "Swift에서도 애플의 화면 도구인 UIKit으로 똑같이 그림을 그릴 수 있었습니다."
+        },
+        {
+          "startSec": 14.933,
+          "endSec": 20.858,
+          "text": "이번 제안은 그 기능을 Swift에서 부를 때, 이름의 반복을 줄이고 목적지가 어디인지 분명히 하려 했습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "s01-question",
+      "endingDigest": "e517805bf1b5688c5bb792d270b282a97896ece851275946e02e15d584c09273",
+      "audioFile": "short/revision-cJhfBn/s01-question.mp3",
+      "durationSec": 7.189,
+      "leadInSec": 0.35,
+      "tailPadSec": 0.75,
+      "totalDurationSec": 8.289,
+      "startSec": 21.609,
+      "endSec": 29.898,
+      "cues": [
+        {
+          "startSec": 22.001,
+          "endSec": 25.751,
+          "text": "아래 줄은 경로의 현재 위치를 위에서 만든 점으로 옮깁니다."
+        },
+        {
+          "startSec": 26.267,
+          "endSec": 29.148,
+          "text": "둘째 줄의 이름에서 단어 하나를 빼도 뜻이 통합니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "s02-draft",
+      "endingDigest": "5530efc80a7a2d1f02cc9659ebd1e3b63ce2f678e65c46152fb78a48cf52cd99",
+      "audioFile": "short/s02-draft.mp3",
+      "durationSec": 7.014,
+      "leadInSec": 0.35,
+      "tailPadSec": 0.75,
+      "totalDurationSec": 8.114,
+      "startSec": 29.898,
+      "endSec": 38.012,
+      "cues": [
+        {
+          "startSec": 30.29,
+          "endSec": 32.206,
+          "text": "첫 줄에 이미 점의 타입이 보입니다."
+        },
+        {
+          "startSec": 32.723,
+          "endSec": 37.256,
+          "text": "12월 제안서에서는 Point만 빠지고, To는 메서드 이름 끝에 남았습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "s03-destination",
+      "endingDigest": "8e99a7cbb2fbcaf600cc67a4021d8f7972df52d44e900534d30eb98cf8812cea",
+      "audioFile": "short/revision-F13XVk/s03-destination.mp3",
+      "durationSec": 17.185,
+      "leadInSec": 0.35,
+      "tailPadSec": 0.75,
+      "totalDurationSec": 18.285,
+      "startSec": 38.012,
+      "endSec": 56.297,
+      "cues": [
+        {
+          "startSec": 38.404,
+          "endSec": 41.27,
+          "text": "Swift 3에서는 메서드 이름이 move로 끝납니다."
+        },
+        {
+          "startSec": 41.787,
+          "endSec": 43.612,
+          "text": "to는 목적지 바로 앞에 붙습니다."
+        },
+        {
+          "startSec": 44.129,
+          "endSec": 47.104,
+          "text": "연필을 시작점에 옮겨 놓으면 종이에는 아직 선이 없습니다."
+        },
+        {
+          "startSec": 47.62,
+          "endSec": 50.854,
+          "text": "꼭짓점을 차례로 잇고 경로를 그리면 종이비행기가 나타납니다."
+        },
+        {
+          "startSec": 51.354,
+          "endSec": 55.545,
+          "text": "이렇게 쓰면 점이라는 말을 되풀이하지 않아도 어디로 이동할지 알 수 있습니다."
+        }
+      ]
+    }
+  ]
+}

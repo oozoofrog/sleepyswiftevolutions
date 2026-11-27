@@ -1,3 +1,5 @@
+import { SceneTransition, sharedPanels } from "../components/SceneTransition";
+import { DirectedScene } from "../components/DirectedScene";
 import { BackgroundMusic } from "../components/BackgroundMusic";
 import { PersonCard } from "../components/PersonCard";
 import { TermNote } from "../components/TermNote";
@@ -25,7 +27,6 @@ import { CodePanel } from "../components/CodePanel";
 import { ProgressTimeline } from "../components/ProgressTimeline";
 import { ProposalBadge } from "../components/ProposalBadge";
 import { SceneTitle } from "../components/SceneTitle";
-import { SubtitleBar } from "../components/SubtitleBar";
 import { FONT_MONO, FONT_SANS, THEME } from "../theme";
 
 export interface ShortVideoProps {
@@ -37,7 +38,8 @@ export interface ShortVideoProps {
 const ShortSceneView: React.FC<{
   script: EpisodeScript;
   timing: ResolvedSceneTiming;
-}> = ({ script, timing }) => {
+  preceding?: ResolvedSceneTiming;
+}> = ({ script, timing, preceding }) => {
   const { scene } = timing;
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig();
@@ -53,6 +55,8 @@ const ShortSceneView: React.FC<{
     [1, 0],
     { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
   );
+
+  if (scene.speech?.some(part => part.direction)) return <DirectedScene timing={timing} preceding={preceding?.scene} showStageLabels={script.showStageLabels} animateLineHighlight={script.animateLineHighlight} sharedLayout={script.sceneTransition === "shared-layout"} />;
 
   if (scene.type === "history") return <ProposalHistory scene={scene} />;
 
@@ -130,12 +134,13 @@ const ShortSceneView: React.FC<{
     }
 
     if (scene.type === "code-compare" && scene.codeBefore && scene.codeAfter) {
-      const afterFrame = Math.max(1, Math.min(38, Math.floor(timing.durationInFrames / 4)));
+      const parallel = scene.comparisonStyle === "parallel";
+      const afterFrame = parallel ? 4 : Math.max(1, Math.min(38, Math.floor(timing.durationInFrames / 4)));
       return (
         <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", gap: 24 }}>
           <SceneTitle eyebrow={scene.chapterTitle} heading={scene.heading} compact />
           <CodePanel snippet={scene.codeBefore} tone="before" fontSize={26} delayFrames={2} />
-          <ComparisonArrow vertical endFrame={afterFrame} />
+          {!parallel && <ComparisonArrow vertical endFrame={afterFrame} />}
           <CodePanel snippet={scene.codeAfter} tone="after" fontSize={26} delayFrames={afterFrame} />
         </div>
       );
@@ -234,9 +239,9 @@ export const ShortVideo: React.FC<ShortVideoProps> = ({ script, manifest }) => {
   );
 
   return (
-    <AbsoluteFill style={{ backgroundColor: THEME.bgDeep }}>
+    <AbsoluteFill className={script.visualStyle} style={{ backgroundColor: THEME.bgDeep }}>
       <Background accentColor={script.thumbnail.accentColor} />
-      <ProgressTimeline scenes={timeline.scenes} totalFrames={timeline.totalFrames} variant="short" />
+      <ProgressTimeline scenes={timeline.scenes} variant="short" />
 
       {/* Top badge inside Shorts safe area */}
       <div
@@ -260,25 +265,36 @@ export const ShortVideo: React.FC<ShortVideoProps> = ({ script, manifest }) => {
         />
       </div>
 
-      {script.backgroundMusic && <BackgroundMusic file={script.backgroundMusic} />}
-      {timeline.scenes.map((timing) => (
-        <Sequence
-          key={timing.scene.id}
-          from={timing.startFrame}
-          durationInFrames={timing.durationInFrames}
-        >
-          <ShortSceneView script={script} timing={timing} />
-          <TermNote timing={timing} />
-          <PersonCard timing={timing} />
-          {timing.audioFile && (
-            <Sequence from={timing.leadInFrames}>
-              <Audio src={staticFile(timing.audioFile)} />
-            </Sequence>
-          )}
-        </Sequence>
-      ))}
+      {script.backgroundMusic && <BackgroundMusic music={script.backgroundMusic} cues={timeline.allCues} />}
+      {timeline.scenes.map((timing, index) => {
+        const previous = timeline.scenes[index - 1], next = timeline.scenes[index + 1];
+        const spatial = script.sceneTransition === "shared-layout";
+        const panels = spatial && sharedPanels(previous, timing);
+        const frames = spatial && next ? next.startFrame - timing.startFrame : timing.durationInFrames;
+        return (
+          <Sequence
+            key={timing.scene.id}
+            from={timing.startFrame}
+            durationInFrames={frames}
+          >
+            <SceneTransition frames={frames} enabled={Boolean(script.sceneTransition)}
+              continues={spatial && Boolean(sharedPanels(timing, next))}
+              shared={panels ? { ...panels, previousFrame: timing.startFrame - previous.startFrame - 1,
+                previous: <ShortSceneView script={script} timing={previous} preceding={timeline.scenes[index - 2]} />,
+              } : undefined}>
+              <ShortSceneView script={script} timing={timing} preceding={timeline.scenes[index - 1]} />
+              <TermNote spatial={spatial} fadeOut={Boolean(script.sceneTransition)} timing={timing} />
+              <PersonCard spatial={spatial} fadeOut={Boolean(script.sceneTransition)} timing={timing} />
+            </SceneTransition>
+            {timing.audioFile && (
+              <Sequence from={timing.leadInFrames}>
+                <Audio src={staticFile(timing.audioFile)} />
+              </Sequence>
+            )}
+          </Sequence>
+        );
+      })}
 
-      <SubtitleBar cues={timeline.allCues} variant="short" />
     </AbsoluteFill>
   );
 };

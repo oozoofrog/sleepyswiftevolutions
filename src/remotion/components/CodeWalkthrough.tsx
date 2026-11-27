@@ -25,7 +25,7 @@ export function CodeWalkthrough({ timing, snippet, steps }: {
   const offset = active ? snippet.code.indexOf(active.focus) : -1;
   return <AbsoluteFill style={{justifyContent: "center", padding: portrait ? "0 6%" : "0 12%", gap: 32, color: THEME.textPrimary}}>
     <SceneTitle eyebrow={timing.scene.badge} heading={timing.scene.heading} />
-    <div style={{padding: 32, borderRadius: 24, background: THEME.codeSurface}}>
+    <div className="code-panel" style={{padding: 32, borderRadius: 24, background: THEME.codeSurface}}>
       <div style={{font: `600 25px ${FONT_SANS}`, color: THEME.swiftAmber}}>{snippet.label}</div>
       <pre style={{font: `500 ${portrait ? 39 : 52}px/1.45 ${FONT_MONO}`, margin: "20px 0 0"}}>{offset >= 0 && active
         ? <>{colored(snippet.code.slice(0, offset))}<span style={{borderBottom: `4px solid ${THEME.swiftOrange}`, background: THEME.amberBg}}>{colored(active.focus)}</span>{colored(snippet.code.slice(offset + active.focus.length))}</>

@@ -1,0 +1,1693 @@
+{
+  "schemaVersion": 1,
+  "proposalId": "SE-0005",
+  "episodeNumber": 5,
+  "swiftVersion": "3.0",
+  "proposalState": "implemented",
+  "proposalTitle": "Better Translation of Objective-C APIs Into Swift",
+  "koreanTitle": "to가 괄호 안으로 들어갔다",
+  "authors": [
+    "Doug Gregor",
+    "Dave Abrahams"
+  ],
+  "proposalUrl": "https://github.com/swiftlang/swift-evolution/blob/main/proposals/0005-objective-c-name-translation.md",
+  "thumbnail": {
+    "eyebrow": "SE-0005 · Swift 3.0",
+    "headline": "to가 괄호 안으로 들어갔다",
+    "subheadline": "듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기",
+    "codeBefore": "path.moveToPoint(end)",
+    "codeAfter": "path.move(to: end)"
+  },
+  "scenes": [
+    {
+      "id": "00-context",
+      "type": "intro",
+      "chapterTitle": "Objective-C와 UIKit",
+      "heading": "같은 그리기 기능을 Swift에서 부르면",
+      "badge": "듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기",
+      "codeBefore": {
+        "label": "Objective-C · UIKit",
+        "code": "CGPoint end = CGPointMake(10, 20);\n[path moveToPoint:end];"
+      },
+      "codeAfter": {
+        "label": "Swift 2 · UIKit",
+        "code": "let end = CGPoint(x: 10, y: 20)\npath.moveToPoint(end)"
+      },
+      "speech": [
+        {
+          "language": "ko",
+          "text": "오늘도 코드 한 줄을 함께 살펴보겠습니다.",
+          "caption": "오늘도 코드 한 줄을 함께 살펴보겠습니다.",
+          "direction": {
+            "panel": "codeBefore",
+            "stages": [
+              "Objective-C · UIKit"
+            ],
+            "references": []
+          }
+        },
+        {
+          "language": "ko",
+          "text": "스위프트가 나오기 전부터 개발자들은 오브젝티브 씨라는 프로그래밍 언어로 아이폰 앱을 만들었습니다.",
+          "caption": "Swift가 나오기 전부터 개발자들은 Objective-C라는 프로그래밍 언어로 아이폰 앱을 만들었습니다.",
+          "direction": {
+            "panel": "codeBefore",
+            "stages": [
+              "Objective-C · 아이폰 앱 개발 언어"
+            ],
+            "references": []
+          }
+        },
+        {
+          "language": "ko",
+          "text": "앱 화면에 글씨나 그림을 띄울 때는 애플이 제공하는 도구 모음인 유아이킷을 썼습니다.",
+          "caption": "앱 화면에 글씨나 그림을 띄울 때는 애플이 제공하는 도구 모음인 UIKit을 썼습니다.",
+          "direction": {
+            "panel": "codeBefore",
+            "stages": [
+              "UIKit · 앱 화면을 만드는 도구 모음"
+            ],
+            "references": []
+          }
+        },
+        {
+          "language": "ko",
+          "text": "화면의 둘째 줄은 그림을 어디서 시작할지 정하는 명령입니다.",
+          "caption": "화면의 둘째 줄은 그림을 어디서 시작할지 정하는 명령입니다.",
+          "direction": {
+            "panel": "codeBefore",
+            "stages": [
+              "그림의 시작점 지정"
+            ],
+            "references": [
+              {
+                "phrase": "둘째",
+                "offsetSec": 0.38,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "moveTo"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "스위프트로 앱을 만드는 개발자도 유아이킷의 같은 기능을 쓸 수 있었습니다.",
+          "caption": "Swift로 앱을 만드는 개발자도 UIKit의 같은 기능을 쓸 수 있었습니다.",
+          "direction": {
+            "panel": "codeAfter",
+            "stages": [
+              "같은 UIKit 기능 · Swift 2 표기"
+            ],
+            "references": []
+          }
+        },
+        {
+          "language": "ko",
+          "text": "첫 줄에서 이미 점을 만들었는데, 둘째 줄의 이름에 점이라는 말이 또 나옵니다.",
+          "caption": "첫 줄에서 이미 점을 만들었는데, 둘째 줄의 이름에 점이라는 말이 또 나옵니다.",
+          "direction": {
+            "panel": "codeAfter",
+            "stages": [
+              "타입과 이름에 겹치는 말"
+            ],
+            "references": [
+              {
+                "phrase": "첫 줄",
+                "offsetSec": 0.06,
+                "lines": [
+                  1
+                ],
+                "targets": [
+                  {
+                    "line": 1,
+                    "text": "Point"
+                  }
+                ]
+              },
+              {
+                "phrase": "둘째 줄",
+                "offsetSec": 2.3,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "Point"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "그래서 이번 제안은 겹치는 말을 줄이고, 값을 어디에 쓰는지 드러내도록 이름을 가져오는 규칙을 바꾸려 했습니다.",
+          "caption": "그래서 이번 제안은 겹치는 말을 줄이고, 값을 어디에 쓰는지 드러내도록 이름을 가져오는 규칙을 바꾸려 했습니다.",
+          "direction": {
+            "panel": "codeAfter",
+            "stages": [
+              "SE-0005 · Swift에서 읽히는 이름"
+            ],
+            "references": []
+          }
+        }
+      ],
+      "deliveryNote": "언어 이름과 화면 도구의 이름 사이에서 한 박자 쉽니다. 두 호출이 같은 일을 한다는 점을 짚습니다.",
+      "narration": "오늘도 코드 한 줄을 함께 살펴보겠습니다. Swift가 나오기 전부터 개발자들은 Objective-C라는 프로그래밍 언어로 아이폰 앱을 만들었습니다. 앱 화면에 글씨나 그림을 띄울 때는 애플이 제공하는 도구 모음인 UIKit을 썼습니다. 화면의 둘째 줄은 그림을 어디서 시작할지 정하는 명령입니다. Swift로 앱을 만드는 개발자도 UIKit의 같은 기능을 쓸 수 있었습니다. 첫 줄에서 이미 점을 만들었는데, 둘째 줄의 이름에 점이라는 말이 또 나옵니다. 그래서 이번 제안은 겹치는 말을 줄이고, 값을 어디에 쓰는지 드러내도록 이름을 가져오는 규칙을 바꾸려 했습니다."
+    },
+    {
+      "id": "01-path",
+      "type": "code-focus",
+      "chapterTitle": "Swift 2의 그리기 코드",
+      "heading": "이름에서 어느 단어를 덜어낼 수 있을까?",
+      "code": {
+        "label": "Swift 2 · UIKit",
+        "code": "let end = CGPoint(x: 10, y: 20)\npath.moveToPoint(end)"
+      },
+      "speech": [
+        {
+          "language": "ko",
+          "text": "첫 줄은 점 하나를 만듭니다.",
+          "caption": "첫 줄은 점 하나를 만듭니다.",
+          "direction": {
+            "stages": [
+              "(10, 20)"
+            ],
+            "panel": "code",
+            "drawingPhase": "ready",
+            "references": [
+              {
+                "phrase": "첫 줄",
+                "offsetSec": 0.255,
+                "lines": [
+                  1
+                ],
+                "targets": [
+                  {
+                    "line": 1,
+                    "text": "Point"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "둘째 줄을 실행하면 경로의 현재 위치가 그 점으로 옮겨갑니다.",
+          "caption": "둘째 줄을 실행하면 경로의 현재 위치가 그 점으로 옮겨갑니다.",
+          "direction": {
+            "stages": [
+              "현재 위치 (10, 20)"
+            ],
+            "panel": "code",
+            "drawingPhase": "move",
+            "references": [
+              {
+                "phrase": "둘째 줄",
+                "offsetSec": 0.06,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "moveTo"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "둘째 줄의 이름에서 단어 하나를 빼도 뜻이 통합니다.",
+          "caption": "둘째 줄의 이름에서 단어 하나를 빼도 뜻이 통합니다.",
+          "direction": {
+            "stages": [
+              "moveToPoint"
+            ],
+            "panel": "code",
+            "drawingPhase": "hold",
+            "references": [
+              {
+                "phrase": "둘째 줄",
+                "offsetSec": 0.06,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "Point"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "narration": "첫 줄은 점 하나를 만듭니다. 둘째 줄을 실행하면 경로의 현재 위치가 그 점으로 옮겨갑니다. 둘째 줄의 이름에서 단어 하나를 빼도 뜻이 통합니다.",
+      "deliveryNote": "첫 문장 뒤에 숨을 쉽니다. 마지막에는 코드를 읽을 시간을 둡니다.",
+      "pathDestination": {
+        "x": 10,
+        "y": 20
+      },
+      "drawingCorners": [
+        {
+          "x": 90,
+          "y": 4
+        },
+        {
+          "x": 64,
+          "y": 45
+        },
+        {
+          "x": 47,
+          "y": 32
+        },
+        {
+          "x": 90,
+          "y": 4
+        },
+        {
+          "x": 39,
+          "y": 28
+        },
+        {
+          "x": 39,
+          "y": 42
+        },
+        {
+          "x": 47,
+          "y": 32
+        },
+        {
+          "x": 39,
+          "y": 28
+        },
+        {
+          "x": 10,
+          "y": 20
+        }
+      ],
+      "drawingEntrance": {
+        "mark": {
+          "cue": "첫 줄은",
+          "offsetSec": 0.895
+        },
+        "place": {
+          "cue": "둘째 줄을",
+          "offsetSec": 2.94
+        }
+      }
+    },
+    {
+      "id": "02-draft",
+      "type": "code-compare",
+      "chapterTitle": "2015년 12월 초안",
+      "heading": "점이라는 말은 첫 줄에 있다",
+      "codeBefore": {
+        "label": "Swift 2 · UIKit",
+        "code": "let end = CGPoint(x: 10, y: 20)\npath.moveToPoint(end)"
+      },
+      "codeAfter": {
+        "label": "2015년 12월 · 제안서 예시",
+        "code": "let end = CGPoint(x: 10, y: 20)\npath.moveTo(end)"
+      },
+      "speech": [
+        {
+          "language": "ko",
+          "text": "점을 뜻하는 말이 두 번 나옵니다.",
+          "caption": "점을 뜻하는 말이 두 번 나옵니다.",
+          "direction": {
+            "stages": [
+              "CGPoint · Point"
+            ],
+            "panel": "codeBefore",
+            "references": [
+              {
+                "phrase": "두 번",
+                "offsetSec": 1.065,
+                "lines": [
+                  1,
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 1,
+                    "text": "Point"
+                  },
+                  {
+                    "line": 2,
+                    "text": "Point"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "더그 그레거와 데이브 에이브러햄스는 오브젝티브 시의 메서드를 스위프트로 가져올 때 이런 반복을 줄이자고 제안했습니다.",
+          "caption": "더그 그레거와 데이브 에이브러햄스는 오브젝티브 시의 메서드를 스위프트로 가져올 때 이런 반복을 줄이자고 제안했습니다.",
+          "direction": {
+            "stages": [
+              "이름을 가져오는 규칙"
+            ],
+            "panel": "codeBefore",
+            "references": [
+              {
+                "phrase": "이런 반복",
+                "offsetSec": 6.14,
+                "lines": [
+                  1,
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 1,
+                    "text": "Point"
+                  },
+                  {
+                    "line": 2,
+                    "text": "Point"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "두 사람이 십이월 제안서에 적은 예시에서는 맨 끝의 포인트만 빠졌습니다.",
+          "caption": "두 사람이 12월 제안서에 적은 예시에서는 맨 끝의 Point만 빠졌습니다.",
+          "direction": {
+            "stages": [
+              "2015년 12월 · 초안"
+            ],
+            "panel": "codeAfter",
+            "references": [
+              {
+                "phrase": "Point",
+                "offsetSec": 3.34,
+                "lines": [
+                  2
+                ],
+                "panel": "codeBefore",
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "Point"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "어디로 움직이는지 알려 주는 투는 아직 여는 괄호 앞에 있습니다.",
+          "caption": "어디로 움직이는지 알려 주는 To는 아직 여는 괄호 앞에 있습니다.",
+          "direction": {
+            "stages": [
+              "moveTo(end)"
+            ],
+            "panel": "codeAfter",
+            "references": [
+              {
+                "phrase": "To",
+                "offsetSec": 2.14,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "To"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "narration": "점을 뜻하는 말이 두 번 나옵니다. 더그 그레거와 데이브 에이브러햄스는 오브젝티브 시의 메서드를 스위프트로 가져올 때 이런 반복을 줄이자고 제안했습니다. 두 사람이 12월 제안서에 적은 예시에서는 맨 끝의 Point만 빠졌습니다. 어디로 움직이는지 알려 주는 To는 아직 여는 괄호 앞에 있습니다.",
+      "deliveryNote": "초안이라는 말을 또렷하게 읽습니다. 두 번째 표기를 충분히 보여 줍니다.",
+      "people": [
+        {
+          "cue": "더그 그레거",
+          "name": "Doug Gregor",
+          "account": "GitHub @DougGregor",
+          "role": "공동 제안자 · 컴파일러 구현",
+          "profile": "https://github.com/DougGregor"
+        },
+        {
+          "cue": "데이브 에이브러햄스",
+          "name": "Dave Abrahams",
+          "account": "GitHub @dabrahams",
+          "role": "공동 제안자 · 설계 지침 논의",
+          "profile": "https://github.com/dabrahams"
+        }
+      ],
+      "pathDestination": {
+        "x": 10,
+        "y": 20
+      },
+      "comparisonStyle": "parallel"
+    },
+    {
+      "id": "03-options",
+      "type": "code-compare",
+      "chapterTitle": "2016년 1월 공개 리뷰",
+      "heading": "옵션은 무엇을 설명할까?",
+      "codeBefore": {
+        "label": "리뷰에서 비교한 이름 · 발췌",
+        "code": "enumerateObjectsWithOptions"
+      },
+      "codeAfter": {
+        "label": "리뷰어가 제시한 표기 · 발췌",
+        "code": "enumerateObjects(options: …)"
+      },
+      "speech": [
+        {
+          "language": "ko",
+          "text": "이듬해 일월 공개 리뷰에서 라데크 피에트루셰프스키는 목록을 훑는 메서드에 주목했습니다.",
+          "caption": "이듬해 1월 공개 리뷰에서 라데크 피에트루셰프스키는 목록을 훑는 메서드에 주목했습니다.",
+          "direction": {
+            "stages": [
+              "공개 리뷰 · 1월 25일"
+            ],
+            "panel": "codeBefore",
+            "references": [
+              {
+                "phrase": "목록을 훑는 메서드",
+                "offsetSec": 4.184,
+                "lines": [
+                  1
+                ],
+                "targets": [
+                  {
+                    "line": 1,
+                    "text": "enumerateObjects"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "이 메서드는 목록의 항목을 하나씩 처리합니다.",
+          "caption": "이 메서드는 목록의 항목을 하나씩 처리합니다.",
+          "direction": {
+            "stages": [
+              "enumerateObjects"
+            ],
+            "panel": "codeBefore",
+            "references": [
+              {
+                "phrase": "메서드",
+                "offsetSec": 0.22,
+                "lines": [
+                  1
+                ],
+                "targets": [
+                  {
+                    "line": 1,
+                    "text": "enumerateObjects"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "옵션은 그 순서나 방식을 지정합니다.",
+          "caption": "옵션은 그 순서나 방식을 지정합니다.",
+          "direction": {
+            "stages": [
+              "options"
+            ],
+            "panel": "codeAfter",
+            "references": [
+              {
+                "phrase": "옵션",
+                "offsetSec": 0.06,
+                "lines": [
+                  1
+                ],
+                "targets": [
+                  {
+                    "line": 1,
+                    "text": "options"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "그는 옵션이라는 말을 괄호 안에 두면 그 뒤에 넣을 값의 쓰임을 바로 알 수 있다고 설명했습니다.",
+          "caption": "그는 옵션이라는 말을 괄호 안에 두면 그 뒤에 넣을 값의 쓰임을 바로 알 수 있다고 설명했습니다.",
+          "direction": {
+            "stages": [
+              "첫 인자의 이름"
+            ],
+            "panel": "codeAfter",
+            "references": [
+              {
+                "phrase": "옵션",
+                "offsetSec": 0.7,
+                "lines": [
+                  1
+                ],
+                "targets": [
+                  {
+                    "line": 1,
+                    "text": "options"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "더그 그레거는 이 의견을 듣고 이름을 위드에서 나누는 규칙을 시험했습니다.",
+          "caption": "더그 그레거는 이 의견을 듣고 이름을 with에서 나누는 규칙을 시험했습니다.",
+          "direction": {
+            "stages": [
+              "1월 27일 · 비교 실험"
+            ],
+            "panel": "codeBefore",
+            "references": [
+              {
+                "phrase": "with",
+                "offsetSec": 2.94,
+                "lines": [
+                  1
+                ],
+                "targets": [
+                  {
+                    "line": 1,
+                    "text": "With"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "그 규칙을 적용해 보니, 코코아 에이피아이 파일 이백한 개에서 이름이 달라졌습니다.",
+          "caption": "그 규칙을 적용해 보니, Cocoa API 파일 201개에서 이름이 달라졌습니다.",
+          "direction": {
+            "stages": [
+              "생성된 API 파일 201개"
+            ],
+            "panel": "codeAfter",
+            "references": []
+          }
+        }
+      ],
+      "narration": "이듬해 1월 공개 리뷰에서 라데크 피에트루셰프스키는 목록을 훑는 메서드에 주목했습니다. 이 메서드는 목록의 항목을 하나씩 처리합니다. 옵션은 그 순서나 방식을 지정합니다. 그는 옵션이라는 말을 괄호 안에 두면 그 뒤에 넣을 값의 쓰임을 바로 알 수 있다고 설명했습니다. 더그 그레거는 이 의견을 듣고 이름을 with에서 나누는 규칙을 시험했습니다. 그 규칙을 적용해 보니, Cocoa API 파일 201개에서 이름이 달라졌습니다.",
+      "deliveryNote": "메서드가 하는 일과 옵션의 역할 사이에서 한 번 쉽니다.",
+      "people": [
+        {
+          "cue": "라데크 피에트루셰프스키",
+          "name": "Radek Pietruszewski",
+          "account": "Swift Forums @Radek_Pietruszewski",
+          "role": "첫 인자의 이름을 검토한 리뷰어",
+          "profile": "https://forums.swift.org/u/Radek_Pietruszewski"
+        },
+        {
+          "cue": "더그 그레거",
+          "name": "Doug Gregor",
+          "account": "GitHub @DougGregor",
+          "role": "공동 제안자 · 컴파일러 구현",
+          "profile": "https://github.com/DougGregor"
+        }
+      ],
+      "termNotes": [
+        {
+          "term": "인자",
+          "meaning": "호출할 때 괄호 안에 넣는 값",
+          "cue": "그 뒤에 넣을 값"
+        }
+      ]
+    },
+    {
+      "id": "04-preposition",
+      "type": "code-compare",
+      "chapterTitle": "2016년 2월 설계 논의",
+      "heading": "목적지를 나타내는 to",
+      "codeBefore": {
+        "label": "2015년 12월 · 제안서 예시",
+        "code": "let end = CGPoint(x: 10, y: 20)\npath.moveTo(end)"
+      },
+      "codeAfter": {
+        "label": "Swift 3 · UIKit",
+        "code": "let end = CGPoint(x: 10, y: 20)\npath.move(to: end)"
+      },
+      "speech": [
+        {
+          "language": "ko",
+          "text": "이월에는 논의가 방향이나 관계를 나타내는 다른 단어로 넓어졌습니다.",
+          "caption": "2월에는 논의가 방향이나 관계를 나타내는 다른 단어로 넓어졌습니다.",
+          "direction": {
+            "stages": [
+              "2016년 2월"
+            ],
+            "panel": "codeBefore",
+            "references": []
+          }
+        },
+        {
+          "language": "ko",
+          "text": "데이브 에이브러햄스는 설계 지침 작업 그룹에서 여러 호출을 읽어 본 결과를 전했습니다.",
+          "caption": "데이브 에이브러햄스는 설계 지침 작업 그룹에서 여러 호출을 읽어 본 결과를 전했습니다.",
+          "direction": {
+            "stages": [
+              "2월 9일 · 작업 그룹"
+            ],
+            "panel": "codeBefore",
+            "references": []
+          }
+        },
+        {
+          "language": "ko",
+          "text": "작업 그룹은 전치사를 그 뒤에 오는 값과 함께 괄호 안에서 읽는 편을 택했습니다.",
+          "caption": "작업 그룹은 전치사를 그 뒤에 오는 값과 함께 괄호 안에서 읽는 편을 택했습니다.",
+          "direction": {
+            "stages": [
+              "to: end"
+            ],
+            "panel": "codeAfter",
+            "references": [
+              {
+                "phrase": "전치사",
+                "offsetSec": 1.02,
+                "lines": [
+                  2
+                ],
+                "panel": "codeBefore",
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "To"
+                  }
+                ]
+              },
+              {
+                "phrase": "값과",
+                "offsetSec": 2.3,
+                "lines": [
+                  2
+                ],
+                "panel": "codeAfter",
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "to:"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "다음 날 더그 그레거가 컴파일러에 이 규칙을 반영했습니다.",
+          "caption": "다음 날 더그 그레거가 컴파일러에 이 규칙을 반영했습니다.",
+          "direction": {
+            "stages": [
+              "2월 10일 · 컴파일러"
+            ],
+            "panel": "codeAfter",
+            "references": []
+          }
+        },
+        {
+          "language": "ko",
+          "text": "이제 괄호 앞에는 이동한다는 동작이 남고, 괄호 안에는 어디로 이동하는지가 보입니다.",
+          "caption": "이제 괄호 앞에는 이동한다는 동작이 남고, 괄호 안에는 어디로 이동하는지가 보입니다.",
+          "direction": {
+            "stages": [
+              "move · to: end"
+            ],
+            "panel": "codeAfter",
+            "references": [
+              {
+                "phrase": "괄호 앞",
+                "offsetSec": 0.395,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "move"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "narration": "2월에는 논의가 방향이나 관계를 나타내는 다른 단어로 넓어졌습니다. 데이브 에이브러햄스는 설계 지침 작업 그룹에서 여러 호출을 읽어 본 결과를 전했습니다. 작업 그룹은 전치사를 그 뒤에 오는 값과 함께 괄호 안에서 읽는 편을 택했습니다. 다음 날 더그 그레거가 컴파일러에 이 규칙을 반영했습니다. 이제 괄호 앞에는 이동한다는 동작이 남고, 괄호 안에는 어디로 이동하는지가 보입니다.",
+      "deliveryNote": "초안의 괄호를 보여 준 뒤 전치사를 설명하는 문장에서 새 표기로 바꿉니다.",
+      "people": [
+        {
+          "cue": "데이브 에이브러햄스",
+          "name": "Dave Abrahams",
+          "account": "GitHub @dabrahams",
+          "role": "공동 제안자 · 설계 지침 논의",
+          "profile": "https://github.com/dabrahams"
+        },
+        {
+          "cue": "더그 그레거",
+          "name": "Doug Gregor",
+          "account": "GitHub @DougGregor",
+          "role": "공동 제안자 · 컴파일러 구현",
+          "profile": "https://github.com/DougGregor"
+        }
+      ],
+      "termNotes": [
+        {
+          "term": "전치사 to",
+          "meaning": "여기서는 이동할 목적지를 가리키는 말",
+          "cue": "작업 그룹은 전치사를"
+        }
+      ],
+      "pathDestination": {
+        "x": 10,
+        "y": 20
+      },
+      "comparisonStyle": "parallel"
+    },
+    {
+      "id": "05-prefix",
+      "type": "code-focus",
+      "chapterTitle": "배열 이름 앞의 NS",
+      "heading": "배열을 복사하면 무엇을 공유할까?",
+      "code": {
+        "label": "Swift와 Foundation · 타입 이름",
+        "code": "Array\nNSMutableArray"
+      },
+      "speech": [
+        {
+          "language": "ko",
+          "text": "이름을 줄였다가 오히려 차이를 알아보기 어려워지는 경우도 있었습니다.",
+          "caption": "이름을 줄였다가 오히려 차이를 알아보기 어려워지는 경우도 있었습니다.",
+          "direction": {
+            "stages": [
+              "Foundation · NS"
+            ],
+            "panel": "code",
+            "references": []
+          }
+        },
+        {
+          "language": "ko",
+          "text": "스위프트 배열은 다른 변수에 대입한 뒤 한쪽에 항목을 더해도 다른 쪽의 항목 수는 그대로입니다.",
+          "caption": "스위프트 배열은 다른 변수에 대입한 뒤 한쪽에 항목을 더해도 다른 쪽의 항목 수는 그대로입니다.",
+          "direction": {
+            "stages": [
+              "값 복사"
+            ],
+            "panel": "code",
+            "references": [
+              {
+                "phrase": "배열",
+                "offsetSec": 0.62,
+                "lines": [
+                  1
+                ],
+                "targets": [
+                  {
+                    "line": 1,
+                    "text": "Array"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "그런데 두 변수가 같은 가변 배열 객체를 가리키면 한쪽에 더한 항목이 다른 쪽에서도 보입니다.",
+          "caption": "그런데 두 변수가 같은 가변 배열 객체를 가리키면 한쪽에 더한 항목이 다른 쪽에서도 보입니다.",
+          "direction": {
+            "stages": [
+              "같은 객체 참조"
+            ],
+            "panel": "code",
+            "references": [
+              {
+                "phrase": "가변 배열",
+                "offsetSec": 2.3,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "Mutable"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "데이브 에이브러햄스는 이름 앞의 엔에스를 떼면 두 배열이 이처럼 다르게 동작한다는 점을 놓치기 쉽다고 지적했습니다.",
+          "caption": "데이브 에이브러햄스는 이름 앞의 NS를 떼면 두 배열이 이처럼 다르게 동작한다는 점을 놓치기 쉽다고 지적했습니다.",
+          "direction": {
+            "stages": [
+              "NS 접두사"
+            ],
+            "panel": "code",
+            "references": [
+              {
+                "phrase": "NS",
+                "offsetSec": 2.3,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "NS"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "삼월 삼일 채택 공지에서 파운데이션의 접두사를 없애는 문제는 별도 제안으로 남겼습니다.",
+          "caption": "3월 3일 채택 공지에서 파운데이션의 접두사를 없애는 문제는 별도 제안으로 남겼습니다.",
+          "direction": {
+            "stages": [
+              "2016년 3월 3일 · 수정 채택"
+            ],
+            "panel": "code",
+            "references": [
+              {
+                "phrase": "접두사",
+                "offsetSec": 2.94,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "NS"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "narration": "이름을 줄였다가 오히려 차이를 알아보기 어려워지는 경우도 있었습니다. 스위프트 배열은 다른 변수에 대입한 뒤 한쪽에 항목을 더해도 다른 쪽의 항목 수는 그대로입니다. 그런데 두 변수가 같은 가변 배열 객체를 가리키면 한쪽에 더한 항목이 다른 쪽에서도 보입니다. 데이브 에이브러햄스는 이름 앞의 NS를 떼면 두 배열이 이처럼 다르게 동작한다는 점을 놓치기 쉽다고 지적했습니다. 3월 3일 채택 공지에서 파운데이션의 접두사를 없애는 문제는 별도 제안으로 남겼습니다.",
+      "deliveryNote": "두 변수에서 보이는 항목 수의 차이에 힘을 줍니다.",
+      "people": [
+        {
+          "cue": "데이브 에이브러햄스",
+          "name": "Dave Abrahams",
+          "account": "GitHub @dabrahams",
+          "role": "공동 제안자 · 설계 지침 논의",
+          "profile": "https://github.com/dabrahams"
+        }
+      ]
+    },
+    {
+      "id": "06-destination",
+      "type": "outro",
+      "chapterTitle": "Swift 3.0의 호출",
+      "heading": "같은 점으로 갑니다",
+      "code": {
+        "label": "Swift 3 · UIKit",
+        "code": "let end = CGPoint(x: 10, y: 20)\npath.move(to: end)"
+      },
+      "speech": [
+        {
+          "language": "ko",
+          "text": "그해 구월에 출시된 스위프트 삼에서 첫 장면의 코드를 다시 보겠습니다.",
+          "caption": "그해 9월에 출시된 Swift 3에서 첫 장면의 코드를 다시 보겠습니다.",
+          "direction": {
+            "stages": [
+              "2016년 9월 13일 · Swift 3.0"
+            ],
+            "panel": "code",
+            "drawingPhase": "move",
+            "references": []
+          }
+        },
+        {
+          "language": "ko",
+          "text": "경로의 현재 위치는 처음과 같은 점입니다.",
+          "caption": "경로의 현재 위치는 처음과 같은 점입니다.",
+          "direction": {
+            "stages": [
+              "현재 위치 (10, 20)"
+            ],
+            "panel": "code",
+            "drawingPhase": "hold",
+            "references": [
+              {
+                "phrase": "현재 위치",
+                "offsetSec": 0.54,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "end"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "연필을 시작점에 옮겨 놓으면 종이에는 아직 선이 없습니다.",
+          "caption": "연필을 시작점에 옮겨 놓으면 종이에는 아직 선이 없습니다.",
+          "direction": {
+            "stages": [
+              "시작점 (10, 20)"
+            ],
+            "panel": "code",
+            "drawingPhase": "hold",
+            "references": [
+              {
+                "phrase": "시작점",
+                "offsetSec": 0.54,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "end"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "이제 종이비행기의 꼭짓점을 차례로 잇고, 선분을 더할 때마다 경로를 그려 보겠습니다.",
+          "caption": "이제 종이비행기의 꼭짓점을 차례로 잇고, 선분을 더할 때마다 경로를 그려 보겠습니다.",
+          "direction": {
+            "stages": [
+              "꼭짓점을 잇고 경로 그리기"
+            ],
+            "panel": "codeAfter",
+            "drawingPhase": "draw",
+            "references": [
+              {
+                "phrase": "잇고",
+                "offsetSec": 2.46,
+                "lines": [
+                  3
+                ],
+                "targets": [
+                  {
+                    "line": 3,
+                    "text": "addLine"
+                  }
+                ]
+              },
+              {
+                "phrase": "그려",
+                "offsetSec": 5.02,
+                "lines": [
+                  4
+                ],
+                "targets": [
+                  {
+                    "line": 4,
+                    "text": "stroke"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "점을 뜻하는 말을 되풀이하지 않고도 목적지를 알아볼 수 있게 하자는 제안이었습니다.",
+          "caption": "점을 뜻하는 말을 되풀이하지 않고도 목적지를 알아볼 수 있게 하자는 제안이었습니다.",
+          "direction": {
+            "stages": [
+              "시작점을 정한 호출 · to: end"
+            ],
+            "panel": "code",
+            "drawingPhase": "complete",
+            "references": [
+              {
+                "phrase": "목적지",
+                "offsetSec": 2.3,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "end"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "narration": "그해 9월에 출시된 Swift 3에서 첫 장면의 코드를 다시 보겠습니다. 경로의 현재 위치는 처음과 같은 점입니다. 연필을 시작점에 옮겨 놓으면 종이에는 아직 선이 없습니다. 이제 종이비행기의 꼭짓점을 차례로 잇고, 선분을 더할 때마다 경로를 그려 보겠습니다. 점을 뜻하는 말을 되풀이하지 않고도 목적지를 알아볼 수 있게 하자는 제안이었습니다.",
+      "deliveryNote": "목적지라는 말을 한 번 짚고 마지막 코드 위에서 숨을 마칩니다.",
+      "pathDestination": {
+        "x": 10,
+        "y": 20
+      },
+      "drawingCorners": [
+        {
+          "x": 90,
+          "y": 4
+        },
+        {
+          "x": 64,
+          "y": 45
+        },
+        {
+          "x": 47,
+          "y": 32
+        },
+        {
+          "x": 90,
+          "y": 4
+        },
+        {
+          "x": 39,
+          "y": 28
+        },
+        {
+          "x": 39,
+          "y": 42
+        },
+        {
+          "x": 47,
+          "y": 32
+        },
+        {
+          "x": 39,
+          "y": 28
+        },
+        {
+          "x": 10,
+          "y": 20
+        }
+      ],
+      "codeAfter": {
+        "label": "Swift 3 · UIKit",
+        "code": "path.move(to: end)\nfor point in corners {\n    path.addLine(to: point)\n    path.stroke()\n}"
+      },
+      "drawingEntrance": {
+        "mark": {
+          "cue": "경로의 현재",
+          "offsetSec": 0.54
+        },
+        "place": {
+          "cue": "연필을 시작점에",
+          "offsetSec": 0.54
+        }
+      }
+    }
+  ],
+  "youtube": {
+    "long": {
+      "title": "to가 괄호 안으로 들어갔다 · SE-0005",
+      "description": "같은 점으로 이동하는 UIKit 호출을 Swift 2, 2015년 12월 초안, Swift 3 순서로 읽습니다.\n\n제안서 · https://github.com/swiftlang/swift-evolution/blob/main/proposals/0005-objective-c-name-translation.md\n12월 초안 · https://github.com/swiftlang/swift-evolution/commit/4444d23e7f1f\n1월 리뷰 · https://forums.swift.org/t/review-se-0005-better-translation-of-objective-c-apis-into-swift/1164/4\n컴파일러 실험 · https://github.com/swiftlang/swift-3-api-guidelines-review/pull/5\n2월 작업 그룹 · https://forums.swift.org/t/guidelines-first-argument-labels-prepositions-inside-the-parens/1369/1\n3월 채택 결정 · https://forums.swift.org/t/accepted-with-modification-se-0005-better-translation-of-objective-c-apis-into-swift/1668/1\nSwift 3.0 출시 · https://www.swift.org/blog/swift-3.0-released/\n\n참여자\nDoug Gregor · https://github.com/DougGregor\nDave Abrahams · https://github.com/dabrahams\nRadek Pietruszewski · https://forums.swift.org/u/Radek_Pietruszewski\nObjective-C 소개 · https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html\nSwift에서 기존 API를 읽는 맥락 · https://www.swift.org/blog/swift-api-transformation/",
+      "tags": [
+        "Swift",
+        "Swift Evolution",
+        "SE-0005",
+        "UIKit",
+        "UIBezierPath",
+        "Objective-C"
+      ],
+      "playlistNames": [
+        "Swift Evolution 처음부터 끝까지"
+      ],
+      "categoryId": "28",
+      "defaultLanguage": "ko"
+    },
+    "short": {
+      "title": "to가 괄호 안으로 들어갔다 · SE-0005 #Shorts",
+      "description": "같은 점으로 이동하는 UIKit 호출을 Swift 2, 2015년 12월 초안, Swift 3 순서로 읽습니다.\n\n제안서 · https://github.com/swiftlang/swift-evolution/blob/main/proposals/0005-objective-c-name-translation.md\n12월 초안 · https://github.com/swiftlang/swift-evolution/commit/4444d23e7f1f\n개정 이력 · https://github.com/swiftlang/swift-evolution/commit/bf2e4c4bcb1a\n\n#Shorts\nObjective-C 소개 · https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html\nSwift에서 기존 API를 읽는 맥락 · https://www.swift.org/blog/swift-api-transformation/",
+      "tags": [
+        "Swift",
+        "Swift Evolution",
+        "SE-0005",
+        "UIKit",
+        "UIBezierPath",
+        "Objective-C",
+        "Shorts"
+      ],
+      "playlistNames": [
+        "Swift Evolution Shorts"
+      ],
+      "categoryId": "28",
+      "defaultLanguage": "ko"
+    }
+  },
+  "visualStyle": "archive-print",
+  "narrationMix": "soft",
+  "backgroundMusic": {
+    "file": "quiet-pulse.m4a",
+    "duckUnderNarration": true
+  },
+  "shortsScenes": [
+    {
+      "id": "s00-context",
+      "type": "intro",
+      "chapterTitle": "Objective-C와 UIKit",
+      "heading": "같은 그리기 기능을 Swift에서 부르면",
+      "badge": "듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기",
+      "codeBefore": {
+        "label": "Objective-C · UIKit",
+        "code": "CGPoint end = CGPointMake(10, 20);\n[path moveToPoint:end];"
+      },
+      "codeAfter": {
+        "label": "Swift 2 · UIKit",
+        "code": "let end = CGPoint(x: 10, y: 20)\npath.moveToPoint(end)"
+      },
+      "speech": [
+        {
+          "language": "ko",
+          "text": "오늘도 코드 한 줄을 함께 살펴보겠습니다.",
+          "caption": "오늘도 코드 한 줄을 함께 살펴보겠습니다.",
+          "direction": {
+            "panel": "codeBefore",
+            "stages": [
+              "Objective-C · UIKit"
+            ],
+            "references": []
+          }
+        },
+        {
+          "language": "ko",
+          "text": "스위프트가 나오기 전부터 개발자들은 오브젝티브 씨라는 프로그래밍 언어로 아이폰 앱을 만들었습니다.",
+          "caption": "Swift가 나오기 전부터 개발자들은 Objective-C라는 프로그래밍 언어로 아이폰 앱을 만들었습니다.",
+          "direction": {
+            "panel": "codeBefore",
+            "stages": [
+              "Objective-C · 아이폰 앱 개발 언어"
+            ],
+            "references": []
+          }
+        },
+        {
+          "language": "ko",
+          "text": "스위프트에서도 애플의 화면 도구인 유아이킷으로 똑같이 그림을 그릴 수 있었습니다.",
+          "caption": "Swift에서도 애플의 화면 도구인 UIKit으로 똑같이 그림을 그릴 수 있었습니다.",
+          "direction": {
+            "panel": "codeAfter",
+            "stages": [
+              "같은 UIKit 그리기 기능"
+            ],
+            "references": []
+          }
+        },
+        {
+          "language": "ko",
+          "text": "이번 제안은 그 기능을 스위프트에서 부를 때, 이름의 반복을 줄이고 목적지가 어디인지 분명히 하려 했습니다.",
+          "caption": "이번 제안은 그 기능을 Swift에서 부를 때, 이름의 반복을 줄이고 목적지가 어디인지 분명히 하려 했습니다.",
+          "direction": {
+            "panel": "codeAfter",
+            "stages": [
+              "SE-0005 · 호출 이름을 쉽게 읽기"
+            ],
+            "references": [
+              {
+                "phrase": "이름의 반복",
+                "offsetSec": 2.912,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "Point"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "deliveryNote": "언어 이름과 화면 도구의 이름 사이에서 한 박자 쉽니다. 두 호출이 같은 일을 한다는 점을 짚습니다.",
+      "narration": "오늘도 코드 한 줄을 함께 살펴보겠습니다. Swift가 나오기 전부터 개발자들은 Objective-C라는 프로그래밍 언어로 아이폰 앱을 만들었습니다. Swift에서도 애플의 화면 도구인 UIKit으로 똑같이 그림을 그릴 수 있었습니다. 이번 제안은 그 기능을 Swift에서 부를 때, 이름의 반복을 줄이고 목적지가 어디인지 분명히 하려 했습니다."
+    },
+    {
+      "id": "s01-question",
+      "type": "code-focus",
+      "chapterTitle": "Swift 2",
+      "heading": "어느 단어를 덜어낼 수 있을까?",
+      "code": {
+        "label": "Swift 2 · UIKit",
+        "code": "let end = CGPoint(x: 10, y: 20)\npath.moveToPoint(end)"
+      },
+      "speech": [
+        {
+          "language": "ko",
+          "text": "아래 줄은 경로의 현재 위치를 위에서 만든 점으로 옮깁니다.",
+          "caption": "아래 줄은 경로의 현재 위치를 위에서 만든 점으로 옮깁니다.",
+          "direction": {
+            "stages": [
+              "현재 위치 (10, 20)"
+            ],
+            "panel": "code",
+            "drawingPhase": "move",
+            "references": [
+              {
+                "phrase": "아래 줄",
+                "offsetSec": 0.279,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "moveTo"
+                  }
+                ]
+              },
+              {
+                "phrase": "위에서 만든 점",
+                "offsetSec": 2.279,
+                "lines": [
+                  1
+                ],
+                "targets": [
+                  {
+                    "line": 1,
+                    "text": "end"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "둘째 줄의 이름에서 단어 하나를 빼도 뜻이 통합니다.",
+          "caption": "둘째 줄의 이름에서 단어 하나를 빼도 뜻이 통합니다.",
+          "direction": {
+            "stages": [
+              "moveToPoint"
+            ],
+            "panel": "code",
+            "drawingPhase": "hold",
+            "references": [
+              {
+                "phrase": "둘째 줄",
+                "offsetSec": 0.052,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "Point"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "narration": "아래 줄은 경로의 현재 위치를 위에서 만든 점으로 옮깁니다. 둘째 줄의 이름에서 단어 하나를 빼도 뜻이 통합니다.",
+      "deliveryNote": "첫 표기를 읽을 한 박자를 둡니다.",
+      "pathDestination": {
+        "x": 10,
+        "y": 20
+      },
+      "drawingCorners": [
+        {
+          "x": 90,
+          "y": 4
+        },
+        {
+          "x": 64,
+          "y": 45
+        },
+        {
+          "x": 47,
+          "y": 32
+        },
+        {
+          "x": 90,
+          "y": 4
+        },
+        {
+          "x": 39,
+          "y": 28
+        },
+        {
+          "x": 39,
+          "y": 42
+        },
+        {
+          "x": 47,
+          "y": 32
+        },
+        {
+          "x": 39,
+          "y": 28
+        },
+        {
+          "x": 10,
+          "y": 20
+        }
+      ],
+      "drawingEntrance": {
+        "mark": {
+          "cue": "아래 줄은",
+          "offsetSec": 1.48
+        },
+        "place": {
+          "cue": "아래 줄은",
+          "offsetSec": 2.84
+        }
+      }
+    },
+    {
+      "id": "s02-draft",
+      "type": "code-focus",
+      "chapterTitle": "2015년 12월 제안",
+      "heading": "점은 첫 줄에 있다",
+      "code": {
+        "label": "2015년 12월 · 제안서 예시",
+        "code": "let end = CGPoint(x: 10, y: 20)\npath.moveTo(end)"
+      },
+      "speech": [
+        {
+          "language": "ko",
+          "text": "첫 줄에 이미 점의 타입이 보입니다.",
+          "caption": "첫 줄에 이미 점의 타입이 보입니다.",
+          "direction": {
+            "stages": [
+              "CGPoint"
+            ],
+            "panel": "code",
+            "references": [
+              {
+                "phrase": "첫 줄",
+                "offsetSec": 0.059,
+                "lines": [
+                  1
+                ],
+                "targets": [
+                  {
+                    "line": 1,
+                    "text": "Point"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "십이월 제안서에서는 포인트만 빠지고, 투는 메서드 이름 끝에 남았습니다.",
+          "caption": "12월 제안서에서는 Point만 빠지고, To는 메서드 이름 끝에 남았습니다.",
+          "direction": {
+            "stages": [
+              "moveTo(end)"
+            ],
+            "panel": "code",
+            "references": [
+              {
+                "phrase": "To",
+                "offsetSec": 2.752,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "To"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "narration": "첫 줄에 이미 점의 타입이 보입니다. 12월 제안서에서는 Point만 빠지고, To는 메서드 이름 끝에 남았습니다.",
+      "deliveryNote": "초안이라는 말을 강조합니다.",
+      "pathDestination": {
+        "x": 10,
+        "y": 20
+      }
+    },
+    {
+      "id": "s03-destination",
+      "type": "outro",
+      "chapterTitle": "Swift 3.0",
+      "heading": "to가 목적지를 가리킨다",
+      "code": {
+        "label": "Swift 3 · UIKit",
+        "code": "let end = CGPoint(x: 10, y: 20)\npath.move(to: end)"
+      },
+      "speech": [
+        {
+          "language": "ko",
+          "text": "스위프트 삼에서는 메서드 이름이 무브로 끝납니다.",
+          "caption": "Swift 3에서는 메서드 이름이 move로 끝납니다.",
+          "direction": {
+            "stages": [
+              "move"
+            ],
+            "panel": "code",
+            "drawingPhase": "move",
+            "references": [
+              {
+                "phrase": "메서드 이름",
+                "offsetSec": 1.236,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "move"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "투는 목적지 바로 앞에 붙습니다.",
+          "caption": "to는 목적지 바로 앞에 붙습니다.",
+          "direction": {
+            "stages": [
+              "to: end"
+            ],
+            "panel": "code",
+            "drawingPhase": "hold",
+            "references": [
+              {
+                "phrase": "to",
+                "offsetSec": 0.051,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "to:"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "연필을 시작점에 옮겨 놓으면 종이에는 아직 선이 없습니다.",
+          "caption": "연필을 시작점에 옮겨 놓으면 종이에는 아직 선이 없습니다.",
+          "direction": {
+            "stages": [
+              "시작점 (10, 20)"
+            ],
+            "panel": "code",
+            "drawingPhase": "hold",
+            "references": [
+              {
+                "phrase": "시작점",
+                "offsetSec": 0.511,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "end"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "꼭짓점을 차례로 잇고 경로를 그리면 종이비행기가 나타납니다.",
+          "caption": "꼭짓점을 차례로 잇고 경로를 그리면 종이비행기가 나타납니다.",
+          "direction": {
+            "stages": [
+              "꼭짓점을 잇고 경로 그리기"
+            ],
+            "panel": "codeAfter",
+            "drawingPhase": "draw",
+            "references": [
+              {
+                "phrase": "잇고",
+                "offsetSec": 0.832,
+                "lines": [
+                  3
+                ],
+                "targets": [
+                  {
+                    "line": 3,
+                    "text": "addLine"
+                  }
+                ]
+              },
+              {
+                "phrase": "그리면",
+                "offsetSec": 1.632,
+                "lines": [
+                  4
+                ],
+                "targets": [
+                  {
+                    "line": 4,
+                    "text": "stroke"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "이렇게 쓰면 점이라는 말을 되풀이하지 않아도 어디로 이동할지 알 수 있습니다.",
+          "caption": "이렇게 쓰면 점이라는 말을 되풀이하지 않아도 어디로 이동할지 알 수 있습니다.",
+          "direction": {
+            "stages": [
+              "시작점을 정한 호출 · to: end"
+            ],
+            "panel": "code",
+            "drawingPhase": "complete",
+            "references": [
+              {
+                "phrase": "어디로",
+                "offsetSec": 2.6,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "to:"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "narration": "Swift 3에서는 메서드 이름이 move로 끝납니다. to는 목적지 바로 앞에 붙습니다. 연필을 시작점에 옮겨 놓으면 종이에는 아직 선이 없습니다. 꼭짓점을 차례로 잇고 경로를 그리면 종이비행기가 나타납니다. 이렇게 쓰면 점이라는 말을 되풀이하지 않아도 어디로 이동할지 알 수 있습니다.",
+      "deliveryNote": "마지막 문장은 서두르지 않고 완성된 호출을 남깁니다.",
+      "pathDestination": {
+        "x": 10,
+        "y": 20
+      },
+      "drawingCorners": [
+        {
+          "x": 90,
+          "y": 4
+        },
+        {
+          "x": 64,
+          "y": 45
+        },
+        {
+          "x": 47,
+          "y": 32
+        },
+        {
+          "x": 90,
+          "y": 4
+        },
+        {
+          "x": 39,
+          "y": 28
+        },
+        {
+          "x": 39,
+          "y": 42
+        },
+        {
+          "x": 47,
+          "y": 32
+        },
+        {
+          "x": 39,
+          "y": 28
+        },
+        {
+          "x": 10,
+          "y": 20
+        }
+      ],
+      "codeAfter": {
+        "label": "Swift 3 · UIKit",
+        "code": "path.move(to: end)\nfor point in corners {\n    path.addLine(to: point)\n    path.stroke()\n}"
+      },
+      "drawingEntrance": {
+        "mark": {
+          "cue": "to는 목적지",
+          "offsetSec": 0.35
+        },
+        "place": {
+          "cue": "연필을 시작점에",
+          "offsetSec": 0.51
+        }
+      }
+    }
+  ],
+  "shortCloneTempo": 1.2,
+  "showStageLabels": false,
+  "sceneTransition": "shared-layout"
+}

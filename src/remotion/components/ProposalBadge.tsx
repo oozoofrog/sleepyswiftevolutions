@@ -1,5 +1,5 @@
 import React from "react";
-import { FONT_MONO, FONT_SANS, THEME } from "../theme";
+import { FONT_LABEL, THEME } from "../theme";
 
 interface ProposalBadgeProps {
   proposalId: string;
@@ -23,19 +23,18 @@ export const ProposalBadge: React.FC<ProposalBadgeProps> = ({
       : `${proposalState.toUpperCase()} · ${swiftVersion}`;
 
   return (
-    <div
+    <div className="proposal-badge"
       style={{
         display: "inline-flex",
         alignItems: "center",
         gap: compact ? 10 : 12,
-        fontFamily: FONT_SANS,
+        fontFamily: FONT_LABEL,
       }}
     >
       <span
         style={{
           background: THEME.swiftGradient,
           color: THEME.bgDeep,
-          fontFamily: FONT_MONO,
           fontWeight: 700,
           fontSize: compact ? 20 : 24,
           padding: compact ? "6px 14px" : "8px 18px",
@@ -66,7 +65,6 @@ export const ProposalBadge: React.FC<ProposalBadgeProps> = ({
           backgroundColor: "rgba(148, 163, 184, 0.12)",
           border: `1px solid ${THEME.borderSubtle}`,
           color: THEME.textSecondary,
-          fontFamily: FONT_MONO,
           fontWeight: 600,
           fontSize: compact ? 17 : 20,
           padding: compact ? "6px 12px" : "8px 14px",

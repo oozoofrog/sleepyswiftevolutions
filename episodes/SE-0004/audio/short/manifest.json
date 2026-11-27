@@ -1,0 +1,63 @@
+{
+  "proposalId": "SE-0004",
+  "format": "short",
+  "provider": "qwen3-clone",
+  "voice": "voice-profile",
+  "fps": 30,
+  "totalDurationSec": 21.755,
+  "totalFrames": 653,
+  "generatedAt": "2026-11-27T00:33:02.606Z",
+  "scenes": [
+    {
+      "sceneId": "01-question",
+      "endingDigest": "af612cbe208891077c3772260bc9d33b3c69477e43338e4bfb4c107de4b3beed",
+      "audioFile": "short/01-question.mp3",
+      "durationSec": 3.735,
+      "leadInSec": 0.35,
+      "tailPadSec": 0.75,
+      "totalDurationSec": 4.835,
+      "startSec": 0,
+      "endSec": 4.835,
+      "cues": [
+        {
+          "startSec": 0.515,
+          "endSec": 4.085,
+          "text": "예전 스위프트에서 이 줄이 저장한 숫자를 맞혀 봅니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "02-answer",
+      "endingDigest": "cf6838f7942ddb558809692ebf8b6acf944fa7e4c3662478c19e79cb3d2b2049",
+      "audioFile": "short/revision-FetyV7/02-answer.mp3",
+      "durationSec": 15.82,
+      "leadInSec": 0.35,
+      "tailPadSec": 0.75,
+      "totalDurationSec": 16.92,
+      "startSec": 4.835,
+      "endSec": 21.755,
+      "cues": [
+        {
+          "startSec": 5.235,
+          "endSec": 7.515,
+          "text": "처음 본 코드에서 답은 넷입니다."
+        },
+        {
+          "startSec": 8.135,
+          "endSec": 9.515,
+          "text": "먼저 넷을 저장합니다."
+        },
+        {
+          "startSec": 10.135,
+          "endSec": 13.275,
+          "text": "그다음에 원래 변수의 값이 다섯으로 바뀝니다."
+        },
+        {
+          "startSec": 13.895,
+          "endSec": 21.005,
+          "text": "스위프트가 이 기호를 없앤 건, 다음 사람이 두 줄을 위에서부터 읽는 것만으로 같은 답을 얻을 수 있게 하려는 선택이었습니다."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "proposalId": "SE-0005",
+  "format": "long",
+  "provider": "qwen3-clone",
+  "voice": "voice-profile",
+  "fps": 30,
+  "totalDurationSec": 200.826,
+  "totalFrames": 6025,
+  "generatedAt": "2026-11-27T07:24:16.108Z",
+  "scenes": [
+    {
+      "sceneId": "00-context",
+      "endingDigest": "e967b488488dbb6a8fd6809a31fb0bd31007ed07dbf0b3b7bd05cf58a46c6644",
+      "audioFile": "long/revision-xdf0nM/00-context.mp3",
+      "durationSec": 40.405,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 41.705,
+      "startSec": 0,
+      "endSec": 41.705,
+      "cues": [
+        {
+          "startSec": 1.095,
+          "endSec": 3.755,
+          "text": "오늘도 코드 한 줄을 함께 살펴보겠습니다."
+        },
+        {
+          "startSec": 4.375,
+          "endSec": 10.945,
+          "text": "Swift가 나오기 전부터 개발자들은 Objective-C라는 프로그래밍 언어로 아이폰 앱을 만들었습니다."
+        },
+        {
+          "startSec": 11.565,
+          "endSec": 17.455,
+          "text": "앱 화면에 글씨나 그림을 띄울 때는 애플이 제공하는 도구 모음인 UIKit을 썼습니다."
+        },
+        {
+          "startSec": 18.075,
+          "endSec": 21.915,
+          "text": "화면의 둘째 줄은 그림을 어디서 시작할지 정하는 명령입니다."
+        },
+        {
+          "startSec": 22.535,
+          "endSec": 27.225,
+          "text": "Swift로 앱을 만드는 개발자도 UIKit의 같은 기능을 쓸 수 있었습니다."
+        },
+        {
+          "startSec": 27.845,
+          "endSec": 32.765,
+          "text": "첫 줄에서 이미 점을 만들었는데, 둘째 줄의 이름에 점이라는 말이 또 나옵니다."
+        },
+        {
+          "startSec": 33.385,
+          "endSec": 40.805,
+          "text": "그래서 이번 제안은 겹치는 말을 줄이고, 값을 어디에 쓰는지 드러내도록 이름을 가져오는 규칙을 바꾸려 했습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "01-path",
+      "endingDigest": "91ac3b1f52a3d55213b3f9c634ab798c21a7f78111e4e062e3a262fbd5240c26",
+      "audioFile": "long/revision-vcLhPx/01-path.mp3",
+      "durationSec": 10.75,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 12.05,
+      "startSec": 41.705,
+      "endSec": 53.755,
+      "cues": [
+        {
+          "startSec": 42.155,
+          "endSec": 44.285,
+          "text": "첫 줄은 점 하나를 만듭니다."
+        },
+        {
+          "startSec": 44.905,
+          "endSec": 49.055,
+          "text": "둘째 줄을 실행하면 경로의 현재 위치가 그 점으로 옮겨갑니다."
+        },
+        {
+          "startSec": 49.675,
+          "endSec": 52.855,
+          "text": "둘째 줄의 이름에서 단어 하나를 빼도 뜻이 통합니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "02-draft",
+      "endingDigest": "b1db05eea02ac14d12e469b6b0201fbb1467e7b421d9d463c6d5ae25fe4328da",
+      "audioFile": "long/02-draft.mp3",
+      "durationSec": 21.291,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 22.591,
+      "startSec": 53.755,
+      "endSec": 76.346,
+      "cues": [
+        {
+          "startSec": 54.185,
+          "endSec": 56.135,
+          "text": "점을 뜻하는 말이 두 번 나옵니다."
+        },
+        {
+          "startSec": 56.755,
+          "endSec": 64.965,
+          "text": "더그 그레거와 데이브 에이브러햄스는 오브젝티브 시의 메서드를 스위프트로 가져올 때 이런 반복을 줄이자고 제안했습니다."
+        },
+        {
+          "startSec": 65.585,
+          "endSec": 70.185,
+          "text": "두 사람이 12월 제안서에 적은 예시에서는 맨 끝의 Point만 빠졌습니다."
+        },
+        {
+          "startSec": 70.805,
+          "endSec": 75.445,
+          "text": "어디로 움직이는지 알려 주는 To는 아직 여는 괄호 앞에 있습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "03-options",
+      "endingDigest": "4598ecf2eaf31b0a9402ddae6b6769f980711ab76c57d82a316116bee9d309b5",
+      "audioFile": "long/revision-umOHEx/03-options.mp3",
+      "durationSec": 31.92,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 33.22,
+      "startSec": 76.346,
+      "endSec": 109.566,
+      "cues": [
+        {
+          "startSec": 76.776,
+          "endSec": 82.786,
+          "text": "이듬해 1월 공개 리뷰에서 라데크 피에트루셰프스키는 목록을 훑는 메서드에 주목했습니다."
+        },
+        {
+          "startSec": 83.406,
+          "endSec": 86.776,
+          "text": "이 메서드는 목록의 항목을 하나씩 처리합니다."
+        },
+        {
+          "startSec": 87.396,
+          "endSec": 90.036,
+          "text": "옵션은 그 순서나 방식을 지정합니다."
+        },
+        {
+          "startSec": 90.656,
+          "endSec": 97.086,
+          "text": "그는 옵션이라는 말을 괄호 안에 두면 그 뒤에 넣을 값의 쓰임을 바로 알 수 있다고 설명했습니다."
+        },
+        {
+          "startSec": 97.706,
+          "endSec": 102.706,
+          "text": "더그 그레거는 이 의견을 듣고 이름을 with에서 나누는 규칙을 시험했습니다."
+        },
+        {
+          "startSec": 103.326,
+          "endSec": 108.666,
+          "text": "그 규칙을 적용해 보니, Cocoa API 파일 201개에서 이름이 달라졌습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "04-preposition",
+      "endingDigest": "8dc3b4c833aa3bebd0c023c19135a2f6b746aadb755545d199f0d716e8171efe",
+      "audioFile": "long/04-preposition.mp3",
+      "durationSec": 28.13,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 29.43,
+      "startSec": 109.566,
+      "endSec": 138.996,
+      "cues": [
+        {
+          "startSec": 110.006,
+          "endSec": 115.296,
+          "text": "2월에는 논의가 방향이나 관계를 나타내는 다른 단어로 넓어졌습니다."
+        },
+        {
+          "startSec": 115.916,
+          "endSec": 121.286,
+          "text": "데이브 에이브러햄스는 설계 지침 작업 그룹에서 여러 호출을 읽어 본 결과를 전했습니다."
+        },
+        {
+          "startSec": 121.906,
+          "endSec": 127.286,
+          "text": "작업 그룹은 전치사를 그 뒤에 오는 값과 함께 괄호 안에서 읽는 편을 택했습니다."
+        },
+        {
+          "startSec": 127.906,
+          "endSec": 131.956,
+          "text": "다음 날 더그 그레거가 컴파일러에 이 규칙을 반영했습니다."
+        },
+        {
+          "startSec": 132.546,
+          "endSec": 138.096,
+          "text": "이제 괄호 앞에는 이동한다는 동작이 남고, 괄호 안에는 어디로 이동하는지가 보입니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "05-prefix",
+      "endingDigest": "385415508deac2dd3b7850c10047fce949942076377d68a75f125de7788a444d",
+      "audioFile": "long/revision-tTYnkM/05-prefix.mp3",
+      "durationSec": 33.6,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 34.9,
+      "startSec": 138.996,
+      "endSec": 173.896,
+      "cues": [
+        {
+          "startSec": 139.446,
+          "endSec": 143.376,
+          "text": "이름을 줄였다가 오히려 차이를 알아보기 어려워지는 경우도 있었습니다."
+        },
+        {
+          "startSec": 143.996,
+          "endSec": 150.076,
+          "text": "스위프트 배열은 다른 변수에 대입한 뒤 한쪽에 항목을 더해도 다른 쪽의 항목 수는 그대로입니다."
+        },
+        {
+          "startSec": 150.696,
+          "endSec": 157.746,
+          "text": "그런데 두 변수가 같은 가변 배열 객체를 가리키면 한쪽에 더한 항목이 다른 쪽에서도 보입니다."
+        },
+        {
+          "startSec": 158.366,
+          "endSec": 166.106,
+          "text": "데이브 에이브러햄스는 이름 앞의 NS를 떼면 두 배열이 이처럼 다르게 동작한다는 점을 놓치기 쉽다고 지적했습니다."
+        },
+        {
+          "startSec": 166.726,
+          "endSec": 172.996,
+          "text": "3월 3일 채택 공지에서 파운데이션의 접두사를 없애는 문제는 별도 제안으로 남겼습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "06-destination",
+      "endingDigest": "42852f4a8d3637a420711b8ddb00af0dd9117eb3aa11877acb437074154935d5",
+      "audioFile": "long/revision-9GyMbZ/06-destination.mp3",
+      "durationSec": 25.63,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 26.93,
+      "startSec": 173.896,
+      "endSec": 200.826,
+      "cues": [
+        {
+          "startSec": 174.346,
+          "endSec": 179.826,
+          "text": "그해 9월에 출시된 Swift 3에서 첫 장면의 코드를 다시 보겠습니다."
+        },
+        {
+          "startSec": 180.446,
+          "endSec": 183.376,
+          "text": "경로의 현재 위치는 처음과 같은 점입니다."
+        },
+        {
+          "startSec": 183.996,
+          "endSec": 187.666,
+          "text": "연필을 시작점에 옮겨 놓으면 종이에는 아직 선이 없습니다."
+        },
+        {
+          "startSec": 188.286,
+          "endSec": 194.276,
+          "text": "이제 종이비행기의 꼭짓점을 차례로 잇고, 선분을 더할 때마다 경로를 그려 보겠습니다."
+        },
+        {
+          "startSec": 194.896,
+          "endSec": 199.926,
+          "text": "점을 뜻하는 말을 되풀이하지 않고도 목적지를 알아볼 수 있게 하자는 제안이었습니다."
+        }
+      ]
+    }
+  ]
+}

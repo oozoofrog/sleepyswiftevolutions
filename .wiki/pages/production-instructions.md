@@ -3,10 +3,10 @@ title: Production instructions
 type: guide
 page_kind: summary
 created: "2026-11-26"
-updated: "2026-11-26"
+updated: "2026-11-27"
 aliases: ["제작 지시사항"]
 tags: [swift-evolution, production]
-sources: ["2026-11-26-project-instructions.md", "2026-11-26-decision-journal.md", "2026-11-26-episode-tools.md", "2026-11-26-channel-publication.md", "2026-11-26-episode-titles.md"]
+sources: ["2026-11-26-project-instructions.md", "2026-11-26-decision-journal.md", "2026-11-26-episode-tools.md", "2026-11-26-channel-publication.md", "2026-11-26-episode-titles.md", "2026-11-27-chrome-quota-fallback.md"]
 ---
 
 # Production instructions
@@ -46,4 +46,12 @@ Invoke `$oozoofrog-mode` to apply the project’s series conventions. See [[2026
 
 The creator selected the full series production cycle as the scope of the project mode. The first episode made with the mode is [SE-0003](../../episodes/SE-0003/research.md).
 
-Consider a present-day comparison when it answers the opening question. Keep the input and observation point fixed, and label the compiler used. This is a proposed format. See [[2026-11-26-swift-version-comparison]].
+Consider a present-day comparison when it answers the opening question. Keep the input and observation point fixed, and label the compiler used. The SE-0003 revision uses this format in its closing scene. See [[2026-11-26-swift-version-comparison]].
+
+2026-11-27 · [[2026-11-27-history-as-narrative|Historical investigation and SE-0004 correction]]
+
+2026-11-27 · [[2026-11-27-proposal-goal-closing|Proposal goal at the close]]
+
+## YouTube quota errors
+
+If the YouTube Data API reports a quota limit, continue the authorized publication in YouTube Studio in Chrome. Verify the active channel and the requested visibility. Check the upload receipt and the channel content list before uploading a file. When a video ID exists, open that video and complete only the missing items. Confirm the saved thumbnail, each published subtitle language, playlist membership and visibility after reopening Studio. Record any control Studio does not offer. [[2026-11-27-chrome-quota-fallback]]

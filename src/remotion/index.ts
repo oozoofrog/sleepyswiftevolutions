@@ -1,3 +1,4 @@
+import "./archive-print.css";
 import { registerRoot } from "remotion";
 import { RemotionRoot } from "./Root";
 
