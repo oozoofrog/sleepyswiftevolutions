@@ -1,0 +1,86 @@
+{
+  "proposalId": "SE-0006",
+  "format": "short",
+  "provider": "qwen3-clone",
+  "voice": "voice-profile",
+  "fps": 30,
+  "totalDurationSec": 28.929,
+  "totalFrames": 868,
+  "generatedAt": "2026-11-27T11:01:12.160Z",
+  "scenes": [
+    {
+      "sceneId": "s01-start",
+      "endingDigest": "38afbd8054dfc5202229906f76dd3d69a70e0044c29ac16579e79696b43bf60f",
+      "audioFile": "short/s01-start.mp3",
+      "durationSec": 10.444,
+      "leadInSec": 0.35,
+      "tailPadSec": 0.75,
+      "totalDurationSec": 11.544,
+      "startSec": 0,
+      "endSec": 11.544,
+      "cues": [
+        {
+          "startSec": 0.75,
+          "endSec": 3.07,
+          "text": "오늘도 코드 한 줄을 함께 살펴보겠습니다."
+        },
+        {
+          "startSec": 3.589,
+          "endSec": 6.699,
+          "text": "선수들이 3번, 1번, 2번 순서로 들어왔습니다."
+        },
+        {
+          "startSec": 7.251,
+          "endSec": 10.761,
+          "text": "Swift 2.2에서 sort()는 정렬한 배열을 돌려줬습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "s02-copy",
+      "endingDigest": "fe52413d9754f481f5451b58374b091466d52ddab9e792af3f942ad0773a9888",
+      "audioFile": "short/s02-copy.mp3",
+      "durationSec": 5.417,
+      "leadInSec": 0.35,
+      "tailPadSec": 0.75,
+      "totalDurationSec": 6.517,
+      "startSec": 11.544,
+      "endSec": 18.061,
+      "cues": [
+        {
+          "startSec": 11.944,
+          "endSec": 14.274,
+          "text": "Swift 3에서는 같은 일을 sorted()가 합니다."
+        },
+        {
+          "startSec": 14.798,
+          "endSec": 17.308,
+          "text": "도착 순서도 필요하다면 원본을 남겨야 합니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "s03-mutate",
+      "endingDigest": "f928a617677d7347ad61d87384e26be861c6897eacab98267121b61e68f414fc",
+      "audioFile": "short/s03-mutate.mp3",
+      "durationSec": 9.768,
+      "leadInSec": 0.35,
+      "tailPadSec": 0.75,
+      "totalDurationSec": 10.868,
+      "startSec": 18.061,
+      "endSec": 28.929,
+      "cues": [
+        {
+          "startSec": 18.451,
+          "endSec": 21.791,
+          "text": "sort()를 호출하면 원래 배열의 첫 번호가 3에서 1로 바뀝니다."
+        },
+        {
+          "startSec": 22.268,
+          "endSec": 28.148,
+          "text": "정렬한 값을 받는지, 갖고 있던 값을 바꾸는지 호출 이름에서 읽을 수 있게 하자는 제안이었습니다."
+        }
+      ]
+    }
+  ]
+}

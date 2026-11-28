@@ -56,3 +56,9 @@ Use the production opening procedure in [[2026-11-26-opening-retake-production]]
 ## Introduce the presenter’s next action
 
 Both editions open with “오늘도 코드 한 줄을 함께 살펴보겠습니다.” Use the same intentional ending when the presenter introduces the next step. For a puzzle, name a clue the viewer can inspect, then pause. Use the present tense for a visible operation and the past tense for a historical decision. This replaces the earlier series opening. [[2026-11-27-narrator-intent]]
+
+Name the object and its action in chapter titles, captions and spoken lines. Use the character number or row and column when explaining a table. Run `pnpm lint:ko` before recording. [[2026-11-27-unicode-chronology-release]]
+
+Name the historical event in Korean chapter titles. The Xerox chapter identifies who developed the Chinese typeface. [[2026-11-27-unicode-sanjo-and-chapter-titles]]
+
+For the Unicode chronology, let the solo tungso open the film. Bring in janggu on the Xerox chapter and duck the accompaniment under the voice. [[2026-11-28-unicode-tungso-sanjo]]

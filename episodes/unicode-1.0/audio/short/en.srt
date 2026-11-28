@@ -1,0 +1,39 @@
+1
+00:00:01,380 --> 00:00:03,590
+This single stroke is the character for “one.”
+
+2
+00:00:04,247 --> 00:00:08,807
+Let’s find it in three different character tables.
+
+3
+00:00:09,497 --> 00:00:13,857
+In the Korean table, the same character is in row 76, column 73.
+
+4
+00:00:14,538 --> 00:00:18,368
+The three table entries for “one” share a single Unicode code point.
+
+5
+00:00:19,038 --> 00:00:22,938
+Convert it back to the Korean table, and it is row 76, column 73 again.
+
+6
+00:00:23,572 --> 00:00:27,642
+Now look at these two forms of the character for blue-green.
+
+7
+00:00:28,428 --> 00:00:31,548
+Look at the lower halves. The strokes inside differ.
+
+8
+00:00:32,205 --> 00:00:35,605
+The Taiwanese character table gave the two forms distinct positions.
+
+9
+00:00:36,247 --> 00:00:40,427
+That is why each kept its own Unicode code point.
+
+10
+00:00:41,372 --> 00:00:45,982
+The aim was to share a character while preserving the distinctions in the original text.

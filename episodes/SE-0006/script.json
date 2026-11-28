@@ -1,0 +1,840 @@
+{
+  "schemaVersion": 1,
+  "proposalId": "SE-0006",
+  "episodeNumber": 6,
+  "swiftVersion": "3.0",
+  "proposalState": "implemented",
+  "proposalTitle": "Apply API Guidelines to the Standard Library",
+  "koreanTitle": "sort()가 원본 배열을 바꾸게 됐다",
+  "authors": [
+    "Dave Abrahams",
+    "Dmitri Gribenko",
+    "Maxim Moiseev"
+  ],
+  "proposalUrl": "https://github.com/swiftlang/swift-evolution/blob/main/proposals/0006-apply-api-guidelines-to-the-standard-library.md",
+  "thumbnail": {
+    "eyebrow": "SE-0006 · Swift 3.0",
+    "headline": "sort()가 원본을\n바꾸게 됐다",
+    "subheadline": "듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기",
+    "codeBefore": "let order = bibs.sort()",
+    "codeAfter": "let order = bibs.sorted()"
+  },
+  "scenes": [
+    {
+      "id": "01-finish",
+      "type": "code-focus",
+      "chapterTitle": "결승선의 등번호",
+      "heading": "정렬한 뒤에도 3번이 첫 선수일까?",
+      "narration": "오늘도 코드 한 줄을 함께 살펴보겠습니다. 달리기 선수 세 명이 3번, 1번, 2번 순서로 결승선을 통과했습니다. 번호순 명단도 필요합니다. 둘째 줄을 실행한 뒤에도 누가 먼저 들어왔는지 알 수 있을지 생각해 보겠습니다.",
+      "speech": [
+        {
+          "language": "ko",
+          "text": "오늘도 코드 한 줄을 함께 살펴보겠습니다.",
+          "caption": "오늘도 코드 한 줄을 함께 살펴보겠습니다.",
+          "direction": {
+            "stages": [
+              "결승선의 등번호"
+            ],
+            "panel": "code",
+            "references": []
+          }
+        },
+        {
+          "language": "ko",
+          "text": "달리기 선수 세 명이 삼 번, 일 번, 이 번 순서로 결승선을 통과했습니다.",
+          "caption": "달리기 선수 세 명이 3번, 1번, 2번 순서로 결승선을 통과했습니다.",
+          "direction": {
+            "stages": [
+              "결승선의 등번호"
+            ],
+            "panel": "code",
+            "references": [
+              {
+                "phrase": "3번",
+                "offsetSec": 1.4,
+                "lines": [
+                  1
+                ],
+                "targets": [
+                  {
+                    "line": 1,
+                    "text": "[3, 1, 2]"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "번호순 명단도 필요합니다.",
+          "caption": "번호순 명단도 필요합니다.",
+          "direction": {
+            "stages": [
+              "결승선의 등번호"
+            ],
+            "panel": "code",
+            "references": []
+          }
+        },
+        {
+          "language": "ko",
+          "text": "둘째 줄을 실행한 뒤에도 누가 먼저 들어왔는지 알 수 있을지 생각해 보겠습니다.",
+          "caption": "둘째 줄을 실행한 뒤에도 누가 먼저 들어왔는지 알 수 있을지 생각해 보겠습니다.",
+          "direction": {
+            "stages": [
+              "결승선의 등번호"
+            ],
+            "panel": "code",
+            "references": [
+              {
+                "phrase": "둘째 줄",
+                "offsetSec": 0.03,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "sort"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "code": {
+        "label": "Swift 2.2",
+        "code": "var bibs = [3, 1, 2]\nlet order = bibs.sort()"
+      },
+      "badge": "듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기",
+      "bibOrder": {
+        "bibs": [
+          3,
+          1,
+          2
+        ],
+        "initialCopy": false,
+        "events": []
+      }
+    },
+    {
+      "id": "02-old",
+      "type": "code-focus",
+      "chapterTitle": "Swift 2.2의 sort",
+      "heading": "번호순 명단을 하나 더 만든다",
+      "narration": "Swift 2.2에서 sort()는 정렬한 배열을 돌려줬습니다. 번호순 명단은 1번부터 시작합니다. 도착 기록에는 3번 선수가 여전히 맨 앞에 있습니다. 당시 도착 기록 자체를 번호순으로 바꾸려면 sortInPlace()를 호출했습니다.",
+      "speech": [
+        {
+          "language": "ko",
+          "text": "스위프트 이 점 이에서 소트는 정렬한 배열을 돌려줬습니다.",
+          "caption": "Swift 2.2에서 sort()는 정렬한 배열을 돌려줬습니다.",
+          "direction": {
+            "stages": [
+              "Swift 2.2의 sort"
+            ],
+            "panel": "codeBefore",
+            "references": [
+              {
+                "phrase": "sort()",
+                "offsetSec": 1.6,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "sort"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "번호순 명단은 일 번부터 시작합니다.",
+          "caption": "번호순 명단은 1번부터 시작합니다.",
+          "direction": {
+            "stages": [
+              "Swift 2.2의 sort"
+            ],
+            "panel": "codeBefore",
+            "references": [
+              {
+                "phrase": "번호순",
+                "offsetSec": 0.23,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "order"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "도착 기록에는 삼 번 선수가 여전히 맨 앞에 있습니다.",
+          "caption": "도착 기록에는 3번 선수가 여전히 맨 앞에 있습니다.",
+          "direction": {
+            "stages": [
+              "Swift 2.2의 sort"
+            ],
+            "panel": "codeBefore",
+            "references": []
+          }
+        },
+        {
+          "language": "ko",
+          "text": "당시 도착 기록 자체를 번호순으로 바꾸려면 소트 인 플레이스를 호출했습니다.",
+          "caption": "당시 도착 기록 자체를 번호순으로 바꾸려면 sortInPlace()를 호출했습니다.",
+          "direction": {
+            "stages": [
+              "Swift 2.2의 sort"
+            ],
+            "panel": "codeAfter",
+            "references": [
+              {
+                "phrase": "sortInPlace()",
+                "offsetSec": 3.18,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "sortInPlace"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "codeBefore": {
+        "label": "Swift 2.2",
+        "code": "var bibs = [3, 1, 2]\nlet order = bibs.sort()"
+      },
+      "codeAfter": {
+        "label": "Swift 2.2",
+        "code": "var bibs = [3, 1, 2]\nbibs.sortInPlace()"
+      },
+      "bibOrder": {
+        "bibs": [
+          3,
+          1,
+          2
+        ],
+        "initialCopy": false,
+        "events": [
+          {
+            "cue": "Swift 2.2에서 sort()는 정렬한 배열을 돌려줬습니다.",
+            "offsetSec": 2.48,
+            "operation": "copy"
+          },
+          {
+            "cue": "당시 도착 기록 자체를 번호순으로 바꾸려면 sortInPlace()를 호출했습니다.",
+            "offsetSec": 3.18,
+            "operation": "in-place"
+          }
+        ]
+      }
+    },
+    {
+      "id": "03-guidelines",
+      "type": "code-focus",
+      "chapterTitle": "표준 라이브러리의 이름",
+      "heading": "짧은 동사는 어느 쪽에 쓸까?",
+      "narration": "2016년 1월, 스위프트 커뮤니티에서는 표준 라이브러리의 이름을 놓고 공개 리뷰를 시작했습니다. 배열처럼 자주 쓰는 도구에 새 설계 지침을 적용해서, 다른 라이브러리도 따를 본보기를 만들자는 제안이었습니다. 원본을 그대로 두고 싶을 때 쓸 이름으로 sorted()를 제안했습니다. 짧은 동사 sort()는 배열 자체를 정렬하는 쪽에 주자는 뜻이었습니다.",
+      "speech": [
+        {
+          "language": "ko",
+          "text": "이천십육 년 일월, 스위프트 커뮤니티에서는 표준 라이브러리의 이름을 놓고 공개 리뷰를 시작했습니다.",
+          "caption": "2016년 1월, 스위프트 커뮤니티에서는 표준 라이브러리의 이름을 놓고 공개 리뷰를 시작했습니다.",
+          "direction": {
+            "stages": [
+              "표준 라이브러리의 이름"
+            ],
+            "panel": "codeBefore",
+            "references": []
+          }
+        },
+        {
+          "language": "ko",
+          "text": "배열처럼 자주 쓰는 도구에 새 설계 지침을 적용해서, 다른 라이브러리도 따를 본보기를 만들자는 제안이었습니다.",
+          "caption": "배열처럼 자주 쓰는 도구에 새 설계 지침을 적용해서, 다른 라이브러리도 따를 본보기를 만들자는 제안이었습니다.",
+          "direction": {
+            "stages": [
+              "표준 라이브러리의 이름"
+            ],
+            "panel": "codeBefore",
+            "references": []
+          }
+        },
+        {
+          "language": "ko",
+          "text": "원본을 그대로 두고 싶을 때 쓸 이름으로 소티드를 제안했습니다.",
+          "caption": "원본을 그대로 두고 싶을 때 쓸 이름으로 sorted()를 제안했습니다.",
+          "direction": {
+            "stages": [
+              "표준 라이브러리의 이름"
+            ],
+            "panel": "codeBefore",
+            "references": [
+              {
+                "phrase": "sorted()",
+                "offsetSec": 2.52,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "sorted"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "짧은 동사 소트는 배열 자체를 정렬하는 쪽에 주자는 뜻이었습니다.",
+          "caption": "짧은 동사 sort()는 배열 자체를 정렬하는 쪽에 주자는 뜻이었습니다.",
+          "direction": {
+            "stages": [
+              "표준 라이브러리의 이름"
+            ],
+            "panel": "codeAfter",
+            "references": [
+              {
+                "phrase": "sort()",
+                "offsetSec": 0.88,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "sort"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "codeBefore": {
+        "label": "2016. 1 · 표준 라이브러리",
+        "code": "var bibs = [3, 1, 2]\nlet order = bibs.sorted()"
+      },
+      "codeAfter": {
+        "label": "2016. 1 · 표준 라이브러리",
+        "code": "var bibs = [3, 1, 2]\nbibs.sort()"
+      },
+      "termNotes": [
+        {
+          "term": "표준 라이브러리",
+          "meaning": "배열처럼 Swift가 기본으로 제공하는 타입과 기능",
+          "cue": "표준 라이브러리"
+        }
+      ]
+    },
+    {
+      "id": "04-review",
+      "type": "code-focus",
+      "chapterTitle": "짧은 이름을 둘러싼 논의",
+      "heading": "어느 호출을 먼저 입력할까?",
+      "narration": "리뷰에 참여한 라데크 피에트루셰프스키는 짧은 이름을 어느 쪽에 주는지가 중요하다고 봤습니다. 원본을 보존하는 쪽이 입력하기 쉬우면, 개발자가 그쪽을 먼저 선택하기도 쉽다는 이유였습니다. 3월 3일, 리뷰를 맡은 더그 그레거는 일부 수정을 거쳐 제안을 채택했다고 발표했습니다.",
+      "speech": [
+        {
+          "language": "ko",
+          "text": "리뷰에 참여한 라데크 피에트루셰프스키는 짧은 이름을 어느 쪽에 주는지가 중요하다고 봤습니다.",
+          "caption": "리뷰에 참여한 라데크 피에트루셰프스키는 짧은 이름을 어느 쪽에 주는지가 중요하다고 봤습니다.",
+          "direction": {
+            "stages": [
+              "짧은 이름을 둘러싼 논의"
+            ],
+            "panel": "codeBefore",
+            "references": []
+          }
+        },
+        {
+          "language": "ko",
+          "text": "원본을 보존하는 쪽이 입력하기 쉬우면, 개발자가 그쪽을 먼저 선택하기도 쉽다는 이유였습니다.",
+          "caption": "원본을 보존하는 쪽이 입력하기 쉬우면, 개발자가 그쪽을 먼저 선택하기도 쉽다는 이유였습니다.",
+          "direction": {
+            "stages": [
+              "짧은 이름을 둘러싼 논의"
+            ],
+            "panel": "codeBefore",
+            "references": [
+              {
+                "phrase": "원본을",
+                "offsetSec": 0.04,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "sort"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "삼월 삼일, 리뷰를 맡은 더그 그레거는 일부 수정을 거쳐 제안을 채택했다고 발표했습니다.",
+          "caption": "3월 3일, 리뷰를 맡은 더그 그레거는 일부 수정을 거쳐 제안을 채택했다고 발표했습니다.",
+          "direction": {
+            "stages": [
+              "짧은 이름을 둘러싼 논의"
+            ],
+            "panel": "codeAfter",
+            "references": []
+          }
+        }
+      ],
+      "codeBefore": {
+        "label": "원본 유지 · Swift 2.2",
+        "code": "var bibs = [3, 1, 2]\nlet order = bibs.sort()"
+      },
+      "codeAfter": {
+        "label": "원본 유지 · Swift 3",
+        "code": "var bibs = [3, 1, 2]\nlet order = bibs.sorted()"
+      },
+      "people": [
+        {
+          "cue": "라데크",
+          "name": "Radek Pietruszewski",
+          "account": "Swift Forums @Radek_Pietruszewski",
+          "role": "공개 리뷰 참여자",
+          "profile": "https://forums.swift.org/u/Radek_Pietruszewski"
+        },
+        {
+          "cue": "더그",
+          "name": "Doug Gregor",
+          "account": "GitHub @DougGregor",
+          "role": "리뷰 매니저",
+          "profile": "https://github.com/DougGregor"
+        }
+      ]
+    },
+    {
+      "id": "05-result",
+      "type": "code-focus",
+      "chapterTitle": "Swift 3의 sort",
+      "heading": "도착 순서와 번호순 명단",
+      "narration": "그해 9월에 나온 Swift 3에서 처음의 도착 기록으로 돌아가 보겠습니다. sorted()로 명단을 만들면 도착 순서를 따로 보관할 필요가 없습니다. sort()를 호출하면 원래 배열의 첫 번호가 3에서 1로 바뀝니다. 정렬한 값을 받는지, 갖고 있던 값을 바꾸는지 호출 이름에서 읽을 수 있게 하자는 제안이었습니다.",
+      "speech": [
+        {
+          "language": "ko",
+          "text": "그해 구월에 나온 스위프트 삼에서 처음의 도착 기록으로 돌아가 보겠습니다.",
+          "caption": "그해 9월에 나온 Swift 3에서 처음의 도착 기록으로 돌아가 보겠습니다.",
+          "direction": {
+            "stages": [
+              "Swift 3의 sort"
+            ],
+            "panel": "codeBefore",
+            "references": []
+          }
+        },
+        {
+          "language": "ko",
+          "text": "소티드로 명단을 만들면 도착 순서를 따로 보관할 필요가 없습니다.",
+          "caption": "sorted()로 명단을 만들면 도착 순서를 따로 보관할 필요가 없습니다.",
+          "direction": {
+            "stages": [
+              "Swift 3의 sort"
+            ],
+            "panel": "codeBefore",
+            "references": [
+              {
+                "phrase": "sorted()",
+                "offsetSec": 0.03,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "sorted"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "소트를 호출하면 원래 배열의 첫 번호가 삼에서 일로 바뀝니다.",
+          "caption": "sort()를 호출하면 원래 배열의 첫 번호가 3에서 1로 바뀝니다.",
+          "direction": {
+            "stages": [
+              "Swift 3의 sort"
+            ],
+            "panel": "codeAfter",
+            "references": [
+              {
+                "phrase": "sort()",
+                "offsetSec": 0.27,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "sort"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "정렬한 값을 받는지, 갖고 있던 값을 바꾸는지 호출 이름에서 읽을 수 있게 하자는 제안이었습니다.",
+          "caption": "정렬한 값을 받는지, 갖고 있던 값을 바꾸는지 호출 이름에서 읽을 수 있게 하자는 제안이었습니다.",
+          "direction": {
+            "stages": [
+              "Swift 3의 sort"
+            ],
+            "panel": "codeAfter",
+            "references": [
+              {
+                "phrase": "바꾸는지",
+                "offsetSec": 2.76,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "bibs"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "codeBefore": {
+        "label": "Swift 3",
+        "code": "var bibs = [3, 1, 2]\nlet order = bibs.sorted()"
+      },
+      "codeAfter": {
+        "label": "Swift 3",
+        "code": "var bibs = [3, 1, 2]\nbibs.sort()"
+      },
+      "bibOrder": {
+        "bibs": [
+          3,
+          1,
+          2
+        ],
+        "initialCopy": false,
+        "events": [
+          {
+            "cue": "sorted()로 명단을 만들면 도착 순서를 따로 보관할 필요가 없습니다.",
+            "offsetSec": 0.59,
+            "operation": "copy"
+          },
+          {
+            "cue": "sort()를 호출하면 원래 배열의 첫 번호가 3에서 1로 바뀝니다.",
+            "offsetSec": 1.31,
+            "operation": "in-place"
+          }
+        ]
+      }
+    }
+  ],
+  "youtube": {
+    "long": {
+      "title": "sort()가 원본 배열을 바꾸게 됐다 · SE-0006",
+      "description": "선수 세 명의 도착 순서로 Swift 2.2와 Swift 3의 sort(), sorted(), sortInPlace()를 비교합니다.\n\n제안서 · https://github.com/swiftlang/swift-evolution/blob/main/proposals/0006-apply-api-guidelines-to-the-standard-library.md\n공개 리뷰 · https://forums.swift.org/t/review-se-0006-apply-api-guidelines-to-the-standard-library/1163/6\n채택 결정 · https://forums.swift.org/t/accepted-with-modifications-se-0006-apply-api-guidelines-to-the-standard-library/1667/1\nSwift 3 출시 · https://www.swift.org/blog/swift-3.0-released/\n\n제안자 · Dave Abrahams, Dmitri Gribenko, Maxim Moiseev",
+      "tags": [
+        "Swift",
+        "Swift Evolution",
+        "SE-0006",
+        "표준 라이브러리",
+        "sort",
+        "sorted"
+      ],
+      "playlistNames": [
+        "Swift Evolution 처음부터 끝까지"
+      ],
+      "categoryId": "28",
+      "defaultLanguage": "ko"
+    },
+    "short": {
+      "title": "sort()가 원본 배열을 바꾸게 됐다 · SE-0006 #Shorts",
+      "description": "선수 세 명의 도착 순서로 Swift 2.2와 Swift 3의 sort(), sorted(), sortInPlace()를 비교합니다.\n\n제안서 · https://github.com/swiftlang/swift-evolution/blob/main/proposals/0006-apply-api-guidelines-to-the-standard-library.md\n공개 리뷰 · https://forums.swift.org/t/review-se-0006-apply-api-guidelines-to-the-standard-library/1163/6\n채택 결정 · https://forums.swift.org/t/accepted-with-modifications-se-0006-apply-api-guidelines-to-the-standard-library/1667/1\nSwift 3 출시 · https://www.swift.org/blog/swift-3.0-released/\n\n제안자 · Dave Abrahams, Dmitri Gribenko, Maxim Moiseev",
+      "tags": [
+        "Swift",
+        "Swift Evolution",
+        "SE-0006",
+        "표준 라이브러리",
+        "sort",
+        "sorted"
+      ],
+      "playlistNames": [
+        "Swift Evolution Shorts"
+      ],
+      "categoryId": "28",
+      "defaultLanguage": "ko"
+    }
+  },
+  "visualStyle": "archive-print",
+  "narrationMix": "soft",
+  "backgroundMusic": {
+    "file": "quiet-pulse.m4a",
+    "duckUnderNarration": true
+  },
+  "shortCloneTempo": 1.2,
+  "showStageLabels": false,
+  "sceneTransition": "shared-layout",
+  "shortsScenes": [
+    {
+      "id": "s01-start",
+      "type": "code-focus",
+      "chapterTitle": "도착 순서",
+      "heading": "3번이 처음이었다는 기록은?",
+      "narration": "오늘도 코드 한 줄을 함께 살펴보겠습니다. 선수들이 3번, 1번, 2번 순서로 들어왔습니다. Swift 2.2에서 sort()는 정렬한 배열을 돌려줬습니다.",
+      "speech": [
+        {
+          "language": "ko",
+          "text": "오늘도 코드 한 줄을 함께 살펴보겠습니다.",
+          "caption": "오늘도 코드 한 줄을 함께 살펴보겠습니다.",
+          "direction": {
+            "stages": [
+              "도착 순서"
+            ],
+            "panel": "code",
+            "references": []
+          }
+        },
+        {
+          "language": "ko",
+          "text": "선수들이 삼 번, 일 번, 이 번 순서로 들어왔습니다.",
+          "caption": "선수들이 3번, 1번, 2번 순서로 들어왔습니다.",
+          "direction": {
+            "stages": [
+              "도착 순서"
+            ],
+            "panel": "code",
+            "references": [
+              {
+                "phrase": "3번",
+                "offsetSec": 0.59,
+                "lines": [
+                  1
+                ],
+                "targets": [
+                  {
+                    "line": 1,
+                    "text": "[3, 1, 2]"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "스위프트 이 점 이에서 소트는 정렬한 배열을 돌려줬습니다.",
+          "caption": "Swift 2.2에서 sort()는 정렬한 배열을 돌려줬습니다.",
+          "direction": {
+            "stages": [
+              "도착 순서"
+            ],
+            "panel": "code",
+            "references": [
+              {
+                "phrase": "sort()",
+                "offsetSec": 1.38,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "sort"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "code": {
+        "label": "Swift 2.2",
+        "code": "var bibs = [3, 1, 2]\nlet order = bibs.sort()"
+      },
+      "badge": "듣다 보면 잠이 오는 스위프트 에볼루션 훑어보기",
+      "bibOrder": {
+        "bibs": [
+          3,
+          1,
+          2
+        ],
+        "initialCopy": false,
+        "events": [
+          {
+            "cue": "Swift 2.2에서 sort()는 정렬한 배열을 돌려줬습니다.",
+            "offsetSec": 1.94,
+            "operation": "copy"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s02-copy",
+      "type": "code-focus",
+      "chapterTitle": "번호순 명단",
+      "heading": "도착 순서를 남기는 호출",
+      "narration": "Swift 3에서는 같은 일을 sorted()가 합니다. 도착 순서도 필요하다면 원본을 남겨야 합니다.",
+      "speech": [
+        {
+          "language": "ko",
+          "text": "스위프트 삼에서는 같은 일을 소티드가 합니다.",
+          "caption": "Swift 3에서는 같은 일을 sorted()가 합니다.",
+          "direction": {
+            "stages": [
+              "번호순 명단"
+            ],
+            "panel": "code",
+            "references": [
+              {
+                "phrase": "sorted()",
+                "offsetSec": 1.6,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "sorted"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "도착 순서도 필요하다면 원본을 남겨야 합니다.",
+          "caption": "도착 순서도 필요하다면 원본을 남겨야 합니다.",
+          "direction": {
+            "stages": [
+              "번호순 명단"
+            ],
+            "panel": "code",
+            "references": [
+              {
+                "phrase": "원본을",
+                "offsetSec": 1.389,
+                "lines": [
+                  1
+                ],
+                "targets": [
+                  {
+                    "line": 1,
+                    "text": "bibs"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "code": {
+        "label": "Swift 3",
+        "code": "var bibs = [3, 1, 2]\nlet order = bibs.sorted()"
+      },
+      "bibOrder": {
+        "bibs": [
+          3,
+          1,
+          2
+        ],
+        "initialCopy": true,
+        "events": []
+      }
+    },
+    {
+      "id": "s03-mutate",
+      "type": "code-focus",
+      "chapterTitle": "원본의 순서",
+      "heading": "첫 번호가 바뀌는 호출",
+      "narration": "sort()를 호출하면 원래 배열의 첫 번호가 3에서 1로 바뀝니다. 정렬한 값을 받는지, 갖고 있던 값을 바꾸는지 호출 이름에서 읽을 수 있게 하자는 제안이었습니다.",
+      "speech": [
+        {
+          "language": "ko",
+          "text": "소트를 호출하면 원래 배열의 첫 번호가 삼에서 일로 바뀝니다.",
+          "caption": "sort()를 호출하면 원래 배열의 첫 번호가 3에서 1로 바뀝니다.",
+          "direction": {
+            "stages": [
+              "원본의 순서"
+            ],
+            "panel": "code",
+            "references": [
+              {
+                "phrase": "sort()",
+                "offsetSec": 0.25,
+                "lines": [
+                  2
+                ],
+                "targets": [
+                  {
+                    "line": 2,
+                    "text": "sort"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "language": "ko",
+          "text": "정렬한 값을 받는지, 갖고 있던 값을 바꾸는지 호출 이름에서 읽을 수 있게 하자는 제안이었습니다.",
+          "caption": "정렬한 값을 받는지, 갖고 있던 값을 바꾸는지 호출 이름에서 읽을 수 있게 하자는 제안이었습니다.",
+          "direction": {
+            "stages": [
+              "원본의 순서"
+            ],
+            "panel": "code",
+            "references": []
+          }
+        }
+      ],
+      "code": {
+        "label": "Swift 3",
+        "code": "var bibs = [3, 1, 2]\nbibs.sort()"
+      },
+      "bibOrder": {
+        "bibs": [
+          3,
+          1,
+          2
+        ],
+        "initialCopy": true,
+        "events": [
+          {
+            "cue": "sort()를 호출하면 원래 배열의 첫 번호가 3에서 1로 바뀝니다.",
+            "offsetSec": 0.97,
+            "operation": "in-place"
+          }
+        ]
+      }
+    }
+  ]
+}

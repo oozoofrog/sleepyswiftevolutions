@@ -1,0 +1,17 @@
+{
+  "page": 11,
+  "cropPoints": [
+    307,
+    240,
+    489,
+    285
+  ],
+  "word": "Xerox",
+  "pixelsPerPoint": 16,
+  "pdfSha256": "660a58576291d7c3a9fbf00732bcaaa8f59d4be75d6fbac8161d15f5c242a45a",
+  "anchor": [
+    252,
+    368
+  ],
+  "radius": 7.280109889280518
+}

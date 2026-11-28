@@ -1,0 +1,284 @@
+1
+00:00:00,820 --> 00:00:08,790
+On August 29, 1988, Joe Becker of Xerox proposed a common numbering system for characters across languages.
+
+2
+00:00:09,457 --> 00:00:14,587
+Today, Unicode gives this Hangul letter Giyeok its own number.
+
+3
+00:00:15,198 --> 00:00:19,668
+Let’s follow this letter back to Xerox in the years before that proposal.
+
+4
+00:00:20,822 --> 00:00:24,542
+Back then, the same character could have a different number in each character table.
+
+5
+00:00:25,207 --> 00:00:31,637
+The Xerox team compared Japanese and Chinese character tables to extend a Chinese font.
+
+6
+00:00:32,290 --> 00:00:38,270
+In Toronto, a user was already borrowing characters missing from the Chinese set from the Japanese table.
+
+7
+00:00:38,915 --> 00:00:44,795
+Lee Collins and his colleagues compared Japanese and Chinese tables to find matching characters.
+
+8
+00:00:45,437 --> 00:00:50,667
+A match in another table could help them extend their Chinese font.
+
+9
+00:00:51,342 --> 00:00:56,332
+At Apple, exchanging files between different computers also raised questions about text.
+
+10
+00:00:56,957 --> 00:01:01,897
+At Apple, Mark Davis was looking for a way to read the same document on different computers.
+
+11
+00:01:02,582 --> 00:01:06,912
+The name Unicode appears in a December 1987 record.
+
+12
+00:01:07,582 --> 00:01:15,592
+Librarians could enter a title in Korean, Chinese or Japanese, and other libraries could reuse the record.
+
+13
+00:01:16,290 --> 00:01:24,290
+Becker and Collins met Karen Smith-Yoshimura and Alan Tucker of the Research Libraries Group to discuss which Han characters to treat as the same.
+
+14
+00:01:24,947 --> 00:01:33,417
+In July 1988 Apple bought the group's Chinese, Japanese and Korean character database to study Han unification.
+
+15
+00:01:34,082 --> 00:01:40,052
+In 1988, Joe Becker proposed character codes that different systems could share.
+
+16
+00:01:40,748 --> 00:01:45,658
+Each system would only need a way to convert between its own table and the shared one.
+
+17
+00:01:46,332 --> 00:01:49,942
+The original proposal used 16 bits per character.
+
+18
+00:01:50,623 --> 00:01:55,963
+English text took more space, but the start of the next character was easy to find.
+
+19
+00:01:56,623 --> 00:01:59,853
+As more people joined, discussions continued beyond the meeting room.
+
+20
+00:02:00,443 --> 00:02:03,323
+Glenn Wright maintained the email forum.
+
+21
+00:02:03,998 --> 00:02:09,478
+In August 1989, Becker and Collins merged the two companies’ Han character databases.
+
+22
+00:02:10,115 --> 00:02:14,185
+Now look at these two forms of the character for blue-green.
+
+23
+00:02:14,972 --> 00:02:18,092
+Look at the lower halves. The strokes inside differ.
+
+24
+00:02:18,748 --> 00:02:21,828
+The two characters had different codes in the Taiwanese standard.
+
+25
+00:02:22,498 --> 00:02:27,448
+Give them one number and you lose track of which form the original document contained.
+
+26
+00:02:28,123 --> 00:02:32,303
+That is why each kept its own Unicode code point.
+
+27
+00:02:33,457 --> 00:02:38,487
+In February 1990, a meeting in Seoul addressed Han unification.
+
+28
+00:02:39,165 --> 00:02:44,045
+The Korean delegation proposed a group in which different countries could review the characters together.
+
+29
+00:02:44,707 --> 00:02:48,687
+A line mixing English and Arabic changes reading direction.
+
+30
+00:02:49,307 --> 00:02:53,977
+Asmus Freytag's subcommittee examined the order in which characters should be stored.
+
+31
+00:02:54,665 --> 00:03:01,705
+Erica Liederman joined as editor. In May 1991 the publisher received the manuscript for copyediting.
+
+32
+00:03:02,373 --> 00:03:06,693
+In June the draft international character standard failed its ballot.
+
+33
+00:03:07,313 --> 00:03:11,243
+While the two standards were being reconciled, the Han section was deferred to a second volume.
+
+34
+00:03:11,895 --> 00:03:16,375
+The group held its first formal meeting in Tokyo the following July.
+
+35
+00:03:17,040 --> 00:03:23,390
+They would check the combined Chinese and Unicode list against rules developed by members of the Japanese delegation.
+
+36
+00:03:24,072 --> 00:03:28,182
+In October 1991, the first Unicode volume appeared.
+
+37
+00:03:28,873 --> 00:03:33,553
+Page 109 says the material is under review and will appear in the second volume.
+
+38
+00:03:34,248 --> 00:03:38,668
+The teams needed time to coordinate with the international standard and review the Han repertoire together.
+
+39
+00:03:39,822 --> 00:03:45,632
+In March 1992, the joint group finalized the unified Han repertoire and its order.
+
+40
+00:03:46,290 --> 00:03:53,860
+The acknowledgments in Volume 2 record Korean delegation leader Oh Young-taik and editorial subcommittee member Lee Choon Tack.
+
+41
+00:03:54,498 --> 00:03:59,228
+In the second volume, published that June, let’s open the cross-reference table to the character for “one.”
+
+42
+00:03:59,915 --> 00:04:04,475
+Let’s find it in three different character tables.
+
+43
+00:04:05,165 --> 00:04:08,235
+In the Chinese table, it is in row 50, column 27.
+
+44
+00:04:08,915 --> 00:04:11,615
+In the Japanese table, it is in row 16, column 76.
+
+45
+00:04:12,290 --> 00:04:16,650
+In the Korean table, the same character is in row 76, column 73.
+
+46
+00:04:17,332 --> 00:04:21,952
+Can we give it one number and still recover the original document?
+
+47
+00:04:22,623 --> 00:04:26,453
+The three table entries for “one” share a single Unicode code point.
+
+48
+00:04:27,123 --> 00:04:31,023
+Convert it back to the Korean table, and it is row 76, column 73 again.
+
+49
+00:04:31,707 --> 00:04:36,317
+The aim was to share a character while preserving the distinctions in the original text.
+
+50
+00:04:37,457 --> 00:04:41,477
+That September a computer magazine covered Unicode.
+
+51
+00:04:42,097 --> 00:04:45,207
+Finally, let’s follow the people in this story beyond 1992.
+
+52
+00:04:45,873 --> 00:04:52,623
+Joe Becker, who proposed a shared code, served as the Consortium’s technical vice president until 1998.
+
+53
+00:04:53,300 --> 00:05:02,680
+After retiring, Smith-Yoshimura recalled how other libraries waited so the Library of Congress could enter the first CJK record in their network.
+
+54
+00:05:03,332 --> 00:05:08,832
+One of the Xerox researchers, Nelson Ng, now chairs the Palo Alto Museum board.
+
+55
+00:05:09,452 --> 00:05:14,242
+His museum biography traces his first connection with the city to a summer internship at Xerox.
+
+56
+00:05:14,925 --> 00:05:22,115
+Akira Miyazawa, who helped develop the Japanese delegation’s criteria for reviewing Han characters, is a professor emeritus at Japan’s National Institute of Informatics.
+
+57
+00:05:22,780 --> 00:05:29,850
+Lee Choon Tack, who verified the unified Han repertoire on the editorial subcommittee, is a professor emeritus at Kongju National University.
+
+58
+00:05:30,540 --> 00:05:38,250
+Kyongsok Kim, credited as a reviewer in both first-edition volumes, went on to lead Hangul Jamo encoding and is now a professor emeritus at Pusan National University.
+
+59
+00:05:38,947 --> 00:05:44,257
+Mark Davis went on to organize data on how languages format dates and numbers.
+
+60
+00:05:44,877 --> 00:05:48,067
+In 2026 a prize bearing his name was announced.
+
+61
+00:05:48,748 --> 00:05:56,628
+In February 2026 Lee Collins and two colleagues checked a dictionary for a character meaning “who” in the Tày language of Vietnam.
+
+62
+00:05:57,290 --> 00:06:01,020
+The three proposed correcting the form of an existing character.
+
+63
+00:06:01,640 --> 00:06:06,780
+Four decades after the Xerox project, Collins was still comparing written forms.
+
+64
+00:06:11,857 --> 00:06:15,567
+Finally, let’s look at Unicode today in numbers.
+
+65
+00:06:16,187 --> 00:06:23,437
+Released in September 2026, Unicode 18.0 is the latest version and encodes 172,808 characters.
+
+66
+00:06:24,457 --> 00:06:31,677
+Rather than individual languages, Unicode encodes 175 scripts used to write thousands of modern and ancient languages.
+
+67
+00:06:32,297 --> 00:06:37,947
+Its localization standard currently supports 172 base languages.
+
+68
+00:06:38,653 --> 00:06:45,963
+Among living languages with their own encoded script, one of the rarest is Toto, spoken by about 1,500 people in one village in India.
+
+69
+00:06:46,553 --> 00:06:52,573
+All 31 letters created in 2015 by village elder Dhaniram Toto are now in Unicode.
+
+70
+00:06:53,297 --> 00:07:02,977
+At the other extreme, East Asian Han ideographs shared by Chinese and neighboring languages take the most space, with 102,999 characters, or nearly 60 percent of Unicode.
+
+71
+00:07:03,597 --> 00:07:10,577
+Among scripts dedicated to a single language, Korean Hangul leads with 11,739 characters, including precomposed syllables.
+

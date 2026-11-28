@@ -1,0 +1,111 @@
+{
+  "pages": {
+    "p012": {
+      "name": "서울 회의",
+      "folio": "제2권 · 12쪽",
+      "url": "https://www.unicode.org/versions/Unicode1.0.0/V2ch02.pdf#page=2"
+    },
+    "p016": {
+      "name": "두 청을 구분한 이유",
+      "folio": "제2권 · 16쪽",
+      "url": "https://www.unicode.org/versions/Unicode1.0.0/V2ch02.pdf#page=6"
+    },
+    "p109": {
+      "name": "검토 중인 지면",
+      "folio": "제1권 · 109쪽",
+      "url": "https://www.unicode.org/versions/Unicode1.0.0/ch03_3.pdf#page=12"
+    },
+    "p169": {
+      "name": "대응표의 범례",
+      "folio": "제2권 · 169쪽",
+      "url": "https://www.unicode.org/versions/Unicode1.0.0/HanCharts2.pdf#page=1"
+    },
+    "p171": {
+      "name": "一의 대응표",
+      "folio": "제2권 · 171쪽",
+      "url": "https://www.unicode.org/versions/Unicode1.0.0/HanCharts2.pdf#page=3"
+    }
+  },
+  "spots": {
+    "row": [
+      "p171",
+      "一의 첫 행",
+      [
+        0.074,
+        0.11,
+        0.36,
+        0.14
+      ]
+    ],
+    "china": [
+      "p171",
+      "중국 · 50행 27열",
+      [
+        0.164,
+        0.115,
+        0.217,
+        0.123
+      ]
+    ],
+    "japan": [
+      "p171",
+      "일본 · 16행 76열",
+      [
+        0.164,
+        0.123,
+        0.217,
+        0.132
+      ]
+    ],
+    "korea": [
+      "p171",
+      "한국 · 76행 73열",
+      [
+        0.222,
+        0.123,
+        0.279,
+        0.132
+      ]
+    ],
+    "legend": [
+      "p169",
+      "문자표의 약호",
+      [
+        0.14,
+        0.23,
+        0.84,
+        0.68
+      ]
+    ],
+    "forms": [
+      "p016",
+      "青과 靑을 따로 둔 설명",
+      [
+        0.145,
+        0.242,
+        0.857,
+        0.282
+      ]
+    ],
+    "seoul": [
+      "p012",
+      "서울 회의 문단",
+      [
+        0.091,
+        0.682,
+        0.882,
+        0.786
+      ]
+    ],
+    "blank": [
+      "p109",
+      "제2권을 예고한 안내",
+      [
+        0.244,
+        0.287,
+        0.768,
+        0.329
+      ]
+    ]
+  }
+}

@@ -67,3 +67,29 @@ The creator replaced the SE-0005 line sweep. Mark only the named characters on t
 When the same code, diagram or table appears in the next layout, carry it from its visible position to the next one. Introduce additions from the edge facing the retained item. This supersedes fading the entire chapter through the background when content continues. [[2026-11-27-shared-layout]]
 
 In a chapter about naming, identify the spelling the viewer can find in the code. SE-0005 uses “배열 이름 앞의 NS” above the array example and in the progress bar. [[2026-11-27-ns-chapter-title]]
+
+SE-0006 uses the same three race bibs for both sorting calls. A second row shows the returned array. Movement within the finish record shows mutation. [[2026-11-27-se-0006-sorting]]
+
+For the Unicode chronology, apply ink-painting principles through empty space, relative ink density and deliberate pauses on the actual printed page. The three treatments are proposals. [[2026-11-27-unicode-ink-studies]]
+
+For the Unicode chronology, carry the recorded paper tone and gray specks with each moving piece of type. The source-pixel treatment supersedes the proposed density adjustment for these shots. [[2026-11-27-unicode-scan-grain]]
+
+For the Unicode stroke close-up, let finer registered detail appear as the camera approaches the ink edge. Label the illustrated detail beyond the scan resolution and compare it with the scan at the same framing. This revises the pixel enlargement in the preceding study. [[2026-11-27-unicode-continuous-zoom]]
+
+For the Unicode film, the deepest zoom now resolves into printed characters paired with their code points. Their positions follow the scanned ink through both camera moves. [[2026-11-27-unicode-glyph-zoom]]
+
+For the Unicode zoom, the whole stroke is made of overlapping type from frame one. Scatter several sizes through the scanned contour and photograph the same plate at all distances. This supersedes the earlier repeated glyph and code-point layout. [[2026-11-27-unicode-glyph-heap]]
+
+For the Unicode stroke, show the scan at reading distance. Resolve fine letter edges first and let the dark ink body open later. Base the enlarged type on the ink density and imperfect edges of the printed samples. This revises the preceding single-plate rule. [[2026-11-27-unicode-optical-print]]
+
+The creator approved this treatment for the stroke zoom in the Unicode film. [[2026-11-27-unicode-optical-print]]
+
+The Unicode film carries the enlarged cluster of characters into the first historical layout. Hold the date and header still while the exhibit moves. [[2026-11-27-unicode-sanjo-and-chapter-titles]]
+
+For the revised Unicode opening, the enlarged ink becomes the interior of the X printed in “Xerox.” The camera withdraws until the source line is readable. This replaces the previous layout that reduced the enlarged cluster to a separate exhibit. [[2026-11-27-unicode-stroke-to-xerox]]
+
+For the chronology film, every view of the opening 一 uses ink drawn by its constituent characters. Its distant modern silhouette comes from a stencil. A registered knockout tests that the small type contributes to the first frame as well as the moving close-ups. This revises the earlier scan-to-plate interpolation for this opening. [[2026-11-27-unicode-dated-proposal-opening]]
+
+A subsequent production refinement replaced opaque gray overwriting and hard stencil clipping with optical overprinting, contour-forming intact glyphs, scale-matched weathered stamps, and a full-width paper aperture (`PEAK_SCALE = 512`) so both the zoomed glyphs and the emerging Xerox `X` avoid horizontal slit clipping. Creator review is pending. [[2026-11-27-unicode-microtype-aperture-refinement]]
+
+The creator then chose Hangul `ㄱ` (`U+3131`) as the opening character instead of `一`. The camera centers `ㄱ` at reading distance, travels into its upper-right calligraphic corner junction, and pulls back out of the `X` in “Xerox,” while Chapter 6 introduces `一` directly for the Han cross-reference chart. [[2026-11-27-unicode-giyeok-opening]]

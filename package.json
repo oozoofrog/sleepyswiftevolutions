@@ -10,7 +10,8 @@
     "scene-clip": "python3 scripts/scene-clip.py",
     "typecheck": "tsc --noEmit",
     "test": "tsx --test tests/*.test.ts",
-    "studio": "remotion studio src/remotion/index.ts"
+    "studio": "remotion studio src/remotion/index.ts",
+    "lint:ko": "tsx scripts/lint-korean.ts"
   },
   "dependencies": {
     "@remotion/bundler": "4.0.547",

@@ -1,0 +1,75 @@
+1
+00:00:00,610 --> 00:00:03,270
+Let’s look at another line of Swift together.
+
+2
+00:00:03,930 --> 00:00:09,180
+Three runners crossed the finish line in bib order 3, 1, 2.
+
+3
+00:00:09,820 --> 00:00:11,440
+We also need a list in bib-number order.
+
+4
+00:00:12,115 --> 00:00:17,375
+After the second line runs, can we still tell who finished first?
+
+5
+00:00:18,760 --> 00:00:22,990
+In Swift 2.2, sort() returned a sorted array.
+
+6
+00:00:23,640 --> 00:00:26,020
+Bib 1 comes first in the new list.
+
+7
+00:00:26,680 --> 00:00:30,020
+Bib 3 is still first in the finish record.
+
+8
+00:00:30,690 --> 00:00:35,860
+To reorder the finish record itself, you called sortInPlace().
+
+9
+00:00:37,230 --> 00:00:43,660
+In January 2016, the Swift community opened a review of standard library names.
+
+10
+00:00:44,335 --> 00:00:52,005
+The proposal would apply the new guidelines to familiar tools like arrays and set an example for other libraries.
+
+11
+00:00:52,660 --> 00:00:56,560
+The proposed name for getting a sorted result while keeping the original was sorted().
+
+12
+00:00:57,625 --> 00:01:01,655
+The short verb sort() would reorder the array itself.
+
+13
+00:01:03,050 --> 00:01:09,290
+Reviewer Radek Pietruszewski thought it mattered which operation got the shorter name.
+
+14
+00:01:09,950 --> 00:01:15,930
+He argued that making the nonmutating version easier to type would encourage people to choose it.
+
+15
+00:01:16,590 --> 00:01:22,430
+On March 3, review manager Doug Gregor announced acceptance with modifications.
+
+16
+00:01:23,840 --> 00:01:28,450
+Let’s return to our finish record in Swift 3, released that September.
+
+17
+00:01:29,135 --> 00:01:33,295
+With sorted(), we can make the list without separately saving the finish order.
+
+18
+00:01:33,965 --> 00:01:38,205
+Calling sort() changes the first bib in the original array from 3 to 1.
+
+19
+00:01:38,870 --> 00:01:45,390
+The proposal aimed to let callers read the name and tell whether they get a sorted value or change the one they have.

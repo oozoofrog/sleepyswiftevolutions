@@ -135,3 +135,7 @@ Use an entrance and exit at scene and explanatory graphic changes. For the first
 On the first spoken reference to a code fragment, fade a background in behind just those characters. On later references to the same spelling, enlarge the text briefly and return it to its original size. Track mentions across scenes within each edition. [Creator decision and sample](../.wiki/sources/2026-11-27-pinpoint-code-emphasis.md)
 
 When content continues into the next layout, keep it visible and move or resize it from its outgoing bounds. Reveal new content from the edge facing the retained item. Check the frames immediately before, during and after the change in each aspect ratio. [Creator feedback and rendered examples](../.wiki/sources/2026-11-27-shared-layout.md)
+
+In Korean narration and chapter titles, name the object and say what changes. When explaining a character table, state the number or the row and column. Run `pnpm lint:ko` before recording. [Examples and rule](../.wiki/sources/2026-11-27-unicode-chronology-release.md)
+
+For Korean history chapters, name the actual event or work. Use the source to identify who did what. A concise title can name the actor and activity, as in “제록스의 중국어 글꼴 개발”. [Creator feedback](../.wiki/sources/2026-11-27-unicode-sanjo-and-chapter-titles.md)

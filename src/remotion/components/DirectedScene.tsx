@@ -4,6 +4,7 @@ import type { ResolvedSceneTiming } from "../../lib/timeline";
 import { FONT_SANS, THEME } from "../theme";
 import { CodeGlyphMorph } from "./CodeGlyphMorph";
 import { CodePanel } from "./CodePanel";
+import { BibOrder } from "./BibOrder";
 import { PathDrawing } from "./PathDrawing";
 import { ParameterValueFlow } from "./ParameterValueFlow";
 import { SceneTitle } from "./SceneTitle";
@@ -175,7 +176,7 @@ export function DirectedScene({ timing, preceding, showStageLabels = true, anima
   }
   const comparePaths = scene.pathDestination && scene.comparisonStyle === "parallel" && !portrait;
   const timeline = scene.milestones?.some(point => beat?.stages.includes(point.date)) && scene.milestones;
-  return <AbsoluteFill style={{ padding: portrait ? "500px 8% 0" : "244px 14% 0", gap: 30 }}>
+  return <AbsoluteFill style={{ padding: scene.bibOrder ? (portrait ? "390px 8% 0" : "196px 14% 0") : (portrait ? "500px 8% 0" : "244px 14% 0"), gap: 30 }}>
     <div data-layout-part="heading"><SceneTitle heading={scene.heading} eyebrow={scene.chapterTitle}/></div>
     {timeline && <div data-layout-part="timeline" data-layout-id={JSON.stringify(timeline)} style={{ display: "flex", gap: 18 }}>
       {timeline.map((point, index) => <div key={point.date} style={{ flex: 1,
@@ -183,13 +184,14 @@ export function DirectedScene({ timing, preceding, showStageLabels = true, anima
         paddingTop: 12, font: `500 27px ${FONT_SANS}`, color: THEME.textSecondary,
         opacity: index <= cueIndex ? 1 : 0.45 }}>{point.date}</div>)}
     </div>}
-    {strip}
+    {(showStageLabels || !scene.bibOrder) && strip}
     {comparePaths && scene.codeBefore && scene.codeAfter ? (
       <div style={{display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginInline: "-8%"}}>
         {(["codeBefore", "codeAfter"] as const).map(panel =>
           <React.Fragment key={panel}>{codeView(panel, 27, true)}</React.Fragment>)}
       </div>
     ) : focused && codeView(beat?.panel, portrait ? 34 : 36)}
+    {scene.bibOrder && <BibOrder example={scene.bibOrder} timing={timing} now={now}/>}
     {scene.pathDestination && <div data-layout-part="destination" data-layout-id={JSON.stringify(scene.pathDestination)} style={{display: "flex", alignItems: "center", gap: 16,
       color: THEME.textPrimary, font: `600 ${portrait ? 34 : 31}px ${FONT_SANS}`}}>
       <span style={{width: 18, height: 18, borderRadius: "50%", background: THEME.swiftAmber}} />

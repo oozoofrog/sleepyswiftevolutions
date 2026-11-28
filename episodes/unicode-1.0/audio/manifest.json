@@ -1,0 +1,850 @@
+[
+  {
+    "key": "open",
+    "seconds": 2.87,
+    "cues": [
+      {
+        "text": "이 한 획은 한자 ‘한 일’입니다.",
+        "startSec": 0.85,
+        "endSec": 2.87
+      }
+    ],
+    "digest": "3d588726e73dc4b6e83b22cccce46785167d57b58fe11e4c879068e5c40a8bde"
+  },
+  {
+    "key": "tables",
+    "seconds": 4.66,
+    "cues": [
+      {
+        "text": "세 나라의 문자표에서 이 글자가 어디에 놓였는지 찾아보겠습니다.",
+        "startSec": 0.05,
+        "endSec": 4.66
+      }
+    ],
+    "digest": "d8a726dd7f6a0fcf24da664be6c5db4f79e8cb2c0f6f74a248b80a8ea6a75420"
+  },
+  {
+    "key": "china",
+    "seconds": 3.16,
+    "cues": [
+      {
+        "text": "중국 표에서는 50행 27열에 있습니다.",
+        "startSec": 0.05,
+        "endSec": 3.16
+      }
+    ],
+    "digest": "3c4cf17d47d6c834059a5224bc4747ea4afdd2b5d7af78539d639b38d318c5ae"
+  },
+  {
+    "key": "japan",
+    "seconds": 2.81,
+    "cues": [
+      {
+        "text": "일본 표에서는 16행 76열입니다.",
+        "startSec": 0.05,
+        "endSec": 2.81
+      }
+    ],
+    "digest": "f4d73fe1dc1d060e392726dc957d20a7457a5c387facc0c4079525b631b48807"
+  },
+  {
+    "key": "korea",
+    "seconds": 4.45,
+    "cues": [
+      {
+        "text": "한국 표를 펴면 76행 73열에서 같은 글자를 만납니다.",
+        "startSec": 0.05,
+        "endSec": 4.45
+      }
+    ],
+    "digest": "bb84bf259f9aa8020bb7eb67e69a709956c10af105153ae0283e9df2417f20d8"
+  },
+  {
+    "key": "question",
+    "seconds": 4.69,
+    "cues": [
+      {
+        "text": "번호를 하나로 모은 뒤에도 원래 문서로 돌아갈 수 있을지 생각해 보겠습니다.",
+        "startSec": 0.05,
+        "endSec": 4.69
+      }
+    ],
+    "digest": "9943e186eb5006f8bf66d20c02b283d24d75c94ebaf55108849f3ed363bf989e"
+  },
+  {
+    "key": "xerox",
+    "seconds": 6.52,
+    "cues": [
+      {
+        "text": "제록스 팀은 중국어 글꼴에 한자를 더 넣으려고 일본과 중국의 문자표를 대조했습니다.",
+        "startSec": 0.05,
+        "endSec": 6.52
+      }
+    ],
+    "digest": "30b20a94fd0cad951f459a3dc9ff237b62023e8de00b650151a258602ee8ae74"
+  },
+  {
+    "key": "compare",
+    "seconds": 5.98,
+    "cues": [
+      {
+        "text": "리 콜린스와 동료들은 일본 문자표를 중국 문자표 옆에 놓고 같은 글자를 찾았습니다.",
+        "startSec": 0.05,
+        "endSec": 5.98
+      }
+    ],
+    "digest": "da33a05f28d1c1140814e9d1fae6dd9f800c48ef051696af844d5e9e94dc6275"
+  },
+  {
+    "key": "why",
+    "seconds": 5.31,
+    "cues": [
+      {
+        "text": "이미 다른 표에 있는 글자를 찾아내면 중국어 글꼴을 확장하는 데 쓸 수 있었습니다.",
+        "startSec": 0.03,
+        "endSec": 5.31
+      }
+    ],
+    "digest": "600f4998dd27fc653a37cd043df4050dbc5f3dbf438aa4c9f75b2f6ab1d83206"
+  },
+  {
+    "key": "apple",
+    "seconds": 5.05,
+    "cues": [
+      {
+        "text": "애플에서도 서로 다른 컴퓨터끼리 파일을 주고받으면서 문자 문제가 드러났습니다.",
+        "startSec": 0.05,
+        "endSec": 5.05
+      }
+    ],
+    "digest": "44747b0ac559fc3c4f8034cb6e4012c9d6b74cb0a5e93e5e1040b94148903ed5"
+  },
+  {
+    "key": "name",
+    "seconds": 4.43,
+    "cues": [
+      {
+        "text": "1987년 12월 기록에는 유니코드라는 이름이 등장합니다.",
+        "startSec": 0.05,
+        "endSec": 4.43
+      }
+    ],
+    "digest": "5edcb686eb5645e0cb0e184597bb3fbb25cd52fb4bee3f7ccb1e80cfddd4cd40"
+  },
+  {
+    "key": "becker",
+    "seconds": 6.07,
+    "cues": [
+      {
+        "text": "1988년, 조 베커는 서로 다른 시스템이 함께 쓸 문자 번호를 제안했습니다.",
+        "startSec": 0.05,
+        "endSec": 6.07
+      }
+    ],
+    "digest": "0cb6f0f8b4c5568e3eda5468b85ab2d6518c15297254e5dd05db7b0ba9d453b5"
+  },
+  {
+    "key": "shared",
+    "seconds": 5,
+    "cues": [
+      {
+        "text": "각 시스템은 자기 문자표와 공통 문자표 사이를 오가는 방법만 알면 됩니다.",
+        "startSec": 0.05,
+        "endSec": 5
+      }
+    ],
+    "digest": "598f832c32c21c03a8487e1a8e7557b28e860e03abf52d9c0533247f3e87e8e2"
+  },
+  {
+    "key": "fixed",
+    "seconds": 3.71,
+    "cues": [
+      {
+        "text": "당시 구상은 문자마다 16비트를 쓰는 방식이었습니다.",
+        "startSec": 0.05,
+        "endSec": 3.71
+      }
+    ],
+    "digest": "e3d82932e294363bbf62940ee6295e1ed19114da2c33a3d3068f465faed0b08a"
+  },
+  {
+    "key": "cost",
+    "seconds": 5.42,
+    "cues": [
+      {
+        "text": "영문을 저장하는 공간은 늘어도 다음 글자가 시작되는 곳은 쉽게 찾을 수 있었습니다.",
+        "startSec": 0.05,
+        "endSec": 5.42
+      }
+    ],
+    "digest": "079e74dc567faefc384461baf53efb5972e3659a6a90f96186f88b4318361911"
+  },
+  {
+    "key": "merge",
+    "seconds": 5.58,
+    "cues": [
+      {
+        "text": "1989년 8월, 베커와 콜린스는 두 회사의 한자 자료를 하나로 합쳤습니다.",
+        "startSec": 0.05,
+        "endSec": 5.58
+      }
+    ],
+    "digest": "97b21497130d72f4b359ed6e41f335c8f67053072f2df665531d3020ca50b1f5"
+  },
+  {
+    "key": "pair",
+    "seconds": 4.08,
+    "cues": [
+      {
+        "text": "이번에는 나란히 놓인 ‘푸를 청’ 두 글자를 보겠습니다.",
+        "startSec": 0.05,
+        "endSec": 4.08
+      }
+    ],
+    "digest": "da8cee9d00a8ee90d5f546e6cf7cf4803e47e326c617410e46e32d42b2ebdb19"
+  },
+  {
+    "key": "lower",
+    "seconds": 3.32,
+    "cues": [
+      {
+        "text": "아랫부분에 눈길을 두면 안쪽의 획이 다릅니다.",
+        "startSec": 0.05,
+        "endSec": 3.32
+      }
+    ],
+    "digest": "e59769bc701dd6e72699d42b943d74263466aa03a0cc7f3bf830609f04faecbb"
+  },
+  {
+    "key": "taiwan",
+    "seconds": 3.17,
+    "cues": [
+      {
+        "text": "대만 문자표에서는 두 글자의 번호가 달랐습니다.",
+        "startSec": 0.05,
+        "endSec": 3.17
+      }
+    ],
+    "digest": "1cc650420fdec0e9535a55fe70558bdff340b903d7bc8b256a198719812be6ea"
+  },
+  {
+    "key": "loss",
+    "seconds": 5.04,
+    "cues": [
+      {
+        "text": "둘을 같은 번호로 바꾸면 원래 문서에 어느 쪽이 있었는지 알아낼 수 없습니다.",
+        "startSec": 0.05,
+        "endSec": 5.04
+      }
+    ],
+    "digest": "0c2c1e4de0d066381828f2928e6ddf64ee1af6f974b0118dd6ac60005a09464e"
+  },
+  {
+    "key": "keep",
+    "seconds": 4.28,
+    "cues": [
+      {
+        "text": "그래서 두 글자는 유니코드에서도 각자의 번호를 받았습니다.",
+        "startSec": 0.05,
+        "endSec": 4.28
+      }
+    ],
+    "digest": "c3f7f0804ea1af01d3e1c8f57c63a86fa6acd95c6301358aaf92790384fe7641"
+  },
+  {
+    "key": "seoul",
+    "seconds": 5.12,
+    "cues": [
+      {
+        "text": "1990년 2월, 서울에서 한자 통합을 논의하는 회의가 열렸습니다.",
+        "startSec": 0.05,
+        "endSec": 5.12
+      }
+    ],
+    "digest": "ad49dceb87014bd6b2d54933ef56ef0333c0cac86da0ebfb8bbd7a3ee81cb1ba"
+  },
+  {
+    "key": "proposal",
+    "seconds": 4.97,
+    "cues": [
+      {
+        "text": "한국 대표단은 여러 나라가 함께 글자를 검토할 연구 그룹을 제안했습니다.",
+        "startSec": 0.05,
+        "endSec": 4.97
+      }
+    ],
+    "digest": "bcc624bcd974604b339e8a2813d1f30444be48f0e7ff508dcd5036405374fc93"
+  },
+  {
+    "key": "tokyo",
+    "seconds": 4.56,
+    "cues": [
+      {
+        "text": "이듬해 7월, 그 그룹의 첫 공식 회의가 도쿄에서 열렸습니다.",
+        "startSec": 0.03,
+        "endSec": 4.56
+      }
+    ],
+    "digest": "1cd8b327f54283c172b12fa78dd97b995aad7c3484c8dea8ad49747d3e1e6afd"
+  },
+  {
+    "key": "review",
+    "seconds": 6.45,
+    "cues": [
+      {
+        "text": "중국 측과 유니코드 측이 합친 목록을 놓고, 일본 대표단이 마련한 기준으로 대조하기로 했습니다.",
+        "startSec": 0.05,
+        "endSec": 6.45
+      }
+    ],
+    "digest": "1e9a00f63ad33a11e65c2fe0f99ce97030c5d9f02db12298d7a597c219acc49c"
+  },
+  {
+    "key": "book",
+    "seconds": 4.19,
+    "cues": [
+      {
+        "text": "1991년 10월, 유니코드 첫 책이 나왔습니다.",
+        "startSec": 0.05,
+        "endSec": 4.19
+      }
+    ],
+    "digest": "5faefc4ae5f440d3f56ed781ff5d82e0e10955f66586ef895dfe3be0c18a6dfb"
+  },
+  {
+    "key": "empty",
+    "seconds": 4.78,
+    "cues": [
+      {
+        "text": "109쪽에는 검토 중인 내용을 두 번째 권에 싣겠다는 안내가 남아 있습니다.",
+        "startSec": 0.05,
+        "endSec": 4.78
+      }
+    ],
+    "digest": "8df9d635aa7346467422b7f3f017f1d628c796dbceb44a869d8bbd81ee9cd943"
+  },
+  {
+    "key": "reason",
+    "seconds": 4.51,
+    "cues": [
+      {
+        "text": "국제 표준과 조율하고 한자 목록을 함께 검토할 시간이 필요했습니다.",
+        "startSec": 0.05,
+        "endSec": 4.51
+      }
+    ],
+    "digest": "c2a05a543bcb1bb1b126e7e7d4f34f634340461fac1f10be1aab342367cff85d"
+  },
+  {
+    "key": "uro",
+    "seconds": 5.86,
+    "cues": [
+      {
+        "text": "1992년 3월, 공동 연구 그룹은 통합할 한자와 그 배열 순서를 확정했습니다.",
+        "startSec": 0.05,
+        "endSec": 5.86
+      }
+    ],
+    "digest": "c520c0643dbdd5456f0878dce326620e673d4ff8df90b97193ad08fff138341e"
+  },
+  {
+    "key": "second",
+    "seconds": 4.87,
+    "cues": [
+      {
+        "text": "여덟 달 뒤, 두 번째 권에 실린 대응표에서 처음의 한 획을 다시 만납니다.",
+        "startSec": 0.05,
+        "endSec": 4.87
+      }
+    ],
+    "digest": "3487f66557591ff43df9ea0f2471992c8e5874592929590016fee18e5f20b0f6"
+  },
+  {
+    "key": "volume",
+    "seconds": 4.83,
+    "cues": [
+      {
+        "text": "그해 6월에 나온 두 번째 권에서 한자 ‘한 일’의 대조표를 펴 보겠습니다.",
+        "startSec": 0.05,
+        "endSec": 4.83
+      }
+    ],
+    "digest": "50d8f796ba2a0fd92480dc582c349952133316ea28d652df53f83fee02d6d274"
+  },
+  {
+    "key": "unified",
+    "seconds": 3.93,
+    "cues": [
+      {
+        "text": "세 문자표의 ‘한 일’이 유니코드에서는 한 번호를 받았습니다.",
+        "startSec": 0.05,
+        "endSec": 3.93
+      }
+    ],
+    "digest": "5d008da9d50e67cde854a761c9880222cd6a558b9dfca657462a1e12d53c4688"
+  },
+  {
+    "key": "return",
+    "seconds": 4,
+    "cues": [
+      {
+        "text": "한국 표로 되돌리면 다시 76행 73열입니다.",
+        "startSec": 0.05,
+        "endSec": 4
+      }
+    ],
+    "digest": "64a0da71722edba835dff562e5a222b3c02e3bc940afc2d12333b1b34386e924"
+  },
+  {
+    "key": "end",
+    "seconds": 4.71,
+    "cues": [
+      {
+        "text": "같은 글자는 함께 쓰고, 원문에 있던 차이는 지키려던 선택이었습니다.",
+        "startSec": 0.05,
+        "endSec": 4.71
+      }
+    ],
+    "digest": "d44b8699936cdce20099fa82457d8f9cd232cdc70aa2bf5cffe87b045370baa5"
+  },
+  {
+    "key": "intro",
+    "seconds": 8.34,
+    "cues": [
+      {
+        "text": "1988년 8월 29일, 제록스의 조 베커는 세계 여러 언어의 글자에 공통 번호를 붙이자고 제안했습니다.",
+        "startSec": 0.7,
+        "endSec": 8.34
+      }
+    ],
+    "digest": "d447cd20024ab7de5f82923376469c4b534e0dfdaed91a4ba404c2e9a6964918",
+    "openingLeadIn": true
+  },
+  {
+    "key": "choose",
+    "seconds": 5.21,
+    "cues": [
+      {
+        "text": "오늘날 유니코드에서는 이 한글 자모, ‘기역’에도 고유한 번호가 있습니다.",
+        "startSec": 0.05,
+        "endSec": 5.21
+      }
+    ],
+    "digest": "90326fd58c24df5b320033328fcdf1b3c22e1ece0483d5dd4ac85e557e0f8bb6"
+  },
+  {
+    "key": "travel",
+    "seconds": 4.52,
+    "cues": [
+      {
+        "text": "이 글자를 따라, 제안서가 쓰이기 전의 제록스로 돌아가 보겠습니다.",
+        "startSec": 0,
+        "endSec": 4.52
+      }
+    ],
+    "digest": "9744c21e28952a9c8490ea29b03c727ec048359ea05c2bdba64bae44b9ebc4a1"
+  },
+  {
+    "key": "userfont",
+    "seconds": 6.04,
+    "cues": [
+      {
+        "text": "당시 토론토에서는 중국 문자표에 없는 한자를 일본 문자표에서 찾아 쓰는 사용자도 있었습니다.",
+        "startSec": 0.05,
+        "endSec": 6.04
+      }
+    ],
+    "digest": "660397a0a83c3105c9c729c0ffc614d6d4da4afe14aac92eecb3038ee095feb7"
+  },
+  {
+    "key": "davis",
+    "seconds": 5.03,
+    "cues": [
+      {
+        "text": "애플의 마크 데이비스는 기종이 달라도 같은 문서를 읽을 방법을 고민했습니다.",
+        "startSec": 0.05,
+        "endSec": 5.03
+      }
+    ],
+    "digest": "4839bc4e067edd7ca5afac0ac66d958d3f2c76fdd4a9362612f2c94686e808fa"
+  },
+  {
+    "key": "library",
+    "seconds": 8.11,
+    "cues": [
+      {
+        "text": "도서관에서는 사서가 한국어나 중국어, 일본어로 책 제목을 입력하면 다른 도서관도 그 기록을 쓸 수 있었습니다.",
+        "startSec": 0.05,
+        "endSec": 8.11
+      }
+    ],
+    "digest": "c06cbfef072bbf0229daa00bedb22e2f9e24b755b0ae842939490b7625a59860"
+  },
+  {
+    "key": "karen",
+    "seconds": 8.09,
+    "cues": [
+      {
+        "text": "베커와 콜린스는 도서관 연구그룹의 캐런 스미스요시무라, 앨런 터커와 만나 어느 한자를 같은 글자로 볼지 논의했습니다.",
+        "startSec": 0.05,
+        "endSec": 8.09
+      }
+    ],
+    "digest": "7b742af31cd8e4e88a605d4eee57b5d3efb2f5a54428ab4f552f7afe60f42407"
+  },
+  {
+    "key": "cjk",
+    "seconds": 8.56,
+    "cues": [
+      {
+        "text": "1988년 7월, 애플은 한자 통합을 연구하려고 이 단체의 한·중·일 문자 데이터베이스를 구입했습니다.",
+        "startSec": 0.05,
+        "endSec": 8.56
+      }
+    ],
+    "digest": "ebc0988b47dbeb187c01e7ccf8f16fc0dec84d9076fea80c09164da5883e555d"
+  },
+  {
+    "key": "network",
+    "seconds": 6.79,
+    "cues": [
+      {
+        "text": "참여자가 늘자 회의실 밖에서도 토론이 이어졌습니다.",
+        "startSec": 0.05,
+        "endSec": 3.28
+      },
+      {
+        "text": "글렌 라이트가 전자우편 토론을 맡았습니다.",
+        "startSec": 3.87,
+        "endSec": 6.79
+      }
+    ],
+    "digest": "3e1010f535b1b103f59f9f1e9f70cf3436349c21e7dc466a6ccf14c9fc83fb88"
+  },
+  {
+    "key": "nonhan",
+    "seconds": 9.36,
+    "cues": [
+      {
+        "text": "영어와 아랍어가 한 줄에 섞이면 글을 읽는 방향도 바뀝니다.",
+        "startSec": 0.05,
+        "endSec": 4.03
+      },
+      {
+        "text": "아스무스 프라이타크의 소위원회는 글자를 어떤 순서로 저장할지 검토했습니다.",
+        "startSec": 4.65,
+        "endSec": 9.36
+      }
+    ],
+    "digest": "098c790baf32cf2fad0ab0ad4b1c4dafc5601b43a14b8dee58429dea0bb5ba95"
+  },
+  {
+    "key": "editing",
+    "seconds": 7.12,
+    "cues": [
+      {
+        "text": "에리카 리더먼이 편집을 맡았고, 1991년 5월에는 교정 전 원고가 출판사에 도착했습니다.",
+        "startSec": 0.05,
+        "endSec": 7.12
+      }
+    ],
+    "digest": "e97d323445c2b2ca8ca229ec580990166eb8781740e5464347369e7bb222ea80"
+  },
+  {
+    "key": "iso",
+    "seconds": 8.96,
+    "cues": [
+      {
+        "text": "그런데 6월에 국제 문자 표준 초안이 투표에서 부결됐습니다.",
+        "startSec": 0.05,
+        "endSec": 4.37
+      },
+      {
+        "text": "두 표준을 조율하는 동안 한자 편은 두 번째 권으로 미뤘습니다.",
+        "startSec": 4.99,
+        "endSec": 8.96
+      }
+    ],
+    "digest": "035f42a9f32fb39c480c43755979b470677a3150a0d2a6e6ada1c79e4a875d21"
+  },
+  {
+    "key": "press",
+    "seconds": 7.84,
+    "cues": [
+      {
+        "text": "그해 9월, 컴퓨터 잡지에도 유니코드 이야기가 실렸습니다.",
+        "startSec": 0.05,
+        "endSec": 4.07
+      },
+      {
+        "text": "마지막으로, 이 사람들의 후일담을 들어 보겠습니다.",
+        "startSec": 4.69,
+        "endSec": 7.84
+      }
+    ],
+    "digest": "0d31154d0b64eeed8201dd3c8292ea4d851b2f338e1299ee015d7a1c45085f6f"
+  },
+  {
+    "key": "afterbecker",
+    "seconds": 6.84,
+    "cues": [
+      {
+        "text": "공통 번호를 제안한 조 베커는 1998년까지 유니코드 컨소시엄의 기술 부회장을 맡았습니다.",
+        "startSec": 0.05,
+        "endSec": 6.84
+      }
+    ],
+    "digest": "3cf3865c92e9215486179be858754b2b3cefb9f991b9fa5db33b6822fdda1223"
+  },
+  {
+    "key": "afterkaren",
+    "seconds": 9.47,
+    "cues": [
+      {
+        "text": "은퇴한 스미스요시무라는 훗날 인터뷰에서, 미국 의회도서관이 첫 한·중·일 서지 기록을 입력하도록 다른 도서관들이 기다려 줬다고 회고했습니다.",
+        "startSec": 0.05,
+        "endSec": 9.47
+      }
+    ],
+    "digest": "544ec819b10726639074a71c5397f96bf72807588ddc84c2d4365f9281898cd3"
+  },
+  {
+    "key": "afterdavis",
+    "seconds": 9.2,
+    "cues": [
+      {
+        "text": "마크 데이비스는 언어마다 날짜와 숫자를 어떻게 쓰는지도 정리하기 시작했습니다.",
+        "startSec": 0.05,
+        "endSec": 5.35
+      },
+      {
+        "text": "2026년에는 그의 이름을 딴 상이 발표됐습니다.",
+        "startSec": 5.97,
+        "endSec": 9.2
+      }
+    ],
+    "digest": "081660f529e73eb18ecca61148c289e5be2912ad7c1244bec8a28ef288d46a61"
+  },
+  {
+    "key": "afterlee",
+    "seconds": 7.97,
+    "cues": [
+      {
+        "text": "2026년 2월, 리 콜린스와 동료 두 사람은 베트남 따이어로 ‘누구’를 뜻하는 글자를 사전에서 다시 확인했습니다.",
+        "startSec": 0.05,
+        "endSec": 7.97
+      }
+    ],
+    "digest": "086ba46e45183f6c1ec7cc00486f21750e0e0848f38a956297464263b01b3711"
+  },
+  {
+    "key": "afterform",
+    "seconds": 9.59,
+    "cues": [
+      {
+        "text": "세 사람은 이미 등록된 글자의 모양을 고치자고 제안했습니다.",
+        "startSec": 0.05,
+        "endSec": 3.78
+      },
+      {
+        "text": "제록스에서 시작한 한자 대조는 사십 년 뒤에도 이렇게 이어졌습니다.",
+        "startSec": 4.4,
+        "endSec": 9.59
+      }
+    ],
+    "digest": "74be7483db8b77d3f7d14fa9f4d08fa23babbff410bc9a125883630cc9d02e11"
+  },
+  {
+    "key": "afternelson",
+    "seconds": 11,
+    "cues": [
+      {
+        "text": "제록스에서 한자를 대조하던 넬슨 응은 지금 팔로알토 박물관의 이사장입니다.",
+        "startSec": 0.05,
+        "endSec": 5.55
+      },
+      {
+        "text": "그는 이 도시와 처음 인연을 맺은 계기가 제록스의 여름 인턴이었다고 소개합니다.",
+        "startSec": 6.17,
+        "endSec": 11
+      }
+    ],
+    "digest": "7f3ef8c036d556e860b7582e0b5a73e40d65fe865bc4c345d349b4ee56096f80"
+  },
+  {
+    "key": "aftermiyazawa",
+    "seconds": 7.29,
+    "cues": [
+      {
+        "text": "일본 대표단에서 한자 검토 기준을 마련한 미야자와 아키라는 일본 국립정보학연구소 명예교수입니다.",
+        "startSec": 0.05,
+        "endSec": 7.29
+      }
+    ],
+    "digest": "21b322e67a2c8b37f7a04e8ef88a9336232da8ead5320eee8653441e0d64f2ad"
+  },
+  {
+    "key": "archive",
+    "seconds": 3.78,
+    "cues": [
+      {
+        "text": "그때는 같은 한자도 문자표마다 번호가 달랐습니다.",
+        "startSec": 0.05,
+        "endSec": 3.78
+      }
+    ],
+    "digest": "650c0b834ccc7bf58347f830757912bd9761f6249d1e22dc8d7c07389e4d6138"
+  },
+  {
+    "key": "krcjk",
+    "seconds": 7.63,
+    "cues": [
+      {
+        "text": "초판 두 번째 권 감사의 글에는 한국 수석대표 오영택과 편집소위원회 위원 이춘택의 이름이 남아 있습니다.",
+        "startSec": 0.05,
+        "endSec": 7.63
+      }
+    ],
+    "digest": "a294229d4f310c3461c508901aaceda18efd7038602a4d5e5ca2bad61da10f31"
+  },
+  {
+    "key": "afterchoontack",
+    "seconds": 7.15,
+    "cues": [
+      {
+        "text": "편집소위원회에서 통합 한자 목록을 검증한 이춘택은 공주대학교 문헌정보교육과 명예교수입니다.",
+        "startSec": 0.05,
+        "endSec": 7.15
+      }
+    ],
+    "digest": "15100739fd89ab899e8e671095813fc9817201180f52e510a3cb7671bb995412"
+  },
+  {
+    "key": "afterkim",
+    "seconds": 7.82,
+    "cues": [
+      {
+        "text": "초판 두 권의 검토자로 이름을 올린 김경석은 한글 자모 부호화를 이끌었고, 지금은 부산대학교 명예교수입니다.",
+        "startSec": 0.05,
+        "endSec": 7.82
+      }
+    ],
+    "digest": "15daebe2b81e9f6b1f557793740374de9ab9461a76f4f48f5250ec10b70e1c4d"
+  },
+  {
+    "key": "cookiever",
+    "seconds": 11.99,
+    "cues": [
+      {
+        "text": "마지막으로 오늘날의 유니코드를 숫자로 살펴보겠습니다.",
+        "startSec": 0.05,
+        "endSec": 3.75
+      },
+      {
+        "text": "2026년 9월에 나온 최신 판본은 유니코드 18.0이며, 수록 문자는 172,808자입니다.",
+        "startSec": 4.37,
+        "endSec": 11.99
+      }
+    ],
+    "digest": "99df01050724181bcf831b2fa061ee43577c343a9dbb6a9600ed62bcece2e4c3"
+  },
+  {
+    "key": "cookielang",
+    "seconds": 13.57,
+    "cues": [
+      {
+        "text": "유니코드는 개별 언어 대신 175개 문자 체계를 부호화해 현대와 고대의 수천 개 언어를 적습니다.",
+        "startSec": 0.05,
+        "endSec": 7.27
+      },
+      {
+        "text": "언어별 표기 규칙을 담은 지역화 표준은 현재 172개 기본 언어를 지원합니다.",
+        "startSec": 7.89,
+        "endSec": 13.57
+      }
+    ],
+    "digest": "3a1b9facef5b1c2a8e8f914be3f2ae821f9fa4e2aaa9537c5c1eab00c25641be"
+  },
+  {
+    "key": "cookierare",
+    "seconds": 14.01,
+    "cues": [
+      {
+        "text": "고유 문자가 등록된 가장 희귀한 생활 언어로는 인도 한 마을에서 약 1,500명이 쓰는 토토어가 꼽힙니다.",
+        "startSec": 0.05,
+        "endSec": 7.39
+      },
+      {
+        "text": "마을 원로 다니람 토토가 2015년에 만든 서른한 글자도 유니코드에 실렸습니다.",
+        "startSec": 7.98,
+        "endSec": 14.01
+      }
+    ],
+    "digest": "f7fabd88245acb583a50f1bf5a2b3284e5c6dc8f81b344f9fc0e9d1b4e225fe0"
+  },
+  {
+    "key": "cookiemost",
+    "seconds": 17.44,
+    "cues": [
+      {
+        "text": "반대로 번호를 가장 많이 쓰는 문자는 중국어 등 동아시아 한자 102,999자로, 전체의 약 60퍼센트를 차지합니다.",
+        "startSec": 0.05,
+        "endSec": 9.82
+      },
+      {
+        "text": "한 언어 전용 문자로는 한국어 한글이 완성형 음절을 포함해 11,739자로 가장 많습니다.",
+        "startSec": 10.44,
+        "endSec": 17.44
+      }
+    ],
+    "digest": "28c5b0e292b1f9637801b53c44ce7a6c3f38f884f05857802e6222e3afb31123"
+  },
+  {
+    "key": "scookiever",
+    "seconds": 7.68,
+    "cues": [
+      {
+        "text": "마지막으로 2026년 9월 발표된 최신 판본 유니코드 18.0은 172,808자를 담고 있습니다.",
+        "startSec": 0.05,
+        "endSec": 7.68
+      }
+    ],
+    "digest": "1fc19d637e6ea8d192b4365ebd7790cf34c98b6b4115e34e6253f61aebb6b417"
+  },
+  {
+    "key": "scookielang",
+    "seconds": 7.13,
+    "cues": [
+      {
+        "text": "175개 문자 체계로 수천 개 언어를 적고, 지역화 표준으로는 172개 기본 언어를 지원합니다.",
+        "startSec": 0.05,
+        "endSec": 7.13
+      }
+    ],
+    "digest": "de314f0951f5d4e6dc07cf6ceb96704d5eadd4435e10270ad35319859e644a6f"
+  },
+  {
+    "key": "scookierare",
+    "seconds": 7.85,
+    "cues": [
+      {
+        "text": "고유 문자가 등록된 가장 희귀한 생활 언어로는 인도 한 마을에서 약 1,500명이 쓰는 토토어가 꼽힙니다.",
+        "startSec": 0.05,
+        "endSec": 7.85
+      }
+    ],
+    "digest": "fd0cc8bd5d367c688228048aa2feb887339c1f165e427fd342542d7f01bc8e8b"
+  },
+  {
+    "key": "scookiemost",
+    "seconds": 11.26,
+    "cues": [
+      {
+        "text": "반대로 번호를 가장 많이 쓰는 문자는 동아시아 한자 102,999자이고, 한 언어 전용 문자로는 한글이 11,739자로 가장 많습니다.",
+        "startSec": 0.05,
+        "endSec": 11.26
+      }
+    ],
+    "digest": "06c1db9c4065f4d06f7e4d98beb8c13d34ba7cbc7846ebf45a4cfd71b9ba47fb"
+  }
+]

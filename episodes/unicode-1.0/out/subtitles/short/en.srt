@@ -1,0 +1,104 @@
+1
+00:00:00,820 --> 00:00:08,790
+On August 29, 1988, Joe Becker of Xerox proposed a common numbering system for characters across languages.
+
+2
+00:00:09,457 --> 00:00:14,587
+Today, Unicode gives this Hangul letter Giyeok its own number.
+
+3
+00:00:15,198 --> 00:00:19,668
+Let’s follow this letter back to Xerox in the years before that proposal.
+
+4
+00:00:20,822 --> 00:00:24,542
+Back then, the same character could have a different number in each character table.
+
+5
+00:00:25,207 --> 00:00:31,637
+The Xerox team compared Japanese and Chinese character tables to extend a Chinese font.
+
+6
+00:00:32,290 --> 00:00:40,290
+Becker and Collins met Karen Smith-Yoshimura and Alan Tucker of the Research Libraries Group to discuss which Han characters to treat as the same.
+
+7
+00:00:40,947 --> 00:00:49,417
+In July 1988 Apple bought the group's Chinese, Japanese and Korean character database to study Han unification.
+
+8
+00:00:50,082 --> 00:00:56,052
+In 1988, Joe Becker proposed character codes that different systems could share.
+
+9
+00:00:56,698 --> 00:01:00,768
+Now look at these two forms of the character for blue-green.
+
+10
+00:01:01,555 --> 00:01:04,675
+Look at the lower halves. The strokes inside differ.
+
+11
+00:01:05,332 --> 00:01:08,412
+The two characters had different codes in the Taiwanese standard.
+
+12
+00:01:09,082 --> 00:01:14,032
+Give them one number and you lose track of which form the original document contained.
+
+13
+00:01:14,707 --> 00:01:18,887
+That is why each kept its own Unicode code point.
+
+14
+00:01:20,030 --> 00:01:25,840
+In March 1992, the joint group finalized the unified Han repertoire and its order.
+
+15
+00:01:26,498 --> 00:01:31,228
+In the second volume, published that June, let’s open the cross-reference table to the character for “one.”
+
+16
+00:01:31,915 --> 00:01:36,275
+In the Korean table, the same character is in row 76, column 73.
+
+17
+00:01:36,957 --> 00:01:40,787
+The three table entries for “one” share a single Unicode code point.
+
+18
+00:01:41,457 --> 00:01:45,357
+Convert it back to the Korean table, and it is row 76, column 73 again.
+
+19
+00:01:46,040 --> 00:01:50,650
+The aim was to share a character while preserving the distinctions in the original text.
+
+20
+00:01:51,790 --> 00:01:59,670
+In February 2026 Lee Collins and two colleagues checked a dictionary for a character meaning “who” in the Tày language of Vietnam.
+
+21
+00:02:00,332 --> 00:02:04,062
+The three proposed correcting the form of an existing character.
+
+22
+00:02:04,682 --> 00:02:09,822
+Four decades after the Xerox project, Collins was still comparing written forms.
+
+23
+00:02:13,898 --> 00:02:21,498
+Finally, Unicode 18.0, released in September 2026, encodes 172,808 characters.
+
+24
+00:02:22,165 --> 00:02:29,195
+Its 175 scripts write thousands of languages, while its localization standard supports 172 base languages.
+
+25
+00:02:29,873 --> 00:02:37,633
+Among living languages with their own encoded script, one of the rarest is Toto, spoken by about 1,500 people in one village in India.
+
+26
+00:02:38,280 --> 00:02:49,460
+At the other extreme, East Asian Han ideographs lead with 102,999 characters, while Korean Hangul leads single-language scripts with 11,739.
+

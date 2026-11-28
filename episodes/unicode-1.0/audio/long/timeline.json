@@ -1,0 +1,152 @@
+[
+  {
+    "key": "open",
+    "frameCount": 94,
+    "voiceOnset": 1.38
+  },
+  {
+    "key": "tables",
+    "frameCount": 126,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "china",
+    "frameCount": 90,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "japan",
+    "frameCount": 82,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "korea",
+    "frameCount": 121,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "question",
+    "frameCount": 133,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "xerox",
+    "frameCount": 136,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "compare",
+    "frameCount": 158,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "why",
+    "frameCount": 142,
+    "voiceOnset": 0.31000000000000005
+  },
+  {
+    "key": "apple",
+    "frameCount": 142,
+    "voiceOnset": 0.34
+  },
+  {
+    "key": "becker",
+    "frameCount": 160,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "shared",
+    "frameCount": 134,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "fixed",
+    "frameCount": 103,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "cost",
+    "frameCount": 150,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "pair",
+    "frameCount": 112,
+    "voiceOnset": 0.28
+  },
+  {
+    "key": "lower",
+    "frameCount": 94,
+    "voiceOnset": 0.47000000000000003
+  },
+  {
+    "key": "taiwan",
+    "frameCount": 97,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "loss",
+    "frameCount": 135,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "keep",
+    "frameCount": 123,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "seoul",
+    "frameCount": 137,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "proposal",
+    "frameCount": 133,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "tokyo",
+    "frameCount": 124,
+    "voiceOnset": 0.31000000000000005
+  },
+  {
+    "key": "review",
+    "frameCount": 175,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "book",
+    "frameCount": 115,
+    "voiceOnset": 0.32
+  },
+  {
+    "key": "empty",
+    "frameCount": 129,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "reason",
+    "frameCount": 129,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "second",
+    "frameCount": 131,
+    "voiceOnset": 0.29000000000000004
+  },
+  {
+    "key": "unified",
+    "frameCount": 108,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "return",
+    "frameCount": 110,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "end",
+    "frameCount": 148,
+    "voiceOnset": 0.33
+  }
+]

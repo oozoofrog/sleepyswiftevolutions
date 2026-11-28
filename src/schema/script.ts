@@ -1,3 +1,4 @@
+import { checkScriptCopy } from "../lib/korean-copy";
 import { z } from "zod";
 
 export const CodeSnippetSchema = z.object({
@@ -95,6 +96,13 @@ export const SceneSchema = z.object({
   }).optional(),
   bullets: z.array(z.string()).optional(),
   badge: z.string().optional(),
+  bibOrder: z.object({
+    bibs: z.array(z.number().int().positive()).min(2).max(5).refine(bibs => new Set(bibs).size === bibs.length),
+    initialCopy: z.boolean().optional(),
+    events: z.array(z.object({
+      cue: z.string().min(1), offsetSec: z.number().nonnegative(), operation: z.enum(["copy", "in-place"]),
+    })),
+  }).optional(),
   pathDestination: DrawingPoint.optional(),
   drawingEntrance: z.object({ mark: DrawingCue, place: DrawingCue }).optional(),
   drawingCorners: z.array(DrawingPoint).min(1).optional(),
@@ -126,6 +134,9 @@ export const SceneSchema = z.object({
         break;
       }
     }
+  }
+  if (scene.bibOrder?.events.some(event => !scene.speech?.some(part => part.caption === event.cue))) {
+    ctx.addIssue({ code: "custom", path: ["bibOrder", "events"], message: "등번호 이동은 실제 대사와 연결해야 합니다." });
   }
   if (scene.drawingEntrance) {
     for (const event of Object.values(scene.drawingEntrance)) {
@@ -237,6 +248,8 @@ export const EpisodeScriptSchema = z.object({
     long: YouTubeFormatMetaSchema,
     short: YouTubeFormatMetaSchema,
   }),
+}).superRefine((script, ctx) => {
+  checkScriptCopy(script, (path, message) => ctx.addIssue({ code: "custom", path, message }));
 });
 export type EpisodeScript = z.infer<typeof EpisodeScriptSchema>;
 

@@ -1,8 +1,8 @@
 ---
 type: home
 page_count: 5
-source_count: 47
-last_updated: "2026-11-27"
+source_count: 78
+last_updated: "2026-11-28"
 ---
 
 # Swift Evolution production wiki
@@ -92,3 +92,46 @@ last_updated: "2026-11-27"
 - [[2026-11-27-shared-layout|Keep visible content in motion across layouts]]
 
 - [[2026-11-27-ns-chapter-title|Naming the array chapter in SE-0005]]
+
+- [[2026-11-27-se-0006-sorting|SE-0006 sorting and the finish record]]
+
+- [[2026-11-27-unicode-1-0-history|유니코드 1.0의 109쪽은 왜 비어 있었을까]]
+
+- [[2026-11-27-oozoofrog-unicode-posts|oozoofrog의 유니코드 역사 글 두 편]]
+
+- [[2026-11-27-unicode-chronology-film-research|유니코드 1.0 연대기 영상 사전 조사]]
+
+- [[2026-11-27-unicode-ink-studies|초판 인쇄면 수묵 표현 시안]]
+
+- [[2026-11-27-unicode-scan-grain|초판 스캔의 노이즈와 활자 분해]]
+
+- [[2026-11-27-unicode-continuous-zoom|초판의 한 획 안으로 들어가는 연속 확대]]
+
+- [[2026-11-27-unicode-glyph-zoom|획 안을 채우는 유니코드 문자들]]
+
+- [[2026-11-27-unicode-glyph-heap|작은 문자들이 겹겹이 쌓여 이룬 획]]
+
+- [[2026-11-27-unicode-optical-print|초판의 잉크 자국이 낡은 활자로 보이는 확대]]
+
+- [[2026-11-27-unicode-chronology-release|유니코드 연대기 완성본과 한국어 문구 린트]]
+
+- [[2026-11-27-unicode-sanjo-and-chapter-titles|산조풍 음악과 제록스 장면 전환·제목 수정]]
+
+- [[2026-11-27-unicode-source-chronology-and-people|영문 연대기와 인물 후일담]]
+
+- [[2026-11-27-unicode-stroke-to-xerox|한 일에서 제록스 제안서로 이어지는 도입]]
+
+- [[2026-11-27-unicode-dated-proposal-opening|조 베커의 제안으로 시작하는 도입과 작은 활자로 만든 一]]
+
+- [[2026-11-27-unicode-microtype-aperture-refinement|유니코드 一 활자판 광학 중첩과 개방형 카메라 개선]]
+
+- [[2026-11-27-unicode-giyeok-opening|한글 자모 ㄱ(U+3131)으로 시작하는 유니코드 연대기 도입]]
+
+- [[2026-11-28-unicode-tungso-sanjo|유니코드 연대기 퉁소 산조 배경음악]]
+
+- [[2026-11-28-unicode-korean-figures-and-dvorak|유니코드 1.0의 한국 관련 인물 사료와 드보락 구분]]
+
+- [[2026-11-28-unicode-cookie-stats|유니코드 18.0 현황·희귀 언어·최다 문자 쿠키]]
+
+- [[2026-11-28-unicode-youtube-publication|유니코드 연대기 본편·쇼츠 유튜브 공개]]
+- [[2026-11-28-instagram-reels-publication|쇼츠 7편 인스타그램 릴스 공개]]

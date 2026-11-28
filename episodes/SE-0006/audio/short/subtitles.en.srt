@@ -1,0 +1,27 @@
+1
+00:00:00,750 --> 00:00:03,070
+Let’s look at another line of Swift together.
+
+2
+00:00:03,589 --> 00:00:06,699
+The runners finished in bib order 3, 1, 2.
+
+3
+00:00:07,251 --> 00:00:10,761
+In Swift 2.2, sort() returned a sorted array.
+
+4
+00:00:11,944 --> 00:00:14,274
+In Swift 3, sorted() does that job.
+
+5
+00:00:14,798 --> 00:00:17,308
+If we need the finish order too, we must keep the original.
+
+6
+00:00:18,451 --> 00:00:21,791
+Calling sort() changes the first bib in the original array from 3 to 1.
+
+7
+00:00:22,268 --> 00:00:28,148
+The proposal aimed to let callers read the name and tell whether they get a sorted value or change the one they have.

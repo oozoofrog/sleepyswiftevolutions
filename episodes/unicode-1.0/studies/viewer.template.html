@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>유니코드 초판 · 수묵 표현 시안</title>
+<style>
+*{box-sizing:border-box}body{margin:0;color:var(--foreground,#282725);font-family:-apple-system,"Apple SD Gothic Neo",sans-serif}
+main{max-width:1100px;margin:auto}nav,.tools{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin:.55rem 0}
+button,select{font:inherit;font-size:14px;color:inherit;cursor:pointer;background:transparent;border:1px solid var(--border,#9b9991);border-radius:4px;padding:.38em .75em}
+button[aria-pressed=true]{background:#333531;color:white;border-color:#333531}button:focus-visible,canvas:focus-visible{outline:2px solid #647f88}
+canvas{background: center / cover no-repeat url("__POSTER__");display:block;width:100%;aspect-ratio:16/9;touch-action:none;cursor:crosshair}input{flex:1;min-width:75px;accent-color:#5d615c}
+.tools span{font-size:13px;font-variant-numeric:tabular-nums}p{font-size:14px;line-height:1.5;margin:.35rem 0}.hint{color:var(--muted-foreground,#74756c)}
+@media(max-width:480px){button,select{font-size:12px}.tools,nav{gap:4px}}
+</style>
+<main>
+<nav aria-label="시안 선택"><button data-mode="a">여백</button><button data-mode="b">농담</button><button data-mode="c">이동과 멈춤</button><button id="original">인쇄면 직접 보기</button></nav>
+<canvas id="art" width="1280" height="720" tabindex="0" aria-label="유니코드 1.0 제2권 171쪽. 누르면 해당 지점의 원본이 확대됩니다."></canvas>
+<div class="tools" id="movie"><button id="play">재생</button><input id="time" type="range" min="0" max="10" value="0" step=".01" aria-label="시안 재생 위치"><span id="clock"></span><button id="sound" aria-pressed="false">해설 소리</button></div>
+<div class="tools" id="doc" hidden style="display:none"><select id="page" aria-label="원본 지면"><option value="p171">제2권 171쪽 · 대응표</option><option value="p016">제2권 16쪽 · 두 청</option><option value="p012">제2권 12쪽 · 서울 회의</option><option value="p109">제1권 109쪽 · 빈 지면</option><option value="p169">제2권 169쪽 · 범례</option></select><button id="focus">해당 대목</button><button id="fit">한 쪽 전체</button><a id="pdf" target="_blank" rel="noopener">초판 PDF</a><button id="back">시안으로</button></div>
+<p id="note" aria-live="polite"></p><p class="hint" id="hint"></p>
+<audio id="speech" preload="none" src="__AUDIO__"></audio>
+</main>
+<script>
+const DATA=__PAGES__, docData=__FACS__;
+const W=1280,H=720,canvas=document.querySelector('canvas'),ctx=canvas.getContext('2d'),pages={};
+const paper='#faf9f5', ink='#242621', gray='#5e615a', line='#aeb0a5';
+const serif='"AppleMyungjo","Batang","Noto Serif CJK KR",serif', sans='-apple-system,"Apple SD Gothic Neo",sans-serif', mono='Menlo,monospace';
+let mode='a',timer=0,playing=false,started=0,stamp=0,reader=false,pid='p171',camera=[.5,.5,1],lastView=null,drag=null,soundOn=false;
+const comments={a:'여백 · 인쇄된 一을 먼저 읽고, 오른쪽에서 원래 표의 위치를 찾습니다.',b:'농담 · 종이와 활자는 제자리에 두고, 주변 행의 농도만 낮춥니다.',c:'이동과 멈춤 · 온전한 지면에서 출발해 첫 행과 한국 표의 칸에서 차례로 멈춥니다.'};
+const bounds=(v,a=0,b=1)=>Math.max(a,Math.min(v,b));const ease=x=>(x=bounds(x),x*x*(3-2*x));const prog=(t,a,b)=>ease((t-a)/(b-a));const mix=(a,b,t)=>a+(b-a)*t;
+function words(text,x,y,size,face=serif,color=ink,align='left',weight='normal'){ctx.save();ctx.fillStyle=color;ctx.font=weight+' '+size+'px '+face;ctx.textAlign=align;ctx.fillText(text,x,y);ctx.restore()}
+function rule(x,y,X,Y,color=line,weight=1){ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(X,Y);ctx.strokeStyle=color;ctx.lineWidth=weight;ctx.stroke()}
+// Source coordinates are fractions of the complete scanned page. Rendering remains isotropic.
+let visible=[];
+function source(img,box,dst,opacity=1,feather=0){
+ const [x,y,w,h]=dst,[l,t,r,b]=box;
+ const scale=Math.min(w/((r-l)*img.width),h/((b-t)*img.height));
+ const dw=(r-l)*img.width*scale,dh=(b-t)*img.height*scale,dx=x+(w-dw)/2,dy=y+(h-dh)/2;
+ const layer=tile(img,box,Math.ceil(dw),Math.ceil(dh),feather);
+ ctx.save();ctx.globalAlpha=opacity;ctx.globalCompositeOperation='multiply';ctx.drawImage(layer,dx,dy,dw,dh);ctx.restore();
+ visible.push({x:dx,y:dy,w:dw,h:dh,box});return {dx,dy,scale};
+}
+const cache=new Map();
+function tile(img,box,w,h,soft){
+ const id=img.alt+box.join()+w+'x'+h+'f'+soft;if(cache.has(id))return cache.get(id);
+ const tmp=document.createElement('canvas');tmp.width=Math.max(1,w);tmp.height=Math.max(1,h);const c=tmp.getContext('2d');
+ const [l,t,r,b]=box;c.drawImage(img,l*img.width,t*img.height,(r-l)*img.width,(b-t)*img.height,0,0,w,h);
+ // On the study surface, lift only pale scan-paper tones into the shared paper.
+ // The unmodified page is separately accessible through the document controls.
+ const pix=c.getImageData(0,0,w,h),arr=pix.data;
+ for(let i=0;i<arr.length;i+=4){const lum=arr[i];if(lum>207){const v=Math.min(255,Math.round(207+(lum-207)*1.62));arr[i]=v;arr[i+1]=v;arr[i+2]=v;}}c.putImageData(pix,0,0);
+ if(soft){c.globalCompositeOperation='destination-in';const fx=Math.min(.18,soft/w),fy=Math.min(.23,soft/h);
+ for(const [edge,f] of [['x',fx],['y',fy]]){const g=c.createLinearGradient(0,0,edge==='x'?w:0,edge==='y'?h:0);g.addColorStop(0,'#0000');g.addColorStop(f,'#000');g.addColorStop(1-f,'#000');g.addColorStop(1,'#0000');c.fillStyle=g;c.fillRect(0,0,w,h);}}
+ if(cache.size>24)cache.delete(cache.keys().next().value);cache.set(id,tmp);return tmp;
+}
+function base(){ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';ctx.fillStyle=paper;ctx.fillRect(0,0,W,H);visible=[];}
+const firstRow=[.076,.109,.359,.139], glyph=[.131,.116,.161,.130], korean=[.22,.121,.280,.133];
+function header(title){words('문자의 연대기',72,60,20,serif);words('유니코드 1.0   /   제2권 171쪽',1208,60,17,sans,gray,'right');rule(72,82,1208,82,'#c7c6bc');if(title)words(title,72,146,35,serif);}
+function spoken(t){if(t>=1.38&&t<3.55)return '이 한 획은 한자 ‘한 일’입니다.';if(t>=4.13&&t<8.6)return '한국 표를 펴면 76행 73열에서 같은 글자를 만납니다.';return '';}
+function footer(t){const s=spoken(t);if(s){words(s,640,657,25,sans,ink,'center')}}
+function withA(a,callback){ctx.save();ctx.globalAlpha=a;callback();ctx.restore()}
+function sceneA(t){base();header();const s=prog(t,3.95,5.7);
+ words('한',90,252,85);words('일',90,342,85);source(pages.p171,glyph,[202,209,233,120],1,9);
+ words('U+4E00',204,384,21,mono,gray);
+ const x=mix(568,531,s);
+ source(pages.p171,[.072,.083,.360,.204],[x,187,655,273],.16+.84*prog(t,.5,3.6),17);
+ if(t>4){withA(s,()=>{words('한국 문자표',x+6,500,22,sans,gray);words('76행  73열',x+5,565,56,serif);});}
+ footer(t);
+}
+function sceneB(t){base();header('같은 한 행');const im=pages.p171;
+ // Keep the table as one contiguous impression. A graduated veil affects only its surroundings.
+ const box=[.072,.104,.537,.251],dst=[50,164,1194,343];const view=source(im,box,dst,1,14);
+ const yLine=view.dy+(.125-box[1])*im.height*view.scale;
+ const density=prog(t,.25,3.15);const fade=ctx.createLinearGradient(0,yLine+13,0,yLine+246);
+ fade.addColorStop(0,'rgba(250,249,245,0)');fade.addColorStop(.27,'rgba(250,249,245,'+(.36*density)+')');fade.addColorStop(1,'rgba(250,249,245,'+(.91*density)+')');
+ ctx.fillStyle=fade;ctx.fillRect(0,yLine+13,W,Math.max(1,565-yLine-13));
+ const k=prog(t,4.15,6.25);
+ if(k){const px=view.dx+(.25-box[0])*im.width*view.scale;const yy=view.dy+(.133-box[1])*im.height*view.scale;
+ rule(px-18,yy+7,px-18+k*40,yy+7,'#42453e',2);
+ withA(k,()=>{words('한국 표의 자리',74,567,22,sans,gray);words('76행 73열',269,571,39,serif);});}footer(t);
+}
+function sceneC(t){base();const im=pages.p171;
+ const p=prog(t,.5,3.25),q=prog(t,4.1,6.7);
+ // The camera preserves every neighbor while travelling. Scale logarithmically.
+ const a={x:.5,y:.50,w:3.52},b={x:.233,y:.15,w:.52},c={x:.222,y:.127,w:.302};
+ function move(a,b,p){return {x:mix(a.x,b.x,p),y:mix(a.y,b.y,p),w:a.w*(b.w/a.w)**p}}
+ const v=move(move(a,b,p),c,q), vw=1065,vh=393;
+ const hh=v.w*(vh/vw)*im.width/im.height;
+ const box=[v.x-v.w/2,v.y-hh/2,v.x+v.w/2,v.y+hh/2];
+ // Mask only the edges of the camera opening. Paper reaches the edges without a frame.
+ const lens=source(im,box,[88,136,vw,vh],1,34);
+ if(q>.96){const xx=lens.dx+(.22-box[0])*im.width*lens.scale,yy=lens.dy+(.133-box[1])*im.height*lens.scale;rule(xx,yy+4,xx+(.055*im.width*lens.scale)*prog(t,6.65,7.4),yy+4,'#46453d',2);}
+ header();words(q>.55?'76행 73열':'한 행을 따라',82,588,47,serif);
+ words(q>.55?'한국  ·  KS C 5601':'1992년 6월',1192,584,21,sans,gray,'right');footer(t);
+}
+function render(t=timer){if(reader)return showReader();({a:sceneA,b:sceneB,c:sceneC}[mode])(t);document.querySelector('#time').value=t;document.querySelector('#clock').textContent=t.toFixed(1)+' / 10초';}
+function showReader(){base();const im=pages[pid],s=Math.min(W/im.width,H/im.height)*camera[2],w=im.width*s,h=im.height*s;
+ const x=W/2-camera[0]*w,y=H/2-camera[1]*h;ctx.drawImage(im,x,y,w,h);lastView={x,y,w,h};
+}
+function zoom(to,X=.5*W,Y=.5*H){const v=lastView;if(!v)return;const px=(X-v.x)/v.w,py=(Y-v.y)/v.h;camera[2]=bounds(to,1,27);const im=pages[pid],s=Math.min(W/im.width,H/im.height)*camera[2];
+ camera[0]=bounds(px-(X-W/2)/(im.width*s));camera[1]=bounds(py-(Y-H/2)/(im.height*s));showReader()}
+function seek(t){timer=bounds(t,0,10);started=performance.now()-timer*1000;if(soundOn){speech.currentTime=Math.min(timer,speech.duration||timer)}render()}
+const speech=document.querySelector('#speech');
+function stop(){playing=false;speech.pause();document.querySelector('#play').textContent='재생';}
+function loop(ts){if(!playing)return;timer=Math.min(10,(ts-started)/1000);render();if(timer>=10){stop();return}requestAnimationFrame(loop)}
+function play(){if(playing){stop();return;}if(timer>=9.99)seek(0);playing=true;started=performance.now()-timer*1000;if(soundOn){speech.currentTime=timer;speech.play().catch(()=>{})}document.querySelector('#play').textContent='정지';requestAnimationFrame(loop)}
+function select(m){stop();reader=false;mode=m;document.querySelector('#movie').style.display='flex';document.querySelector('#doc').style.display='none';
+ document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.mode===m));
+ document.querySelector('#note').textContent=comments[m];document.querySelector('#hint').textContent='재생하거나 시간을 움직여 보세요. 인쇄된 부분을 누르면 원본이 열립니다.';seek(0);}
+function openPage(page='p171',pos=null){stop();reader=true;pid=page;document.querySelector('#page').value=page;document.querySelector('#pdf').href=docData.pages[page].url;camera=pos||[.5,.5,1];document.querySelector('#movie').style.display='none';document.querySelector('#doc').style.display='flex';document.querySelector('#note').textContent=docData.pages[pid].folio+' · '+docData.pages[pid].name;document.querySelector('#hint').textContent='끌어서 이동하고 휠 또는 두 손가락으로 확대하세요. “한 쪽 전체”를 누르면 원래 위치로 돌아갑니다.';showReader()}
+function position(ev){const rect=canvas.getBoundingClientRect();return [(ev.clientX-rect.left)/rect.width*W,(ev.clientY-rect.top)/rect.height*H]}
+const points=new Map();let lastDistance=0;
+canvas.onpointerdown=e=>{const [x,y]=position(e);if(!reader){const hit=visible.slice().reverse().find(v=>x>=v.x&&x<=v.x+v.w&&y>=v.y&&y<=v.y+v.h);if(hit){const [l,t,r,b]=hit.box;openPage('p171',[l+(x-hit.x)/hit.w*(r-l),t+(y-hit.y)/hit.h*(b-t),8])}return;}
+ canvas.setPointerCapture(e.pointerId);points.set(e.pointerId,[x,y]);drag=[x,y,...camera];if(points.size===2){const [a,b]=[...points.values()];lastDistance=Math.hypot(a[0]-b[0],a[1]-b[1]);}};
+canvas.onpointermove=e=>{if(!reader||!points.has(e.pointerId))return;const [x,y]=position(e);points.set(e.pointerId,[x,y]);
+ if(points.size===2){const [a,b]=[...points.values()];const d=Math.hypot(a[0]-b[0],a[1]-b[1]);if(lastDistance>0)zoom(camera[2]*d/lastDistance,(a[0]+b[0])/2,(a[1]+b[1])/2);lastDistance=d;drag=null;}
+ else if(drag){camera[0]=bounds(drag[2]-(x-drag[0])/lastView.w);camera[1]=bounds(drag[3]-(y-drag[1])/lastView.h);showReader();}};
+canvas.onpointerup=canvas.onpointercancel=e=>{points.delete(e.pointerId);drag=null;lastDistance=0};
+canvas.onwheel=e=>{if(reader){e.preventDefault();zoom(camera[2]*Math.exp(-e.deltaY*.002),...position(e))}};
+canvas.onkeydown=e=>{if(reader&&['+','=','-','0','Escape'].includes(e.key)){e.preventDefault();if(e.key==='Escape')select(mode);else if(e.key==='0')openPage(pid);else zoom(camera[2]*(e.key==='-'?.75:1.35))}else if(!reader&&e.key===' '){e.preventDefault();play()}};
+document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>select(b.dataset.mode));
+document.querySelector('#original').onclick=()=>openPage();document.querySelector('#page').onchange=e=>openPage(e.target.value);
+document.querySelector('#focus').onclick=()=>{const k={p171:'korea',p016:'forms',p012:'seoul',p169:'legend',p109:'blank'}[pid];const [l,t,r,b]=docData.spots[k][2];openPage(pid,[(l+r)/2,(t+b)/2,Math.min(21,1.25/(r-l))]);};
+document.querySelector('#fit').onclick=()=>openPage(pid);document.querySelector('#back').onclick=()=>select(mode);
+document.querySelector('#play').onclick=play;document.querySelector('#sound').onclick=e=>{soundOn=!soundOn;e.target.setAttribute('aria-pressed',soundOn);speech.muted=!soundOn;if(playing&&soundOn){speech.currentTime=timer;speech.play().catch(()=>{})}else speech.pause()};
+document.querySelector('#time').oninput=e=>seek(+e.target.value);
+window.study={sample:(m,t)=>{mode=m;reader=false;timer=t;render(t);return canvas.toDataURL('image/jpeg',.93).split(',')[1]},ready:false};
+Promise.all(Object.entries(DATA).map(async([key,url])=>{const i=new Image();i.alt=key;i.src=url;await i.decode();pages[key]=i;})).then(()=>{select('a');window.study.ready=true;});
+</script></html>

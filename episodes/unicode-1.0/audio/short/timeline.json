@@ -1,0 +1,52 @@
+[
+  {
+    "key": "open",
+    "frameCount": 94,
+    "voiceOnset": 1.38
+  },
+  {
+    "key": "tables",
+    "frameCount": 126,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "korea",
+    "frameCount": 121,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "unified",
+    "frameCount": 108,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "return",
+    "frameCount": 110,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "pair",
+    "frameCount": 112,
+    "voiceOnset": 0.28
+  },
+  {
+    "key": "lower",
+    "frameCount": 94,
+    "voiceOnset": 0.47000000000000003
+  },
+  {
+    "key": "taiwan",
+    "frameCount": 97,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "keep",
+    "frameCount": 123,
+    "voiceOnset": 0.33
+  },
+  {
+    "key": "end",
+    "frameCount": 148,
+    "voiceOnset": 0.33
+  }
+]

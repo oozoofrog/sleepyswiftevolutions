@@ -233,9 +233,44 @@
       "title": "Apply API Guidelines to the Standard Library",
       "proposalState": "implemented",
       "swiftVersion": "3.0",
-      "stage": "pending",
-      "updatedAt": "2026-11-25T15:42:15.970Z",
-      "formats": {}
+      "stage": "uploaded",
+      "updatedAt": "2026-11-27T11:12:48.828Z",
+      "formats": {
+        "long": {
+          "voicedAt": "2026-11-27T11:04:12.057Z",
+          "renderedAt": "2026-11-27T11:05:01.358Z",
+          "durationSec": 106.34,
+          "upload": {
+            "videoId": "6QfWBJCDqjM",
+            "url": "https://youtu.be/6QfWBJCDqjM",
+            "uploadedAt": "2026-11-27T11:12:31.776Z",
+            "privacyStatus": "public",
+            "title": "sort()가 원본 배열을 바꾸게 됐다 · SE-0006",
+            "playlists": [
+              "Swift Evolution 처음부터 끝까지"
+            ],
+            "captionsUploaded": true,
+            "thumbnailUploaded": true
+          }
+        },
+        "short": {
+          "voicedAt": "2026-11-27T11:01:12.175Z",
+          "renderedAt": "2026-11-27T11:05:11.707Z",
+          "durationSec": 28.929,
+          "upload": {
+            "videoId": "eROSmP5FMJc",
+            "url": "https://www.youtube.com/shorts/eROSmP5FMJc",
+            "uploadedAt": "2026-11-27T11:12:48.824Z",
+            "privacyStatus": "public",
+            "title": "sort()가 원본 배열을 바꾸게 됐다 · SE-0006 #Shorts",
+            "playlists": [
+              "Swift Evolution Shorts"
+            ],
+            "captionsUploaded": true,
+            "thumbnailUploaded": true
+          }
+        }
+      }
     },
     "SE-0007": {
       "id": "SE-0007",

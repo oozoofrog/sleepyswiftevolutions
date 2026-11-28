@@ -307,3 +307,86 @@ The creator asked for continuity when a new item joins existing content. This up
 ## 2026-11-27 · Name the prefix in the array chapter
 
 The creator found “줄이지 않기로 한 이름” awkward. The editor chose “배열 이름 앞의 NS” for the sixth chapter of SE-0005. It points to the first two letters of `NSMutableArray` on screen. The original decision deferred removal of Foundation prefixes to a separate proposal. The chapter label appears above the scene heading and in the progress bar. [Reading sheet](../episodes/SE-0005/reading-ko.md#6-배열-이름-앞의-ns) · [Episode research](../episodes/SE-0005/research.md)
+
+## 2026-11-27 · Ink treatment for the Unicode chronology
+
+The creator clarified that ink painting describes the treatment of the printed page. The illustrated landscape behind the first cut competed with the scan. The editor made three ten-second studies using the same printed row and the same narration, varying the placement of empty space, relative ink density and camera movement. The next full-cut treatment is open. [Study and sources](../.wiki/sources/2026-11-27-unicode-ink-studies.md)
+
+## 2026-11-27 · Keep scan noise registered to printed type
+
+The creator asked for natural decomposition and the noise of the first-edition scan. The editor extracted native image samples from the published PDF, moved the type with its surrounding pixels and used a separate drawn grid to explain the coordinates. A four-shot study includes a dedicated macro view of the stroke and the adjacent paper. Both character crops and the paper crop match their decoded source pixels. All three fragment partitions reassemble exactly at native resolution. [Source coordinates and verified outputs](../.wiki/sources/2026-11-27-unicode-scan-grain.md)
+
+## 2026-11-27 · Continuous magnification for the Unicode stroke
+
+The creator asked for a seamless high-resolution transition in the style of an infinite zoom painting. The editor registered four detail plates to the scan and brought them in with the magnification. The deepest view illustrates fine ink and paper texture. The comparison control follows the same camera with the recorded scan. At five tested magnifications the inward and outward frames match within the image window. [Film and test scope](../.wiki/sources/2026-11-27-unicode-continuous-zoom.md)
+
+## 2026-11-27 · Resolve the stroke into Unicode characters
+
+The creator asked for Unicode characters inside the zoom. The editor used the three original forms from the film, set their code points beneath them, and changed the narration and captions. At maximum magnification the characters fill the ink area. On the return they merge into the original stroke. [Clip and checks](../.wiki/sources/2026-11-27-unicode-glyph-zoom.md)
+
+## 2026-11-27 · Build the stroke from irregular layers of type
+
+The creator found the earlier zoom looked like an effect and the glyph placement too orderly. The editor replaced the fading images and grid with a single plate, placed 72 characters at varied sizes and angles and updated the narration. A local knockout showed that the same patch contributes ink at opening, intermediate and maximum magnification. [Clip and verification](../.wiki/sources/2026-11-27-unicode-glyph-heap.md)
+
+## 2026-11-27 · Match the illusion to the printed scan
+
+The creator clarified that the distant view should read as original ink and that the close type looked too clean. The editor retained the scan through 4× and separated the emergence of fine marks from the later change in overall density. Both paper noise and irregular gray edges are anchored to the print. The small-view comparison, return check and rendered outputs are recorded in the [shot note](../.wiki/sources/2026-11-27-unicode-optical-print.md).
+
+The creator approved the [13-second stroke zoom](../episodes/unicode-1.0/motion/grain.mp4) as the visual reference for this shot.
+
+## 2026-11-27 · Open the chronology through 一 and name the actual operation
+
+The creator requested a clean contemporary glyph that reveals worn printed characters as the camera approaches. The editor selected 一 and led into the 1986–1987 Xerox record. The creator also requested a lint failure for vague Korean wording such as “들어가느자리”. The revised Taiwan line names the two character numbers. The closing chapter names the return to the source table. The full cut and the Short carry the corrected text and recording. [Release, rule and verification](../.wiki/sources/2026-11-27-unicode-chronology-release.md)
+
+## 2026-11-27 · Revise the Unicode transitions, music and Xerox title
+
+The creator requested sanjo-style music, found the transitions awkward and rejected the previous Xerox heading. The editor carried the enlarged print into the Xerox layout, replaced the pulse track with an original synthesized score and gave Xerox and Apple separate chapter titles. The first historical title now reads “제록스의 중국어 글꼴 개발”. [Decision and outputs](../.wiki/sources/2026-11-27-unicode-sanjo-and-chapter-titles.md)
+
+## 2026-11-27 · Restore the original chronology and the people behind it
+
+The creator asked to read the English chronology first and distinguish each person’s documented role from recent public evidence. The revision separates the original Xerox task from the RLG CJK acquisition and adds the ISO ballot, the two-volume decision and a sourced epilogue. The research companion accounts for all 48 headings in the Korean article. [Research and sources](../.wiki/sources/2026-11-27-unicode-source-chronology-and-people.md)
+
+## 2026-11-27 · Follow 一 into the printed Xerox name
+
+The creator asked for a more natural invitation into the chronology and a continuous route from the stroke to the document. The narration introduces the meaning of 一 and takes the listener back to the period when the tables used different numbers. The visual edit registers the enlarged grain inside the X in Becker’s 1988 proposal. After the pullback the same excerpt stays on screen as the earlier Xerox mapping team is introduced. This replaces the previous shrinking exhibit for this episode. The reusable scan skill includes a PDF registration tool. [Source and checks](../.wiki/sources/2026-11-27-unicode-stroke-to-xerox.md)
+
+## 2026-11-27 · Start from Becker’s dated proposal and follow the same ink
+
+The creator asked to open on a dated proposal and to construct the first 一 from the letters seen in the enlargement. The editor chose the date on Becker’s proposal cover and reserved the present-day U+4E00 for the following line. Becker’s abstract leaves individual code assignments for later work. The renderer now samples one ink plate from the initial frame through the zoom. The earlier optical study remains the reference for weathered type. [Primary sources, camera and checks](../.wiki/sources/2026-11-27-unicode-dated-proposal-opening.md)
+
+## 2026-11-27 · Refine the Unicode microtype ink layering and camera aperture
+
+Production refinement (awaiting creator visual review): inspection of the previous opening frames showed three issues — the interrupted landscape delivery still carried missing glyphs on “조 베커”, opaque gray stamping plus hard stencil multiplication produced muddy mottled ink and straight-cut edge glyphs, and the `1132×360` stage window clipped both the macro glyph wall and the emerging serif `X` of “Xerox”. Updated [microtype.py](../episodes/unicode-1.0/microtype.py) to use optical overprinting, contour-hugging miniature glyphs without a guillotine edge, and scale-matched weathered letterpress stamps with spaced multilingual hero glyphs; opened [film_opening.py](../episodes/unicode-1.0/film_opening.py) and [document_zoom.py](../episodes/unicode-1.0/document_zoom.py) to a full-width paper aperture (`1280×502` landscape, `720×900` portrait, `PEAK_SCALE = 512`) with progressive opening draw-in. [check_opening.py](../episodes/unicode-1.0/check_opening.py), `lint-korean.ts`, and full stream/subtitle/audio checks passed on all four rendered editions and the [opening preview](../episodes/unicode-1.0/out/unicode-chronology-opening-ko.mp4). [Refinement note](../.wiki/sources/2026-11-27-unicode-microtype-aperture-refinement.md)
+
+## 2026-11-27 · Open the Unicode chronology with Hangul ㄱ
+
+The creator requested starting the Unicode chronology with Hangul `ㄱ` instead of `一`. Rebuilt the single microtype plate around a bold Myeongjo `ㄱ` (`U+3131`) whose upper-right calligraphic corner junction serves as the zoom target before pulling back out of the `X` in Becker’s 1988 Xerox excerpt. Updated `choose`, `travel`, and `volume` in [narration.tsv](../episodes/unicode-1.0/narration.tsv) (so Chapter 6 introduces `‘한 일’` directly for the Volume 2 Han chart), resynthesized those three lines with the local Qwen voice clone, confirmed recognition of “기역에도” via `qwen3-asr` after adding a comma pause, and verified all four re-rendered editions. [Source and checks](../.wiki/sources/2026-11-27-unicode-giyeok-opening.md)
+
+## 2026-11-28 · Score the Unicode chronology for tungso
+
+The creator requested traditional Korean sanjo played on tungso. The editor synthesized a new flute melody with janggu accompaniment and timed the ensemble entrance to the Xerox scene. Each edition has its own closing cadence. The [production note](../.wiki/sources/2026-11-28-unicode-tungso-sanjo.md) links the musical reference, both audio checks and the listening copy.
+
+## 2026-11-28 · Add Korean contributors and distinguish John C. Dvorak in the Unicode chronology
+
+The creator asked for primary sources on Korean contributors to Unicode 1.0 and whether the September 1992 *PC Magazine* figure was the Dvorak keyboard designer. Updated [film.py](../episodes/unicode-1.0/film.py), [narration.tsv](../episodes/unicode-1.0/narration.tsv), [produce.py](../episodes/unicode-1.0/produce.py), and [chronology.ko.md](../episodes/unicode-1.0/chronology.ko.md) to label columnist John C. Dvorak explicitly as distinct from keyboard designer August Dvorak on the `press` card, introduce Korean CJK-JRG delegation leader Oh Young-taik (`오영택`) and editorial subcommittee member Lee Choon Tack (`이춘택`) after the March 1992 URO scene (`krcjk`), and add epilogue cards for Lee Choon Tack (`afterchoontack`, Kongju National University Professor Emeritus) and Version 1.0 reviewer and Hangul Jamo encoding lead Kyongsok Kim (`afterkim`, Pusan National University Professor Emeritus). Removed an overlapping `groupkr` label from the `p013` exhibit scenes and shortened the portrait exhibit height so open Korean captions clear the source line. Synthesized the three new Korean lines with the local Qwen voice clone, verified wording via `qwen3-asr`, updated [unicode-tungso-sanjo.m4a](../episodes/unicode-1.0/out/unicode-tungso-sanjo.m4a), and verified all four rendered MP4 outputs (`371.17s` landscape at `-15.0 LUFS`, `134.21s` Short at `-15.1 LUFS`). [Sources and verification](../.wiki/sources/2026-11-28-unicode-korean-figures-and-dvorak.md)
+
+## 2026-11-28 · Add a post-credits cookie on Unicode 18.0 scale and extremes
+
+The creator requested adding a post-credits cookie after the people introductions covering the current Unicode version, how many languages it supports, the rarest language, and the language using the most Unicode characters.
+
+- **Verified primary facts**: Unicode **18.0.0** (released September 16, 2026) encodes **172,808** graphic + format characters across **175** scripts (`Supported Scripts 18.0`), writing thousands of languages while **CLDR 49** (October 22, 2026) supports **172** base languages across `185` coverage locales (`821` language tags). Among living languages with their own dedicated script, **Toto (`txo`, `U+1E290–U+1E2BF`, 31 characters)** has roughly **1,500** speakers in one village in India (`L2/19-330`). East Asian shared **Han** leads overall with **102,999** characters (`59.6%`), and **Korean Hangul** leads single-language scripts with **11,739** characters.
+- **Production choices**: Placed `credits` (`자료와 제작`) directly after `afterform`, followed by the `쿠키 · 오늘의 유니코드` chapter with four cards (`cookiever`, `cookielang`, `cookierare` displaying `art/toto18.png` from `U1E290.pdf` p. 2, and `cookiemost`) and a quiet `진양조` coda in [sanjo.py](../episodes/unicode-1.0/sanjo.py). When the initial full-length cookie pushed the Short to `195.0s` (exceeding YouTube Shorts’ `180s` cap), introduced four concise single-sentence Short rows (`scookiever`..`scookiemost`) sharing the same visual cards and adjusted Short `credits` to `2.5s`, bringing the Short to `170.625s` (`-15.1 LUFS`, 8 chapters) and the full cut to `431.958s` (`-15.0 LUFS`, 13 chapters). [Cookie sources and measurements](../.wiki/sources/2026-11-28-unicode-cookie-stats.md) · [Landscape master](../episodes/unicode-1.0/out/unicode-chronology-long.mp4) · [Short master](../episodes/unicode-1.0/out/unicode-chronology-short.mp4)
+
+## 2026-11-28 · Publish the Unicode chronology episode and Short to YouTube
+
+The creator asked to publish the Unicode chronology episode to YouTube first (`"일단 유니코드를 유튜브에 올려주세요"`).
+
+- **Pre-flight checks and assets**: Checked existing channel uploads on `잠이오는 스위프트 진화의 역사` (`UCCtGyB0lbnsT0ES0Yuwhwjg`; 20 existing videos, zero prior Unicode uploads) and extracted muxed `ko`, `en`, `ja`, and `zh-Hans` SRT tracks (`71` cues per track for Long, `26` cues per track for Short) into [subtitles](../episodes/unicode-1.0/out/subtitles/). Generated custom archival thumbnails via [thumb.py](../episodes/unicode-1.0/thumb.py) using `AppleMyungjo` + `AppleSDGothicNeo` + `Menlo` (after catching `Menlo` tofu boxes on Korean characters in an early pass): [Landscape thumbnail](../episodes/unicode-1.0/out/unicode-chronology-thumb.jpg) (`1280x720`) and [Short thumbnail](../episodes/unicode-1.0/out/unicode-chronology-short-thumb.jpg) (`1080x1920`).
+- **Publication and API-to-Studio completion**: [upload.ts](../episodes/unicode-1.0/upload.ts) created public playlist `유니코드 연대기` (`PLfEnlqRjmO_8`), uploaded `eVXZMR9GoK8` (`https://youtu.be/eVXZMR9GoK8`, `public`, `PT7M13S`) and `UvNizJ4WiqE` (`https://www.youtube.com/shorts/UvNizJ4WiqE`, `public`, `PT2M51S`), uploaded all 4 Long caption tracks and Short `ko`, and added both videos to `PLfEnlqRjmO_8`. After `thumbnails.set` returned `429 Too Many Requests` and Short `captions.insert` hit `403 quotaExceeded`, completed Long & Short custom thumbnail uploads (`저장` confirmed `"변경사항이 저장됨"` / `"모든 변경사항이 저장되었습니다."`) and Short's `en`, `ja`, and `zh-Hans` captions (`게시됨`) directly in Chrome YouTube Studio without duplicating video files. Reopened Studio for both videos and re-ran `--verify-only` to confirm `privacy=public`, `upload=processed`, `processing=succeeded`, `captions=en,ja,ko,zh-Hans` on both videos, and both items inside `PLfEnlqRjmO_8`. [Publication source record](../.wiki/sources/2026-11-28-unicode-youtube-publication.md) · [Upload receipt](../episodes/unicode-1.0/out/upload-receipt.json)
+
+## 2026-11-28 · Publish all 7 published Shorts as Instagram Reels (`@oozoofrog`)
+
+The creator asked to cross-publish all Shorts as Instagram Reels (`"쇼츠들을 릴스로도 올려주세요"`), choosing account `@oozoofrog` via Chrome (`"로그인완료"`), all 7 previously published vertical Shorts (`SE-0001`–`SE-0006` and `unicode-1.0`), and burned-in Korean subtitle editions (`SE-0004` exported with burned-in Korean subtitles via `ffmpeg-full`).
+
+- **Pre-flight and Korean-subtitled asset check**: Confirmed `@oozoofrog` (`게시물 30`, zero existing Reels) before uploading, verified `1080x1920` cover images for all 7 episodes, and rendered [SE-0004 Korean-subtitled vertical export](../episodes/SE-0004/out/SE-0004-9x16-ko.mp4) (`21.78s`) from `episodes/SE-0004/audio/short/subtitles.srt` after checking a mid-video frame visually for clean lower-margin subtitle placement. Note that Instagram's web composer defaults to `1:1` crop until the aspect-ratio popover (`자르기 선택` -> `9:16 세로 방향 자르기 아이콘`) is explicitly applied in a separate UI step.
+- **Chronological upload and verification**: Uploaded `SE-0001` through `unicode-1.0` sequentially in Google Chrome with `9:16` framing, custom `1080x1920` covers, linted Korean captions linking each full YouTube episode, and Facebook cross-posting turned off. Verified all 7 live Reels (`DgRohDsx5oC`, `DgRpCwYpIav`, `DgRprIZhKHJ`, `DgRp959PxgF`, `DgRqUvcMI0s`, `DgRqliypvlf`, `DgRq_zcBET7`) on `https://www.instagram.com/oozoofrog/reels/` (`게시물 37`), restored the pre-existing empty clipboard, removed the temporary staging folder, and saved all URLs and timestamps in [Reels receipt](../data/instagram-reels-receipt.json). [Publication source record](../.wiki/sources/2026-11-28-instagram-reels-publication.md)

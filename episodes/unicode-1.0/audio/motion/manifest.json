@@ -1,0 +1,52 @@
+[
+  {
+    "key": "axis-row",
+    "digest": "afe65d199267dc7e0661c77083efd91da4a78f849e613eb53a9c34fe47469975",
+    "seconds": 4.37
+  },
+  {
+    "key": "axis-col",
+    "digest": "ac2a174d87ae0cd8f2e08377e2fba88a346b07704ebfe7b98d4a791a286fc533",
+    "seconds": 2.52
+  },
+  {
+    "key": "axis-code",
+    "digest": "0b2ab9dde6e2c92435d3c88a5d7e3c085fe49f8f6d2c9f2c598fc1bba5ffd625",
+    "seconds": 2.83
+  },
+  {
+    "key": "grain-edge",
+    "digest": "7995bbae72b7a618c74de66f98b15f22bf1b0402b687d428ece4c30615637b9d",
+    "seconds": 2.4
+  },
+  {
+    "key": "grain-paper",
+    "digest": "476511f2dadf130e3943626143e5b6c90323012490e489285ef7a4f84c0bbf15",
+    "seconds": 3.09
+  },
+  {
+    "key": "grain-back",
+    "digest": "93e9a47d34d945384392fc393ce3ecab1722a3de813155f18857d747d0b6a8b8",
+    "seconds": 3.13
+  },
+  {
+    "key": "grain-letters",
+    "digest": "5c30cedde7aa6b2136599222b45e763e8af642796294ac4e899412f85c3b5b1e",
+    "seconds": 4.88
+  },
+  {
+    "key": "grain-rejoin",
+    "digest": "3ae8cc04bf956b6ad1fe42038e4defeaae31886bd3c1f86b0d2a74ba9299b051",
+    "seconds": 3.17
+  },
+  {
+    "key": "grain-layers",
+    "digest": "66bee5b7704f81d4dbf1f40d536d35297feeae9dbe50d79c32f38ff3ccd20473",
+    "seconds": 3.93
+  },
+  {
+    "key": "axis-cell",
+    "digest": "0a0f0cd2a2f67e6ceeaf7ec019223f8238ac904dd8484da53d6bbd0d259fefbd",
+    "seconds": 3.09
+  }
+]

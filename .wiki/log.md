@@ -121,3 +121,48 @@ type: chronicle
 - 2026-11-27 · Updated [[visual-direction]] with continuous movement for retained content and edge reveals for additions. [[2026-11-27-shared-layout]]
 
 - 2026-11-27 · Recorded the revised SE-0005 array chapter label in [[visual-direction]]. [[2026-11-27-ns-chapter-title]]
+
+- 2026-11-27 · Documented the SE-0006 sorting example and its review history in [[visual-direction]]. [[2026-11-27-se-0006-sorting]]
+
+- 2026-11-27 · Added [[2026-11-27-unicode-1-0-history]] using the original proposal, both volumes and the working group chronology.
+
+- 2026-11-27 · Linked oozoofrog’s 2018 and 2019 posts to the Unicode history research. [[2026-11-27-oozoofrog-unicode-posts]]
+
+- 2026-11-27 · Checked the first-edition Han charts and the Seoul meeting record for [[2026-11-27-unicode-chronology-film-research]].
+
+- 2026-11-27 · Recorded the creator’s correction and the three original-page motion studies in [[2026-11-27-unicode-ink-studies]].
+
+- 2026-11-27 · Verified the decoded source pixels and the reassembly of the four Unicode scan studies. [[2026-11-27-unicode-scan-grain]]
+
+- 2026-11-27 · Recorded the continuous zoom and the matched-framing scan comparison. [[2026-11-27-unicode-continuous-zoom]]
+
+- 2026-11-27 · Recorded the glyph composition and revised narration in [[2026-11-27-unicode-glyph-zoom]].
+
+- 2026-11-27 · Replaced the zoom-dependent glyph grid with a fixed plate of overlapping type. [[2026-11-27-unicode-glyph-heap]]
+
+- 2026-11-27 · Recorded the scan-first optical transition and sampled ink treatment. [[2026-11-27-unicode-optical-print]]
+
+- 2026-11-27 · Recorded creator approval of the Unicode stroke zoom in [[visual-direction]].
+
+- 2026-11-27 · Added the chronology release to [[overview]] and the Korean copy rule to [[narration]]. [[2026-11-27-unicode-chronology-release]]
+
+- 2026-11-27 · Recorded the sanjo score, the transition into Xerox and the chapter title revision. [[2026-11-27-unicode-sanjo-and-chapter-titles]]
+
+- 2026-11-27 · Indexed the six-story chronology, library history and dated follow-ups in [[overview]]. [[2026-11-27-unicode-source-chronology-and-people]]
+
+- 2026-11-27 · Registered the Xerox excerpt from Unicode 88 and documented the optical handoff in [[visual-direction]]. [[2026-11-27-unicode-stroke-to-xerox]]
+
+- 2026-11-27 · Recorded the dated opening line and the single-plate production and verification method. [[2026-11-27-unicode-dated-proposal-opening]]
+
+- 2026-11-27 · Recorded the microtype optical overprinting, contour-formed edge and full-bleed aperture refinement for the Unicode opening. [[2026-11-27-unicode-microtype-aperture-refinement]]
+
+- 2026-11-27 · Replaced the opening 一 with Hangul ㄱ (U+3131) per creator feedback and updated Chapter 6 narration continuity. [[2026-11-27-unicode-giyeok-opening]]
+
+- 2026-11-28 · Updated the Unicode chronology music to synthesized tungso and janggu and verified both mixes. [[2026-11-28-unicode-tungso-sanjo]]
+
+- 2026-11-28 · Recorded primary sources on Korean Unicode 1.0 contributors, distinguished columnist John C. Dvorak from keyboard inventor August Dvorak, integrated the scenes into the Unicode chronology episode, and updated [[overview]]. [[2026-11-28-unicode-korean-figures-and-dvorak]]
+
+- 2026-11-28 · Added post-credits cookie on Unicode 18.0 character counts, supported scripts/languages, Toto, and Han/Hangul extremes, and linked [[2026-11-28-unicode-cookie-stats]] in [[overview]].
+
+- 2026-11-28 · Published the Unicode chronology full edition (`eVXZMR9GoK8`) and Short (`UvNizJ4WiqE`) publicly into playlist `유니코드 연대기` (`PLfEnlqRjmO_8`), completed custom thumbnails and 4-language captions via YouTube API + Chrome Studio, and linked [[2026-11-28-unicode-youtube-publication]] in [[overview]].
+- 2026-11-28 · Published all 7 published Shorts (`SE-0001`–`SE-0006` and `unicode-1.0`) as Korean-subtitled Instagram Reels on `@oozoofrog` via Google Chrome (`DgRohDsx5oC`–`DgRq_zcBET7`), saved `SE-0004-9x16-ko.mp4` and [instagram-reels-receipt.json](../data/instagram-reels-receipt.json), and linked [[2026-11-28-instagram-reels-publication]] in [[overview]].

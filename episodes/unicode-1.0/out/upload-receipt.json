@@ -1,0 +1,36 @@
+{
+  "channelId": "UCCtGyB0lbnsT0ES0Yuwhwjg",
+  "playlistId": "PLfEnlqRjmO_8",
+  "long": {
+    "videoId": "eVXZMR9GoK8",
+    "url": "https://youtu.be/eVXZMR9GoK8",
+    "title": "유니코드 1.0 연대기 — 한 획에 붙은 세 번호",
+    "privacyStatus": "public",
+    "uploadedAt": "2026-11-28T01:03:21.561Z",
+    "thumbnailUploaded": true,
+    "captions": [
+      "en",
+      "ja",
+      "ko",
+      "zh-Hans"
+    ],
+    "playlistId": "PLfEnlqRjmO_8",
+    "processingStatus": "succeeded"
+  },
+  "short": {
+    "videoId": "UvNizJ4WiqE",
+    "url": "https://www.youtube.com/shorts/UvNizJ4WiqE",
+    "title": "유니코드 1.0 연대기 — 한 획에 붙은 세 번호 #Shorts",
+    "privacyStatus": "public",
+    "uploadedAt": "2026-11-28T01:04:11.825Z",
+    "thumbnailUploaded": true,
+    "processingStatus": "succeeded",
+    "playlistId": "PLfEnlqRjmO_8",
+    "captions": [
+      "en",
+      "ja",
+      "ko",
+      "zh-Hans"
+    ]
+  }
+}

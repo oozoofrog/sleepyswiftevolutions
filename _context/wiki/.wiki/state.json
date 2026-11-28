@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "sources": {
+    "claude:/Users/oozoofrog/.claude/projects/-Volumes-eyedisk-develop-content-swift-evolutions/9cb95ab4-2bd6-4d0e-9682-10369b9d39d3.jsonl": {
+      "offset": 573726
+    },
+    "claude:/Users/oozoofrog/.claude/projects/-Volumes-eyedisk-develop-content-swift-evolutions/b7405e92-d2c7-4edd-9787-2324d7418f93.jsonl": {
+      "offset": 1012608
+    },
+    "git": {
+      "commit": "bed0031757bf1ee5c7ebba0c15de2553eba6426a"
+    }
+  },
+  "updated": "2026-11-28T09:16:27+00:00"
+}
