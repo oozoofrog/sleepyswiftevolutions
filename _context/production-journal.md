@@ -286,7 +286,7 @@ The creator requested motion when code changes and asked to delay highlights unt
 
 ## 2026-11-27 · Add a quiet house score to SE-0005
 
-The creator noted that the episode had no music and asked for calm EDM with a memorable kick. The script had no background music asset. Both editions now use an original 100 BPM score with a four-on-the-floor kick, offbeat bass and a repeating synth motif. The music drops under the measured narration cues and recovers over the pauses. The final AAC mixes measured −17.3 LUFS for the landscape edition and −17.5 LUFS for the Short. The remux preserved the video packets and subtitle cues of both editions. [Mixed excerpt](../episodes/SE-0005/out/SE-0005-music-preview-ko.mp4) · [Score](../episodes/SE-0005/audio/quiet-pulse.m4a)
+The creator noted that the episode had no music and asked for calm EDM with a memorable kick. The script had no background music asset. Both editions now use an original 100 BPM score with a four-on-the-floor kick, offbeat bass and a repeating synth motif. The music drops under the measured narration cues and recovers over the pauses. The final AAC mixes measured −17.3 LUFS for the landscape edition and −17.5 LUFS for the Short. The remux preserved the video packets and subtitle cues of both editions. [Mixed excerpt](../episodes/SE-0005/out/SE-0005-music-preview-ko.mp4) · [Score](../assets/music/quiet-pulse.m4a)
 
 ## 2026-11-27 · Track letters during code edits and slow the highlight
 

@@ -14,6 +14,7 @@ import {
   syncEvolutionFeed,
 } from "./lib/evolution";
 import { parseProposalNumber, PROJECT_ROOT, type VideoFormat } from "./lib/paths";
+import { linkBackgroundMusic } from "./lib/music";
 import { computeProgressSummary, formatStage, productionStage, loadWorkspaceState } from "./lib/state";
 import { formatChapterTimestamp } from "./lib/subtitle";
 import { buildSceneTimeline, getEffectiveShortsScenes } from "./lib/timeline";
@@ -358,6 +359,7 @@ program
     }
 
     const remotionBin = path.join(PROJECT_ROOT, "node_modules/.bin/remotion");
+    const unlinkMusic = await linkBackgroundMusic(await loadAndValidateScript(proposal.id), info.audioDir);
     await new Promise<void>((resolve, reject) => {
       const child = spawn(
         remotionBin,
@@ -374,7 +376,7 @@ program
         else reject(new Error(`Remotion Studio가 종료 코드 ${code}로 끝났습니다.`));
       });
       child.on("error", reject);
-    });
+    }).finally(unlinkMusic);
   });
 
 program

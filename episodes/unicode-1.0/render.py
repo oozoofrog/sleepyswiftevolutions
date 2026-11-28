@@ -8,7 +8,7 @@ from draw import ROOT, TEXT, LONG, layout, render_frame, font, px
 FPS=24
 RATE=48000
 OUT=ROOT/'out'
-MUSIC=ROOT.parent/'SE-0006/audio/quiet-pulse.m4a'
+MUSIC=ROOT.parent.parent/'assets/music/quiet-pulse.m4a'
 SHORT=['open','tables','korea','unified','return','pair','lower','taiwan','keep','end']
 def run(args):sp.run(args,check=True)
 def srt_time(sec):

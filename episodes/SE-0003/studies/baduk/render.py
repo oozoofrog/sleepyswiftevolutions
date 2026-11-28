@@ -77,7 +77,7 @@ def board(im,x,y,side,stones,last=None,paper=False,dropping=1,bridge=0):
         d.line((x+pad+2*step,cy,x+pad+(2+2*bridge)*step,cy),fill=rust,width=3)
 def render():
     cues,frames=mix();summary=json.loads((EP/'script.json').read_text())['scenes'][1]['code']['code'].splitlines()+['print(x)']
-    cmd=['ffmpeg','-v','error','-y','-f','rawvideo','-pix_fmt','rgb24','-s','1280x720','-r','24','-i','pipe:0','-i',str(TMP/'voice.wav'),'-stream_loop','-1','-i',str(EP/'audio/evening-keys.m4a'),'-filter_complex',f'[1:a]highpass=f=65,loudnorm=I=-17:TP=-2:LRA=8[v];[2:a]volume=0.22,afade=t=in:d=1.4,afade=t=out:st={frames/FPS-2}:d=2[m];[v][m]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.88[a]','-map','0:v','-map','[a]','-t',str(frames/FPS),'-c:v','libx264','-crf','18','-preset','veryfast','-pix_fmt','yuv420p','-c:a','aac','-b:a','160k','-movflags','+faststart',str(OUT)]
+    cmd=['ffmpeg','-v','error','-y','-f','rawvideo','-pix_fmt','rgb24','-s','1280x720','-r','24','-i','pipe:0','-i',str(TMP/'voice.wav'),'-stream_loop','-1','-i',str(EP.parent.parent/'assets/music/evening-keys.m4a'),'-filter_complex',f'[1:a]highpass=f=65,loudnorm=I=-17:TP=-2:LRA=8[v];[2:a]volume=0.22,afade=t=in:d=1.4,afade=t=out:st={frames/FPS-2}:d=2[m];[v][m]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.88[a]','-map','0:v','-map','[a]','-t',str(frames/FPS),'-c:v','libx264','-crf','18','-preset','veryfast','-pix_fmt','yuv420p','-c:a','aac','-b:a','160k','-movflags','+faststart',str(OUT)]
     with subprocess.Popen(cmd,stdin=subprocess.PIPE) as p:
         for n in range(frames):
             t=n/FPS;i=max((i for i,c in enumerate(cues) if c[0]<=t),default=0);a,b,cap=cues[i];u=e((t-a)/.48)

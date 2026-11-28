@@ -1,0 +1,263 @@
+{
+  "proposalId": "SE-0007",
+  "format": "long",
+  "provider": "qwen3-clone",
+  "voice": "voice-profile",
+  "fps": 30,
+  "totalDurationSec": 160.155,
+  "totalFrames": 4805,
+  "generatedAt": "2026-11-28T11:13:46.060Z",
+  "scenes": [
+    {
+      "sceneId": "01-loop",
+      "endingDigest": "aaaf9eb1d6d76e533fe05175f9130148693a13afa70c7a1eae07971e8b2b1377",
+      "audioFile": "long/01-loop.mp3",
+      "durationSec": 22.535,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 23.835,
+      "startSec": 0,
+      "endSec": 23.835,
+      "cues": [
+        {
+          "startSec": 0.495,
+          "endSec": 3.055,
+          "text": "오늘도 코드 한 줄을 함께 살펴보겠습니다."
+        },
+        {
+          "startSec": 3.675,
+          "endSec": 8.515,
+          "text": "이 반복문은 i를 0에서 시작해 3보다 작은 동안 하나씩 늘립니다."
+        },
+        {
+          "startSec": 9.135,
+          "endSec": 13.465,
+          "text": "화면에는 0, 1, 2가 차례로 출력됩니다."
+        },
+        {
+          "startSec": 14.065,
+          "endSec": 18.025,
+          "text": "Swift 3부터는 이 첫 줄을 컴파일하지 않습니다."
+        },
+        {
+          "startSec": 18.645,
+          "endSec": 22.935,
+          "text": "같은 출력을 얻으려면 첫 줄을 어떻게 고쳐야 할지 생각해 보겠습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "02-answer",
+      "endingDigest": "5096ba8a74096e1155eaec69a56213606d423bbab1e45ca92309a7dae6732184",
+      "audioFile": "long/02-answer.mp3",
+      "durationSec": 16.15,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 17.45,
+      "startSec": 23.835,
+      "endSec": 41.285,
+      "cues": [
+        {
+          "startSec": 24.285,
+          "endSec": 27.405,
+          "text": "답은 for i in 0..<3입니다."
+        },
+        {
+          "startSec": 28.025,
+          "endSec": 32.935,
+          "text": "초기값, 조건, 증가식을 나누던 세미콜론 두 개가 사라집니다."
+        },
+        {
+          "startSec": 33.555,
+          "endSec": 36.865,
+          "text": "그 자리에 0부터 3 바로 앞까지의 범위가 들어갑니다."
+        },
+        {
+          "startSec": 37.485,
+          "endSec": 40.385,
+          "text": "출력은 그대로 0, 1, 2입니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "03-history",
+      "endingDigest": "0a8d7d2db3bbca65516f83e23236ff309f97359fafca322cd6565157b8c8155e",
+      "audioFile": "long/03-history.mp3",
+      "durationSec": 19.9,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 21.2,
+      "startSec": 41.285,
+      "endSec": 62.485,
+      "cues": [
+        {
+          "startSec": 41.735,
+          "endSec": 49.375,
+          "text": "이 문법을 없애자는 논의는 2015년 12월 3일, 에리카 새던이 포럼에 올린 질문에서 시작했습니다."
+        },
+        {
+          "startSec": 49.995,
+          "endSec": 52.115,
+          "text": "11일 뒤 제안이 채택됐습니다."
+        },
+        {
+          "startSec": 52.735,
+          "endSec": 57.705,
+          "text": "2016년 3월에 나온 Swift 2.2는 이 문법에 경고를 보여 줬습니다."
+        },
+        {
+          "startSec": 58.325,
+          "endSec": 61.585,
+          "text": "9월에 나온 Swift 3에서는 이 문법이 사라졌습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "04-continue",
+      "endingDigest": "4e4e7c19dad227e4d105648366a68472acaa40f82889f58d35207334463c2b0d",
+      "audioFile": "long/04-continue.mp3",
+      "durationSec": 23.07,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 24.37,
+      "startSec": 62.485,
+      "endSec": 86.855,
+      "cues": [
+        {
+          "startSec": 62.935,
+          "endSec": 68.885,
+          "text": "리뷰가 열린 12월 7일, 드미트리 그리벤코는 continue가 들어 있는 반복문을 걱정했습니다."
+        },
+        {
+          "startSec": 69.505,
+          "endSec": 73.075,
+          "text": "C 스타일 반복문은 continue 뒤에도 증가식을 실행합니다."
+        },
+        {
+          "startSec": 73.695,
+          "endSec": 77.335,
+          "text": "while로 옮기면 증가식을 본문 안에 직접 적어야 합니다."
+        },
+        {
+          "startSec": 77.945,
+          "endSec": 82.345,
+          "text": "이 코드에서 i가 0이면 continue가 마지막 줄을 건너뜁니다."
+        },
+        {
+          "startSec": 82.965,
+          "endSec": 85.955,
+          "text": "i는 0에 머물고, 반복은 끝나지 않습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "05-speed",
+      "endingDigest": "63e711bdac715d820a41cb7287d65d30c5f4325f5ed483a3e595b9c7a9132007",
+      "audioFile": "long/05-speed.mp3",
+      "durationSec": 22.69,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 23.99,
+      "startSec": 86.855,
+      "endSec": 110.845,
+      "cues": [
+        {
+          "startSec": 87.305,
+          "endSec": 90.665,
+          "text": "두 변수를 함께 움직이는 반복문도 논의됐습니다."
+        },
+        {
+          "startSec": 91.285,
+          "endSec": 94.975,
+          "text": "새 문법에서는 stride 두 개를 zip으로 묶습니다."
+        },
+        {
+          "startSec": 95.595,
+          "endSec": 101.535,
+          "text": "데이비드 오언스는 최적화하지 않은 빌드에서 새 코드가 약 17배 느리다고 측정했습니다."
+        },
+        {
+          "startSec": 102.155,
+          "endSec": 104.875,
+          "text": "최적화한 빌드에서도 약 2배 느렸습니다."
+        },
+        {
+          "startSec": 105.495,
+          "endSec": 109.945,
+          "text": "토르스텐은 이 결과와 defer를 쓰자는 제안을 이유로 지지를 철회했습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "06-decision",
+      "endingDigest": "e4d45b1a3a13441e6f833baa64d1d17fb1c88dd2a8c5dd9cb452421004c39c28",
+      "audioFile": "long/06-decision.mp3",
+      "durationSec": 25.69,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 26.99,
+      "startSec": 110.845,
+      "endSec": 137.835,
+      "cues": [
+        {
+          "startSec": 111.295,
+          "endSec": 115.705,
+          "text": "12월 14일, 리뷰를 맡은 더그 그레거가 채택을 발표했습니다."
+        },
+        {
+          "startSec": 116.325,
+          "endSec": 120.935,
+          "text": "코어 팀은 C 스타일 반복문이 Swift 코드에서 드물다고 봤습니다."
+        },
+        {
+          "startSec": 121.555,
+          "endSec": 126.925,
+          "text": "거꾸로 세는 반복처럼 어색한 경우는 표준 라이브러리를 개선해 풀자고 했습니다."
+        },
+        {
+          "startSec": 127.545,
+          "endSec": 133.015,
+          "text": "성능 차이는 최적화로 줄일 수 있고, 급한 코드에는 while을 쓰면 된다고 판단했습니다."
+        },
+        {
+          "startSec": 133.635,
+          "endSec": 136.935,
+          "text": "지금은 reversed()로 2, 1, 0을 출력합니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "07-outro",
+      "endingDigest": "708468e3b24805b35c1e586551da82a1c64bc724f994e5f2e4a53476c02caef7",
+      "audioFile": "long/07-outro.mp3",
+      "durationSec": 21.02,
+      "leadInSec": 0.4,
+      "tailPadSec": 0.9,
+      "totalDurationSec": 22.32,
+      "startSec": 137.835,
+      "endSec": 160.155,
+      "cues": [
+        {
+          "startSec": 138.285,
+          "endSec": 140.395,
+          "text": "처음 반복문으로 돌아가 보겠습니다."
+        },
+        {
+          "startSec": 141.015,
+          "endSec": 147.345,
+          "text": "첫 줄은 for i in 0..<3이 됐고, 출력은 여전히 0, 1, 2입니다."
+        },
+        {
+          "startSec": 147.965,
+          "endSec": 152.245,
+          "text": "Swift 6.4.2도 옛 문법을 오류로 처리합니다."
+        },
+        {
+          "startSec": 152.865,
+          "endSec": 159.255,
+          "text": "드물게 쓰이고 Swift답지 않은 C 스타일 반복문을 없애 언어를 단순하게 만들려는 제안이었습니다."
+        }
+      ]
+    }
+  ]
+}

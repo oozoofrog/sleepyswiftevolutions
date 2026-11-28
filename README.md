@@ -27,6 +27,8 @@ Swift Evolution 제안서(`SE-0001` ~ 현재)를 공식 피드(`evolution.json`)
 ```text
 swift-evolutions/
 ├── .env.example
+├── assets/
+│   └── music/                 # 공용 배경 음악. script.json의 backgroundMusic 파일 이름으로 찾습니다
 ├── data/
 │   ├── evolution.json         # 공식 Swift Evolution 피드 캐시
 │   ├── state.json             # 에피소드별 진행 상태 & 업로드 기록

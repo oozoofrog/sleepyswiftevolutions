@@ -51,7 +51,7 @@ target=ep/'audio'/'style-studies'
 target.mkdir(parents=True,exist_ok=True)
 length=sum(r['frames'] for r in score)/24
 subprocess.run(['ffmpeg','-v','error','-y','-f','s16le','-ar','24000','-ac','1','-i',str(raw),
-                '-stream_loop','-1','-i',str(ep/'audio/evening-keys.m4a'),'-filter_complex',
+                '-stream_loop','-1','-i',str(ep.parent.parent/'assets/music/evening-keys.m4a'),'-filter_complex',
                 f'[0:a]highpass=f=65,loudnorm=I=-17:TP=-2:LRA=8[voice];[1:a]volume=0.24,afade=t=in:d=2,afade=t=out:st={length-3}:d=3[music];[voice][music]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.86[out]',
                 '-map','[out]','-t',str(length),'-ar','48000','-c:a','aac','-b:a','160k',str(target/'metaphor-score.m4a')],check=True)
 (HERE/'metaphor-timing.json').write_text(json.dumps(score,ensure_ascii=False,indent=2)+'\n')

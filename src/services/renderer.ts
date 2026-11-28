@@ -12,6 +12,7 @@ import {
 } from "@remotion/renderer";
 import { getConfig } from "../config/env";
 import { getEpisodePaths, REMOTION_ENTRY, type VideoFormat } from "../lib/paths";
+import { linkBackgroundMusic } from "../lib/music";
 import { maxStage, updateEpisodeState, writeJsonAtomic } from "../lib/state";
 import { buildSceneTimeline } from "../lib/timeline";
 import {
@@ -166,10 +167,16 @@ export async function renderEpisode(
       : await prepareNarration(script, format));
   }
   const browserExecutable = await resolveBrowserExecutable();
-  const serveUrl = await bundle({
-    entryPoint: REMOTION_ENTRY,
-    publicDir: paths.audioDir,
-  });
+  const unlinkMusic = await linkBackgroundMusic(script, paths.audioDir);
+  let serveUrl: string;
+  try {
+    serveUrl = await bundle({
+      entryPoint: REMOTION_ENTRY,
+      publicDir: paths.audioDir,
+    });
+  } finally {
+    await unlinkMusic();
+  }
 
   const results: RenderedFormatResult[] = [];
 

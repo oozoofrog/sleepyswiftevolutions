@@ -278,9 +278,20 @@
       "title": "Remove C-style for-loops with conditions and incrementers",
       "proposalState": "implemented",
       "swiftVersion": "3.0",
-      "stage": "pending",
-      "updatedAt": "2026-11-25T15:42:15.970Z",
-      "formats": {}
+      "stage": "rendered",
+      "updatedAt": "2026-11-28T11:20:24.922Z",
+      "formats": {
+        "long": {
+          "voicedAt": "2026-11-28T11:13:46.117Z",
+          "renderedAt": "2026-11-28T11:17:44.234Z",
+          "durationSec": 160.155
+        },
+        "short": {
+          "voicedAt": "2026-11-28T11:14:13.160Z",
+          "renderedAt": "2026-11-28T11:20:24.922Z",
+          "durationSec": 30.118
+        }
+      }
     },
     "SE-0008": {
       "id": "SE-0008",

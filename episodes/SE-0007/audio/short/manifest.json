@@ -1,0 +1,91 @@
+{
+  "proposalId": "SE-0007",
+  "format": "short",
+  "provider": "qwen3-clone",
+  "voice": "voice-profile",
+  "fps": 30,
+  "totalDurationSec": 30.118,
+  "totalFrames": 904,
+  "generatedAt": "2026-11-28T11:14:13.143Z",
+  "scenes": [
+    {
+      "sceneId": "s01-loop",
+      "endingDigest": "3ecf374b50820d69fbb761e048fddc9593d987db547cb4d504f16997e819baf0",
+      "audioFile": "short/s01-loop.mp3",
+      "durationSec": 11.65,
+      "leadInSec": 0.35,
+      "tailPadSec": 0.75,
+      "totalDurationSec": 12.75,
+      "startSec": 0,
+      "endSec": 12.75,
+      "cues": [
+        {
+          "startSec": 0.608,
+          "endSec": 2.992,
+          "text": "오늘도 코드 한 줄을 함께 살펴보겠습니다."
+        },
+        {
+          "startSec": 3.508,
+          "endSec": 6.783,
+          "text": "이 반복문은 0, 1, 2를 출력합니다."
+        },
+        {
+          "startSec": 7.3,
+          "endSec": 9.4,
+          "text": "Swift 3부터는 이 첫 줄이 오류입니다."
+        },
+        {
+          "startSec": 9.917,
+          "endSec": 11.992,
+          "text": "첫 줄을 어떻게 고칠지 생각해 보겠습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "s02-answer",
+      "endingDigest": "1f19ecd4ffd2fd61ee7d353d2301fc777eaf5844ee2cb1ae071e4fbc5720c153",
+      "audioFile": "short/s02-answer.mp3",
+      "durationSec": 7.036,
+      "leadInSec": 0.35,
+      "tailPadSec": 0.75,
+      "totalDurationSec": 8.136,
+      "startSec": 12.75,
+      "endSec": 20.886,
+      "cues": [
+        {
+          "startSec": 13.142,
+          "endSec": 15.467,
+          "text": "답은 for i in 0..<3입니다."
+        },
+        {
+          "startSec": 15.983,
+          "endSec": 20.133,
+          "text": "코어 팀은 C 스타일 반복문이 드물고, 대부분 for-in이 더 읽기 쉽다고 봤습니다."
+        }
+      ]
+    },
+    {
+      "sceneId": "s03-outro",
+      "endingDigest": "ff858b12fe1f4911ffe54791c75f9b4790b47ee8644098a8d7699f4943e7d5a4",
+      "audioFile": "short/s03-outro.mp3",
+      "durationSec": 8.132,
+      "leadInSec": 0.35,
+      "tailPadSec": 0.75,
+      "totalDurationSec": 9.232,
+      "startSec": 20.886,
+      "endSec": 30.118,
+      "cues": [
+        {
+          "startSec": 21.253,
+          "endSec": 23.519,
+          "text": "출력은 여전히 0, 1, 2입니다."
+        },
+        {
+          "startSec": 24.036,
+          "endSec": 29.368,
+          "text": "드물게 쓰이고 Swift답지 않은 C 스타일 반복문을 없애 언어를 단순하게 만들려는 제안이었습니다."
+        }
+      ]
+    }
+  ]
+}
